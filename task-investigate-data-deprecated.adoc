@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task-investigate-data-deprecated.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies 
+summary: Você pode investigar os dados da sua organização exibindo detalhes na página Investigação de dados. É possível navegar para essa página em várias áreas da IU de classificação do BlueXP , incluindo os painéis de governança e conformidade. 
+---
+= Investigue os dados armazenados na página Investigação de dados
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode investigar os dados da sua organização exibindo detalhes na página Investigação de dados. É possível navegar para essa página em várias áreas da IU de classificação do BlueXP , incluindo os painéis de governança e conformidade.
+
+
+NOTE: As capacidades descritas nesta secção só estão disponíveis se tiver optado por efetuar uma análise de classificação completa nas suas fontes de dados. As fontes de dados que tiveram uma varredura somente de mapeamento não mostram detalhes no nível do arquivo.
+
+
+
+== Filtre os dados na página Investigação de dados
+
+Você pode filtrar o conteúdo da página de investigação para exibir apenas os resultados que deseja ver. Este é um recurso muito poderoso porque depois de ter refinado os dados, você pode usar a barra de botões na parte superior da página para executar uma variedade de ações, incluindo copiar arquivos, mover arquivos, adicionar uma tag ou rótulo AIP aos arquivos e muito mais.
+
+
+
+=== Filtre dados por tags, rótulos, usuários atribuídos e políticas
+
+Use os filtros a seguir para exibir dados por tags, rótulos AIP, usuários atribuídos ou políticas.
+
+[]
+====
+*NOTA* a capacidade de filtrar por tags, rótulos e usuários atribuídos é relevante apenas para a classificação BlueXP  versões 1,30 e anteriores.
+
+====
+[cols="30,60"]
+|===
+| Filtro | Detalhes 
+
+
+| Políticas | Selecione uma política ou políticas. Vá link:task-using-policies.html["aqui"^] para ver a lista de políticas existentes e para criar suas próprias políticas personalizadas. 
+
+
+| Etiqueta | link:task-org-private-data.html#categorize-your-data-using-aip-labels["Etiquetas AIP"]Selecione que estão atribuídos aos seus ficheiros. 
+
+
+| Tags | link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files["a tag ou tags"]Selecione que estão atribuídos aos seus ficheiros. 
+
+
+| Atribuído a | Selecione o nome da pessoa à qual o arquivo é atribuído. 
+|===
+
+
+== Crie o Relatório de Investigação de dados
+
+O Relatório de Investigação de dados é um download do conteúdo filtrado da página Investigação de dados.
+
+O relatório está disponível em dois formatos diferentes:
+
+* Como um arquivo .CSV que você pode salvar na máquina local.
++
+Este relatório pode incluir um máximo de 10.000 linhas de dados.
+
+* Como um arquivo .json que você exporta para um compartilhamento NFS.
++
+Se houver mais de 250.000 linhas de dados, arquivos .json adicionais serão criados.
+
++
+Ao exportar para um compartilhamento de arquivos, certifique-se de que a classificação BlueXP  tenha as permissões corretas para o acesso à exportação.
+
++
+[]
+====
+*NOTA* a capacidade de gerar o relatório no formato .json é relevante apenas para as versões de classificação BlueXP  1,30 e anteriores.
+
+====
+
+
+Pode haver até três arquivos de relatório baixados se a classificação do BlueXP  estiver escaneando arquivos (dados não estruturados), diretórios (pastas e compartilhamentos de arquivos) e bancos de dados (dados estruturados).
+
+.Passos
+. Na página Investigação de dados, clique no image:button_download.png["botão de transferência"] botão na parte superior direita da página.
+. Selecione se deseja fazer o download de um relatório .CSV ou .json dos dados e clique em *Download Report*.
++
+Ao selecionar um relatório .json, insira o nome do compartilhamento NFS onde o relatório será baixado no formato `<host_name>:/<share_path>`.
+
++
+É possível visualizar o progresso da geração de relatórios JSON no link:task-view-compliance-actions.html["Painel Status ações"].
+
++
+[]
+====
+*NOTA* a capacidade de filtrar por tags, rótulos e usuários atribuídos é relevante apenas para a classificação BlueXP  versões 1,30 e anteriores.
+
+====
+

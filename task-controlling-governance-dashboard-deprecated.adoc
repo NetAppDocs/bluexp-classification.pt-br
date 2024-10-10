@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-governance-dashboard-deprecated.html 
+keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies 
+summary: Controle os custos relacionados aos dados sobre os recursos de storage da sua organização. A classificação do BlueXP  identifica a quantidade de dados obsoletos, dados não comerciais, arquivos duplicados e arquivos muito grandes em seus sistemas. Assim, você pode decidir se deseja remover ou categorizar alguns arquivos para um storage de objetos mais econômico. 
+---
+= Veja detalhes de governança sobre seus dados usando o painel Governança
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Controle os custos relacionados aos dados sobre os recursos de storage da sua organização. A classificação do BlueXP  identifica a quantidade de dados obsoletos, dados não comerciais, arquivos duplicados e arquivos muito grandes em seus sistemas. Assim, você pode decidir se deseja remover ou categorizar alguns arquivos para um storage de objetos mais econômico.
+
+Além disso, se você estiver planejando migrar dados de locais para a nuvem, poderá visualizar o tamanho dos dados e se algum deles contém informações confidenciais antes de movê-los.
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+
+
+== Dados listados por sensibilidade e permissões amplas no painel Governança
+
+A área _dados confidenciais e permissões amplas_ no painel de governança fornece um mapa de calor de arquivos que contêm dados confidenciais (incluindo dados pessoais confidenciais e confidenciais) e que são excessivamente permissivos. Isso pode ajudá-lo a ver onde você pode ter alguns riscos com dados confidenciais.
+
+
+NOTE: Isto aplica-se às versões de classificação BlueXP  1,30 e anteriores.
+
+Os arquivos são classificados com base no número de usuários com permissão para acessar os arquivos no eixo X (menor para maior) e no número de identificadores sensíveis dentro dos arquivos no eixo Y (menor para maior). Os blocos representam o número de arquivos que correspondem aos itens dos eixos X e Y. O bloco colorido mais claro é bom; com menos usuários capazes de acessar os arquivos e com menos identificadores sensíveis por arquivo. Os blocos mais escuros são os itens que você pode querer investigar. Por exemplo, a tela abaixo mostra o texto da dica de ferramenta para o bloco azul escuro. Ele mostra que você tem 1.500 arquivos onde 751-100 usuários têm acesso e onde há 501-100 identificadores sensíveis por arquivo.
+
+image:screenshot_compliance_sensitive_data.png["Uma captura de tela mostrando os dados exibidos quando você coloca o cursor sobre um elemento neste painel."]
+
+Você pode clicar no bloco em que está interessado para ver os resultados filtrados dos arquivos afetados na página de investigação para que você possa investigar mais.
+
+Nenhum dado será exibido neste painel se você não tiver integrado um serviço de identidade com a classificação BlueXP . link:task-add-active-directory-datasense.html["Veja como integrar seu serviço do ative Directory com a classificação do BlueXP "^].
+
+
+TIP: Esse painel oferece suporte a arquivos em compartilhamentos CIFS, OneDrive e fontes de dados do SharePoint. Atualmente, não há suporte para bancos de dados, Google Drive, Amazon S3 e armazenamento de objetos genéricos.
+
+
+
+== Área de classificação no painel mostrando rótulos AIP
+
+A área _classificação_ no painel fornece uma lista das etiquetas AIP (proteção de informações do Azure) mais identificadas nos seus dados digitalizados.
+
+Se você se inscreveu no Azure Information Protection (AIP), poderá classificar e proteger documentos e arquivos aplicando rótulos ao conteúdo. A revisão dos rótulos AIP mais usados atribuídos a arquivos permite ver quais rótulos são mais usados em seus arquivos.
+
+Consulte link:task-org-private-data.html#categorize-your-data-using-aip-labels["Etiquetas AIP"^] para obter mais informações.

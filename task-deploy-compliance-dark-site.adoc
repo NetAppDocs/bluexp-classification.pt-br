@@ -1,0 +1,392 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-compliance-dark-site.html 
+keywords: cloud compliance, bluexp, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, linux, ubuntu, compliance, on-premises, dark site, upgrade, private mode, docker, podman, rhel, bluexp classification, classification, install, cloud data sense, cds, linux host 
+summary: 'Complete alguns passos para instalar a classificação BlueXP  em um host Linux em um site local que não tem acesso à Internet - também conhecido como "modo privado". Este tipo de instalação é perfeito para seus sites seguros.' 
+---
+= Instale a classificação BlueXP  em um host Linux sem acesso à Internet
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Conclua algumas etapas para instalar a classificação BlueXP  em um host Linux em um site local que não tenha acesso à Internet - também conhecido como _modo privado_. Este tipo de instalação é perfeito para seus sites seguros.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Saiba mais sobre os diferentes modos de implantação para o conetor BlueXP  e a classificação BlueXP "^].
+
+Observe que você também link:task-deploy-compliance-onprem.html["Implante a classificação BlueXP  em um site local que tenha acesso à Internet"]pode .
+
+O script de instalação da classificação BlueXP  começa verificando se o sistema e o ambiente atendem aos pré-requisitos necessários. Se todos os pré-requisitos forem atendidos, a instalação será iniciada. Se você quiser verificar os pré-requisitos independentemente de executar a instalação de classificação do BlueXP , há um pacote de software separado que você pode baixar que apenas testa os pré-requisitos. link:task-test-linux-system.html["Veja como verificar se o seu host Linux está pronto para instalar a classificação BlueXP "].
+
+
+NOTE: Para versões antigas 1,30 e anteriores, se for necessário instalar a classificação BlueXP  em vários hosts, link:task-deploy-multi-host-install-dark-site.html["Instale a classificação BlueXP  em vários hosts sem acesso à Internet"]consulte .
+
+
+
+== Fontes de dados compatíveis
+
+Quando instalado modo privado (às vezes chamado de site "off-line" ou "escuro"), a classificação BlueXP  só pode digitalizar dados de fontes de dados que também são locais para o site local. Neste momento, a classificação BlueXP  pode analisar as seguintes fontes de dados *locais*:
+
+* Sistemas ONTAP no local
+* Esquemas de banco de dados
+
+
+Atualmente, não há suporte para a verificação de contas Cloud Volumes ONTAP, Azure NetApp Files ou FSX for ONTAP quando a classificação BlueXP  é implantada no modo privado.
+
+
+
+== Limitações
+
+A maioria dos recursos de classificação BlueXP  funciona quando é implantado em um site sem acesso à Internet. No entanto, certos recursos que exigem acesso à Internet não são suportados, por exemplo:
+
+* Definir funções do BlueXP  para diferentes utilizadores (por exemplo, Administrador de contas ou Visualizador de conformidade)
+* Copiar e sincronizar arquivos de origem usando cópia e sincronização do BlueXP 
+* Atualizações automatizadas de software da BlueXP 
++
+Tanto o conetor BlueXP  quanto a classificação BlueXP  exigirão atualizações manuais periódicas para habilitar novos recursos. Você pode ver a versão de classificação do BlueXP  na parte inferior das páginas da IU de classificação do BlueXP . Verifique o link:whats-new.html["Notas de lançamento da classificação BlueXP "] para ver os novos recursos em cada versão e se você deseja esses recursos. Em seguida, pode seguir os passos para https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Atualize o conetor BlueXP "^] e <<Atualizar o software de classificação BlueXP ,Atualize seu software de classificação BlueXP >>.
+
+
+
+
+
+== Início rápido
+
+Comece rapidamente seguindo estas etapas ou role para baixo até as seções restantes para obter detalhes completos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Instale o conetor BlueXP 
+[role="quick-margin-para"]
+Se você ainda não tiver um conetor instalado no modo privado, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Implante o conetor"^] em um host Linux agora.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Rever pré-requisitos de classificação BlueXP 
+[role="quick-margin-para"]
+Verifique se o sistema Linux atende ao <<Prepare o sistema host Linux,requisitos de host>>, se ele tem todo o software necessário instalado e se o ambiente off-line atende ao <<Verifique os pré-requisitos de classificação BlueXP  e BlueXP ,permissões e conetividade>>necessário .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Baixe e implante a classificação BlueXP 
+[role="quick-margin-para"]
+Faça o download do software de classificação BlueXP  do site de suporte da NetApp e copie o arquivo do instalador para o host Linux que você planeja usar. Em seguida, inicie o assistente de instalação e siga as instruções para implantar a instância de classificação do BlueXP .
+
+
+
+== Instale o conetor BlueXP 
+
+Se você ainda não tiver um conetor BlueXP  instalado em modo privado, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Implante o conetor"^] em um host Linux em seu site offline.
+
+
+
+== Prepare o sistema host Linux
+
+O software de classificação BlueXP  deve ser executado em um host que atenda a requisitos específicos do sistema operacional, requisitos de RAM, requisitos de software etc.
+
+* A classificação BlueXP  não é suportada em um host que é compartilhado com outros aplicativos - o host deve ser um host dedicado.
+* Ao criar o sistema host em suas instalações, você pode escolher entre esses tamanhos de sistema, dependendo do tamanho do conjunto de dados que você planeja fazer a verificação de classificação do BlueXP .
++
+[cols="17,17,27,31"]
+|===
+| Tamanho do sistema | CPU | RAM (a memória swap deve ser desativada) | Disco 
+
+
+| * Extra grande * | 32 CPUs | 128 GB DE RAM | 1 TIB SSD ON /, OR - 100 GiB disponível em /opt - 895 GiB disponível em /var/lib/docker - 5 GiB em /tmp 
+
+
+| * Grande * | 16 CPUs | 64 GB DE RAM | 500 GiB SSD ON /, OR - 100 GiB disponível em /opt - 395 GiB disponível em /var/lib/docker ou Podman /var/lib/containers ou Podman /var/lib/containers - 5 GiB em /tmp 
+|===
+* Ao implantar uma instância de computação na nuvem para sua instalação de classificação do BlueXP , recomendamos um sistema que atenda aos requisitos "grandes" do sistema acima:
++
+** *Tipo de instância do Amazon Elastic Compute Cloud (Amazon EC2)*: Recomendamos "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Consulte tipos de instâncias adicionais da AWS"^].
+** *Tamanho da VM do Azure*: Recomendamos "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Consulte tipos de instância adicionais do Azure"^].
+** *Tipo de máquina GCP*: Recomendamos "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Consulte tipos de instância adicionais do GCP"^].
+
+
+* *Permissões de pasta UNIX*: As seguintes permissões mínimas UNIX são necessárias:
++
+[cols="25,25"]
+|===
+| Pasta | Permissões mínimas 
+
+
+| /tmp | `rwxrwxrwt` 
+
+
+| /opt | `rwxr-xr-x` 
+
+
+| /var/lib/docker | `rwx------` 
+
+
+| /usr/lib/systemd/system | `rwxr-xr-x` 
+|===
+* *Sistema operacional*:
++
+** Os seguintes sistemas operacionais requerem o uso do mecanismo de contentor Docker:
++
+*** Red Hat Enterprise Linux versão 7,8 e 7,9
+*** Ubuntu 22,04 (requer classificação BlueXP  versão 1,23 ou superior)
+*** Ubuntu 24,04 (requer classificação BlueXP  versão 1,23 ou superior)
+
+
+** Os seguintes sistemas operacionais requerem o uso do motor de contentores Podman, e eles exigem a classificação BlueXP  versão 1,30 ou superior:
++
+*** Red Hat Enterprise Linux versão 8,8, 9,0, 9,1, 9,2, 9,3, 9,4
+
+
+
+
+* *Red Hat Subscription Management*: O host deve estar registrado no Red Hat Subscription Management. Se não estiver registrado, o sistema não poderá acessar repositórios para atualizar o software necessário de 3rd partes durante a instalação.
+* * Software adicional*: Você deve instalar o seguinte software no host antes de instalar a classificação BlueXP :
++
+** Dependendo do sistema operacional que você estiver usando, você precisará instalar um dos motores de contentor:
++
+*** Docker Engine versão 19.3.1 ou superior. https://docs.docker.com/engine/install/["Veja as instruções de instalação"^].
+*** Podman versão 4 ou superior. Para instalar o Podman, digite (`sudo yum install podman netavark -y`).
+
+
+
+
+
+
+* Python versão 3,6 ou superior. https://www.python.org/downloads/["Veja as instruções de instalação"^].
++
+** *Considerações de NTP*: A NetApp recomenda configurar o sistema de classificação BlueXP  para usar um serviço de protocolo de tempo de rede (NTP). O tempo deve ser sincronizado entre o sistema de classificação BlueXP  e o sistema de conetores BlueXP .
+** *Considerações sobre o Firewalld*: Se você estiver planejando usar `firewalld`, recomendamos que você a ative antes de instalar a classificação do BlueXP . Execute os seguintes comandos para configurar `firewalld` de modo que seja compatível com a classificação BlueXP :
++
+....
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --reload
+....
++
+Observe que você deve reiniciar o Docker ou o Podman sempre que ativar ou atualizar `firewalld` as configurações.
+
+
+
+
+
+
+TIP: O endereço IP do sistema anfitrião de classificação BlueXP  não pode ser alterado após a instalação.
+
+
+
+== Verifique os pré-requisitos de classificação BlueXP  e BlueXP 
+
+Reveja os pré-requisitos a seguir para se certificar de que você tem uma configuração suportada antes de implantar a classificação do BlueXP .
+
+* Verifique se o conetor tem permissões para implantar recursos e criar grupos de segurança para a instância de classificação do BlueXP . Você pode encontrar as permissões de BlueXP  mais recentes no https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html["As políticas fornecidas pela NetApp"^].
+* Certifique-se de que você pode manter a classificação BlueXP  em execução. A instância de classificação do BlueXP  precisa permanecer ligada para verificar continuamente seus dados.
+* Garanta a conetividade do navegador da Web com a classificação BlueXP . Depois que a classificação do BlueXP  estiver ativada, certifique-se de que os usuários acessem a interface do BlueXP  a partir de um host que tenha uma conexão com a instância de classificação do BlueXP .
++
+A instância de classificação do BlueXP  usa um endereço IP privado para garantir que os dados indexados não sejam acessíveis a outros. Como resultado, o navegador da Web que você usa para acessar o BlueXP  deve ter uma conexão com esse endereço IP privado. Essa conexão pode vir de um host que está dentro da mesma rede que a instância de classificação BlueXP .
+
+
+
+
+
+== Verifique se todas as portas necessárias estão ativadas
+
+Você deve garantir que todas as portas necessárias estejam abertas para comunicação entre o conetor, a classificação do BlueXP , o ative Directory e suas fontes de dados.
+
+[cols="25,25,50"]
+|===
+| Tipo de ligação | Portas | Descrição 
+
+
+| Conetor >> classificação BlueXP  | 8080 (TCP), 6000 (TCP), 443 (TCP) E 80. 9000  a| 
+O grupo de segurança do conetor deve permitir tráfego de entrada e saída através das portas 6000 e 443 de e para a instância de classificação BlueXP .
+
+* A porta 6000 é necessária para que a licença BYOL de classificação do BlueXP  funcione em um local escuro.
+* A porta 8080 deve estar aberta para que você possa ver o progresso da instalação no BlueXP .
+* Se um firewall for usado no host Linux, a porta 9000 será necessária para processos internos dentro de um servidor Ubuntu.
+
+
+
+
+| Conetor do cluster do ONTAP (nas) | 443 (TCP)  a| 
+O BlueXP  descobre clusters do ONTAP usando HTTPS. Se você usar políticas de firewall personalizadas, elas devem atender aos seguintes requisitos:
+
+* O host do conetor deve permitir o acesso HTTPS de saída através da porta 443. Se o conetor estiver na nuvem, toda a comunicação de saída é permitida pelo grupo de segurança predefinido.
+* O cluster ONTAP deve permitir acesso HTTPS de entrada através da porta 443. A política de firewall "mgmt" padrão permite o acesso HTTPS de entrada de todos os endereços IP. Se você modificou essa política padrão, ou se criou sua própria política de firewall, associe o protocolo HTTPS a essa política e habilite o acesso do host do conetor.
+
+
+
+
+| Classificação do BlueXP  >> cluster ONTAP  a| 
+* Para NFS - 111 (TCP/UDP) e 2049 (TCP/UDP)
+* Para CIFS - 139 (TCP/UDP) e 445 (TCP/UDP)
+
+ a| 
+A classificação BlueXP  precisa de uma conexão de rede para cada sub-rede Cloud Volumes ONTAP ou sistema ONTAP local. Os grupos de segurança para Cloud Volumes ONTAP devem permitir conexões de entrada da instância de classificação BlueXP .
+
+Certifique-se de que essas portas estejam abertas para a instância de classificação BlueXP :
+
+* Para NFS - 111 e 2049
+* Para CIFS - 139 e 445
+
+
+As políticas de exportação de volume NFS devem permitir o acesso a partir da instância de classificação BlueXP .
+
+
+
+| Classificação do BlueXP  >> ative Directory | 389 (TCP E UDP), 636 (TCP), 3268 (TCP) E 3269 (TCP)  a| 
+Você deve ter um ative Directory já configurado para os usuários em sua empresa. Além disso, a classificação do BlueXP  precisa de credenciais do ative Directory para verificar volumes CIFS.
+
+Você deve ter as informações do ative Directory:
+
+* Endereço IP do servidor DNS ou vários endereços IP
+* Nome de usuário e senha para o servidor
+* Nome de domínio (Nome do ative Directory)
+* Quer esteja a utilizar LDAP seguro (LDAPS) ou não
+* Porta de servidor LDAP (normalmente 389 para LDAP e 636 para LDAP seguro)
+
+
+
+
+| Se um firewall for usado no host Linux | 9000 | Necessário para processos internos dentro de um servidor Ubuntu. 
+|===
+Se você estiver usando vários hosts de classificação BlueXP  para fornecer poder de processamento adicional para verificar suas fontes de dados, precisará ativar portas/protocolos adicionais. link:task-deploy-compliance-dark-site.html["Consulte os requisitos de porta adicionais"].
+
+
+
+== Instale a classificação BlueXP  no host Linux local
+
+Para configurações típicas, você instalará o software em um único sistema host.
+
+image:diagram_deploy_onprem_single_host_no_internet.png["Um diagrama mostrando a localização das fontes de dados que você pode verificar ao usar uma única instância de classificação do BlueXP  implantada no local sem acesso à Internet."]
+
+image:diagram_deploy_onprem_multi_host_no_internet.png["Um diagrama mostrando a localização das fontes de dados que você pode verificar ao usar várias instâncias de classificação do BlueXP  implantadas no local sem acesso à Internet."]
+
+
+
+=== Instalação de um único host para configurações típicas
+
+Siga estas etapas ao instalar o software de classificação BlueXP  em um único host local em um ambiente off-line.
+
+Observe que todas as atividades de instalação são registradas ao instalar a classificação BlueXP . Se você encontrar algum problema durante a instalação, poderá visualizar o conteúdo do log de auditoria de instalação. Está escrito para `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html["Veja mais detalhes aqui"].
+
+.O que você vai precisar
+* Verifique se o sistema Linux atende ao <<Prepare o sistema host Linux,requisitos de host>>.
+* Verifique se você instalou os dois pacotes de software pré-requisito (Docker Engine ou Podman, e Python 3).
+* Certifique-se de ter o root Privileges no sistema Linux.
+* Verifique se o ambiente off-line atende ao <<Verifique os pré-requisitos de classificação BlueXP  e BlueXP ,permissões e conetividade>>necessário .
+
+
+.Passos
+. Num sistema configurado pela Internet, transfira o software de classificação BlueXP  a partir do https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Site de suporte da NetApp"^]. O arquivo que você deve selecionar é chamado *DataSense-offline-bundle-<version>.tar.gz*.
+. Copie o pacote de instalação para o host Linux que você pretende usar no modo privado.
+. Descompacte o pacote de instalação na máquina host, por exemplo:
++
+[source, cli]
+----
+tar -xzf DataSense-offline-bundle-v1.25.0.tar.gz
+----
++
+Isso extrai o software necessário e o arquivo de instalação real *cc_onprem_installer.tar.gz*.
+
+. Descompacte o arquivo de instalação na máquina host, por exemplo:
++
+[source, cli]
+----
+tar -xzf cc_onprem_installer.tar.gz
+----
+. Inicie o BlueXP  e selecione *Governança > classificação*.
+. Clique em *Activate Data Sense*.
++
+image:screenshot_cloud_compliance_deploy_start.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
+
+. Clique em *Deploy* para iniciar a instalação no local.
++
+image:screenshot_cloud_compliance_deploy_darksite.png["Uma captura de tela da seleção do botão para implantar a classificação do BlueXP  no local."]
+
+. A caixa de diálogo _Deploy Data Sense on Premises_ é exibida. Copie o comando fornecido (por exemplo: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq --darksite`) E cole-o em um arquivo de texto para que você possa usá-lo mais tarde. Em seguida, clique em *Fechar* para ignorar a caixa de diálogo.
+. Na máquina host, digite o comando que você copiou e siga uma série de prompts, ou você pode fornecer o comando completo, incluindo todos os parâmetros necessários como argumentos de linha de comando.
++
+Observe que o instalador executa uma pré-verificação para garantir que seus requisitos de sistema e rede estejam em vigor para uma instalação bem-sucedida.
+
++
+[cols="50a,50"]
+|===
+| Insira os parâmetros conforme solicitado: | Digite o comando completo: 
+
+
+ a| 
+.. Cole as informações que você copiou da etapa 8:
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --darksite`
+.. Insira o endereço IP ou o nome do host da máquina host de classificação BlueXP  para que ele possa ser acessado pelo sistema de conetores.
+.. Insira o endereço IP ou o nome do host da máquina host do conetor BlueXP  para que ele possa ser acessado pelo sistema de classificação BlueXP .
+
+| Alternativamente, você pode criar todo o comando com antecedência, fornecendo os parâmetros de host necessários:
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --host <ds_host> --manager-host <cm_host> --no-proxy --darksite` 
+|===
++
+Valores variáveis:
+
++
+** _Account_id_ - ID da conta do NetApp
+** ID do cliente do conetor (adicione o sufixo "clients" ao ID do cliente se ele ainda não estiver lá)
+** _User_token_: Token de acesso de usuário JWT
+** _ds_host_: Endereço IP ou nome de host do sistema de classificação BlueXP .
+** _Cm_host_: Endereço IP ou nome de host do sistema do conetor BlueXP .
+
+
+
+
+.Resultado
+O instalador de classificação BlueXP  instala pacotes, Registra a instalação e instala a classificação BlueXP . A instalação pode levar de 10 a 20 minutos.
+
+Se houver conetividade pela porta 8080 entre a máquina host e a instância do conetor, você verá o progresso da instalação na guia classificação do BlueXP  no BlueXP .
+
+.O que vem a seguir
+Na página Configuração, pode selecionar o local link:task-getting-started-compliance.html["Clusters ONTAP no local"] e link:task-scanning-databases.html["bancos de dados"] que pretende digitalizar.
+
+
+
+== Atualizar o software de classificação BlueXP 
+
+Uma vez que o software de classificação BlueXP  é atualizado com novos recursos regularmente, você deve entrar em uma rotina para verificar se há novas versões periodicamente para se certificar de que você está usando o software e os recursos mais recentes. Você precisará atualizar o software de classificação BlueXP  manualmente porque não há conetividade à Internet para realizar a atualização automaticamente.
+
+.Antes de começar
+* Recomendamos que o software BlueXP  Connector seja atualizado para a versão mais recente disponível. https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Consulte os passos de atualização do conetor"^].
+* A partir da classificação BlueXP  versão 1,24, você pode realizar atualizações para qualquer versão futura do software.
++
+Se o seu software de classificação BlueXP  estiver executando uma versão anterior a 1,24, você poderá atualizar apenas uma versão principal de cada vez. Por exemplo, se você tiver a versão 1,21.x instalada, você pode atualizar apenas para 1,22.x. Se você está algumas versões principais atrás, você precisará atualizar o software várias vezes.
+
+
+
+.Passos
+. Num sistema configurado pela Internet, transfira o software de classificação BlueXP  a partir do https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Site de suporte da NetApp"^]. O arquivo que você deve selecionar é chamado *DataSense-offline-bundle-<version>.tar.gz*.
+. Copie o pacote de software para o host Linux onde a classificação BlueXP  está instalada no site escuro.
+. Descompacte o pacote de software na máquina host, por exemplo:
++
+[source, cli]
+----
+tar -xvf DataSense-offline-bundle-v1.25.0.tar.gz
+----
++
+Isso extrai o arquivo de instalação *cc_onprem_installer.tar.gz*.
+
+. Descompacte o arquivo de instalação na máquina host, por exemplo:
++
+[source, cli]
+----
+tar -xzf cc_onprem_installer.tar.gz
+----
++
+Isso extrai o script de atualização *start_darksite_upgrade.sh* e qualquer software de terceiros necessário.
+
+. Execute o script de atualização na máquina host, por exemplo:
++
+[source, cli]
+----
+start_darksite_upgrade.sh
+----
+
+
+.Resultado
+O software de classificação BlueXP  é atualizado em seu host. A atualização pode levar de 5 a 10 minutos.
+
+Você pode verificar se o software foi atualizado verificando a versão na parte inferior das páginas da IU de classificação do BlueXP .

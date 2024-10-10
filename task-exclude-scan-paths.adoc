@@ -1,0 +1,164 @@
+---
+sidebar: sidebar 
+permalink: task-exclude-scan-paths.html 
+keywords: exclude scans, folders, directories 
+summary: Se você quiser que a classificação do BlueXP  exclua os dados de digitalização que residem em determinados diretórios de origem de dados, você pode adicionar esses nomes de diretório a um arquivo de configuração. Depois de aplicar esta alteração, o motor de classificação BlueXP  excluirá os dados de digitalização nesses diretórios. 
+---
+= Excluir diretórios específicos de exames de classificação do BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se você quiser que a classificação do BlueXP  exclua os dados de digitalização que residem em determinados diretórios de origem de dados, você pode adicionar esses nomes de diretório a um arquivo de configuração. Depois de aplicar esta alteração, o motor de classificação BlueXP  excluirá os dados de digitalização nesses diretórios.
+
+Observe que a classificação BlueXP  é configurada por padrão para excluir dados instantâneos de volume de digitalização, pois esse conteúdo é idêntico ao conteúdo do volume.
+
+Esta funcionalidade está disponível na classificação BlueXP  versão 1,29 e superior (a partir de março de 2024).
+
+
+
+== Fontes de dados compatíveis
+
+A exclusão de diretórios específicos de varreduras de classificação do BlueXP  é compatível com compartilhamentos NFS e CIFS nas seguintes fontes de dados:
+
+* ONTAP no local
+* Cloud Volumes ONTAP
+* Amazon FSX para NetApp ONTAP
+* Azure NetApp Files
+* Compartilhamentos de arquivo geral
+
+
+
+
+== Defina os diretórios a excluir da digitalização
+
+Antes de excluir diretórios da verificação de classificação, você precisa fazer login no sistema de classificação BlueXP  para que você possa editar um arquivo de configuração e executar um script. Veja como link:reference-log-in-to-instance.html["Inicie sessão no sistema de classificação BlueXP "]dependendo se você instalou manualmente o software em uma máquina Linux ou se implantou a instância na nuvem.
+
+[NOTE]
+====
+* Você pode excluir um máximo de 50 caminhos de diretório por sistema de classificação BlueXP .
+* A exclusão de caminhos de diretório pode afetar os tempos de digitalização.
+
+
+====
+.Passos
+. No sistema de classificação BlueXP , vá para "/opt/NetApp/config/custom_Configuration" e abra o `data_provider.yaml` arquivo .
+. Na seção "data_Providers", na linha "Excluir:", digite os caminhos do diretório a serem excluídos. Por exemplo:
++
+....
+exclude:
+- "folder1"
+- "folder2"
+....
++
+Não altere mais nada neste arquivo.
+
+. Salve as alterações no arquivo.
+. Vá para "/opt/NetApp/Datasense/Tools/customer_Configuration/data_Providers" e execute o seguinte script:
++
+ update_data_providers_from_config_file.sh
++
+Este comando compromete os diretórios a serem excluídos da digitalização para o mecanismo de classificação.
+
+
+
+.Resultado
+Todas as verificações subsequentes dos seus dados excluirão a digitalização desses diretórios especificados.
+
+Você pode adicionar, editar ou excluir itens da lista Excluir usando estas mesmas etapas. A lista de exclusão revisada será atualizada depois que você executar o script para confirmar suas alterações.
+
+
+
+== Exemplos
+
+.Configuração 1:
+Todas as pastas que contêm "folder1" em qualquer lugar do nome serão excluídas de todas as fontes de dados.
+
+....
+data_providers:
+   exclude:
+   - "folder1"
+....
+.Resultados esperados para caminhos que serão excluídos:
+* /CVO1/folder1
+* /CVO1/folder1name
+* /CVO1/folder10
+* /CVO1/*folder1
+* /CVO1/-folder1name
+* /CVO1/notfolder10
+* /CVO22/folder1
+* /CVO22/folder1name
+* /CVO22/folder10
+
+
+.Exemplos de caminhos que não serão excluídos:
+* /CVO1/*pasta
+* /CVO1/foldername
+* /CVO22/*folder20
+
+
+.Configuração 2:
+Todas as pastas que contenham "*folder1" apenas no início do nome serão excluídas.
+
+....
+data_providers:
+   exclude:
+   - "\\*folder1"
+....
+.Resultados esperados para caminhos que serão excluídos:
+* /CVO/*folder1
+* /CVO/*folder1name
+* /CVO/*folder10
+
+
+.Exemplos de caminhos que não serão excluídos:
+* /CVO/folder1
+* /CVO/folder1name
+* /CVO/not*folder10
+
+
+.Configuração 3:
+Todas as pastas na fonte de dados "CVO22" que contém "folder1" em qualquer lugar do nome serão excluídas.
+
+....
+data_providers:
+   exclude:
+   - "CVO22/folder1"
+....
+.Resultados esperados para caminhos que serão excluídos:
+* /CVO22/folder1
+* /CVO22/folder1name
+* /CVO22/folder10
+
+
+.Exemplos de caminhos que não serão excluídos:
+* /CVO1/folder1
+* /CVO1/folder1name
+* /CVO1/folder10
+
+
+
+
+== Escapando carateres especiais em nomes de pastas
+
+Se você tiver um nome de pasta que contém um dos seguintes carateres especiais e quiser excluir dados nessa pasta de serem digitalizados, você precisará usar a sequência de escape antes do nome da pasta.
+
+ ., +, *, ?, ^, $, (, ), [, ], {, }, |
+Por exemplo:
+
+Caminho na fonte: `/project/*not_to_scan`
+
+Sintaxe no ficheiro de exclusão: `"\\*not_to_scan"`
+
+
+
+== Veja a lista de exclusão atual
+
+É possível que o conteúdo do `data_provider.yaml` arquivo de configuração seja diferente do que realmente foi confirmado após a execução `update_data_providers_from_config_file.sh` do script. Para exibir a lista atual de diretórios excluídos da verificação de classificação do BlueXP , execute o seguinte comando de "/opt/NetApp/Datasense/Tools/customer_Configuration/data_Providers":
+
+ get_data_providers_configuration.sh

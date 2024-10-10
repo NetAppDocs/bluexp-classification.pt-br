@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: task-managing-repo-scanning-deprecated.html 
+keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan 
+summary: 'Você pode gerenciar como seus dados estão sendo digitalizados em cada um de seus ambientes de trabalho e fontes de dados. Você pode fazer as alterações em uma base "repositório"; o que significa que você pode fazer alterações para cada volume, intervalo, compartilhamento, esquema, usuário, etc., dependendo do tipo de fonte de dados que você está digitalizando.' 
+---
+= Redigitalizar dados para um repositório existente
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A classificação do BlueXP  verifica continuamente seus dados para detetar alterações incrementais nos repositórios que você adicionou. No entanto, leva tempo para o sistema digitalizar todos os ambientes, e não há método para controlar a ordem dos repositórios que são digitalizados. Se você precisar redigitalizar um repositório específico imediatamente para que as alterações sejam refletidas no sistema, você pode selecionar o repositório e redigitá-lo. Isso permite que você priorize a digitalização de determinados dados antes de outros dados. Após a ação de redigitalização, o repositório selecionado volta a ser verificado sob a programação de classificação normal do BlueXP .
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+A classificação BlueXP  suporta a verificação de diretórios em todos os tipos de fonte de dados, exceto para o Amazon S3 e bancos de dados. Atualmente, suportamos a redigitalização de um único diretório (pasta ou compartilhamento) ou vários diretórios. O suporte futuro incluirá a redigitalização de tipos de repositório adicionais (arquivos, bancos de dados, etc.).
+
+* Ao digitalizar novamente um diretório, todos os arquivos dentro do diretório são reconfigurados, mas as subpastas dentro do diretório não são reconfiguradas.
+* Ao Escanear um compartilhamento, apenas os metadados do compartilhamento são redefinidos.
+* Um máximo de 1K itens podem ser reenlatados de cada vez.
+
+
+.Passos
+. No painel resultados da investigação de dados, selecione as pastas ou compartilhamentos que você deseja redigitalizar e clique em *Rescan*.
++
+image:screenshot_compliance_rescan_directory.png["Uma captura de tela mostrando como selecionar e redigitalizar um diretório."]
+
+. Na caixa de diálogo _Rescan Directory_, clique em *Rescan*.
+
+
+Observe que você também pode redigitalizar um diretório individual ao visualizar os detalhes dos metadados. Basta clicar em *Rescan*.
+
+image:screenshot_compliance_rescan_single_file.png["Uma captura de tela mostrando como redigitalizar uma única pasta ou compartilhar."]

@@ -1,0 +1,253 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-cloud-compliance.html 
+keywords: cloud compliance, bluexp, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, bluexp classification, classification, cloud data sense 
+summary: Conclua algumas etapas para implantar a classificação do BlueXP  na nuvem. O BlueXP  implantará a instância de classificação BlueXP  na mesma rede de provedores de nuvem que o BlueXP  Connector. 
+---
+= Implante a classificação do BlueXP  na nuvem usando o BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Conclua algumas etapas para implantar a classificação do BlueXP  na nuvem. O BlueXP  implantará a instância de classificação BlueXP  na mesma rede de provedores de nuvem que o BlueXP  Connector.
+
+Observe que você também link:task-deploy-compliance-onprem.html["Instale a classificação BlueXP  em um host Linux que tenha acesso à Internet"]pode . Esse tipo de instalação pode ser uma boa opção se você preferir digitalizar sistemas ONTAP on-premises usando uma instância de classificação BlueXP  que também está localizada no local, mas isso não é um requisito. O software funciona exatamente da mesma forma, independentemente do método de instalação que você escolher.
+
+
+
+== Início rápido
+
+Comece rapidamente seguindo estas etapas ou role para baixo até as seções restantes para obter detalhes completos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Crie um conetor
+[role="quick-margin-para"]
+Se você ainda não tiver um conetor, crie um conetor agora. Consulte https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Criando um conetor na AWS"^] https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Criando um conetor no Azure"^] , , ou https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Criando um conetor no GCP"^].
+
+[role="quick-margin-para"]
+Você também pode https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Instale o conetor no local"^] em um host Linux em sua rede ou em um host Linux na nuvem.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Reveja os pré-requisitos
+[role="quick-margin-para"]
+Certifique-se de que seu ambiente atenda aos pré-requisitos. Isso inclui acesso de saída à Internet, por exemplo, conetividade entre o conetor e a classificação BlueXP  na porta 443 e muito mais. <<Reveja os pré-requisitos,Veja a lista completa>>.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Implantar a classificação BlueXP 
+[role="quick-margin-para"]
+Inicie o assistente de instalação para implantar a instância de classificação do BlueXP  na nuvem.
+
+
+
+== Crie um conetor
+
+Se você ainda não tiver um conetor, crie um conetor no seu provedor de nuvem.  https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Criando um conetor na AWS"^]Consulte ou https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Criando um conetor no Azure"^], ou https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Criando um conetor no GCP"^]. Na maioria dos casos, você provavelmente terá um conetor configurado antes de tentar ativar a classificação BlueXP  porque a maioria https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-a-connector-is-required["Os recursos do BlueXP  exigem um conetor"], mas há casos em que você precisará configurar um agora.
+
+Existem alguns cenários em que você precisa usar um conetor que é implantado em um provedor de nuvem específico:
+
+* Ao digitalizar dados no Cloud Volumes ONTAP nos buckets do AWS ou do Amazon FSX for ONTAP, você usa um conetor na AWS.
+* Ao digitalizar dados no Cloud Volumes ONTAP no Azure ou no Azure NetApp Files, você usa um conetor no Azure.
++
+** Para o Azure NetApp Files, ele deve ser implantado na mesma região que os volumes que você deseja analisar.
+
+
+* Ao digitalizar dados no Cloud Volumes ONTAP no GCP, você usa um conetor no GCP.
+
+
+Os sistemas ONTAP locais, compartilhamentos de arquivos NetApp e bancos de dados podem ser verificados usando qualquer um desses conetores de nuvem.
+
+Observe que você também pode https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Instale o conetor no local"^] em um host Linux em sua rede ou na nuvem. Alguns usuários que planejam instalar a classificação do BlueXP  no local também podem optar por instalar o conetor no local.
+
+Como você pode ver, pode haver algumas situações em que você precisa usar https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#multiple-connectors["Vários conetores"].
+
+
+
+=== Apoio governamental na região
+
+A classificação do BlueXP  é suportada quando o conetor é implantado em uma região governamental (AWS GovCloud, Azure Gov ou Azure DoD). Quando implementada desta forma, a classificação BlueXP  tem as seguintes restrições:
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-restricted-mode.html["Consulte mais informações sobre como implantar o conetor em uma região do governo"^].
+
+
+
+== Reveja os pré-requisitos
+
+Revise os pré-requisitos a seguir para garantir que você tenha uma configuração compatível antes de implantar a classificação do BlueXP  na nuvem. Quando você implementa a classificação BlueXP  na nuvem, ela está localizada na mesma sub-rede que o conetor.
+
+Ative o acesso de saída à Internet a partir da classificação BlueXP :: A classificação BlueXP  requer acesso de saída à Internet. Se a sua rede virtual ou física utilizar um servidor proxy para acesso à Internet, certifique-se de que a instância de classificação do BlueXP  tem acesso de saída à Internet para contactar os seguintes endpoints. O proxy deve ser não transparente - atualmente não oferecemos suporte a proxies transparentes.
++
+--
+Consulte a tabela apropriada abaixo, dependendo se você está implantando a classificação do BlueXP  na AWS, no Azure ou no GCP.
+
+--
+
+
+[role="tabbed-block"]
+====
+.Endpoints necessários para a AWS
+--
+[cols="43,57"]
+|===
+| Endpoints | Finalidade 
+
+
+| https://api.BlueXP .NetApp.com | Comunicação com o serviço BlueXP , que inclui contas NetApp. 
+
+
+| https://NetApp-cloud-account.auth0.com \https://auth0.com | Comunicação com o site BlueXP  para autenticação centralizada de usuários. 
+
+
+| https://cloud-compliance-support-NetApp.s3.us-west-2.amazonaws.com \https://hub.docker.com \https://auth.docker.io \https://registry-1.docker.io \https://index.docker.io/ \https://dseasb33srnrn.cloudfront.net/ \https://production.cloudflare.docker.com/ | Fornece acesso a imagens de software, manifestos e modelos. 
+
+
+| \https://kinesis.us-east-1.amazonaws.com | Permite que o NetApp transmita dados de Registros de auditoria. 
+
+
+| \https://cognito-idp.us-east-1.amazonaws.com \https://cognito-identity.us-east-1.amazonaws.com \https://user-feedback-store-prod.s3.us-west-2.amazonaws.com \https://customer-data-production.s3.us-west-2.amazonaws.com | Permite a classificação do BlueXP  para acessar e baixar manifestos e modelos, e para enviar logs e métricas. 
+|===
+--
+.Endpoints necessários para o Azure
+--
+[cols="43,57"]
+|===
+| Endpoints | Finalidade 
+
+
+| https://api.BlueXP .NetApp.com | Comunicação com o serviço BlueXP , que inclui contas NetApp. 
+
+
+| https://NetApp-cloud-account.auth0.com \https://auth0.com | Comunicação com o site BlueXP  para autenticação centralizada de usuários. 
+
+
+| https://support.compliance.api.BlueXP .NetApp.com/ \https://hub.docker.com \https://auth.docker.io \https://registry-1.docker.io \https://index.docker.io/ \https://dseasb33srnrn.cloudfront.net/ \https://production.cloudflare.docker.com/ | Fornece acesso a imagens de software, manifestos, modelos e para enviar logs e métricas. 
+
+
+| https://support.compliance.api.BlueXP .NetApp.com/ | Permite que o NetApp transmita dados de Registros de auditoria. 
+|===
+--
+.Pontos de extremidade necessários para o GCP
+--
+[cols="43,57"]
+|===
+| Endpoints | Finalidade 
+
+
+| https://api.BlueXP .NetApp.com | Comunicação com o serviço BlueXP , que inclui contas NetApp. 
+
+
+| https://NetApp-cloud-account.auth0.com \https://auth0.com | Comunicação com o site BlueXP  para autenticação centralizada de usuários. 
+
+
+| https://support.compliance.api.BlueXP .NetApp.com/ \https://hub.docker.com \https://auth.docker.io \https://registry-1.docker.io \https://index.docker.io/ \https://dseasb33srnrn.cloudfront.net/ \https://production.cloudflare.docker.com/ | Fornece acesso a imagens de software, manifestos, modelos e para enviar logs e métricas. 
+
+
+| https://support.compliance.api.BlueXP .NetApp.com/ | Permite que o NetApp transmita dados de Registros de auditoria. 
+|===
+--
+====
+Certifique-se de que o BlueXP  tem as permissões necessárias:: Certifique-se de que o BlueXP  tenha permissões para implantar recursos e criar grupos de segurança para a instância de classificação do BlueXP . Você pode encontrar as permissões de BlueXP  mais recentes no https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html["As políticas fornecidas pela NetApp"^].
+Certifique-se de que o conetor BlueXP  pode aceder à classificação BlueXP :: Garanta a conetividade entre o conetor e a instância de classificação BlueXP . O grupo de segurança do conetor deve permitir tráfego de entrada e saída pela porta 443 de e para a instância de classificação BlueXP . Essa conexão permite a implantação da instância de classificação do BlueXP  e permite exibir informações nas guias conformidade e Governança. A classificação do BlueXP  é compatível com regiões governamentais na AWS e no Azure.
++
+--
+Regras adicionais de grupo de segurança de entrada e saída são necessárias para implantações AWS e AWS GovCloud.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Regras para o conetor na AWS"^]Consulte para obter detalhes.
+
+Regras adicionais de grupo de segurança de entrada e saída são necessárias para implantações do Azure e do Azure Government.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Regras para o conetor no Azure"^]Consulte para obter detalhes.
+
+--
+Certifique-se de que você pode manter a classificação BlueXP  em execução:: A instância de classificação do BlueXP  precisa permanecer ligada para verificar continuamente seus dados.
+Garanta a conetividade do navegador da Web com a classificação BlueXP :: Depois que a classificação do BlueXP  estiver ativada, certifique-se de que os usuários acessem a interface do BlueXP  a partir de um host que tenha uma conexão com a instância de classificação do BlueXP .
++
+--
+A instância de classificação do BlueXP  usa um endereço IP privado para garantir que os dados indexados não sejam acessíveis à Internet. Como resultado, o navegador da Web que você usa para acessar o BlueXP  deve ter uma conexão com esse endereço IP privado. Essa conexão pode vir de uma conexão direta com seu provedor de nuvem (por exemplo, uma VPN) ou de um host que esteja dentro da mesma rede que a instância de classificação BlueXP .
+
+--
+Verifique os limites do seu vCPU:: Certifique-se de que o limite de vCPU do seu provedor de nuvem permita a implantação de uma instância com o número necessário de núcleos. Você precisará verificar o limite do vCPU para a família de instâncias relevante na região em que o BlueXP  está sendo executado. link:concept-cloud-compliance.html#the-bluexp-classification-instance["Consulte os tipos de instância necessários"].
++
+--
+Consulte os links a seguir para obter mais detalhes sobre os limites do vCPU:
+
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html["Documentação da AWS: Cotas de serviço do Amazon EC2"^]
+* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas["Documentação do Azure: Cotas de vCPU de máquina virtual"^]
+* https://cloud.google.com/compute/quotas["Documentação do Google Cloud: Cotas de recursos"^]
+
+
+--
+
+
+
+
+== Implante a classificação do BlueXP  na nuvem
+
+Siga estas etapas para implantar uma instância de classificação do BlueXP  na nuvem. O conetor irá implantar a instância na nuvem e, em seguida, instalar o software de classificação BlueXP  nessa instância.
+
+Em regiões onde o tipo de instância padrão não está disponível, a classificação BlueXP  é executada em um link:reference-instance-types.html["tipo de instância alternativa"].
+
+[role="tabbed-block"]
+====
+.Implante na AWS
+--
+.Passos
+. No menu de navegação esquerdo do BlueXP , clique em *Governança > classificação*.
++
+image:screenshot_cloud_compliance_deploy_start.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
+
+. Clique em *Activate Data Sense*.
+. Na página _Installation_, clique em *Deploy > Deploy* para usar o tamanho da instância "grande" e iniciar o assistente de implantação na nuvem.
+. O assistente exibe o progresso à medida que passa pelas etapas de implantação. Ele irá parar e pedir a entrada se ele se deparar com quaisquer problemas.
++
+image:screenshot_cloud_compliance_wizard_start.png["Uma captura de tela do assistente de classificação do BlueXP  para implantar uma nova instância."]
+
+. Quando a instância for implantada e a classificação BlueXP  estiver instalada, clique em *Continue to Configuration* para ir para a página _Configuration_.
+
+
+--
+.Implantar no Azure
+--
+.Passos
+. No menu de navegação esquerdo do BlueXP , clique em *Governança > classificação*.
+. Clique em *Activate Data Sense*.
++
+image:screenshot_cloud_compliance_deploy_start.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
+
+. Clique em *Deploy* para iniciar o assistente de implantação na nuvem.
++
+image:screenshot_cloud_compliance_deploy_cloud.png["Uma captura de tela da seleção do botão para implantar a classificação do BlueXP  na nuvem."]
+
+. O assistente exibe o progresso à medida que passa pelas etapas de implantação. Ele irá parar e pedir a entrada se ele se deparar com quaisquer problemas.
++
+image:screenshot_cloud_compliance_wizard_start.png["Uma captura de tela do assistente de classificação do BlueXP  para implantar uma nova instância."]
+
+. Quando a instância for implantada e a classificação BlueXP  estiver instalada, clique em *Continue to Configuration* para ir para a página _Configuration_.
+
+
+--
+.Implantar no Google Cloud
+--
+.Passos
+. No menu de navegação esquerdo do BlueXP , clique em *Governança > classificação*.
+. Clique em *Activate Data Sense*.
++
+image:screenshot_cloud_compliance_deploy_start.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
+
+. Clique em *Deploy* para iniciar o assistente de implantação na nuvem.
++
+image:screenshot_cloud_compliance_deploy_cloud.png["Uma captura de tela da seleção do botão para implantar a classificação do BlueXP  na nuvem."]
+
+. O assistente exibe o progresso à medida que passa pelas etapas de implantação. Ele irá parar e pedir a entrada se ele se deparar com quaisquer problemas.
++
+image:screenshot_cloud_compliance_wizard_start.png["Uma captura de tela do assistente de classificação do BlueXP  para implantar uma nova instância."]
+
+. Quando a instância for implantada e a classificação BlueXP  estiver instalada, clique em *Continue to Configuration* para ir para a página _Configuration_.
+
+
+--
+====
+.Resultado
+O BlueXP  implanta a instância de classificação do BlueXP  em seu provedor de nuvem.
+
+As atualizações para o BlueXP  Connector e o software de classificação BlueXP  são automatizadas, desde que as instâncias tenham conetividade com a Internet.
+
+.O que vem a seguir
+Na página Configuração, pode selecionar as fontes de dados que pretende digitalizar.

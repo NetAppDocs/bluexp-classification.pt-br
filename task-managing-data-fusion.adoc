@@ -1,0 +1,255 @@
+---
+sidebar: sidebar 
+permalink: task-managing-data-fusion.html 
+keywords: data identifiers, personal data, sensitive personal data, compliance, data fusion, data sense 
+summary: 'A classificação BlueXP  fornece muitas maneiras de adicionar uma lista personalizada de "dados pessoais" que a classificação BlueXP  identificará em futuras verificações, dando a você uma visão completa sobre onde os dados potencialmente confidenciais residem em todos os arquivos de suas organizações.' 
+---
+= Adicione identificadores de dados pessoais às suas análises de classificação do BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A classificação BlueXP  fornece muitas maneiras de adicionar uma lista personalizada de "dados pessoais" que a classificação BlueXP  identificará em futuras verificações, dando a você uma visão completa sobre onde os dados potencialmente confidenciais residem em _all_ arquivos de suas organizações.
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+* Você pode adicionar identificadores exclusivos com base em colunas específicas em bancos de dados que você está digitalizando.
+* Você pode adicionar palavras-chave personalizadas a partir de um arquivo de texto - essas palavras são identificadas dentro de seus dados.
+* Você pode adicionar um padrão pessoal usando uma expressão regular (regex) -- o regex é adicionado aos padrões predefinidos existentes.
+* Você pode adicionar categorias personalizadas para identificar onde categorias específicas de informações são encontradas em seus dados.
+
+
+Todos esses mecanismos para adicionar critérios de digitalização personalizados são suportados em todos os idiomas.
+
+
+NOTE: As capacidades descritas nesta secção só estão disponíveis se tiver optado por efetuar uma análise de classificação completa nas suas fontes de dados. As fontes de dados que tiveram uma varredura somente de mapeamento não mostram detalhes no nível do arquivo.
+
+
+
+== Adicione identificadores de dados pessoais personalizados a partir de seus bancos de dados
+
+Um recurso que chamamos _Data Fusion_ permite que você analise os dados de suas organizações para identificar se identificadores exclusivos de seus bancos de dados são encontrados em qualquer uma de suas outras fontes de dados. Você pode escolher os identificadores adicionais que a classificação do BlueXP  procurará em suas verificações selecionando uma coluna específica, ou colunas, em uma tabela de banco de dados. Por exemplo, o diagrama abaixo mostra como o Data Fusion é usado para verificar seus volumes, buckets e bancos de dados para ocorrências de todas as suas IDs de cliente do seu banco de dados Oracle.
+
+image:diagram_compliance_data_fusion.png["Um diagrama mostrando como o conteúdo de seus bancos de dados pode ser usado como uma fonte para identificar arquivos que contêm os mesmos dados."]
+
+Como você pode ver, dois IDs de cliente exclusivos foram encontrados em dois volumes e em um bucket do S3. Quaisquer correspondências em tabelas de banco de dados também serão identificadas.
+
+Observe que, uma vez que você está digitalizando seus próprios bancos de dados, qualquer idioma em que seus dados estejam armazenados será usado para identificar dados em futuras análises de classificação do BlueXP .
+
+.Passos
+É necessário ter link:task-scanning-databases.html#add-the-database-server["adicionado pelo menos um servidor de banco de dados"^] que classificar BlueXP  antes de poder adicionar fontes de dados Fusion.
+
+. Na página Configuração, clique em *Manage Data Fusion* no banco de dados onde residem os dados de origem.
++
+image:screenshot_compliance_manage_data_fusion.png["Uma captura de tela da seleção do botão Gerenciar Fusion de dados para adicionar uma coluna de origem."]
+
+. Clique em *Adicionar fonte de dados Fusion* na próxima página.
+. Na página _Adicionar origem do Fusion de dados_:
++
+.. Selecione o esquema do banco de dados no menu suspenso.
+.. Insira o nome da tabela nesse esquema.
+.. Insira a coluna, ou colunas, que contêm os identificadores exclusivos que você deseja usar.
++
+Ao adicionar várias colunas, insira o nome de cada coluna ou nome de exibição de tabela em uma linha separada.
+
++
+image:screenshot_compliance_add_data_fusion.png["Uma captura de tela de identificação do esquema, tabela e coluna para a origem do data Fusion."]
+
+
+
+. Clique em *Adicionar fonte de Fusion de dados*.
++
+image:screenshot_compliance_data_fusion_list.png["Uma captura de tela de todas as referências de origem de dados que você configurou com o Data Fusion."]
+
+
+
+.Resultados
+Após a próxima verificação, os resultados incluirão essas novas informações no Painel de conformidade, na seção "resultados pessoais", e na página de investigação no filtro "dados pessoais". O nome usado para o classificador aparece na lista de filtros, por `Customers.CustomerID` exemplo .
+
+image:screenshot_add_data_fusion_result.png["Uma captura de tela mostrando um exemplo de resultados do Data Fusion no painel resultados da investigação."]
+
+
+
+=== Excluir uma fonte de Data Fusion
+
+Se, em algum momento, você decidir não digitalizar seus arquivos usando uma determinada fonte de dados Fusion, você pode selecionar a linha de origem na página de inventário do Data Fusion e clicar em *Excluir fonte de dados Fusion*.
+
+image:screenshot_compliance_delete_data_fusion.png["Uma captura de tela mostrando como remover uma fonte de dados do Fusion."]
+
+
+
+== Adicione palavras-chave personalizadas a partir de uma lista de palavras
+
+Você pode adicionar palavras-chave personalizadas à classificação do BlueXP  para que ele identifique onde essas informações são encontradas em seus dados. Você adiciona as palavras-chave apenas inserindo cada palavra que você quer que a classificação BlueXP  reconheça. As palavras-chave são adicionadas às palavras-chave pré-definidas existentes que a classificação BlueXP  já usa, e os resultados serão visíveis na seção padrões pessoais.
+
+Por exemplo, você pode querer ver onde nomes de produto internos são mencionados em todos os seus arquivos para garantir que esses nomes não estejam acessíveis em locais que não sejam seguros.
+
+Depois de atualizar as palavras-chave personalizadas, a classificação BlueXP  reiniciará a digitalização de todas as fontes de dados. Após a conclusão do exame, os novos resultados serão apresentados no Painel de controlo de conformidade da classificação do BlueXP , na secção "resultados pessoais", e na página de investigação no filtro "dados pessoais".
+
+.Passos
+. Na guia _Configurações de classificação_, clique em *Adicionar novo classificador* para iniciar o assistente _Adicionar classificador personalizado_.
++
+image:screenshot_compliance_add_classifier_button.png["Uma captura de tela mostrando como iniciar o assistente Adicionar Classificador personalizado."]
+
+. Na página _Selecionar tipo_, digite o nome do classificador, forneça uma breve descrição, selecione *Identificador Pessoal* e clique em *Avançar*.
++
+O nome inserido aparecerá na IU de classificação do BlueXP  como o título dos arquivos digitalizados que correspondem aos requisitos do classificador e como o nome do filtro na página de investigação.
+
++
+Você também pode marcar a caixa "Máscara de resultados detetados no sistema" para que o resultado completo não apareça na IU. Por exemplo, você pode querer fazer isso para ocultar números completos de cartão de crédito ou dados pessoais semelhantes (a máscara aparecerá na interface do usuário como esta: "Pass:[****] pass:[****] pass:[*****]" 3434).
+
++
+image:screenshot_select_classifier_type2.png["Uma captura de tela mostrando como nomear o classificador e selecionar o tipo de classificador."]
+
+. Na página _Select Data Analysis Tool_, selecione *Custom Keywords* como o método que você deseja usar para definir o classificador e clique em *Next*.
++
+image:screenshot_select_classifier_tool_keywords.png["Uma captura de tela mostrando a seleção de palavras-chave personalizadas como a ferramenta que a classificação BlueXP  usará para construir o padrão."]
+
+. Na página _Create Logic_, insira as palavras-chave que deseja reconhecer - cada palavra em uma linha separada - e clique em *Validar*.
++
+A captura de tela abaixo mostra os nomes de produto internos (diferentes tipos de corujas). A pesquisa de classificação BlueXP  para esses itens não é sensível a maiúsculas e minúsculas.
+
++
+image:screenshot_select_classifier_create_logic_keyword.png["Uma captura de tela de inserir as palavras-chave para seu classificador personalizado."]
+
+. Clique em *Done* e a classificação BlueXP  começa a redigitalizar seus dados.
+
+
+.Resultados
+Após a conclusão da verificação, os resultados incluirão essas novas informações no Painel de conformidade, na seção "resultados pessoais", e na página de investigação no filtro "dados pessoais".
+
+image:screenshot_add_keywords_result.png["Uma captura de tela mostrando um exemplo de resultados personalizados de palavras-chave no painel resultados da investigação."]
+
+Como você pode ver, o nome do classificador é usado como o nome no painel resultados pessoais. Desta forma, você pode ativar muitos grupos diferentes de palavras-chave e ver os resultados para cada grupo.
+
+
+
+== Adicione identificadores de dados pessoais personalizados usando uma regex
+
+Você pode adicionar um padrão pessoal para identificar informações específicas em seus dados usando uma expressão regular personalizada (regex). Isso permite que você crie uma nova regex personalizada para identificar novos elementos de informações pessoais que ainda não existem no sistema. O regex é adicionado aos padrões pré-definidos existentes que a classificação BlueXP  já usa, e os resultados serão visíveis na seção padrões pessoais.
+
+Por exemplo, você pode querer ver onde suas IDs de produto internas são mencionadas em todos os seus arquivos. Se a ID do produto tiver uma estrutura clara, por exemplo, é um número de 12 dígitos que começa com 201, você pode usar o recurso regex personalizado para pesquisá-lo em seus arquivos. A expressão regular para este exemplo é * B201 d'9*.
+
+Depois de adicionar o regex, a classificação BlueXP  reiniciará a digitalização de todas as fontes de dados. Após a conclusão do exame, os novos resultados serão apresentados no Painel de controlo de conformidade da classificação do BlueXP , na secção "resultados pessoais", e na página de investigação no filtro "dados pessoais".
+
+Se você precisar de ajuda para construir a expressão regular, https://regex101.com/["Expressões regulares 101"^] consulte . Escolha *Python* para o sabor para ver os tipos de resultados a classificação BlueXP  irá corresponder a partir da expressão regular. O https://pythonium.net/regex["Página do Python Regex Tester"^] também é útil ao exibir uma representação gráfica de seus padrões.
+
+
+NOTE: Atualmente não permitimos o uso de sinalizadores de padrão ao criar um regex - isso significa que você não deve usar "/".
+
+.Passos
+. Na guia _Configurações de classificação_, clique em *Adicionar novo classificador* para iniciar o assistente _Adicionar classificador personalizado_.
++
+image:screenshot_compliance_add_classifier_button.png["Uma captura de tela mostrando como iniciar o assistente Adicionar Classificador personalizado."]
+
+. Na página _Selecionar tipo_, digite o nome do classificador, forneça uma breve descrição, selecione *Identificador Pessoal* e clique em *Avançar*.
++
+O nome inserido aparecerá na IU de classificação do BlueXP  como o título dos arquivos digitalizados que correspondem aos requisitos do classificador e como o nome do filtro na página de investigação. Você também pode marcar a caixa "Máscara de resultados detetados no sistema" para que o resultado completo não apareça na IU. Por exemplo, você pode querer fazer isso para ocultar números completos de cartão de crédito ou dados pessoais semelhantes.
+
++
+image:screenshot_select_classifier_type.png["Uma captura de tela mostrando como nomear o classificador e selecionar o tipo de classificador."]
+
+. Na página _Select Data Analysis Tool_, selecione *Custom regular expression* como o método que você deseja usar para definir o classificador e clique em *Next*.
++
+image:screenshot_select_classifier_tool_regex.png["Uma captura de tela mostrando a seleção de expressão regular personalizada como a ferramenta que a classificação BlueXP  usará para construir o padrão."]
+
+. Na página _Create Logic_, insira a expressão regular e quaisquer palavras de proximidade e clique em *Done*.
++
+.. Você pode inserir qualquer expressão regular legal. Clique no botão *Validar* para que a classificação BlueXP  verifique se a expressão regular é válida e se ela não é muito ampla -- o que significa que retornará muitos resultados.
+.. Opcionalmente, você pode inserir algumas palavras de proximidade para ajudar a refinar a precisão dos resultados. Estas são palavras que normalmente serão encontradas dentro de 300 carateres do padrão que você está procurando (antes ou depois do padrão encontrado). Introduza cada palavra ou frase numa linha separada.
++
+image:screenshot_select_classifier_create_logic_regex.png["Uma captura de tela de inserir as palavras regex e de proximidade para o seu classificador personalizado."]
+
+
+
+
+
+.Resultados
+O classificador é adicionado e a classificação BlueXP  começa a redigitalizar todas as suas fontes de dados. Você será retornado à página Classifiers personalizados, onde você pode exibir o número de arquivos que correspondem ao seu novo classificador. Os resultados da digitalização de todas as suas fontes de dados demorarão algum tempo, dependendo do número de arquivos que precisam ser digitalizados.
+
+image:screenshot_personal_info_regex_added.png["Uma captura de tela mostrando os resultados de um novo classificador regex sendo adicionado ao sistema com a varredura em andamento."]
+
+
+
+== Adicionar categorias personalizadas
+
+A classificação BlueXP  leva os dados que digitaliza e divide-os em diferentes tipos de categorias. Categorias são tópicos baseados na análise de inteligência artificial do conteúdo e metadados de cada arquivo. link:reference-private-data-categories.html#types-of-categories["Consulte a lista de categorias predefinidas"].
+
+As categorias podem ajudá-lo a entender o que está acontecendo com seus dados, mostrando os tipos de informações que você tem. Por exemplo, uma categoria como _currículos_ ou _contratos de funcionários_ pode incluir dados confidenciais. Ao investigar os resultados, você pode descobrir que os contratos de funcionários são armazenados em um local inseguro. Você pode então corrigir esse problema.
+
+Você pode adicionar categorias personalizadas à classificação do BlueXP  para que você possa identificar onde categorias de informações exclusivas para o seu data Estate são encontradas em seus dados. Você adiciona cada categoria criando arquivos de "treinamento" que contêm as categorias de dados que você deseja identificar e, em seguida, fazer com que a classificação BlueXP  analise esses arquivos para "aprender" através da IA para que ele possa identificar esses dados em suas fontes de dados. As categorias são adicionadas às categorias predefinidas existentes que a classificação BlueXP  já identifica e os resultados são visíveis na seção categorias.
+
+Por exemplo, você pode querer ver onde os arquivos de instalação compatados no formato .gz estão localizados em seus arquivos para que você possa removê-los, se necessário.
+
+Depois de atualizar as categorias personalizadas, a classificação BlueXP  reiniciará a digitalização de todas as fontes de dados. Após a conclusão do exame, os novos resultados serão apresentados no Painel de controlo de conformidade da classificação BlueXP , na secção "categorias", e na página de investigação no filtro "Categoria". link:task-controlling-private-data.html#view-files-by-categories["Veja como exibir arquivos por categorias"].
+
+.O que você vai precisar
+Você precisará criar um mínimo de 25 arquivos de treinamento que contenham amostras das categorias de dados que você deseja que a classificação BlueXP  reconheça. Os seguintes tipos de arquivo são suportados:
+
+`+.CSV, .DOC, .DOCX, .GZ, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
+
+Os arquivos devem ter no mínimo 100 bytes e devem estar localizados em uma pasta acessível pela classificação BlueXP .
+
+.Passos
+. Na guia _Configurações de classificação_, clique em *Adicionar novo classificador* para iniciar o assistente _Adicionar classificador personalizado_.
++
+image:screenshot_compliance_add_classifier_button.png["Uma captura de tela mostrando como iniciar o assistente Adicionar Classificador personalizado."]
+
+. Na página _Selecionar tipo_, digite o nome do classificador, forneça uma breve descrição, selecione *Categoria* e clique em *Avançar*.
++
+O nome inserido aparecerá na IU de classificação do BlueXP  como o título dos arquivos digitalizados que correspondem à categoria de dados que você está definindo e como o nome do filtro na página de investigação.
+
++
+image:screenshot_select_classifier_category.png["Uma captura de tela mostrando como nomear o classificador e selecionar o tipo de classificador."]
+
+. Na página _Create Logic_, certifique-se de que os arquivos de aprendizagem estão preparados e clique em *Select Files*.
++
+image:screenshot_category_create_logic.png["Uma captura de tela da página criar lógica, onde você adiciona os arquivos que contêm dados com os quais deseja que a classificação BlueXP  aprenda."]
+
+. Introduza o endereço IP do volume e o caminho em que os ficheiros de formação estão localizados e clique em *Add*.
++
+image:screenshot_category_add_files.png["Uma captura de tela mostrando como inserir a localização dos arquivos de treinamento."]
+
+. Verifique se os arquivos de treinamento foram reconhecidos pela classificação BlueXP . Clique no *x* para remover quaisquer arquivos de treinamento que não atendam aos requisitos. Em seguida, clique em *Concluído*.
++
+image:screenshot_category_files_added.png["Uma captura de tela mostrando os arquivos que a classificação BlueXP  usará como arquivos de treinamento que definem a nova categoria."]
+
+
+
+.Resultados
+A nova categoria é criada conforme definido pelos arquivos de treinamento e adicionada à classificação BlueXP . Em seguida, a classificação BlueXP  começa a redigitalizar todas as suas fontes de dados para identificar arquivos que se encaixam nesta nova categoria. Você será retornado à página Classifiers personalizados, onde você pode ver o número de arquivos que correspondem à sua nova categoria. Os resultados da digitalização de todas as suas fontes de dados demorarão algum tempo, dependendo do número de arquivos que precisam ser digitalizados.
+
+
+
+== Veja os resultados dos seus classificadores personalizados
+
+Você pode exibir os resultados de qualquer um dos seus classificadores personalizados no Painel de conformidade e na página de investigação. Por exemplo, esta captura de tela mostra as informações correspondentes no Painel de conformidade na seção "resultados pessoais".
+
+image:screenshot_add_regex_result.png["Uma captura de tela mostrando um exemplo de resultados de regex personalizados no painel de resultados da investigação."]
+
+Clique no image:button_arrow_investigate.png["círculo com uma seta"] botão para ver os resultados detalhados na página de investigação.
+
+Além disso, todos os resultados do classificador personalizado aparecem na guia classificadores personalizados e os 6 melhores resultados do classificador personalizado são exibidos no Painel de conformidade, conforme mostrado abaixo.
+
+image:screenshot_custom_classifier_top_5.png["Uma captura de tela mostrando os 3 melhores classificadores personalizados com base nos resultados retornados."]
+
+
+
+== Gerenciar classificadores personalizados
+
+Você pode alterar qualquer um dos classificadores personalizados que você criou usando o botão *Editar classificador*.
+
+
+TIP: Neste momento, não é possível editar classificadores Data Fusion.
+
+E se você decidir, em algum momento posterior, que não precisa da classificação do BlueXP  para identificar os padrões personalizados que você adicionou, você pode usar o botão *Excluir classificador* para remover cada item.
+
+image:screenshot_custom_classifiers_manage.png["Uma captura de tela da página classificadores personalizados com os botões para editar e excluir um classificador."]

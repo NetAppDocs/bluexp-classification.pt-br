@@ -1,0 +1,118 @@
+---
+sidebar: sidebar 
+permalink: task-managing-repo-scanning.html 
+keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification, bluexp 
+summary: 'Você pode gerenciar como seus dados estão sendo digitalizados em cada um de seus ambientes de trabalho e fontes de dados na classificação BlueXP . Você pode fazer as alterações em uma base "repositório"; o que significa que você pode fazer alterações para cada volume, intervalo, compartilhamento, esquema, usuário, etc., dependendo do tipo de fonte de dados que você está digitalizando.' 
+---
+= Altere as configurações de digitalização para seus repositórios
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode gerenciar como seus dados estão sendo digitalizados em cada um de seus ambientes de trabalho e fontes de dados. Você pode fazer as alterações em uma base "repositório"; o que significa que você pode fazer alterações para cada volume, esquema, usuário, etc., dependendo do tipo de fonte de dados que você está digitalizando.
+
+Algumas das coisas que você pode alterar são se um repositório é digitalizado ou não e se a classificação BlueXP  está executando um link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans["digitalização de mapeamento ou uma digitalização de classificação  de mapeamento"]. Você também pode pausar e retomar a digitalização, por exemplo, se precisar parar de digitalizar um volume por um período de tempo.
+
+
+
+== Veja o status da digitalização para seus repositórios
+
+Você pode visualizar os repositórios individuais que a classificação do BlueXP  está digitalizando (volumes, buckets, etc.) para cada ambiente de trabalho e fonte de dados. Além disso, você pode ver quantos foram "mapeados", e quantos foram "classificados". A classificação leva mais tempo, pois a identificação completa de AI está sendo executada em todos os dados.
+
+Pode visualizar o estado de digitalização de cada ambiente de trabalho na página Configuração:
+
+* *Inicializando* (ponto azul claro): A configuração de mapa ou classificação é ativada. Isso aparece por alguns segundos antes de iniciar o status "fila pendente".
+* *Fila pendente* (ponto laranja): A tarefa de digitalização está aguardando para ser listada na fila de digitalização.
+* *Enfileirada* (ponto laranja): A tarefa foi adicionada com êxito à fila de digitalização. O sistema iniciará o mapeamento ou a classificação do volume quando chegar a sua vez na fila.
+* *Running* (ponto verde): A tarefa de digitalização, que estava na fila, agora está sendo feita no repositório de armazenamento selecionado.
+* *Concluído* (ponto verde): A verificação do repositório de armazenamento está concluída.
+* *Pausado* (ponto cinza): Você selecionou a opção "Pausa" para pausar a digitalização. Embora as alterações no volume não sejam apresentadas no sistema, as informações lidas continuam a ser apresentadas.
+* *Erro* (ponto vermelho): A verificação não pode ser concluída porque encontrou problemas. Se você precisar concluir uma ação, o erro aparecerá na dica de ferramenta sob a coluna "ação necessária". Caso contrário, o sistema mostra um status de "erro" e tenta recuperar. Quando terminar, o estado muda.
+* * Não digitalizando*: A configuração de volume de "Off" foi selecionada e o sistema não digitaliza o volume.
+
+
+.Passos
+. Na guia Configuração, clique no botão *Configuração* para o ambiente de trabalho.
++
+image:screenshot_compliance_config_button.png["Uma captura de tela mostrando como clicar no botão Configuração para um ambiente de trabalho."]
+
+. Na página Scan Configuration (Configuração da digitalização), pode visualizar as definições de digitalização para todos os repositórios.
++
+image:screenshot_compliance_repo_scan_settings.png["Uma captura de tela mostrando se seus buckets estão sendo digitalizados e o status atual da varredura."]
+
+
+
+Você pode passar o cursor sobre o gráfico na coluna _Mapping Status_ para ver o número de arquivos que permanecem mapeados ou classificados em cada repositório (bucket neste exemplo).
+
+
+
+== Altere o tipo de digitalização para um repositório
+
+Pode iniciar ou parar exames apenas de mapeamento ou exames de mapeamento e classificação num ambiente de trabalho a qualquer momento a partir da página Configuração. Você também pode mudar de digitalizações somente de mapeamento para digitalizações de mapeamento e classificação, e vice-versa.
+
+
+TIP: Os bancos de dados não podem ser configurados para exames somente de mapeamento. A digitalização da base de dados pode estar desligada ou ligada; onde a opção ligada é equivalente a mapear e classificar.
+
+.Passos
+. Na guia Configuração, clique no botão *Configuração* para o ambiente de trabalho.
++
+image:screenshot_compliance_config_button.png["Uma captura de tela mostrando como clicar no botão Configuração para um ambiente de trabalho."]
+
+. Na página Configuração de digitalização, você pode alterar qualquer um dos repositórios (buckets neste exemplo) para executar varreduras *Map* ou *Map & Classify*.
++
+image:screenshot_compliance_repo_scan_settings.png["Uma captura de tela mostrando como selecionar o tipo de digitalização para um bucket."]
+
+
+
+Certos tipos de ambientes de trabalho permitem que você altere o tipo de digitalização globalmente para todos os repositórios usando uma barra de botões na parte superior da página. Isso é válido para sistemas Cloud Volumes ONTAP, ONTAP no local, Azure NetApp Files e Amazon FSX para ONTAP.
+
+O exemplo abaixo mostra esta barra de botões para um sistema Azure NetApp Files.
+
+image:screenshot_compliance_repo_scan_all.png["Uma captura de tela mostrando como configurar a mesma configuração de digitalização para todos os volumes em um ambiente de trabalho."]
+
+
+
+== Pare de procurar um repositório
+
+Você pode parar de digitalizar um repositório (por exemplo, um volume) se não precisar mais monitorá-lo para conformidade. Você faz isso desativando a digitalização. Quando a digitalização é desligada, toda a indexação e informações sobre esse volume são removidas do sistema e o carregamento para a digitalização dos dados é interrompido.
+
+.Passos
+. Na guia Configuração, clique no botão *Configuração* para o ambiente de trabalho.
++
+image:screenshot_compliance_config_button.png["Uma captura de tela mostrando como clicar no botão Configuração para um ambiente de trabalho."]
+
+. Na página Configuração de digitalização, selecione *Off* para parar a digitalização de um determinado intervalo.
++
+image:screenshot_compliance_stop_repo_scanning.png["Uma captura de tela mostrando como selecionar o tipo de digitalização para um bucket."]
+
+
+
+
+
+== Pausar e retomar a digitalização de um repositório
+
+Você pode "pausar" a digitalização em um repositório se quiser parar temporariamente a digitalização de determinado conteúdo. Pausar a digitalização significa que a classificação do BlueXP  não executará verificações futuras para alterações ou adições ao repositório, mas que todos os resultados atuais ainda serão exibidos no sistema. A pausa na digitalização não pára de carregar para os dados digitalizados porque os dados ainda existem.
+
+Você pode "retomar" a digitalização a qualquer momento.
+
+.Passos
+. Na guia Configuração, clique no botão *Configuração* para o ambiente de trabalho.
++
+image:screenshot_compliance_config_button.png["Uma captura de tela mostrando como clicar no botão Configuração para um ambiente de trabalho."]
+
+. Na página Scan Configuration (Configuração da digitalização), clique no botão Pause (Pausa) para interromper a digitalização de um volume ou prima o botão Resume (Retomar) para retomar a digitalização de um volume que tenha sido anteriormente pausado.
++
+image:screenshot_compliance_repo_pause_resume.png["Uma captura de tela mostrando como pausar e retomar a digitalização em um volume."]
+
++
+Observe que algumas fontes de dados fornecem a funcionalidade Pausa e Retomar em um menu, como mostrado abaixo para sites do SharePoint.
+
++
+image:screenshot_compliance_repo_pause_resume2.png["Uma captura de tela mostrando como pausar e retomar a digitalização em um site do SharePoint."]
+
+

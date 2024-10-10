@@ -1,0 +1,300 @@
+---
+sidebar: sidebar 
+permalink: task-managing-highlights.html 
+keywords: compliance, privacy, filter data, delete files, move files, copy files, clone files, sync files, data sense, migration 
+summary: A classificação do BlueXP  fornece várias maneiras de gerenciar seus dados privados. Algumas funcionalidades facilitam a preparação para a migração dos seus dados, enquanto outras funcionalidades permitem-lhe fazer alterações nos dados. 
+---
+= Gerencie seus dados privados
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A classificação do BlueXP  fornece várias maneiras de gerenciar seus dados privados. Algumas funcionalidades facilitam a preparação para a migração dos seus dados, enquanto outras funcionalidades permitem-lhe fazer alterações nos dados.
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+* Você pode copiar arquivos para um compartilhamento NFS de destino se quiser fazer uma cópia de certos dados e movê-los para um local NFS diferente.
+* Você pode clonar um volume ONTAP para um novo volume, incluindo apenas arquivos selecionados do volume de origem no novo volume clonado. Isso é útil para situações em que você está migrando dados e deseja excluir certos arquivos do volume original.
+* Você pode copiar e sincronizar arquivos de um repositório de origem para um diretório em um local de destino específico. Isso é útil para situações em que você está migrando dados de um sistema de origem para outro, enquanto ainda há alguma atividade final nos arquivos de origem.
+* Você pode mover arquivos de origem que a classificação do BlueXP  está digitalizando para qualquer compartilhamento NFS.
+* Você pode excluir arquivos que parecem inseguros ou muito arriscados para deixar em seu sistema de armazenamento, ou que você identificou como duplicados.
+
+
+[NOTE]
+====
+* As capacidades descritas nesta secção só estão disponíveis se tiver optado por efetuar uma análise de classificação completa nas suas fontes de dados. As fontes de dados que tiveram uma varredura somente de mapeamento não mostram detalhes no nível do arquivo.
+* Os dados das contas do Google Drive não podem usar nenhum desses recursos no momento.
+
+
+====
+
+
+== Copiar ficheiros de origem
+
+Você pode copiar qualquer arquivo de origem que a classificação BlueXP  esteja digitalizando. Existem três tipos de operações de cópia dependendo do que você está tentando realizar:
+
+* *Copie arquivos* do mesmo ou de diferentes volumes ou fontes de dados para um compartilhamento NFS de destino.
++
+Isso é útil se você quiser fazer uma cópia de certos dados e movê-los para um local NFS diferente.
+
+* *Clonar um volume ONTAP* para um novo volume no mesmo agregado, mas incluir somente arquivos selecionados do volume de origem no novo volume clonado.
++
+Isso é útil para situações em que você está migrando dados e deseja excluir certos arquivos do volume original. Esta ação usa a https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html["NetApp FlexClone"^] funcionalidade para duplicar rapidamente o volume e, em seguida, remover os arquivos que você *não* selecionou.
+
+* *Copie e sincronize arquivos* de um único repositório de origem (volume ONTAP, bucket S3, compartilhamento NFS, etc.) para um diretório em um local de destino específico (destino).
++
+Isso é útil para situações em que você está migrando dados de um sistema de origem para outro. Após a cópia inicial, o serviço sincroniza todos os dados alterados com base na programação definida. Esta ação usa a https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html["Cópia e sincronização do NetApp BlueXP "^] funcionalidade para copiar e sincronizar dados de uma origem para um destino.
+
+
+
+
+
+=== Copiar arquivos de origem para um compartilhamento NFS
+
+Você pode copiar arquivos de origem que a classificação do BlueXP  está digitalizando para qualquer compartilhamento NFS. O compartilhamento NFS não precisa ser integrado à classificação BlueXP , basta saber o nome do compartilhamento NFS onde todos os arquivos selecionados serão copiados no formato `<host_name>:/<share_path>`.
+
+
+TIP: Você não pode copiar arquivos que residem em bancos de dados.
+
+.Requisitos
+* Você deve ter permissões para copiar arquivos. link:concept-cloud-compliance.html#user-roles["Saiba mais sobre o acesso do usuário às informações de conformidade"].
+* A cópia de arquivos requer que o compartilhamento NFS de destino permita o acesso a partir da instância de classificação BlueXP .
+* Você pode copiar entre 1 e 100.000 arquivos de cada vez.
+
+
+.Passos
+. No painel resultados da investigação de dados, selecione o arquivo ou os arquivos que deseja copiar e clique em *Copiar*.
++
+image:screenshot_compliance_copy_multi_files.png["Uma captura de tela mostrando como selecionar os arquivos a serem copiados e o botão Copiar na página Investigação de dados."]
+
++
+** Para selecionar arquivos individuais, marque a caixa para cada arquivo (image:button_backup_1_volume.png[""] ).
+** Para selecionar todos os arquivos na página atual, marque a caixa na linha de título (image:button_select_all_files.png[""] ).
+** Para selecionar todos os arquivos em todas as páginas, marque a caixa na linha de título (image:button_select_all_files.png[""]) e, em seguida, na mensagem pop-up image:screenshot_select_all_items.png["sobre a seleção de todos os arquivos"], clique em *Selecionar todos os itens na lista (itens xxx)*.
+
+
+. Na caixa de diálogo _Copiar arquivos_, selecione a guia *cópia regular*.
++
+image:screenshot_compliance_copy_files_dialog.png["Uma captura de tela mostrando a caixa de diálogo Copiar arquivos para que você possa especificar o nome do compartilhamento NFS onde todos os arquivos selecionados serão copiados."]
+
+. Digite o nome do compartilhamento NFS onde todos os arquivos selecionados serão copiados no formato `<host_name>:/<share_path>`e clique em *Copiar*.
++
+É apresentada uma caixa de diálogo com o estado da operação de cópia.
+
+
+
+Pode ver o progresso da operação de cópia no link:task-view-compliance-actions.html["Painel Status ações"].
+
+Observe que você também pode copiar um arquivo individual ao exibir os detalhes dos metadados de um arquivo. Basta clicar em *Copiar ficheiro*.
+
+image:screenshot_compliance_copy_file.png["Uma captura de tela mostrando a seleção do botão Copiar arquivo dos detalhes dos metadados de um arquivo na página Investigação de dados."]
+
+
+
+=== Clone dados de volume para um novo volume
+
+Você pode clonar um volume ONTAP existente que a classificação BlueXP  está digitalizando usando a funcionalidade NetApp _FlexClone_. Isso permite que você duplique rapidamente o volume, incluindo apenas os arquivos selecionados. Isso é útil se você estiver migrando dados e quiser excluir certos arquivos do volume original ou se quiser criar uma cópia de um volume para teste.
+
+O novo volume é criado no mesmo agregado que o volume de origem. Certifique-se de que tem espaço suficiente para este novo volume no agregado antes de iniciar esta tarefa. Contacte o administrador de armazenamento, se necessário.
+
+*Nota:* os volumes FlexGroup não podem ser clonados porque não são suportados pelo FlexClone.
+
+.Requisitos
+* Você deve ter permissões para copiar arquivos. link:concept-cloud-compliance.html#user-roles["Saiba mais sobre o acesso do usuário às informações de conformidade"].
+* Você deve selecionar um mínimo de 20 arquivos.
+* Todos os arquivos selecionados devem ter o mesmo volume e o volume deve estar on-line.
+* O volume deve ser de um sistema Cloud Volumes ONTAP ou ONTAP no local. Nenhuma outra fonte de dados é suportada atualmente.
+* A licença FlexClone deve ser instalada no cluster. Esta licença é instalada por padrão em sistemas Cloud Volumes ONTAP.
+
+
+.Passos
+. No painel Investigação de dados, crie um filtro selecionando um único *ambiente de trabalho* e um único *Repositório de armazenamento* para garantir que todos os arquivos sejam do mesmo volume ONTAP.
++
+image:screenshot_compliance_filter_1_repo.png["Uma captura de tela da criação de um filtro que inclua arquivos de um único repositório de armazenamento em um único ambiente de trabalho."]
+
++
+Aplique outros filtros para que você veja apenas os arquivos que deseja clonar para o novo volume.
+
+. No painel resultados da investigação, selecione os arquivos que deseja clonar e clique em *Copiar*.
++
+image:screenshot_compliance_copy_multi_files.png["Uma captura de tela mostrando como selecionar os arquivos a serem copiados e o botão Copiar na página Investigação de dados."]
+
++
+** Para selecionar arquivos individuais, marque a caixa para cada arquivo (image:button_backup_1_volume.png[""] ).
+** Para selecionar todos os arquivos na página atual, marque a caixa na linha de título (image:button_select_all_files.png[""] ).
+** Para selecionar todos os arquivos em todas as páginas, marque a caixa na linha de título (image:button_select_all_files.png[""]) e, em seguida, na mensagem pop-up image:screenshot_select_all_items.png["sobre a seleção de todos os arquivos"], clique em *Selecionar todos os itens na lista (itens xxx)*.
+
+
+. Na caixa de diálogo _Copiar arquivos_, selecione a guia *FlexClone*. Esta página mostra o número total de arquivos que serão clonados do volume (os arquivos selecionados) e o número de arquivos que não estão incluídos/excluídos (os arquivos que você não selecionou) do volume clonado.
++
+image:screenshot_compliance_clone_files_dialog.png["Uma captura de tela mostrando a caixa de diálogo Copiar arquivos para que você possa especificar o nome do novo volume que será clonado do volume de origem."]
+
+. Digite o nome do novo volume e clique em *FlexClone*.
++
+É apresentada uma caixa de diálogo com o estado da operação clone.
+
+
+
+.Resultado
+O novo volume clonado é criado no mesmo agregado que o volume de origem.
+
+É possível visualizar o progresso da operação de clone no link:task-view-compliance-actions.html["Painel Status ações"].
+
+Se você selecionou inicialmente *Mapear todos os volumes* ou *mapear e classificar todos os volumes* quando você ativou a classificação BlueXP  para o ambiente de trabalho em que o volume de origem reside, a classificação BlueXP  verificará o novo volume clonado automaticamente. Se você não usou nenhuma dessas seleções inicialmente, então, se quiser digitalizar esse novo volume, será necessário link:task-getting-started-compliance.html["ative a digitalização no volume manualmente"].
+
+
+
+=== Copie e sincronize arquivos de origem para um sistema de destino
+
+Você pode copiar arquivos de origem que a classificação BlueXP  está digitalizando de qualquer fonte de dados não estruturados suportada para um diretório em um local de (https://docs.netapp.com/us-en/bluexp-copy-sync/reference-supported-relationships.html["Locais de destino compatíveis com cópia e sincronização do BlueXP "^]destino específico ). Após a cópia inicial, todos os dados alterados nos arquivos são sincronizados com base na programação configurada.
+
+Isso é útil para situações em que você está migrando dados de um sistema de origem para outro. Esta ação usa a https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html["Cópia e sincronização do NetApp BlueXP "^] funcionalidade para copiar e sincronizar dados de uma origem para um destino.
+
+
+TIP: Não é possível copiar e sincronizar arquivos que residem em bancos de dados, contas do OneDrive ou contas do SharePoint.
+
+.Requisitos
+* Você deve ter permissões para copiar e sincronizar arquivos. link:concept-cloud-compliance.html#user-roles["Saiba mais sobre o acesso do usuário às informações de conformidade"].
+* Você deve selecionar um mínimo de 20 arquivos.
+* Todos os arquivos selecionados devem ser do mesmo repositório de origem (volume ONTAP, bucket do S3, compartilhamento NFS ou CIFS, etc.).
+* Você precisará ativar o serviço de cópia e sincronização do BlueXP  e configurar um mínimo de um agente de dados que pode ser usado para transferir arquivos entre os sistemas de origem e destino. Reveja os requisitos de cópia e sincronização do BlueXP  a partir do https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html["Descrição de início rápido"^].
++
+Observe que o serviço de cópia e sincronização do BlueXP  tem taxas de serviço separadas para seus relacionamentos de sincronização e incorrerá em cobranças de recursos se você implantar o agente de dados na nuvem.
+
+
+
+.Passos
+. No painel Investigação de dados, crie um filtro selecionando um único *ambiente de trabalho* e um único *Repositório de armazenamento* para garantir que todos os arquivos sejam do mesmo repositório.
++
+image:screenshot_compliance_filter_1_repo.png["Uma captura de tela da criação de um filtro que inclua arquivos de um único repositório de armazenamento em um único ambiente de trabalho."]
+
++
+Aplique outros filtros para que você veja apenas os arquivos que deseja copiar e sincronizar com o sistema de destino.
+
+. No painel resultados da investigação, selecione todos os arquivos em todas as páginas marcando a caixa na linha de título (image:button_select_all_files.png[""] ), na mensagem pop-up image:screenshot_select_all_items.png["sobre a seleção de todos os arquivos"]clique em *Selecione todos os itens na lista (itens xxx)* e clique em *Copiar*.
++
+image:screenshot_compliance_sync_multi_files.png["Uma captura de tela mostrando como selecionar os arquivos a serem copiados e o botão Copiar na página Investigação de dados."]
+
+. Na caixa de diálogo _Copy Files_, selecione a guia *Sync*.
++
+image:screenshot_compliance_sync_files_dialog.png["Uma captura de tela mostrando a caixa de diálogo Copiar arquivos para que você possa selecionar a opção Sincronizar."]
+
+. Se tiver certeza de que deseja sincronizar os arquivos selecionados para um local de destino, clique em *OK*.
++
+A IU de cópia e sincronização do BlueXP  é aberta no BlueXP .
+
++
+É-lhe pedido que defina a relação de sincronização. O sistema de origem é pré-preenchido com base no repositório e nos ficheiros que já selecionou na classificação BlueXP .
+
+. Você precisará selecionar o sistema de destino e, em seguida, selecionar (ou criar) o Data Broker que você pretende usar. Reveja os requisitos de cópia e sincronização do BlueXP  a partir do link:https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html["Descrição de início rápido"^].
+
+
+.Resultado
+Os arquivos são copiados para o sistema de destino e serão sincronizados com base na programação que você definir. Se você selecionar uma sincronização única, os arquivos serão copiados e sincronizados apenas uma vez. Se você escolher uma sincronização periódica, os arquivos serão sincronizados com base na programação. Observe que se o sistema de origem adicionar novos arquivos que correspondam à consulta criada usando filtros, esses arquivos _new_ serão copiados para o destino e sincronizados no futuro.
+
+Observe que algumas das operações de cópia e sincronização BlueXP  usuais são desativadas quando são invocadas a partir da classificação BlueXP :
+
+* Não é possível usar os botões *Excluir arquivos na origem* ou *Excluir arquivos no destino*.
+* A execução de um relatório está desativada.
+
+
+
+
+== Mover arquivos de origem para um compartilhamento NFS
+
+Você pode mover arquivos de origem que a classificação do BlueXP  está digitalizando para qualquer compartilhamento NFS. O compartilhamento NFS não precisa ser integrado à classificação BlueXP .
+
+Opcionalmente, você pode deixar um arquivo de breadcrumb no local do arquivo movido. Um arquivo de breadcrumb ajuda seus usuários a entender por que um arquivo foi movido de seu local original. Para cada arquivo movido, o sistema cria um arquivo de breadcrumb no local de origem `<filename>-breadcrumb-<date>.txt` chamado . Você pode adicionar texto na caixa de diálogo que será adicionado ao arquivo de breadcrumb para indicar o local onde o arquivo foi movido e o usuário que moveu o arquivo.
+
+Observe que a estrutura de subdiretório do arquivo de origem é recriada no compartilhamento de destino quando o arquivo é movido, então é mais fácil entender de onde o arquivo foi movido. Se existir um ficheiro com o mesmo nome no local de destino, o ficheiro não será movido.
+
+
+TIP: Você não pode mover arquivos que residem em bancos de dados.
+
+.Requisitos
+* Você deve ter permissões para mover arquivos. link:concept-cloud-compliance.html#user-roles["Saiba mais sobre o acesso do usuário às informações de conformidade"].
+* Os arquivos de origem podem estar localizados nas seguintes fontes de dados: ONTAP on-premises, Cloud Volumes ONTAP, Azure NetApp Files, compartilhamentos de arquivos e SharePoint Online.
+* Você pode mover um máximo de 15 milhões de arquivos de cada vez.
+* Apenas os ficheiros com 50 MB ou menos são movidos.
+* O compartilhamento NFS de destino deve permitir o acesso a partir do endereço IP da instância de classificação BlueXP .
+
+
+.Passos
+. No painel resultados da investigação de dados, selecione o ficheiro ou os ficheiros que pretende mover.
++
+image:screenshot_compliance_move_multi_files.png["Uma captura de tela mostrando como selecionar os arquivos a serem movidos e o botão mover na página Investigação de dados."]
+
++
+** Para selecionar arquivos individuais, marque a caixa para cada arquivo (image:button_backup_1_volume.png[""] ).
+** Para selecionar todos os arquivos na página atual, marque a caixa na linha de título (image:button_select_all_files.png[""] ).
+** Para selecionar todos os arquivos em todas as páginas, marque a caixa na linha de título (image:button_select_all_files.png[""]) e, em seguida, na mensagem pop-up image:screenshot_select_all_items.png["sobre a seleção de todos os arquivos"], clique em *Selecionar todos os itens na lista (itens xxx)*.
+
+
+. Na barra de botões, clique em *mover*.
++
+image:screenshot_compliance_move_files_dialog.png["Uma captura de tela mostrando a caixa de diálogo mover arquivos para que você possa especificar o nome do compartilhamento NFS onde todos os arquivos selecionados serão movidos."]
+
+. Na caixa de diálogo _mover arquivos_, digite o nome do compartilhamento NFS onde todos os arquivos selecionados serão movidos no formato `<host_name>:/<share_path>`.
+. Se você quiser deixar um arquivo de breadcrumb, marque a caixa _deixar breadcrumb_. Você pode inserir texto na caixa de diálogo para indicar o local onde o arquivo foi movido e o usuário que moveu o arquivo, e qualquer outra informação, como o motivo pelo qual o arquivo foi movido.
+. Clique em *mover ficheiros*.
+
+
+Observe que você também pode mover um arquivo individual ao exibir os detalhes dos metadados de um arquivo. Basta clicar em *mover ficheiro*.
+
+image:screenshot_compliance_move_file.png["Uma captura de tela mostrando a seleção do botão mover arquivo dos detalhes dos metadados de um arquivo na página Investigação de dados."]
+
+
+
+== Eliminar ficheiros de origem
+
+Você pode remover permanentemente arquivos de origem que parecem inseguros ou muito arriscados para sair em seu sistema de armazenamento, ou que você identificou como uma duplicata. Esta ação é permanente e não há desfazer ou restaurar.
+
+Você pode excluir arquivos manualmente do painel de investigação ou link:task-using-policies.html["Usando políticas automaticamente"^].
+
+
+TIP: Não é possível excluir arquivos que residem em bancos de dados. Todas as outras fontes de dados são suportadas.
+
+A exclusão de arquivos requer as seguintes permissões:
+
+* Para dados NFS - a política de exportação precisa ser definida com permissões de gravação.
+* Para dados CIFS - as credenciais CIFS precisam ter permissões de gravação.
+* Para dados S3 - a função IAM deve incluir a seguinte permissão: `s3:DeleteObject`.
+
+
+
+
+=== Excluir arquivos de origem manualmente
+
+.Requisitos
+* Você deve ter permissões para excluir arquivos. link:concept-cloud-compliance.html#user-roles["Saiba mais sobre o acesso do usuário às informações de conformidade"].
+* Pode eliminar um máximo de 100.000 ficheiros de cada vez.
+
+
+.Passos
+. No painel resultados da investigação de dados, selecione o ficheiro ou os ficheiros que pretende eliminar.
++
+image:screenshot_compliance_delete_multi_files.png["Uma captura de tela mostrando como selecionar os arquivos a serem excluídos e o botão Excluir na página Investigação de dados."]
+
++
+** Para selecionar arquivos individuais, marque a caixa para cada arquivo (image:button_backup_1_volume.png[""] ).
+** Para selecionar todos os arquivos na página atual, marque a caixa na linha de título (image:button_select_all_files.png[""] ).
+** Para selecionar todos os arquivos em todas as páginas, marque a caixa na linha de título (image:button_select_all_files.png[""]) e, em seguida, na mensagem pop-up image:screenshot_select_all_items.png["sobre a seleção de todos os arquivos"], clique em *Selecionar todos os itens na lista (itens xxx)*.
+
+
+. Na barra de botões, clique em *Excluir*.
+. Como a operação de exclusão é permanente, você deve digitar "*permanentemente delete*" na caixa de diálogo _Delete File_ subsequente e clicar em *Delete File*.
+
+
+Pode ver o progresso da operação de eliminação no link:task-view-compliance-actions.html["Painel Status ações"].
+
+Observe que você também pode excluir um arquivo individual ao exibir os detalhes dos metadados de um arquivo. Basta clicar em *Excluir arquivo*.
+
+image:screenshot_compliance_delete_file.png["Uma captura de tela mostrando a seleção do botão Excluir arquivo dos detalhes dos metadados de um arquivo na página Investigação de dados."]

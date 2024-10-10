@@ -1,0 +1,204 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-add-scanner-nodes.html 
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, bluexp classification, docker, podman, install bluexp classification 
+summary: Conclua algumas etapas para adicionar nós de scanner em um host Linux na nuvem, que tenha acesso à Internet. 
+---
+= Adicione nós do scanner a uma implantação existente
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode adicionar nós de scanner a uma implantação existente em um host Linux com acesso à Internet.
+
+Você pode adicionar mais nós de scanner se descobrir que você precisa de mais poder de processamento de digitalização para digitalizar suas fontes de dados. Você pode adicionar os nós do scanner imediatamente após a instalação do nó do gerenciador ou pode adicionar um nó do scanner mais tarde. Por exemplo, se você perceber que a quantidade de dados em uma de suas fontes de dados duplicou ou triplicou de tamanho após 6 meses, você pode adicionar um novo nó de scanner para ajudar na digitalização de dados.
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+Existem duas maneiras pelas quais você pode adicionar nós de scanner adicionais:
+
+* adicione um nó para ajudar na digitalização de todas as fontes de dados
+* adicionar um nó para ajudar na digitalização de uma fonte de dados específica ou de um grupo específico de fontes de dados (normalmente com base no local)
+
+
+Por padrão, todos os novos nós de scanner adicionados são adicionados ao conjunto geral de recursos de digitalização. Isso é chamado de "grupo de scanner padrão". Na imagem abaixo, há 1 nó Manager e 3 nós de scanner no grupo "padrão" que são todos os dados de digitalização de todas as fontes de dados 6.
+
+image:diagram_onprem_scanner_groups_default.png["Um diagrama de como os scanners de classificação BlueXP  digitalizam fontes de dados quando estão no grupo de scanners padrão."]
+
+Se você tiver certas fontes de dados que deseja ser digitalizadas por nós do scanner que estão fisicamente mais perto das fontes de dados, pode definir um nó do scanner ou um grupo de nós do scanner para digitalizar uma fonte de dados específica ou um grupo de fontes de dados. Na imagem abaixo, há 1 nó Manager e 3 nós scanner.
+
+* O nó Manager está no grupo "Default" (padrão) e está a digitalizar a fonte de dados 1D.
+* O nó do scanner 1 está no grupo "united_States" e está a digitalizar 2 fontes de dados
+* Os nós de scanner 2 e 3 estão no grupo "europa" e compartilham as tarefas de digitalização para fontes de dados 3
+
+
+image:diagram_onprem_scanner_groups.png["Um diagrama de como os scanners de classificação BlueXP  digitalizam fontes de dados quando atribuídos a diferentes grupos de scanners."]
+
+Os grupos de scanner de classificação BlueXP  podem ser definidos como áreas geográficas separadas onde seus dados são armazenados. Você pode implantar vários nós de scanner de classificação BlueXP  em todo o mundo e escolher um grupo de scanners para cada nó. Dessa forma, cada nó do scanner digitalizará os dados mais próximos a ele. Quanto mais próximo o nó do scanner estiver dos dados, melhor, pois reduz a latência da rede o máximo possível durante a digitalização de dados.
+
+Você pode escolher quais grupos de scanner adicionar à classificação BlueXP  e escolher seus nomes. A classificação BlueXP  não impõe que um nó mapeado para um grupo de scanners chamado "europa" seja implantado na Europa.
+
+Siga estas etapas para instalar nós adicionais do scanner de classificação do BlueXP :
+
+. Prepare os sistemas host Linux que atuarão como os nós do scanner
+. Baixe o software Data Sense para esses sistemas Linux
+. Execute um comando no nó Manager para identificar os nós do scanner
+. Siga os passos para implementar o software nos nós do scanner (e para definir opcionalmente um "grupo de scanner" para determinados nós do scanner)
+. Se você definiu um grupo de scanner, no nó Gerenciador:
++
+.. Abra o arquivo "working_environment_to_scanner_group_config.yml" e defina os ambientes de trabalho que serão verificados por cada grupo de scanner
+.. Execute o seguinte script para Registrar essas informações de mapeamento com todos os nós do scanner: `update_we_scanner_group_from_config_file.sh`
+
+
+
+
+.O que você vai precisar
+* Verifique se todos os seus sistemas Linux para nós de scanner atendem aos requisitos de host.
+* Verifique se os sistemas têm os dois pacotes de software pré-requisitos instalados (Docker Engine ou Podman, e Python 3).
+* Certifique-se de que você tem Privileges root nos sistemas Linux.
+* Verifique se o seu ambiente atende às permissões e conetividade necessárias.
+* Você deve ter os endereços IP dos hosts de nó do scanner que você está adicionando.
+* Você deve ter o endereço IP do sistema host do nó do Gerenciador de classificação do BlueXP 
+* Você deve ter o endereço IP ou o nome do host do sistema do conetor, o ID da conta do NetApp, o ID do cliente do conetor e o token de acesso do usuário. Se você está planejando usar grupos de scanner, precisará saber a ID do ambiente de trabalho para cada fonte de dados em sua conta. Consulte *_etapas de pré-requisito_* abaixo para obter essas informações.
+* As seguintes portas e protocolos devem estar ativados em todos os hosts:
++
+[cols="15,20,55"]
+|===
+| Porta | Protocolos | Descrição 
+
+
+| 2377 | TCP | Comunicações de gerenciamento de cluster 
+
+
+| 7946 | TCP, UDP | Comunicação entre nós 
+
+
+| 4789 | UDP | Sobreponha o tráfego de rede 
+
+
+| 50 | ESP | Tráfego de rede de sobreposição IPsec criptografada (ESP) 
+
+
+| 111 | TCP, UDP | Servidor NFS para compartilhamento de arquivos entre os hosts (necessário de cada nó do scanner para nó do gerente) 
+
+
+| 2049 | TCP, UDP | Servidor NFS para compartilhamento de arquivos entre os hosts (necessário de cada nó do scanner para nó do gerente) 
+|===
+* Se estiver a utilizar `firewalld` nas suas máquinas de classificação BlueXP , recomendamos que o ative antes de instalar a classificação BlueXP . Execute os seguintes comandos para configurar `firewalld` de modo que seja compatível com a classificação BlueXP :
++
+....
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --permanent --add-port=2377/tcp
+firewall-cmd --permanent --add-port=7946/udp
+firewall-cmd --permanent --add-port=7946/tcp
+firewall-cmd --permanent --add-port=4789/udp
+firewall-cmd --reload
+....
++
+Observe que você deve reiniciar o Docker ou o Podman sempre que ativar ou atualizar `firewalld` as configurações.
+
+
+
+.Etapas de pré-requisito
+Siga estas etapas para obter o ID da conta do NetApp, o ID do cliente do conetor, o nome do servidor do conetor e o token de acesso do usuário necessários para adicionar nós do scanner.
+
+. Na barra de menus do BlueXP , clique em *conta > Gerenciar contas*.
++
+image:screenshot_account_id.png["Uma captura de tela dos detalhes da conta do BlueXP ."]
+
+. Copie o _ID de conta_.
+. Na barra de menus do BlueXP , clique em *Ajuda > suporte > conetor BlueXP *.
++
+image:screenshot_connector_client_id.png["Uma captura de tela das configurações do conetor BlueXP ."]
+
+. Copie o conetor _Client ID_ e o _Server Name_.
+. Se estiver a planear utilizar grupos de scanner, no separador Configuração da classificação BlueXP , copie a ID do ambiente de trabalho para cada ambiente de trabalho que pretende adicionar a um grupo de scanner.
++
+image:screenshot_work_env_id.png["Uma captura de tela do ID do ambiente de trabalho na página Configuração da classificação do BlueXP ."]
+
+. Vá para https://services.cloud.netapp.com/developer-hub["API Documentação Developer Hub"^] e clique em *Saiba como autenticar*.
++
+image:screenshot_client_access_token.png["Uma captura de tela da página Documentação da API, com um link para instruções de autenticação."]
+
+. Siga as instruções de autenticação, usando o nome de usuário e senha do administrador da conta nos parâmetros "nome de usuário" e "senha".
+. Em seguida, copie o _access token_ da resposta.
+
+
+.Passos
+. No nó Gerenciador de classificação do BlueXP , execute o script "add_scanner_node.sh". Por exemplo, este comando adiciona 2 nós de scanner:
++
+`sudo ./add_scanner_node.sh -a <account_id> -c <client_id> -m <cm_host> -h <ds_manager_ip> *-n <node_private_ip_1,node_private_ip_2>* -t <user_token>`
+
++
+Valores variáveis:
+
++
+** _Account_id_ - ID da conta do NetApp
+** ID do cliente do conetor (adicione o sufixo "clients" ao ID do cliente que você copiou nas etapas de pré-requisito)
+** _Cm_host_: Endereço IP ou nome de host do sistema do conetor
+** _DS_Manager_IP_: Endereço IP privado do sistema de nós do Gerenciador de classificação do BlueXP 
+** _Node_private_ip_: Endereços IP dos sistemas de nó do scanner de classificação BlueXP  (vários IPs de nó de scanner são separados por uma vírgula)
+** _User_token_: Token de acesso de usuário JWT
+
+
+. Antes da conclusão do script add_scanner_node, uma caixa de diálogo exibe o comando de instalação necessário para os nós do scanner. Copie o comando (por exemplo: `sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF1s35212 -u red95467j`) E salve-o em um arquivo de texto.
+. No host *Each* do nó do scanner:
++
+.. Copie o arquivo do instalador do Data Sense (*DATASENSE-installer-<version>.tar.gz*) para a máquina host (usando `scp` ou algum outro método).
+.. Descompacte o arquivo do instalador.
+.. Cole e execute o comando que você copiou na etapa 2.
+.. Se quiser adicionar um nó de scanner a um "grupo de scanner", adicione o parâmetro *-r <scanner_group_name>* ao comando. Caso contrário, o nó do scanner é adicionado ao grupo "padrão".
++
+Quando a instalação termina em todos os nós do scanner e eles foram Unidos ao nó do gerente, o script "add_scanner_node.sh" também é concluído. A instalação pode levar de 10 a 20 minutos.
+
+
+
+. Se você tiver adicionado qualquer nó de scanner a um grupo de scanner, retorne ao nó Gerenciador e execute as seguintes 2 tarefas:
++
+.. Abra o arquivo "/opt/NetApp/config/custom_Configuration/working_environment_to_scanner_group_config.yml" e insira o mapeamento para o qual os grupos de scanner irão digitalizar ambientes de trabalho específicos. Você precisará ter o _Working Environment ID_ para cada fonte de dados. Por exemplo, as seguintes entradas adicionam 2 ambientes de trabalho ao grupo de scanners "europa" e 2 ao grupo de scanners "estados unidos":
++
+....
+scanner_groups:
+ europe:
+   working_environments:
+     - "working_environment_id1"
+     - "working_environment_id2"
+ united_states:
+   working_environments:
+     - "working_environment_id3"
+     - "working_environment_id4"
+....
++
+Qualquer ambiente de trabalho que não seja adicionado à lista é digitalizado pelo grupo "padrão" - você deve ter pelo menos um gerente ou nó de scanner no grupo "padrão".
+
+.. Execute o seguinte script para Registrar essas informações de mapeamento com todos os nós do scanner:
+`/opt/netapp/Datasense/tools/update_we_scanner_group_from_config_file.sh`
+
+
+
+
+.Resultado
+A classificação do BlueXP  é configurada com os nós de Gerenciador e scanner para verificar todas as suas fontes de dados.
+
+.O que vem a seguir
+Na página Configuração, pode selecionar as fontes de dados que pretende analisar - se ainda não o tiver feito. Se você criou grupos de scanner, cada fonte de dados será digitalizada pelos nós do scanner no respetivo grupo.
+
+Você pode ver o nome do Grupo do scanner para cada ambiente de trabalho na página Configuração.
+
+image:screenshot_work_env_id.png["Uma captura de tela do ID do ambiente de trabalho na página Configuração da classificação do BlueXP ."]
+
+Você também pode ver a lista de todos os grupos de scanner, juntamente com o endereço IP e o status de cada nó de scanner no grupo, na parte inferior da página Configuração.
+
+image:screenshot_scanner_groups.png["Uma captura de tela mostrando todos os grupos de scanner juntamente com o endereço IP de cada nó de scanner no grupo."]

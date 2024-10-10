@@ -1,0 +1,145 @@
+---
+settings:
+  name: BlueXP classification
+  platform: cloud
+  internal:
+    pdf_enabled: true
+    termcheck_enabled: true
+    lipi_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: pt-br,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
+sidebar:
+  entries:
+  - title: Documentos de classificação BlueXP 
+    url: "/index.html"
+  - title: Notas de lançamento
+    entries:
+    - title: O que há de novo
+      url: "/whats-new.html"
+    - title: Limitações conhecidas
+      url: "/reference-limitations.html"
+  - title: Comece agora
+    entries:
+    - title: Saiba mais sobre a classificação BlueXP 
+      url: "/concept-cloud-compliance.html"
+    - title: Implantar a classificação BlueXP 
+      entries:
+      - title: Qual implantação você deve usar
+        url: "/task-deploy-overview.html"
+      - title: Implante na nuvem usando o BlueXP 
+        url: "/task-deploy-cloud-compliance.html"
+      - title: Instale em um host Linux com acesso à Internet
+        url: "/task-deploy-compliance-onprem.html"
+      - title: Instale em um host Linux on-premise sem acesso à Internet
+        url: "/task-deploy-compliance-dark-site.html"
+      - title: Verifique se o seu host Linux está pronto para instalar a classificação
+          BlueXP 
+        url: "/task-test-linux-system.html"
+    - title: Ative a digitalização nas suas fontes de dados
+      entries:
+      - title: Azure NetApp Files
+        url: "/task-scanning-anf.html"
+      - title: Amazon FSX para ONTAP
+        url: "/task-scanning-fsx.html"
+      - title: Cloud Volumes ONTAP e ONTAP on-premise
+        url: "/task-getting-started-compliance.html"
+      - title: Esquemas de banco de dados
+        url: "/task-scanning-databases.html"
+      - title: Compartilhamentos de arquivo
+        url: "/task-scanning-file-shares.html"
+      - title: StorageGRID
+        url: "/task-scanning-storagegrid.html"
+    - title: Integrar o ative Directory
+      url: "/task-add-active-directory-datasense.html"
+    - title: FAQ
+      url: "/faq-cloud-compliance.html"
+  - title: Use a classificação BlueXP 
+    entries:
+    - title: Veja detalhes de governança sobre seus dados
+      url: "/task-controlling-governance-data.html"
+    - title: Veja os detalhes de conformidade sobre seus dados
+      url: "/task-controlling-private-data.html"
+    - title: Categorias de dados privados
+      url: "/reference-private-data-categories.html"
+    - title: Investigue seus dados
+      url: "/task-investigate-data.html"
+    - title: Atribua políticas aos seus dados
+      url: "/task-using-policies.html"
+    - title: Alterar as definições de digitalização
+      url: task-managing-repo-scanning.html
+    - title: Gerar relatórios de conformidade
+      url: "/task-generating-compliance-reports.html"
+  - title: Gerir a classificação BlueXP 
+    entries:
+    - title: Excluir diretórios da digitalização
+      url: "/task-exclude-scan-paths.html"
+    - title: Definir IDs de grupo existentes como "aberto à organização"
+      url: "/task-add-group-id-as-open.html"
+    - title: Remover fontes de dados da classificação BlueXP 
+      url: "/task-managing-compliance.html"
+    - title: Desinstalar a classificação BlueXP 
+      url: "/task-uninstall-data-sense.html"
+  - title: Funcionalidades obsoletas
+    entries:
+    - title: Lista de recursos obsoletos
+      url: "/reference-free-paid.html"
+    - title: Implantar depreciações de classificação do BlueXP 
+      entries:
+      - title: Instale a classificação BlueXP  em vários hosts sem acesso à Internet
+        url: "/task-deploy-multi-host-install-dark-site.html"
+      - title: Adicione nós do scanner a uma implantação existente
+        url: "/task-deploy-add-scanner-nodes.html"
+    - title: Analisar descontinuações de dados
+      entries:
+      - title: Verifique os buckets do Amazon S3
+        url: "/task-scanning-s3.html"
+      - title: Digitalizar contas OneDrive
+        url: "/task-scanning-onedrive.html"
+      - title: Analisar contas do SharePoint
+        url: "/task-scanning-sharepoint.html"
+      - title: Analisar contas do Google Drive
+        url: "/task-scanning-google-drive.html"
+      - title: Analisar o armazenamento de objetos que utiliza o protocolo S3
+        url: "/task-scanning-object-storage.html"
+    - title: Gerencie as depreciações de dados
+      entries:
+      - title: Veja os detalhes da governança sobre os dados no painel Governança
+        url: "/task-controlling-governance-dashboard-deprecated.html"
+      - title: Organize os seus dados privados
+        url: "/task-org-private-data.html"
+      - title: Gerencie seus dados privados
+        url: "/task-managing-highlights.html"
+      - title: Adicione identificadores de dados pessoais personalizados
+        url: "/task-managing-data-fusion.html"
+      - title: Veja o status das ações de classificação do BlueXP 
+        url: "/task-view-compliance-actions.html"
+      - title: Auditar o histórico das ações de classificação do BlueXP 
+        url: "/task-audit-data-sense-actions.html"
+      - title: Reduza a velocidade de digitalização da classificação BlueXP 
+        url: "/task-reduce-scan-speed.html"
+      - title: Remova uma conta do OneDrive, SharePoint ou Google Drive
+        url: "/task-managing-compliance-deprecated.html"
+  - title: Referência
+    entries:
+    - title: Tipos de instância de classificação BlueXP  compatíveis
+      url: "/reference-instance-types.html"
+    - title: Metadados coletados de fontes de dados
+      url: "/reference-collected-metadata.html"
+    - title: Inicie sessão no sistema de classificação BlueXP 
+      url: "/reference-log-in-to-instance.html"
+    - title: APIs de classificação BlueXP 
+      url: "/api-classification.html"
+  - title: Conhecimento e apoio
+    entries:
+    - title: Registre-se para obter suporte
+      url: "/task-support-registration.html"
+    - title: Obtenha ajuda
+      url: "/task-get-help.html"
+  - title: Avisos legais
+    url: "/legal-notices.html"
+product-family:
+  name: BlueXP
+  repo: bluexp-family

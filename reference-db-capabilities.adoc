@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: reference-db-capabilities.html 
+keywords: database actions, database filters, supported, unsupported 
+summary: Existem alguns recursos e funcionalidades que não estão disponíveis com a classificação BlueXP  quando você está digitalizando esquemas de banco de dados. 
+---
+= Recursos de banco de dados suportados e não suportados
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Existem alguns recursos e funcionalidades que não estão disponíveis com a classificação BlueXP  quando você está digitalizando esquemas de banco de dados. Veja a lista abaixo.
+
+Você pode adicionar seus esquemas de bancos de dados à classificação do BlueXP  a serem verificados link:task-scanning-databases.html["como descrito aqui"^].
+
+[cols="12,25,9,9,9,9,9,9,9"]
+|===
+| Tipo | Descrição | MongoDB | SQL Server | MySQL | Oracle | PostgreSQL | SAP HANA | Amazon RDS 
+
+
+.9+| Ações | Criar política | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Etiqueta | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Atribuir a | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Exportar dados | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Voltar a digitalizar | x | x | x | x | x | x | x 
+
+
+| Eliminar | x | x | x | x | x | x | x 
+
+
+| Mover | x | x | x | x | x | x | x 
+
+
+| Cópia | x | x | x | x | x | x | x 
+
+
+| Etiqueta | x | x | x | x | x | x | x 
+
+
+.25+| Filtros | Políticas | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Estado da análise do exame | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Tipo de ambiente de trabalho | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Ambiente de trabalho | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Repositório de storage | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Nível de sensibilidade | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Dados pessoais confidenciais | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Categorias | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Dados pessoais | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Titular dos dados | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Tipo de ficheiro | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Tamanho do ficheiro | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Hora descoberta | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Tags | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Atribuir a | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Evento de análise de digitalização | x | x | x | x | x | x | x 
+
+
+| Caminho do arquivo/diretório | x | x | x | x | x | x | x 
+
+
+| Filtros de permissões | x | x | x | x | x | x | x 
+
+
+| Etiqueta | x | x | x | x | x | x | x 
+
+
+| Número de identificadores | x | x | x | x | x | x | x 
+
+
+| Tipo de diretório | x | x | x | x | x | x | x 
+
+
+| Hora criada | x | x | x | x | x | x | x 
+
+
+| Modificado pela última vez | x | x | x | x | x | x | x 
+
+
+| Último acesso | x | x | x | x | x | x | x 
+
+
+| Duplicatas | x | x | x | x | x | x | x 
+|===

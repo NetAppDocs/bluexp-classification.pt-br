@@ -1,0 +1,309 @@
+---
+sidebar: sidebar 
+permalink: task-org-private-data.html 
+keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
+summary: A classificação BlueXP  fornece muitas maneiras de gerenciar e organizar seus dados privados. Isso facilita a visualização dos dados mais importantes para você. 
+---
+= Organize os seus dados privados
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A classificação BlueXP  fornece muitas maneiras de gerenciar e organizar seus dados privados. Isso facilita a visualização dos dados mais importantes para você.
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores. A versão de dezembro de 2023 (v1.26.6) removeu a opção de integrar dados usando rótulos AIP (proteção de informações do Azure).
+
+====
+* Se você está inscrito https://azure.microsoft.com/en-us/services/information-protection/["Proteção de informações do Azure (AIP)"^] para classificar e proteger seus arquivos, você pode usar a classificação BlueXP  para gerenciar esses rótulos AIP.
+* Você pode adicionar Tags a arquivos que deseja marcar para a organização ou para algum tipo de acompanhamento.
+* Você pode atribuir um usuário do BlueXP  a um arquivo específico ou a vários arquivos, para que a pessoa possa ser responsável pelo gerenciamento do arquivo.
+* Usando a funcionalidade "Política", você pode criar suas próprias consultas de pesquisa personalizadas para que você possa ver facilmente os resultados clicando em um botão.
+* Você pode enviar alertas de e-mail para usuários do BlueXP  ou qualquer outro endereço de e-mail quando certas políticas críticas retornam resultados.
+
+
+
+NOTE: As capacidades descritas nesta secção só estão disponíveis se tiver optado por efetuar uma análise de classificação completa nas suas fontes de dados. As fontes de dados que tiveram uma varredura somente de mapeamento não mostram detalhes no nível do arquivo.
+
+
+
+== Devo usar tags ou rótulos?
+
+Abaixo está uma comparação entre a marcação de classificação BlueXP  e a rotulagem de proteção de informações do Azure.
+
+[cols="50,50"]
+|===
+| Tags | Etiquetas 
+
+
+| Tags de arquivo são uma parte integrada da classificação BlueXP . | Requer que você se inscreveu no Azure Information Protection (AIP). 
+
+
+| A tag só é mantida no banco de dados de classificação BlueXP  - não é gravada no arquivo. Ele não altera o arquivo, nem o arquivo acessado ou modificado vezes. | O rótulo faz parte do arquivo e, quando o rótulo muda, o arquivo muda. Essa alteração também altera os horários acessados e modificados do arquivo. 
+
+
+| Você pode ter várias tags em um único arquivo. | Você pode ter um rótulo em um único arquivo. 
+
+
+| A tag pode ser usada para a ação interna de classificação do BlueXP , como copiar, mover, excluir, executar uma política, etc. | Outros sistemas que podem ler o arquivo podem ver o rótulo - que pode ser usado para automação adicional. 
+
+
+| Apenas uma única chamada de API é usada para ver se um arquivo tem uma tag. |  
+|===
+
+
+== Categorize seus dados usando rótulos AIP
+
+Você pode gerenciar rótulos AIP nos arquivos que a classificação do BlueXP  está digitalizando se você se inscreveu https://azure.microsoft.com/en-us/services/information-protection/["Proteção de informações do Azure (AIP)"^] no . O AIP permite classificar e proteger documentos e arquivos aplicando rótulos ao conteúdo. A classificação BlueXP  permite exibir os rótulos que já estão atribuídos a arquivos, adicionar rótulos a arquivos e alterar rótulos quando um rótulo já existe.
+
+A classificação BlueXP  suporta etiquetas AIP nos seguintes tipos de arquivo: .DOC, .DOCX, .PDF, .PPTX, .xls, .xlsx.
+
+[NOTE]
+====
+* Atualmente, não é possível alterar rótulos em arquivos com mais de 30 MB. Para contas do OneDrive, SharePoint e Google Drive, o tamanho máximo do arquivo é de 4 MB.
+* Se um arquivo tem um rótulo que não existe mais no AIP, a classificação BlueXP  considera-o como um arquivo sem um rótulo.
+* Se você implantou a classificação do BlueXP  em uma região do governo ou em um local local local que não tenha acesso à Internet (também conhecido como um site escuro), a funcionalidade de rótulo AIP não estará disponível.
+
+
+====
+
+
+=== Integre rótulos AIP em seu projeto ou área de trabalho
+
+Antes de gerenciar rótulos AIP, você precisa integrar a funcionalidade de rótulo AIP na classificação do BlueXP , fazendo login na sua conta existente do Azure. Uma vez ativado, você pode gerenciar rótulos AIP em arquivos para todos link:concept-cloud-compliance.html["fontes de dados"^] no seu projeto ou área de trabalho do BlueXP .
+
+.Requisitos
+* Você deve ter uma conta e uma licença de proteção de informações do Azure.
+* Tem de ter as credenciais de início de sessão para a conta Azure.
+* Se você planeja alterar rótulos em arquivos que residem nos buckets do Amazon S3, verifique se a permissão `s3:PutObject` está incluída na função IAM. link:task-scanning-s3.html#reviewing-s3-prerequisites["Configurando a função do IAM"^]Consulte .
+
+
+.Passos
+. Na página Configuração de classificação do BlueXP , clique em *integrar rótulos AIP*.
++
+image:screenshot_compliance_integrate_aip_labels.png["Uma captura de tela que mostra clicar no botão para integrar a funcionalidade de rótulos AIP na classificação BlueXP ."]
+
+. Na caixa de diálogo integrar rótulos AIP, clique em *entrar no Azure*.
+. Na página da Microsoft exibida, selecione a conta e insira as credenciais necessárias.
+. Retorne à guia classificação do BlueXP  e você verá a mensagem "_AIP rótulos foram integrados com êxito com o Account <account_name>_".
+. Clique em *Fechar* e você verá o texto _rótulos AIP integrados_ na parte superior da página.
++
+image:screenshot_compliance_aip_labels_int.png["Uma captura de tela que mostra rótulos AIP foi integrada com sucesso."]
+
+
+
+.Resultado
+Você pode exibir e atribuir rótulos AIP a partir do painel de resultados da página de investigação. Você também pode atribuir rótulos AIP a arquivos usando políticas.
+
+
+
+=== Veja etiquetas AIP em seus arquivos
+
+Você pode exibir o rótulo AIP atual atribuído a um arquivo.
+
+No painel resultados da investigação de dados, clique image:button_down_caret.png["cuidado com os pés"] em para o ficheiro para expandir os detalhes dos metadados do ficheiro.
+
+image:screenshot_compliance_show_label.png["Uma captura de tela mostrando os detalhes dos metadados para um único arquivo, incluindo o rótulo AIP atribuído."]
+
+
+
+=== Atribua etiquetas AIP manualmente
+
+Você pode adicionar, alterar e remover rótulos AIP de seus arquivos usando a classificação BlueXP .
+
+Siga estas etapas para atribuir um rótulo AIP a um único arquivo.
+
+.Passos
+. No painel resultados da investigação de dados, clique image:button_down_caret.png["cuidado com os pés"] em para o ficheiro para expandir os detalhes dos metadados do ficheiro.
++
+image:screenshot_compliance_add_label_manually.png["Uma captura de tela mostrando os detalhes dos metadados de um arquivo na página Investigação de dados."]
+
+. Clique em *Assign a Label to this file* (atribuir um rótulo a este arquivo*) e, em seguida, selecione o rótulo.
++
+O rótulo aparece nos metadados do arquivo.
+
+
+
+Siga estas etapas para atribuir um rótulo AIP a vários arquivos. Observe que você pode atribuir um rótulo AIP a um máximo de 20 arquivos de cada vez (uma página na IU).
+
+.Passos
+. No painel resultados da investigação de dados, selecione o arquivo ou os arquivos que você deseja rotular.
++
+image:screenshot_compliance_tag_multi_files.png["Uma captura de tela mostrando como selecionar os arquivos que você deseja rotular e o botão rótulo na página Investigação de dados."]
+
++
+** Para selecionar arquivos individuais, marque a caixa para cada arquivo (image:button_backup_1_volume.png[""] ).
+** Para selecionar todos os arquivos na página atual, marque a caixa na linha de título (image:button_select_all_files.png[""] ).
+
+
+. Na barra de botões, clique em *Label* e selecione o rótulo AIP:
++
+image:screenshot_compliance_select_aip_label_multi.png["Uma captura de tela mostrando como atribuir um rótulo AIP a vários arquivos na página Investigação de dados."]
+
++
+O rótulo AIP é adicionado aos metadados para todos os arquivos selecionados.
+
+
+
+
+
+=== Remova a integração AIP
+
+Se você não quiser mais a capacidade de gerenciar rótulos AIP em arquivos, você pode remover a conta AIP da interface de classificação do BlueXP .
+
+Observe que não são feitas alterações nos rótulos que você adicionou usando a classificação BlueXP . Os rótulos que existem nos arquivos permanecerão como eles existem atualmente.
+
+.Passos
+. Na página _Configuration_, clique em *AIP Labels Integrated > Remove Integration* (etiquetas AIP integradas > Remover integração).
++
+image:screenshot_compliance_un_integrate_aip_labels.png["Uma captura de tela mostrando como remover integrações AIP com a classificação BlueXP ."]
+
+. Clique em *Remover integração* na caixa de diálogo de confirmação.
+
+
+
+
+== Aplique tags para gerenciar seus arquivos digitalizados
+
+Você pode adicionar uma tag aos arquivos que deseja marcar para algum tipo de acompanhamento. Por exemplo, você pode ter encontrado alguns arquivos duplicados e deseja excluir um deles, mas você precisa verificar qual deles deve ser excluído. Você pode adicionar uma tag de "Check to delete" ao arquivo para que você saiba que esse arquivo requer alguma pesquisa e algum tipo de ação futura.
+
+A classificação BlueXP  permite visualizar as tags atribuídas a arquivos, adicionar ou remover tags de arquivos e alterar o nome ou excluir uma tag existente.
+
+Observe que a tag não é adicionada ao arquivo da mesma forma que as etiquetas AIP fazem parte dos metadados do arquivo. A tag é vista apenas pelos usuários do BlueXP  usando a classificação BlueXP  para que você possa ver se um arquivo precisa ser excluído ou verificado para algum tipo de acompanhamento.
+
+
+TIP: As tags atribuídas a arquivos na classificação BlueXP  não estão relacionadas às tags que você pode adicionar a recursos, como volumes ou instâncias de máquina virtual. As tags de classificação BlueXP  são aplicadas no nível do arquivo.
+
+
+
+=== Exibir arquivos que têm certas tags aplicadas
+
+Você pode visualizar todos os arquivos que têm tags específicas atribuídas.
+
+. Clique no separador *Investigation* da classificação BlueXP .
+. Na página Investigação de dados, clique em *Tags* no painel filtros e selecione as tags necessárias.
++
+image:screenshot_compliance_filter_status.png["Uma captura de tela mostrando como selecionar tags no painel filtros."]
+
++
+O painel resultados da investigação exibe todos os arquivos que têm essas tags atribuídas.
+
+
+
+
+
+=== Atribuir tags a arquivos
+
+Você pode adicionar tags a um único arquivo ou a um grupo de arquivos.
+
+Para adicionar uma tag a um único arquivo:
+
+.Passos
+. No painel resultados da investigação de dados, clique image:button_down_caret.png["cuidado com os pés"] em para o ficheiro para expandir os detalhes dos metadados do ficheiro.
+. Clique no campo *Tags* e as tags atualmente atribuídas serão exibidas.
+. Adicione a tag ou tags:
++
+** Para atribuir uma tag existente, clique no campo *New Tag...* e comece a digitar o nome da tag. Quando a tag que você está procurando for exibida, selecione-a e pressione *Enter*.
+** Para criar uma nova tag e atribuí-la ao arquivo, clique no campo *New Tag...*, digite o nome da nova tag e pressione *Enter*.
++
+image:screenshot_compliance_add_status_manually.png["Uma captura de tela mostrando como atribuir uma tag a um arquivo na página Investigação de dados."]
+
++
+A tag aparece nos metadados do arquivo.
+
+
+
+
+
+Para adicionar uma tag a vários arquivos:
+
+.Passos
+. No painel resultados da investigação de dados, selecione o arquivo ou os arquivos que você deseja marcar.
++
+image:screenshot_compliance_tag_multi_files.png["Uma captura de tela mostrando como selecionar os arquivos que você deseja marcar e o botão Tags na página Investigação de dados."]
+
++
+** Para selecionar arquivos individuais, marque a caixa para cada arquivo (image:button_backup_1_volume.png[""] ).
+** Para selecionar todos os arquivos na página atual, marque a caixa na linha de título (image:button_select_all_files.png[""] ).
+** Para selecionar todos os arquivos em todas as páginas, marque a caixa na linha de título (image:button_select_all_files.png[""]) e, em seguida, na mensagem pop-up image:screenshot_select_all_items.png[""], clique em *Selecionar todos os itens na lista (itens xxx)*.
++
+Você pode aplicar tags a um máximo de 100.000 arquivos de cada vez.
+
+
+
+. Na barra de botões, clique em *Tags* e as tags atualmente atribuídas são exibidas.
+. Adicione a tag ou tags:
++
+** Para atribuir uma tag existente, clique no campo *New Tag...* e comece a digitar o nome da tag. Quando a tag que você está procurando for exibida, selecione-a e pressione *Enter*.
+** Para criar uma nova tag e atribuí-la ao arquivo, clique no campo *New Tag...*, digite o nome da nova tag e pressione *Enter*.
++
+image:screenshot_compliance_select_tags_multi.png["Uma captura de tela mostrando como atribuir uma tag a vários arquivos na página Investigação de dados."]
+
+
+
+. Aprovar a adição das tags na caixa de diálogo de confirmação e as tags são adicionadas aos metadados para todos os arquivos selecionados.
+
+
+
+
+=== Excluir tags de arquivos
+
+Você pode excluir uma tag se não precisar mais usá-la.
+
+Basta clicar no *x* para obter uma tag existente.
+
+image:button_delete_datasense_file_tag.png["Uma captura de tela da localização do botão de exclusão."]
+
+Se você selecionou vários arquivos, a tag será removida de todos os arquivos.
+
+
+
+== Atribua usuários para gerenciar determinados arquivos
+
+Você pode atribuir um usuário do BlueXP  a um arquivo específico ou a vários arquivos, para que a pessoa possa ser responsável por quaisquer ações de acompanhamento que precisam ser feitas no arquivo. Esse recurso é frequentemente usado com o recurso para adicionar tags de status personalizadas a um arquivo.
+
+Por exemplo, você pode ter um arquivo que contém certos dados pessoais que permite que muitos usuários leiam e gravem o acesso (permissões abertas). Assim, você pode atribuir a tag Status "alterar permissões" e atribuir este arquivo ao usuário "Joan Smith" para que eles possam decidir como corrigir o problema. Quando eles corrigirem o problema, eles poderiam alterar a tag Status para "Completed" (Concluído).
+
+Observe que o nome de usuário não é adicionado ao arquivo como parte dos metadados do arquivo - ele é visto apenas pelos usuários do BlueXP  ao usar a classificação BlueXP .
+
+Um novo filtro na página de investigação permite visualizar facilmente todos os ficheiros que têm a mesma pessoa no campo "atribuído a".
+
+Siga estas etapas para atribuir um usuário a um único arquivo.
+
+.Passos
+. No painel resultados da investigação de dados, clique image:button_down_caret.png["cuidado com os pés"] em para o ficheiro para expandir os detalhes dos metadados do ficheiro.
+. Clique no campo *Assigned to* e selecione o nome de usuário.
++
+image:screenshot_compliance_add_user_manually.png["Uma captura de tela mostrando como atribuir um usuário a um arquivo na página Investigação de dados."]
+
++
+O Nome de utilizador aparece nos metadados do ficheiro.
+
+
+
+Siga estas etapas para atribuir um usuário a vários arquivos. Observe que você pode atribuir um usuário a um máximo de 20 arquivos de cada vez (uma página na IU).
+
+.Passos
+. No painel resultados da investigação de dados, selecione o ficheiro ou os ficheiros que pretende atribuir a um utilizador.
++
+image:screenshot_compliance_tag_multi_files.png["Uma captura de tela mostrando como selecionar os arquivos que você deseja atribuir a um usuário e o botão atribuir a, na página Investigação de dados."]
+
++
+** Para selecionar arquivos individuais, marque a caixa para cada arquivo (image:button_backup_1_volume.png[""] ).
+** Para selecionar todos os arquivos na página atual, marque a caixa na linha de título (image:button_select_all_files.png[""] ).
+
+
+. Na barra de botões, clique em *Assign to* e selecione o nome de usuário:
++
+image:screenshot_compliance_select_user_multi.png["Uma captura de tela mostrando como atribuir um usuário a vários arquivos na página Investigação de dados."]
+
++
+O usuário é adicionado aos metadados para todos os arquivos selecionados.
+
+

@@ -1,0 +1,242 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-fsx.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, fsx, fsx for ontap, aws, data sense 
+summary: Conclua algumas etapas para começar a digitalizar o volume do Amazon FSX for ONTAP com a classificação BlueXP . 
+---
+= Verifique o Amazon FSX para volumes ONTAP com a classificação BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Conclua algumas etapas para começar a digitalizar o volume do Amazon FSX for ONTAP com a classificação BlueXP .
+
+
+
+== Antes de começar
+
+* Você precisa de um conetor ativo na AWS para implantar e gerenciar a classificação do BlueXP .
+* O grupo de segurança selecionado ao criar o ambiente de trabalho deve permitir o tráfego da instância de classificação do BlueXP . Você pode encontrar o grupo de segurança associado usando o ENI conetado ao sistema de arquivos FSX for ONTAP e editá-lo usando o Console de Gerenciamento da AWS.
++
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html["Grupos de segurança da AWS para instâncias Linux"^]
+
++
+https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/security-group-rules.html["Grupos de segurança da AWS para instâncias do Windows"^]
+
++
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html["Interfaces de rede AWS Elastic (ENI)"^]
+
+
+
+
+
+== Início rápido
+
+Comece rapidamente seguindo estes passos ou role para baixo para obter detalhes completos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Descubra os sistemas de arquivos FSX for ONTAP que você deseja digitalizar
+[role="quick-margin-para"]
+Antes de poder digitalizar o FSX para ONTAP volumes https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html["Você deve ter um ambiente de trabalho do FSX com volumes configurados"^], .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Implante a instância de classificação do BlueXP 
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implantar a classificação BlueXP  no BlueXP "^] se ainda não houver uma instância implantada.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Ative a classificação BlueXP  e selecione os volumes a digitalizar
+[role="quick-margin-para"]
+Selecione a guia *Configuração* e ative as verificações de conformidade para volumes em ambientes de trabalho específicos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"] Garanta o acesso aos volumes
+[role="quick-margin-para"]
+Agora que a classificação BlueXP  está ativada, certifique-se de que ela pode acessar todos os volumes.
+
+[role="quick-margin-list"]
+* A instância de classificação do BlueXP  precisa de uma conexão de rede para cada sub-rede do FSX for ONTAP.
+* Certifique-se de que as seguintes portas estejam abertas para a instância de classificação BlueXP :
++
+** Para NFS – portas 111 e 2049.
+** Para CIFS – portas 139 e 445.
+
+
+* As políticas de exportação de volume NFS devem permitir o acesso a partir da instância de classificação BlueXP .
+* A classificação do BlueXP  precisa de credenciais do ative Directory para analisar volumes CIFS. Clique em *Compliance* > *Configuration* > *Edit CIFS Credentials* e forneça as credenciais.
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"] Gerencie os volumes que deseja digitalizar
+[role="quick-margin-para"]
+Selecione ou anule a seleção dos volumes que pretende digitalizar e a classificação BlueXP  inicia ou pára de os digitalizar.
+
+
+
+== Descubra o sistema de arquivos FSX for ONTAP que você deseja digitalizar
+
+Se o sistema de arquivos FSX for ONTAP que você deseja digitalizar ainda não está no BlueXP  como um ambiente de trabalho, você pode adicioná-lo à tela neste momento.
+
+https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html["Veja como descobrir ou criar o sistema de arquivos FSX for ONTAP no BlueXP "^].
+
+
+
+== Implante a instância de classificação do BlueXP 
+
+link:task-deploy-cloud-compliance.html["Implantar a classificação BlueXP "^] se ainda não houver uma instância implantada.
+
+Você deve implantar a classificação do BlueXP  na mesma rede da AWS que o conetor para AWS e os volumes do FSX que deseja analisar.
+
+*Observação:* a implantação da classificação do BlueXP  em um local local local não é suportada atualmente ao digitalizar volumes FSX.
+
+As atualizações para o software de classificação BlueXP  são automatizadas, desde que a instância tenha conetividade com a Internet.
+
+
+
+== Ative a classificação BlueXP  nos seus ambientes de trabalho
+
+Você pode ativar a classificação do BlueXP  para o FSX for ONTAP volumes.
+
+. No menu de navegação esquerdo do BlueXP , clique em *Governança > classificação* e selecione a guia *Configuração*.
++
+image:screenshot_fsx_scanning_activate.png["Uma captura de tela da guia Configuração imediatamente após implantar a instância de classificação do BlueXP ."]
+
+. Selecione como pretende digitalizar os volumes em cada ambiente de trabalho. link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans["Saiba mais sobre o mapeamento e a classificação de exames"]:
++
+** Para mapear todos os volumes, clique em *Mapear todos os volumes*.
+** Para mapear e classificar todos os volumes, clique em *Map & Classify All volumes*.
+** Para personalizar a digitalização para cada volume, clique em *ou selecione o tipo de digitalização para cada volume* e, em seguida, escolha os volumes que pretende mapear e/ou classificar.
++
+<<Ative e desative verificações de conformidade em volumes,Ativar e desativar verificações de conformidade em volumes>>Consulte para obter detalhes.
+
+
+
+. Na caixa de diálogo de confirmação, clique em *Approve* para que a classificação BlueXP  comece a digitalizar seus volumes.
+
+
+.Resultado
+A classificação BlueXP  inicia a digitalização dos volumes selecionados no ambiente de trabalho. Os resultados estarão disponíveis no painel de conformidade assim que a classificação BlueXP  terminar as verificações iniciais. O tempo que leva depende da quantidade de dados - pode ser de alguns minutos ou horas.
+
+[NOTE]
+====
+* Por padrão, se a classificação do BlueXP  não tiver permissões de atributos de gravação no CIFS ou permissões de gravação no NFS, o sistema não verificará os arquivos em seus volumes porque a classificação do BlueXP  não pode reverter o "último tempo de acesso" para o carimbo de data/hora original. Se não se importar se a última hora de acesso for redefinida, clique em *ou selecione o tipo de digitalização para cada volume*. A página resultante tem uma configuração que você pode habilitar para que a classificação BlueXP  digitalize os volumes independentemente das permissões.
+* A classificação BlueXP  verifica apenas um compartilhamento de arquivo sob um volume. Se você tiver vários compartilhamentos em seus volumes, precisará analisar esses outros compartilhamentos separadamente como um grupo de compartilhamentos. link:reference-limitations.html#bluexp-classification-scans-only-one-share-under-a-volume["Veja mais detalhes sobre esta limitação de classificação BlueXP "^].
+
+
+====
+
+
+== Verifique se a classificação BlueXP  tem acesso a volumes
+
+Verifique se a classificação do BlueXP  pode acessar volumes verificando suas políticas de rede, grupos de segurança e exportação.
+
+Você precisará fornecer a classificação BlueXP  com credenciais CIFS para que possa acessar volumes CIFS.
+
+.Passos
+. Na página _Configuration_, clique em *View Details* (Ver detalhes) para rever o estado e corrigir quaisquer erros.
++
+Por exemplo, a imagem a seguir mostra uma classificação de volume BlueXP  não pode ser verificada devido a problemas de conetividade de rede entre a instância de classificação BlueXP  e o volume.
+
++
+image:screenshot_fsx_scanning_no_network_error.png["Uma captura de tela da página Exibir detalhes na configuração de digitalização mostrando o volume não sendo digitalizado devido à conetividade de rede entre a classificação BlueXP  e o volume."]
+
+. Verifique se há uma conexão de rede entre a instância de classificação do BlueXP  e cada rede que inclua volumes para o FSX for ONTAP.
++
+
+NOTE: Para o FSX for ONTAP, a classificação BlueXP  pode digitalizar volumes apenas na mesma região que o BlueXP .
+
+. Certifique-se de que as portas a seguir estejam abertas para a instância de classificação BlueXP .
++
+** Para NFS – portas 111 e 2049.
+** Para CIFS – portas 139 e 445.
+
+
+. Garanta que as políticas de exportação de volume NFS incluam o endereço IP da instância de classificação BlueXP  para que ela possa acessar os dados em cada volume.
+. Se você usar o CIFS, forneça a classificação do BlueXP  com credenciais do ative Directory para que ele possa analisar volumes CIFS.
++
+.. No menu de navegação esquerdo do BlueXP , clique em *Governança > classificação* e selecione a guia *Configuração*.
+.. Para cada ambiente de trabalho, clique em *Editar credenciais CIFS* e introduza o nome de utilizador e a palavra-passe de que a classificação BlueXP  necessita para aceder aos volumes CIFS no sistema.
++
+As credenciais podem ser somente leitura, mas fornecer credenciais de administrador garante que a classificação do BlueXP  possa ler qualquer dado que exija permissões elevadas. As credenciais são armazenadas na instância de classificação do BlueXP .
+
++
+Se você quiser garantir que seus arquivos "últimos tempos acessados" sejam inalterados pelas verificações de classificação do BlueXP , recomendamos que o usuário tenha permissões de atributos de gravação em CIFS ou permissões de gravação em NFS. Se possível, recomendamos tornar o usuário configurado do ative Directory parte de um grupo pai na organização que tem permissões para todos os arquivos.
+
++
+Depois de inserir as credenciais, você verá uma mensagem informando que todos os volumes CIFS foram autenticados com êxito.
+
+
+
+
+
+
+
+== Ative e desative verificações de conformidade em volumes
+
+Pode iniciar ou parar exames apenas de mapeamento ou exames de mapeamento e classificação num ambiente de trabalho a qualquer momento a partir da página Configuração. Você também pode mudar de digitalizações somente de mapeamento para digitalizações de mapeamento e classificação, e vice-versa. Recomendamos que você digitalize todos os volumes.
+
+A opção na parte superior da página para *Scan when missing "write attributes" permissions* está desativada por padrão. Isso significa que se a classificação BlueXP  não tiver permissões de atributos de gravação no CIFS ou permissões de gravação no NFS, o sistema não verificará os arquivos porque a classificação BlueXP  não poderá reverter o "último tempo de acesso" para o carimbo de data/hora original. Se você não se importa se a última hora de acesso é redefinida, LIGUE o interrutor e todos os arquivos serão digitalizados independentemente das permissões. link:reference-collected-metadata.html#last-access-time-timestamp["Saiba mais"^].
+
+image:screenshot_volume_compliance_selection.png["Uma captura de tela da página Configuração onde você pode ativar ou desativar a digitalização de volumes individuais."]
+
+[cols="45,45"]
+|===
+| Para: | Faça isso: 
+
+
+| Ative digitalizações apenas de mapeamento num volume | Na área de volume, clique em *Map* 
+
+
+| Ative a digitalização completa num volume | Na área de volume, clique em *Map & Classify* 
+
+
+| Desativar a digitalização num volume | Na área de volume, clique em *Off* 
+
+
+|  |  
+
+
+| Ative digitalizações apenas de mapeamento em todos os volumes | Na área de cabeçalho, clique em *Map* 
+
+
+| Ative a digitalização completa em todos os volumes | Na área de cabeçalho, clique em *Map & Classify* 
+
+
+| Desative a digitalização em todos os volumes | Na área de cabeçalho, clique em *Off* 
+|===
+
+NOTE: Os novos volumes adicionados ao ambiente de trabalho são automaticamente digitalizados apenas quando você definir a configuração *Map* ou *Map & Classify* na área de cabeçalho. Quando definido como *Custom* ou *Off* na área de cabeçalho, você precisará ativar o mapeamento e/ou a digitalização completa em cada novo volume adicionado no ambiente de trabalho.
+
+
+
+== Analisar volumes de proteção de dados
+
+Por padrão, os volumes de proteção de dados (DP) não são verificados porque não são expostos externamente e a classificação BlueXP  não pode acessá-los. Estes são os volumes de destino para operações do SnapMirror a partir de um sistema de arquivos FSX for ONTAP.
+
+Inicialmente, a lista de volumes identifica esses volumes como _Type_ *DP* com o _Status_ *Not Scanning* e a _Required Action_ *Enable Access to DP volumes*.
+
+image:screenshot_cloud_compliance_dp_volumes.png["Uma captura de tela mostrando o botão Ativar acesso aos volumes DP que você pode selecionar para digitalizar volumes de proteção de dados."]
+
+.Passos
+Se você quiser analisar esses volumes de proteção de dados:
+
+. Clique em *Ativar o acesso aos volumes DP* na parte superior da página.
+. Revise a mensagem de confirmação e clique em *Ativar o acesso aos volumes DP* novamente.
++
+** Os volumes criados inicialmente como volumes NFS no sistema de arquivos FSX for ONTAP de origem estão ativados.
+** Os volumes criados inicialmente como volumes CIFS no sistema de arquivos FSX for ONTAP de origem exigem que você insira credenciais CIFS para verificar esses volumes DP. Se você já inseriu credenciais do ative Directory para que a classificação do BlueXP  possa analisar volumes CIFS, você pode usar essas credenciais ou especificar um conjunto diferente de credenciais de administrador.
++
+image:screenshot_compliance_dp_cifs_volumes.png["Uma captura de tela das duas opções para habilitar volumes de proteção de dados CIFS."]
+
+
+
+. Ative cada volume DP que pretende digitalizar <<Ativar e desativar verificações de conformidade em volumes,da mesma forma que ativou outros volumes>>.
+
+
+.Resultado
+Uma vez ativada, a classificação BlueXP  cria um compartilhamento NFS a partir de cada volume DP que foi ativado para digitalização. As políticas de exportação de compartilhamento só permitem acesso a partir da instância de classificação BlueXP .
+
+*Observação:* se você não tiver volumes de proteção de dados CIFS quando você ativou inicialmente o acesso a volumes DP e depois adicionar alguns, o botão *Ativar acesso ao CIFS DP* aparece na parte superior da página Configuração. Clique neste botão e adicione credenciais CIFS para permitir o acesso a esses volumes CIFS DP.
+
+
+NOTE: As credenciais do active Directory são registradas apenas na VM de storage do primeiro volume CIFS DP, de modo que todos os volumes de DP nesse SVM serão verificados. Quaisquer volumes que residam em outros SVMs não terão as credenciais do ative Directory registradas, portanto, esses volumes DP não serão verificados.

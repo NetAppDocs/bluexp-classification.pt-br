@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
+Se você quiser garantir que seus arquivos "últimos tempos acessados" sejam inalterados pelas verificações de classificação do BlueXP , recomendamos que o usuário tenha permissões de atributos de gravação em CIFS ou permissões de gravação em NFS. Se possível, recomendamos tornar o usuário configurado do ative Directory parte de um grupo pai na organização que tem permissões para todos os arquivos.

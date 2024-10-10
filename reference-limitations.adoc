@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, data sense, classification, bluexp, scan shares 
+summary: As limitações conhecidas identificam funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado. 
+---
+= Limitações conhecidas
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+As limitações conhecidas identificam funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado.
+
+
+
+== Opções de liberação de classificação BlueXP  removidas
+
+A versão de dezembro de 2023 (versão 1.26.6) removeu as seguintes opções:
+
+* A opção para ativar a coleção de registos de auditoria foi desativada.
+* Durante a investigação de diretórios, a opção de calcular o número de dados pessoais identificáveis (PII) por diretórios não está disponível.
+* A opção de integrar dados usando rótulos AIP (proteção de informações do Azure) foi desativada.
+
+
+
+
+== Limitações de digitalização da classificação BlueXP 
+
+
+
+=== A classificação BlueXP  verifica apenas uma partilha sob um volume
+
+Se você tiver vários compartilhamentos de arquivo em um único volume, a classificação BlueXP  verificará o compartilhamento com a hierarquia mais alta. Por exemplo, se você tiver compartilhamentos como o seguinte:
+
+* /A
+* /A/B
+* /C
+* /D/E
+
+
+Em seguida, os dados em /A serão digitalizados. Os dados em /C e /D não serão digitalizados.
+
+.Solução alternativa
+Existe uma solução alternativa para verificar se você está digitalizando dados de todos os compartilhamentos do seu volume. Siga estes passos:
+
+. No ambiente de trabalho, adicione o volume a ser lido.
+. Depois que a classificação do BlueXP  concluir a digitalização do volume, vá para a página _Investigação de dados_ e crie um filtro para ver qual compartilhamento está sendo digitalizado:
++
+Você filtrará os dados por "Nome do ambiente de trabalho" e "tipo de diretório" para ver qual compartilhamento está sendo verificado.
+
+. Obtenha a lista completa de compartilhamentos que existem no volume para que você possa ver quais compartilhamentos não estão sendo digitalizados.
+. link:task-scanning-file-shares.html["Adicione os compartilhamentos restantes a um grupo de ações"].
++
+Você precisará adicionar todos os compartilhamentos individualmente, por exemplo:
+
++
+....
+/C
+/D
+....
+. Execute estas etapas para cada volume no ambiente de trabalho que tenha vários compartilhamentos.
+

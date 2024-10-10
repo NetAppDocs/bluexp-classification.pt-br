@@ -1,0 +1,77 @@
+= 
+:allow-uri-read: 
+
+
+* A classificação BlueXP  não é suportada em um host que é compartilhado com outros aplicativos - o host deve ser um host dedicado.
+* Ao criar o sistema host em suas instalações, você pode escolher entre esses tamanhos de sistema, dependendo do tamanho do conjunto de dados que você planeja fazer a verificação de classificação do BlueXP .
++
+[cols="17,17,27,31"]
+|===
+| Tamanho do sistema | CPU | RAM (a memória swap deve ser desativada) | Disco 
+
+
+| * Extra grande * | 32 CPUs | 128 GB DE RAM | 1 TIB SSD ON /, OR - 100 GiB disponível em /opt - 895 GiB disponível em /var/lib/docker - 5 GiB em /tmp 
+
+
+| * Grande * | 16 CPUs | 64 GB DE RAM | 500 GiB SSD ON /, OR - 100 GiB disponível em /opt - 395 GiB disponível em /var/lib/docker ou Podman /var/lib/containers ou Podman /var/lib/containers - 5 GiB em /tmp 
+|===
+* Ao implantar uma instância de computação na nuvem para sua instalação de classificação do BlueXP , recomendamos um sistema que atenda aos requisitos "grandes" do sistema acima:
++
+** *Tipo de instância do Amazon Elastic Compute Cloud (Amazon EC2)*: Recomendamos "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Consulte tipos de instâncias adicionais da AWS"^].
+** *Tamanho da VM do Azure*: Recomendamos "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Consulte tipos de instância adicionais do Azure"^].
+** *Tipo de máquina GCP*: Recomendamos "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Consulte tipos de instância adicionais do GCP"^].
+
+
+* *Permissões de pasta UNIX*: As seguintes permissões mínimas UNIX são necessárias:
++
+[cols="25,25"]
+|===
+| Pasta | Permissões mínimas 
+
+
+| /tmp | `rwxrwxrwt` 
+
+
+| /opt | `rwxr-xr-x` 
+
+
+| /var/lib/docker | `rwx------` 
+
+
+| /usr/lib/systemd/system | `rwxr-xr-x` 
+|===
+* *Sistema operacional*:
++
+** Os seguintes sistemas operacionais requerem o uso do mecanismo de contentor Docker:
++
+*** Red Hat Enterprise Linux versão 7,8 e 7,9
+*** Ubuntu 22,04 (requer classificação BlueXP  versão 1,23 ou superior)
+*** Ubuntu 24,04 (requer classificação BlueXP  versão 1,23 ou superior)
+
+
+** Os seguintes sistemas operacionais requerem o uso do motor de contentores Podman, e eles exigem a classificação BlueXP  versão 1,30 ou superior:
++
+*** Red Hat Enterprise Linux versão 8,8, 9,0, 9,1, 9,2, 9,3, 9,4
+
+
+
+
+* *Red Hat Subscription Management*: O host deve estar registrado no Red Hat Subscription Management. Se não estiver registrado, o sistema não poderá acessar repositórios para atualizar o software necessário de 3rd partes durante a instalação.
+* * Software adicional*: Você deve instalar o seguinte software no host antes de instalar a classificação BlueXP :
++
+** Dependendo do sistema operacional que você estiver usando, você precisará instalar um dos motores de contentor:
++
+*** Docker Engine versão 19.3.1 ou superior. https://docs.docker.com/engine/install/["Veja as instruções de instalação"^].
+*** Podman versão 4 ou superior. Para instalar o Podman, digite (`sudo yum install podman netavark -y`).
+
+
+
+
+
+
+* Python versão 3,6 ou superior. https://www.python.org/downloads/["Veja as instruções de instalação"^].
++
+** *Considerações de NTP*: A NetApp recomenda configurar o sistema de classificação BlueXP  para usar um serviço de protocolo de tempo de rede (NTP). O tempo deve ser sincronizado entre o sistema de classificação BlueXP  e o sistema de conetores BlueXP .
+
+
+

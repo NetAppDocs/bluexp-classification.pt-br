@@ -1,0 +1,219 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-governance-data.html 
+keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies 
+summary: Controle os custos relacionados aos dados sobre os recursos de storage da sua organização. A classificação do BlueXP  identifica a quantidade de dados obsoletos, dados não comerciais, arquivos duplicados e arquivos muito grandes em seus sistemas. Assim, você pode decidir se deseja remover ou categorizar alguns arquivos para um storage de objetos mais econômico. 
+---
+= Veja detalhes de governança sobre os dados armazenados em sua organização
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Controle os custos relacionados aos dados sobre os recursos de storage da sua organização. A classificação do BlueXP  identifica a quantidade de dados obsoletos, dados não comerciais, arquivos duplicados e arquivos muito grandes em seus sistemas. Assim, você pode decidir se deseja remover ou categorizar alguns arquivos para um storage de objetos mais econômico.
+
+Além disso, se você estiver planejando migrar dados de locais para a nuvem, poderá visualizar o tamanho dos dados e se algum deles contém informações confidenciais antes de movê-los.
+
+
+
+== O painel Governança
+
+O dashboard de governança fornece informações para que você possa aumentar a eficiência e controlar os custos relacionados aos dados armazenados em seus recursos de storage.
+
+image:screenshot_compliance_governance_dashboard.png["Uma captura de tela do painel de governança de classificação da BlueXP ."]
+
+
+
+=== Salvar oportunidades
+
+Você pode querer investigar os itens na área _Saving Opportunities_ para ver se há dados que você deve excluir ou categorizar para armazenamento de objetos mais barato. Clique em cada item para ver os resultados filtrados na página de investigação.
+
+* *Dados obsoletos* - dados que foram modificados pela última vez há mais de 3 anos.
+* *Dados não comerciais* - dados considerados não relacionados ao negócio, com base na sua Categoria ou tipo de ficheiro. Isso inclui:
++
+** Dados da aplicação
+** Áudio
+** Executáveis
+** Imagens
+** Registos
+** Vídeos
+** Diversos (categoria geral "outros")
+
+
+* *Duplicate Files* - arquivos que são duplicados em outros locais nas fontes de dados que você está digitalizando. link:task-investigate-data.html#view-all-duplicated-files["Veja que tipos de arquivos duplicados são exibidos"].
+
+
+
+NOTE: Se alguma das suas fontes de dados implementar a disposição em camadas de dados, os dados antigos que já residem no armazenamento de objetos podem ser identificados na categoria _dados obsoletos_.
+
+
+
+=== Políticas com o maior número de resultados
+
+Na área _policies_, as políticas com o maior número de resultados aparecem no topo da lista. Clique no nome de uma política para exibir os resultados na página de investigação. Clique em *Exibir tudo* para exibir a lista de todas as políticas disponíveis.
+
+Clique link:task-using-policies.html["aqui"] para saber mais sobre políticas.
+
+
+
+=== Visão geral dos dados
+
+A seção _Visão geral de dados_ fornece uma visão geral rápida de todos os dados que estão sendo digitalizados. Clique no botão para baixar um relatório completo de mapeamento de dados que inclui capacidade de uso, idade dos dados, tamanho dos dados e tipos de arquivo para todos os seus ambientes de trabalho e fontes de dados. Consulte <<Relatório de mapeamento de dados,Relatório de mapeamento de dados>> para obter detalhes completos sobre este relatório.
+
+
+
+=== Principais repositórios de dados listados por sensibilidade de dados
+
+A área _Top Data Repositories by Sensitivity Level_ lista os quatro principais repositórios de dados (ambientes de trabalho e fontes de dados) que contêm os itens mais sensíveis. O gráfico de barras para cada ambiente de trabalho é dividido em:
+
+* Dados não confidenciais
+* Dados pessoais
+* Dados pessoais confidenciais
+
+
+Você pode posicionar o cursor sobre cada seção para ver o número total de itens em cada categoria.
+
+Clique em cada área para ver os resultados filtrados na página de investigação para que possa investigar mais.
+
+
+
+=== Dados listados por tipos de permissões abertas
+
+A área _open permissions_ mostra a porcentagem para cada tipo de permissões que existem para todos os arquivos que estão sendo verificados. O gráfico mostra os seguintes tipos de permissões:
+
+* Sem permissões abertas
+* Aberto à Organização
+* Aberto ao público
+* Acesso desconhecido
+
+
+Você pode posicionar o cursor sobre cada seção para ver o número total de arquivos em cada categoria. Clique em cada área para ver os resultados filtrados na página de investigação para que possa investigar mais.
+
+
+
+=== Idade dos dados e tamanho dos gráficos de dados
+
+Você pode querer investigar os itens nos gráficos _Age_ e _size_ para ver se há dados que você deve excluir ou classificar para armazenamento de objetos menos caro.
+
+Você pode posicionar o cursor sobre um ponto nos gráficos para ver detalhes sobre a idade ou o tamanho dos dados nessa categoria. Clique para ver todos os ficheiros filtrados por essa faixa etária ou tamanho.
+
+* *Age of Data graph* - categoriza os dados com base na hora em que foi criado, na última vez em que foi acessado ou na última vez em que foi modificado.
+* * Tamanho do gráfico de dados * - categoriza os dados com base no tamanho.
+
+
+
+NOTE: Se alguma das suas fontes de dados implementar a disposição em camadas de dados, os dados antigos que já residem no armazenamento de objetos podem ser identificados no gráfico _idade dos dados_.
+
+
+
+=== A maioria das classificações de dados identificadas
+
+A área _Classification_ fornece uma lista dos dados mais identificados link:task-controlling-private-data.html#view-files-by-categories["Categorias"^] e link:task-controlling-private-data.html#view-files-by-file-types["Tipos de ficheiros"^]verificados.
+
+
+
+==== Categorias
+
+As categorias podem ajudá-lo a entender o que está acontecendo com seus dados, mostrando os tipos de informações que você tem. Por exemplo, uma categoria como "currículos" ou "contratos de funcionários" pode incluir dados confidenciais. Ao investigar os resultados, você pode descobrir que os contratos de funcionários são armazenados em um local não seguro. Você pode então corrigir esse problema.
+
+Consulte link:task-controlling-private-data.html#view-files-by-categories["Visualizar ficheiros por categorias"^] para obter mais informações.
+
+
+
+==== Tipos de ficheiros
+
+A revisão dos tipos de arquivo pode ajudá-lo a controlar seus dados confidenciais, porque você pode descobrir que certos tipos de arquivo não estão armazenados corretamente.
+
+Consulte link:task-controlling-private-data.html#view-files-by-file-types["Exibindo tipos de arquivo"^] para obter mais informações.
+
+
+
+== Relatório de mapeamento de dados
+
+O Relatório de Mapeamento de dados fornece uma visão geral dos dados que estão sendo armazenados em suas fontes de dados corporativas para ajudá-lo nas decisões de migração, backup, segurança e processos de conformidade. Primeiro, o relatório lista uma visão geral que resume todos os seus ambientes de trabalho e fontes de dados e, em seguida, fornece uma análise para cada ambiente de trabalho.
+
+O relatório inclui as seguintes informações:
+
+[cols="25,65"]
+|===
+| Categoria | Descrição 
+
+
+| Capacidade de utilização | Para todos os ambientes de trabalho: Lista o número de arquivos e a capacidade usada para cada ambiente de trabalho. Para ambientes de trabalho individuais: Lista os arquivos que estão usando a maior capacidade. 
+
+
+| Idade dos dados | Fornece três gráficos e gráficos para quando os arquivos foram criados, modificados pela última vez ou acessados pela última vez. Lista o número de arquivos e sua capacidade usada, com base em determinados intervalos de datas. 
+
+
+| Tamanho dos dados | Lista o número de arquivos que existem dentro de determinados intervalos de tamanho em seus ambientes de trabalho. 
+
+
+| Tipos de ficheiros | Lista o número total de arquivos e a capacidade usada para cada tipo de arquivo que está sendo armazenado em seus ambientes de trabalho. 
+|===
+
+
+=== Gerar o Relatório de Mapeamento de dados
+
+Você gera esse relatório a partir da guia Governança na classificação BlueXP .
+
+.Passos
+. No menu BlueXP , clique em *Governança > classificação*.
+. Clique em *Governança* e, em seguida, clique no botão *Relatório de Mapeamento de dados*.
++
+image:screenshot_compliance_data_mapping_report_button.png["Uma captura de tela do Painel de Governança que mostra como iniciar o Relatório de Mapeamento de dados."]
+
+
+
+.Resultado
+A classificação BlueXP  gera um relatório .pdf que pode rever e enviar para outros grupos, conforme necessário.
+
+Se o relatório for maior que 1 MB, o arquivo .pdf será retido na instância de classificação do BlueXP  e você verá uma mensagem pop-up sobre a localização exata. Quando a classificação do BlueXP  é instalada em uma máquina Linux em suas instalações ou em uma máquina Linux implantada na nuvem, você pode navegar diretamente para o arquivo .pdf. Quando a classificação do BlueXP  é implantada na nuvem, você precisará fazer SSH para a instância de classificação do BlueXP  para baixar o arquivo .pdf. link:task-audit-data-sense-actions.html#access-the-log-files["Veja como acessar dados na instância de classificação"^].
+
+Observe que você pode personalizar o nome da empresa que aparece na primeira página do relatório a partir da parte superior da página de classificação do BlueXP  clicando image:screenshot_gallery_options.gif["O botão mais"] e, em seguida, clicando em *alterar nome da empresa*. Na próxima vez que você gerar o relatório, ele incluirá o novo nome.
+
+
+
+== Relatório de avaliação da descoberta de dados
+
+O Relatório de avaliação de descoberta de dados fornece uma análise de alto nível do ambiente digitalizado para destacar as descobertas do sistema e mostrar áreas de preocupação e possíveis etapas de correção. Os resultados são baseados em mapeamento e classificação de seus dados. O objetivo deste relatório é aumentar a conscientização sobre três aspectos significativos do seu conjunto de dados:
+
+[cols="25,65"]
+|===
+| Recurso | Descrição 
+
+
+| Preocupações com a governança de dados | Uma imagem detalhada de todos os dados que você possui e áreas onde você pode ser capaz de reduzir a quantidade de dados para economizar custos. 
+
+
+| Exposições de segurança de dados | Áreas onde seus dados estão acessíveis a ataques internos ou externos devido a permissões de acesso amplas. 
+
+
+| Lacunas de conformidade de dados | Onde suas informações pessoais ou confidenciais estão localizadas para segurança e para DSARs (solicitações de acesso do titular dos dados). 
+|===
+Após a avaliação, este relatório identifica áreas onde você pode:
+
+* Reduza os custos de armazenamento alterando sua política de retenção ou movendo ou excluindo determinados dados (dados obsoletos, duplicados ou não comerciais)
+* Proteja seus dados com permissões amplas revisando as políticas globais de gerenciamento de grupos
+* Proteja seus dados que tenham informações pessoais ou confidenciais, movendo PII para armazenamentos de dados mais seguros
+
+
+
+
+=== Gerar o Relatório de avaliação de descoberta de dados
+
+Você gera esse relatório a partir da guia Governança na classificação BlueXP .
+
+.Passos
+. No menu BlueXP , clique em *Governança > classificação*.
+. Clique em *Governança* e, em seguida, clique no botão *Relatório de avaliação de descoberta de dados*.
++
+image:screenshot_compliance_data_discovery_report_button.png["Uma captura de tela do Painel de Governança que mostra como iniciar o Relatório de avaliação de descoberta de dados."]
+
+
+
+.Resultado
+A classificação BlueXP  gera um relatório .pdf que pode rever e enviar para outros grupos, conforme necessário.

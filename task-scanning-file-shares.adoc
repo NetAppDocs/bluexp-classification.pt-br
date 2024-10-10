@@ -1,0 +1,162 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-file-shares.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode 
+summary: Conclua algumas etapas para iniciar a verificação de compartilhamentos de arquivos NFS ou CIFS não NetApp diretamente com a classificação BlueXP . Esses compartilhamentos de arquivos podem residir no local ou na nuvem. 
+---
+= Partilha de ficheiros de leitura com a classificação BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Conclua algumas etapas para iniciar a verificação de compartilhamentos de arquivos NFS ou CIFS a partir de volumes do Google Cloud NetApp e de sistemas NetApp 7-modo mais antigos. Esses compartilhamentos de arquivos podem residir no local ou na nuvem.
+
+
+NOTE: A digitalização de dados de compartilhamentos de arquivos não NetApp não é suportada na versão principal da classificação BlueXP .
+
+
+
+== Início rápido
+
+Comece rapidamente seguindo estas etapas ou role para baixo até as seções restantes para obter detalhes completos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Rever pré-requisitos de partilha de ficheiros
+[role="quick-margin-para"]
+Para compartilhamentos CIFS (SMB), verifique se você tem credenciais para acessar os compartilhamentos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Implante a instância de classificação do BlueXP 
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implantar a classificação BlueXP "^] se ainda não houver uma instância implantada.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Crie um grupo para manter os compartilhamentos de arquivo
+[role="quick-margin-para"]
+O grupo é um contentor para os compartilhamentos de arquivo que você deseja analisar e é usado como o nome do ambiente de trabalho para esses compartilhamentos de arquivo.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"] Adicione os compartilhamentos de arquivo ao grupo
+[role="quick-margin-para"]
+Adicione a lista de compartilhamentos de arquivo que você deseja digitalizar e selecione o tipo de digitalização. Você pode adicionar até 100 compartilhamentos de arquivo de cada vez.
+
+
+
+== Reveja os requisitos de compartilhamento de arquivos
+
+Reveja os seguintes pré-requisitos para se certificar de que tem uma configuração suportada antes de ativar a classificação BlueXP .
+
+* Os compartilhamentos podem ser hospedados em qualquer lugar, inclusive na nuvem ou no local. Os compartilhamentos CIFS de sistemas de storage NetApp 7-Mode mais antigos podem ser verificados como compartilhamentos de arquivos.
++
+Observe que a classificação BlueXP  não pode extrair permissões ou o "último tempo de acesso" de sistemas do modo 7. Além disso, devido a um problema conhecido entre algumas versões do Linux e compartilhamentos CIFS em sistemas 7-Mode, você deve configurar o compartilhamento para usar apenas SMB v1 com autenticação NTLM ativada.
+
+* É necessário haver conetividade de rede entre a instância de classificação BlueXP  e os compartilhamentos.
+* Certifique-se de que essas portas estejam abertas para a instância de classificação BlueXP :
++
+** Para NFS – portas 111 e 2049.
+** Para CIFS – portas 139 e 445.
+
+
+* Você pode adicionar um compartilhamento DFS (Distributed File System) como um compartilhamento CIFS regular. No entanto, como a classificação do BlueXP  não sabe que o compartilhamento é construído em vários servidores/volumes combinados como um único compartilhamento CIFS, você pode receber erros de permissão ou conetividade sobre o compartilhamento quando a mensagem realmente se aplica a uma das pastas/compartilhamentos localizados em um servidor/volume diferente.
+* Para compartilhamentos CIFS (SMB), verifique se você tem credenciais do ative Directory que fornecem acesso de leitura aos compartilhamentos. As credenciais de administrador são preferidas no caso de a classificação do BlueXP  precisar analisar quaisquer dados que requeiram permissões elevadas.
++
+Se você quiser garantir que seus arquivos "últimos tempos acessados" sejam inalterados pelas verificações de classificação do BlueXP , recomendamos que o usuário tenha permissões de atributos de gravação em CIFS ou permissões de gravação em NFS. Se possível, recomendamos tornar o usuário configurado do ative Directory parte de um grupo pai na organização que tem permissões para todos os arquivos.
+
+* Você precisará da lista de compartilhamentos que deseja adicionar no formato `<host_name>:/<share_path>`. Você pode inserir os compartilhamentos individualmente ou fornecer uma lista separada por linha dos compartilhamentos de arquivo que deseja analisar.
+
+
+
+
+== Implante a instância de classificação do BlueXP 
+
+Implante a classificação do BlueXP  se ainda não houver uma instância implantada.
+
+As atualizações para o software de classificação BlueXP  são automatizadas, desde que a instância tenha conetividade com a Internet.
+
+
+
+== Crie o grupo para os compartilhamentos de arquivo
+
+Você deve adicionar um "grupo" de compartilhamentos de arquivos antes de adicionar seus compartilhamentos de arquivo. O grupo é um recipiente para os compartilhamentos de arquivo que você deseja analisar e o nome do grupo é usado como o nome do ambiente de trabalho para esses compartilhamentos de arquivo.
+
+Você pode misturar compartilhamentos NFS e CIFS no mesmo grupo. No entanto, todos os compartilhamentos de arquivos CIFS em um grupo precisam estar usando as mesmas credenciais do active Directory. Se você planeja adicionar compartilhamentos CIFS que usam credenciais diferentes, será necessário criar um grupo separado para cada conjunto exclusivo de credenciais.
+
+.Passos
+. Na página Configuração de ambientes de trabalho, clique em *Adicionar fonte de dados* > *Adicionar grupo de compartilhamentos de arquivos*.
++
+image:screenshot_compliance_add_fileshares_button.png["Uma captura de tela da página Configuração de digitalização, onde você pode clicar no botão Adicionar grupo de compartilhamentos de arquivos."]
+
+. Na caixa de diálogo Grupo Adicionar compartilhamentos de arquivos, digite o nome do grupo de compartilhamentos e clique em *continuar*.
+
+
+O novo Grupo de compartilhamentos de arquivo é adicionado à lista de ambientes de trabalho.
+
+
+
+== Adicionar compartilhamentos de arquivo a um grupo
+
+Você adiciona compartilhamentos de arquivo ao Grupo compartilhamentos de arquivo para que os arquivos nesses compartilhamentos sejam verificados pela classificação BlueXP . Você adiciona os compartilhamentos no formato `<host_name>:/<share_path>`.
+
+Você pode adicionar compartilhamentos de arquivo individuais ou fornecer uma lista separada por linha dos compartilhamentos de arquivo que deseja analisar. Você pode adicionar até 100 compartilhamentos de cada vez.
+
+Ao adicionar compartilhamentos NFS e CIFS em um único grupo, você precisará executar o processo duas vezes, uma vez que adicionar compartilhamentos NFS e, em seguida, adicionar novamente os compartilhamentos CIFS.
+
+.Passos
+. Na página _ambientes de trabalho_, clique no botão *Configuração* do Grupo compartilhamentos de arquivos.
++
+image:screenshot_compliance_fileshares_add_shares.png["Uma captura de tela da página Configuração de digitalização, onde você pode selecionar o botão Configuração."]
+
+. Se esta for a primeira vez que adicionar compartilhamentos de arquivo para este Grupo de compartilhamentos de arquivo, clique em *Adicionar seus primeiros compartilhamentos*.
++
+image:screenshot_compliance_fileshares_add_initial_shares.png["Uma captura de tela mostrando o botão Adicionar seus primeiros compartilhamentos para adicionar compartilhamentos iniciais ao grupo."]
+
++
+Se você estiver adicionando compartilhamentos de arquivo a um grupo existente, clique em *Adicionar compartilhamentos*.
+
++
+image:screenshot_compliance_fileshares_add_more_shares2.png["Uma captura de tela mostrando o botão Adicionar compartilhamentos para adicionar mais compartilhamentos ao grupo."]
+
+. Selecione o protocolo para os compartilhamentos de arquivo que você está adicionando, adicione os compartilhamentos de arquivo que você deseja digitalizar - um compartilhamento de arquivo por linha - e clique em *continuar*.
++
+Ao adicionar compartilhamentos CIFS (SMB), você precisa inserir as credenciais do ative Directory que fornecem acesso de leitura aos compartilhamentos. As credenciais de administrador são preferidas.
+
++
+image:screenshot_compliance_fileshares_add_file_shares.png["Uma captura de tela da página Adicionar compartilhamentos de arquivo, onde você pode adicionar os compartilhamentos a serem verificados."]
+
++
+Uma caixa de diálogo de confirmação exibe o número de compartilhamentos que foram adicionados.
+
++
+Se a caixa de diálogo listar quaisquer compartilhamentos que não possam ser adicionados, Capture essas informações para que você possa resolver o problema. Em alguns casos, você pode adicionar novamente o compartilhamento com um nome de host ou nome de compartilhamento corrigido.
+
+. Ative digitalizações apenas de mapeamento ou digitalizações de mapeamento e classificação em cada partilha de ficheiros.
++
+[cols="45,45"]
+|===
+| Para: | Faça isso: 
+
+
+| Ativar varreduras somente de mapeamento em compartilhamentos de arquivo | Clique em *mapa* 
+
+
+| Ative digitalizações completas em compartilhamentos de arquivo | Clique em *Map & Classify* 
+
+
+| Desative a digitalização em compartilhamentos de arquivo | Clique em *Off* 
+|===
++
+A opção na parte superior da página para *Scan when missing "write attributes" permissions* está desativada por padrão. Isso significa que se a classificação BlueXP  não tiver permissões de atributos de gravação no CIFS ou permissões de gravação no NFS, o sistema não verificará os arquivos porque a classificação BlueXP  não poderá reverter o "último tempo de acesso" para o carimbo de data/hora original. Se você não se importa se a última hora de acesso é redefinida, LIGUE o interrutor e todos os arquivos serão digitalizados independentemente das permissões. link:reference-collected-metadata.html#last-access-time-timestamp["Saiba mais"^].
+
+
+
+.Resultado
+A classificação do BlueXP  começa a digitalizar os arquivos nos compartilhamentos de arquivo adicionados e os resultados são exibidos no Painel e em outros locais.
+
+
+
+== Remover um compartilhamento de arquivos de verificações de conformidade
+
+Se você não precisar mais digitalizar certos compartilhamentos de arquivo, você pode remover compartilhamentos de arquivo individuais de ter seus arquivos digitalizados a qualquer momento. Basta clicar em *Remover compartilhamento* na página Configuração.
+
+image:screenshot_compliance_fileshares_remove_share.png["Uma captura de tela mostrando como remover um único compartilhamento de arquivo de ter seus arquivos digitalizados."]

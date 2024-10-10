@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: task-audit-data-sense-actions.html 
+keywords: compliance, actions, view progress, audit, logs, installation 
+summary: As atividades de gerenciamento de Registros de classificação do BlueXP  que foram executadas em arquivos de todos os ambientes de trabalho e fontes de dados que a classificação do BlueXP  está digitalizando. A classificação BlueXP  também Registra as atividades ao implantar a instância de classificação BlueXP . 
+---
+= Auditar o histórico das ações de classificação do BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+As atividades de gerenciamento de Registros de classificação do BlueXP  que foram executadas em arquivos de todos os ambientes de trabalho e fontes de dados que a classificação do BlueXP  está digitalizando. A classificação BlueXP  também Registra as atividades ao implantar a instância de classificação BlueXP .
+
+Você pode visualizar o conteúdo dos arquivos de log de auditoria de classificação do BlueXP  ou baixá-los para ver quais alterações de arquivo ocorreram e quando. Por exemplo, você pode ver qual solicitação foi emitida, a hora da solicitação e detalhes como localização de origem no caso de um arquivo ser excluído ou localização de origem e destino no caso de um arquivo ser movido.
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+
+
+== Conteúdo do ficheiro de registo
+
+Cada linha no log de auditoria contém informações neste formato:
+
+`<full date> | <status> | ds_audit_logger | <module> | 0 | 0 | File <full file path> deleted from device <device path> - <result>`
+
+* Data e hora - carimbo de data/hora completo para o evento
+* Estado - INFORMAÇÃO, AVISO
+* Tipo de ação (excluir, copiar, mover, criar política, atualizar política, redigitalizar arquivos, baixar relatório JSON, etc.)
+* Nome do ficheiro (se a ação for relevante para um ficheiro)
+* Detalhes para a ação - o que foi feito: Depende da ação
++
+** Nome da política
+** Para mover - origem e destino
+** Para copiar - origem e destino
+** Para tag - nome da tag
+** Para atribuir a - nome de utilizador
+** Para alerta por e-mail - endereço de e-mail / conta
+
+
+
+
+Por exemplo, as linhas a seguir do arquivo de log mostram uma operação de cópia bem-sucedida e uma operação de cópia com falha.
+
+....
+2022-06-06 15:23:08,910 | INFO | ds_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
+2022-06-06 15:23:08,968 | WARNING | ds_audit_logger | es_scanned_file | 239 | 153 | Copy file /CIFS_share/data/compliance-netapp.tar.gz from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - FAILURE
+....
+
+
+== Localizações dos ficheiros de registo
+
+Os arquivos de log de auditoria de gerenciamento estão localizados na máquina de classificação BlueXP  em: `/opt/netapp/audit_logs/`
+
+Os arquivos de log de auditoria de instalação são gravados `/opt/netapp/install_logs/`
+
+Cada ficheiro de registo pode ter um tamanho máximo de 10 MB. Quando esse limite é atingido, um novo arquivo de log é iniciado. Os arquivos de log são denominados "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2", e assim por diante. Um máximo de 100 ficheiros de registo são retidos no sistema - os ficheiros de registo mais antigos são eliminados automaticamente após o máximo ter sido atingido.
+
+
+
+== Aceder aos ficheiros de registo
+
+Você precisará fazer login no sistema de classificação BlueXP  para acessar os arquivos de log. Veja como link:reference-log-in-to-instance.html["Inicie sessão no sistema de classificação BlueXP "]dependendo se você instalou manualmente o software em uma máquina Linux ou se implantou a instância na nuvem.

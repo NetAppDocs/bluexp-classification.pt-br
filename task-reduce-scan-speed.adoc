@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: task-reduce-scan-speed.html 
+keywords: slow scans, reduce speed 
+summary: 'As verificações de dados têm um impactos insignificante nos sistemas de storage e nos dados. No entanto, se você estiver preocupado com até mesmo um impactos muito pequeno, você pode configurar a classificação BlueXP  para executar verificações "lentas".' 
+---
+= Reduzir a velocidade de digitalização da classificação BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+As verificações de dados têm um impactos insignificante nos sistemas de storage e nos dados. No entanto, se você estiver preocupado com até mesmo um impactos muito pequeno, você pode configurar a classificação BlueXP  para executar verificações "lentas".
+
+Quando ativado, a digitalização lenta é usada em todas as fontes de dados - você não pode configurar a digitalização lenta para um único ambiente de trabalho ou fonte de dados.
+
+
+TIP: A velocidade de digitalização não pode ser reduzida ao digitalizar bases de dados.
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+.Passos
+. Na parte inferior da página _Configuration_, mova o controle deslizante para a direita para ativar a varredura lenta.
++
+image:screenshot_slow_scan_enable.png["Uma captura de tela mostrando como ativar a verificação de conformidade lenta."]
+
++
+A parte superior da página Configuração indica que a digitalização lenta está ativada.
+
++
+image:screenshot_slow_scan_disable.png["Uma captura de tela mostrando como ativar a verificação de conformidade lenta."]
+
+. Você pode desativar a varredura lenta clicando em *Disable* nesta mensagem.
+

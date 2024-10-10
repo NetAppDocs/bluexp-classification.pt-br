@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: reference-log-in-to-instance.html 
+keywords: log in, data sense, classification 
+summary: Às vezes, você pode precisar fazer login no sistema de classificação BlueXP  para que você possa acessar arquivos de log ou editar arquivos de configuração. 
+---
+= Inicie sessão no sistema de classificação BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Às vezes, você pode precisar fazer login no sistema de classificação BlueXP  para que você possa acessar arquivos de log ou editar arquivos de configuração.
+
+Quando a classificação do BlueXP  é instalada em uma máquina Linux no local ou em uma máquina Linux implantada na nuvem, você pode acessar o arquivo de configuração e o script diretamente.
+
+Quando a classificação do BlueXP  é implantada na nuvem, você precisa fazer SSH para a instância de classificação do BlueXP . Você faz o SSH para o sistema inserindo o usuário e a senha, ou usando a chave SSH fornecida durante a instalação do BlueXP  Connector. O comando SSH é:
+
+ ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>
+* <path_to_the_ssh_key>: localização das chaves de autenticação ssh
+* <machine_user> -
++
+** Para AWS: Use o <ec2-user>
+** Para Azure: Use o usuário criado para a instância do BlueXP 
+** Para o GCP: Use o usuário criado para a instância do BlueXP 
+
+
+* <datasense_ip>: Endereço IP da instância da máquina virtual
+
+
+Observe que você precisará modificar as regras de entrada do grupo de segurança para acessar o sistema na nuvem. Para obter detalhes, consulte:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Regras do grupo de segurança na AWS"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Regras do grupo de segurança no Azure"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Regras de firewall no Google Cloud"^]
+

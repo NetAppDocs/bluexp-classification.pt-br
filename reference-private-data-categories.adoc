@@ -1,0 +1,390 @@
+---
+sidebar: sidebar 
+permalink: reference-private-data-categories.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, categories, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, 
+summary: Há muitos tipos de dados privados que a classificação do BlueXP  pode identificar em seus volumes, buckets do Amazon S3, bancos de dados, pastas do OneDrive, contas do SharePoint e contas do Google Drive. 
+---
+= Categorias de dados privados
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Há muitos tipos de dados privados que a classificação do BlueXP  pode identificar em seus volumes e bancos de dados.
+
+A classificação BlueXP  identifica dois tipos de dados pessoais:
+
+* * Informações de identificação pessoal (PII) *
+* *Informações pessoais sensíveis (SPii)*
+
+
+
+TIP: Se você precisar da classificação BlueXP  para identificar outros tipos de dados privados, como números de identificação nacionais adicionais ou identificadores de saúde, envie um e-mail para NetApp.com com com sua solicitação.
+
+
+
+== Tipos de dados pessoais
+
+Os dados pessoais, ou _informações pessoais identificáveis_ (PII), encontrados em arquivos podem ser dados pessoais gerais ou identificadores nacionais. A terceira coluna da tabela abaixo identifica se a classificação BlueXP  usa link:task-controlling-private-data.html#view-files-that-contain-personal-data["validação de proximidade"^] para validar seus resultados para o identificador.
+
+Os idiomas em que esses itens podem ser reconhecidos são identificados na tabela.
+
+[cols="13,37,10,8,8,8,8,8"]
+|===
+| Tipo | Identificador | Validação de proximidade? | Inglês | Alemão | Espanhol | Francês | Japonês 
+
+
+.6+| Geral | Número do cartão de crédito | Não | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Titulares dos dados | Não | ✓ | ✓ | ✓ |  |  
+
+
+| Endereço de e-mail | Não | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Número IBAN (número de conta bancária internacional) | Não | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Endereço IP | Não | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Palavra-passe | Sim | ✓ | ✓ | ✓ |  | ✓ 
+
+
+.57+| Identificadores nacionais | Australian TFN (número do ficheiro fiscal) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Carteira de motorista australiana | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Australian Medicare número | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número de passaporte australiano | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| SSN austríaco | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID belga (Numero National) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número do cartão de identidade do Botswana (Omang) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número de passaporte do Botsuana | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Identidade Brasileira (CPF) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Passaporte britânico | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID búlgaro (UCN) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID croata (OIB) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificação fiscal do Chipre (TIC) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Código checo/eslovaco | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID dinamarquesa (CPR) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID holandesa (BSN) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID da Estónia | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID finlandês (HETU) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Carta de condução francesa | Sim | ✓ | ✓ | ✓ | ✓ |  
+
+
+| ID francesa | Sim | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Francês INSEE | Sim | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Número da Segurança Social Francesa | Sim | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Número de identificação fiscal Francês (SPI) | Sim | ✓ | ✓ | ✓ | ✓ |  
+
+
+| ID Alemão (Personalausweisnummer) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID interno alemão para transferências bancárias | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número da Segurança Social Alemã (Sozialversicherungsnummer) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificação fiscal Alemão (Steuerliche Identifikationsrommer) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID grega | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificação fiscal húngaro | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID irlandesa (PPS) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID israelense | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificação fiscal italiano | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificação pessoal japonês (pessoal e corporativo) | Sim | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| ID letão | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID lituano | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID Luxemburgo | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID maltês | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número do Serviço Nacional de Saúde (SNS) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Conta bancária da Nova Zelândia | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Carteira de motorista da Nova Zelândia | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número IRD da Nova Zelândia (ID fiscal) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número de NHI da Nova Zelândia (National Health Index) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número de passaporte da Nova Zelândia | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID polaco (PESEL) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificação fiscal Português (NIF) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Identificação romena (CNP) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Cartão de identidade de Registro Nacional de Cingapura (NRIC) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Slovenian ID (EMSO) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID sul-africana | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificação fiscal espanhol | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID sueco | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Texas Driver's License | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| ID DO REINO UNIDO (NINO) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| EUA California Driver's License | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| EUA Indiana carteira de motorista | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| EUA Nova York carteira de motorista | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Número da Segurança Social dos EUA (SSN) | Sim | ✓ | ✓ | ✓ |  |  
+|===
+
+
+== Tipos de dados pessoais sensíveis
+
+A classificação BlueXP  pode encontrar as seguintes informações pessoais confidenciais (SPii) em arquivos.
+
+Os itens nesta categoria só podem ser reconhecidos em inglês neste momento.
+
+* * Referência de procedimentos penais*: Dados relativos às condenações e infrações penais de uma pessoa singular.
+* * Referência étnica*: Dados relativos à origem racial ou étnica de uma pessoa natural.
+* *Referência de Saúde*: Dados relativos à saúde de uma pessoa singular.
+* *CID-9-CM Medical Codes*: Códigos utilizados na indústria médica e de saúde.
+* *CID-10-CM Medical Codes*: Códigos utilizados na indústria médica e de saúde.
+* * Referência de crenças filosóficas *: Dados relativos às crenças filosóficas de uma pessoa natural.
+* *Pareceres políticos Referência*: Dados relativos às opiniões políticas de uma pessoa singular.
+* * Referência de crenças religiosas *: Dados relativos às crenças religiosas de uma pessoa natural.
+* * Referência de vida sexual ou Orientação *: Dados relativos à vida sexual ou orientação sexual de uma pessoa natural.
+
+
+
+
+== Tipos de categorias
+
+A classificação BlueXP  categoriza seus dados da seguinte forma.
+
+A maioria dessas categorias pode ser reconhecida em inglês, alemão e espanhol.
+
+[cols="25,25,15,15,15"]
+|===
+| Categoria | Tipo | Inglês | Alemão | Espanhol 
+
+
+.4+| Finanças | Balanços | ✓ | ✓ | ✓ 
+
+
+| Ordens compra | ✓ | ✓ | ✓ 
+
+
+| Faturas | ✓ | ✓ | ✓ 
+
+
+| Relatórios trimestrais | ✓ | ✓ | ✓ 
+
+
+.6+| HR | Verificações de fundo | ✓ |  | ✓ 
+
+
+| Planos de compensação | ✓ | ✓ | ✓ 
+
+
+| Contratos de funcionários | ✓ |  | ✓ 
+
+
+| Avaliações de funcionários | ✓ |  | ✓ 
+
+
+| Saúde | ✓ |  | ✓ 
+
+
+| Retoma | ✓ | ✓ | ✓ 
+
+
+.2+| Legal | NDAs | ✓ | ✓ | ✓ 
+
+
+| Contratos fornecedor-cliente | ✓ | ✓ | ✓ 
+
+
+.2+| Marketing | Campanhas | ✓ | ✓ | ✓ 
+
+
+| Conferências | ✓ | ✓ | ✓ 
+
+
+| Operações | Relatórios de auditoria | ✓ | ✓ | ✓ 
+
+
+| Vendas | Ordens vendas | ✓ | ✓ |  
+
+
+.4+| Serviços | RFI | ✓ |  | ✓ 
+
+
+| RFP | ✓ |  | ✓ 
+
+
+| SOW | ✓ | ✓ | ✓ 
+
+
+| Formação | ✓ | ✓ | ✓ 
+
+
+| Suporte | Reclamações e bilhetes | ✓ | ✓ | ✓ 
+|===
+Os seguintes metadados também são categorizados e são identificados nos mesmos idiomas suportados:
+
+* Dados da aplicação
+* Arquivar ficheiros
+* Áudio
+* Breadcrumbs da classificação BlueXP  dados de aplicativo de negócios
+* Ficheiros CAD
+* Código
+* Corrompido
+* Banco de dados e arquivos de índice
+* Arquivos de design
+* Dados do aplicativo de e-mail
+* Encriptado (ficheiros com uma pontuação de entropia elevada)
+* Executáveis
+* Dados de aplicações financeiras
+* Dados da aplicação de integridade
+* Imagens
+* Registos
+* Documentos diversos
+* Apresentações diversas
+* Folhas de cálculo diversas
+* Diversos "desconhecido"
+* Ficheiros protegidos por palavra-passe
+* Dados estruturados
+* Vídeos
+* Ficheiros Zero-Byte
+
+
+
+
+== Tipos de arquivos
+
+A classificação BlueXP  verifica todos os arquivos para obter informações sobre categorias e metadados e exibe todos os tipos de arquivo na seção tipos de arquivo do painel.
+
+Mas quando a classificação BlueXP  deteta informações pessoais identificáveis (PII) ou quando realiza uma pesquisa DSAR, apenas os seguintes formatos de arquivo são suportados:
+
+`+.CSV, .DCM, .DICOM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
+
+
+
+== Precisão das informações encontradas
+
+A NetApp não pode garantir 100% de precisão dos dados pessoais e dados pessoais sensíveis que a classificação BlueXP  identifica. Deve sempre validar as informações através da revisão dos dados.
+
+Com base em nossos testes, a tabela abaixo mostra a precisão das informações que a classificação BlueXP  encontra. Nós quebramos isso por _precisão_ e _recall_:
+
+Precisão:: A probabilidade de que o que a classificação BlueXP  encontra foi identificada corretamente. Por exemplo, uma taxa de precisão de 90% para dados pessoais significa que 9 em cada 10 arquivos identificados como contendo informações pessoais, contêm informações pessoais. 1 de 10 arquivos seria um falso positivo.
+Recolha:: A probabilidade para a classificação BlueXP  encontrar o que deveria. Por exemplo, uma taxa de recall de 70% para dados pessoais significa que a classificação BlueXP  pode identificar 7 em cada 10 arquivos que realmente contêm informações pessoais em sua organização. A classificação BlueXP  perderia 30% dos dados e não aparecerá no painel.
+
+
+Estamos constantemente melhorando a precisão de nossos resultados. Essas melhorias estarão automaticamente disponíveis em futuras versões de classificação do BlueXP .
+
+[cols="25,20,20"]
+|===
+| Tipo | Precisão | Recolha 
+
+
+| Dados pessoais - Geral | 90%-95% | 60%-80% 
+
+
+| Dados pessoais - identificadores de país | 30%-60% | 40%-60% 
+
+
+| Dados pessoais confidenciais | 80%-95% | 20%-30% 
+
+
+| Categorias | 90%-97% | 60%-80% 
+|===

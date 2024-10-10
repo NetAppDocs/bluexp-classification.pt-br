@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: task-add-active-directory-datasense.html 
+keywords: active directory, ad, data sense, cloud data sense 
+summary: Você pode integrar uma classificação global do ative Directory com o BlueXP  para melhorar os resultados que a classificação do BlueXP  relata sobre proprietários de arquivos e quais usuários e grupos têm acesso aos seus arquivos. 
+---
+= Integre seu ative Directory com a classificação BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode integrar uma classificação global do ative Directory com o BlueXP  para melhorar os resultados que a classificação do BlueXP  relata sobre proprietários de arquivos e quais usuários e grupos têm acesso aos seus arquivos.
+
+Quando você configura determinadas fontes de dados (listadas abaixo), você precisa inserir credenciais do ative Directory para que a classificação do BlueXP  analise volumes CIFS. Essa integração fornece classificação BlueXP  com o proprietário do arquivo e detalhes de permissões para os dados que residem nessas fontes de dados. O ative Directory inserido para essas fontes de dados pode ser diferente das credenciais globais do ative Directory inseridas aqui. A classificação BlueXP  irá procurar em todos os diretórios ativos integrados para obter detalhes de usuário e permissão.
+
+Esta integração fornece informações adicionais nos seguintes locais na classificação BlueXP :
+
+* Você pode usar o "proprietário do arquivo" link:task-investigate-data.html#filter-data-in-the-data-investigation-page["filtro"] e ver os resultados nos metadados do arquivo no painel de investigação. Em vez do proprietário do arquivo que contém o SID (identificador de segurança), ele é preenchido com o nome de usuário real.
+* Você pode ver link:task-investigate-data.html#view-permissions-for-files-and-directories["permissões de arquivo completas"] para cada arquivo e diretório quando você clicar no botão "Exibir todas as permissões".
+* No link:task-controlling-governance-data.html["Painel de governança"], o painel Open Permissions (permissões abertas) mostrará um maior nível de detalhes sobre os dados.
+
+
+
+NOTE: SIDs de usuário local e SIDs de domínios desconhecidos não são traduzidos para o nome de usuário real.
+
+
+
+== Fontes de dados compatíveis
+
+Uma integração do ative Directory com a classificação BlueXP  pode identificar dados de dentro das seguintes fontes de dados:
+
+* Sistemas ONTAP no local
+* Cloud Volumes ONTAP
+* Azure NetApp Files
+* FSX para ONTAP
+* Contas OneDrive e contas SharePoint (para versões antigas 1,30 e anteriores)
+
+
+Não há suporte para identificar informações de usuários e permissões de esquemas de banco de dados, contas do Google Drive, contas do Amazon S3 ou armazenamento de objetos que usam o protocolo Simple Storage Service (S3).
+
+
+
+== Conete-se ao servidor do ative Directory
+
+Depois de implantar a classificação do BlueXP  e ativar a verificação em suas fontes de dados, você pode integrar a classificação do BlueXP  ao ative Directory. O ative Directory pode ser acessado usando um endereço IP do servidor DNS ou um endereço IP do servidor LDAP.
+
+As credenciais do ative Directory podem ser somente leitura, mas fornecer credenciais de administrador garante que a classificação do BlueXP  possa ler qualquer dado que exija permissões elevadas. As credenciais são armazenadas na instância de classificação do BlueXP .
+
+Para volumes/compartilhamentos de arquivos CIFS, se você quiser garantir que seus arquivos "últimos tempos acessados" sejam inalterados pelas verificações de classificação de BlueXP , recomendamos que o usuário tenha permissão de gravação de atributos. Se possível, recomendamos tornar o usuário configurado do ative Directory parte de um grupo pai na organização que tem permissões para todos os arquivos.
+
+.Requisitos
+* Você deve ter um ative Directory já configurado para os usuários em sua empresa.
+* Você deve ter as informações do ative Directory:
++
+** Endereço IP do servidor DNS ou vários endereços IP
++
+ou
+
++
+Endereço IP do servidor LDAP ou vários endereços IP
+
+** Nome de utilizador e palavra-passe para aceder ao servidor
+** Nome de domínio (Nome do ative Directory)
+** Quer esteja a utilizar LDAP seguro (LDAPS) ou não
+** Porta de servidor LDAP (normalmente 389 para LDAP e 636 para LDAP seguro)
+
+
+* As seguintes portas devem estar abertas para comunicação de saída pela instância de classificação BlueXP :
++
+[cols="20,20,30,30"]
+|===
+| Protocolo | Porta | Destino | Finalidade 
+
+
+| TCP E UDP | 389 | Ative Directory | LDAP 
+
+
+| TCP | 636 | Ative Directory | LDAP em SSL 
+
+
+| TCP | 3268 | Ative Directory | Catálogo Global 
+
+
+| TCP | 3269 | Ative Directory | Catálogo Global sobre SSL 
+|===
+
+
+.Passos
+. Na página Configuração de classificação do BlueXP , clique em *Adicionar ative Directory*.
++
+image:screenshot_compliance_integrate_active_directory.png["Uma captura de tela que mostra clicar no botão para adicionar um servidor do ative Directory à classificação do BlueXP ."]
+
+. Na caixa de diálogo conetar ao ative Directory, insira os detalhes do ative Directory e clique em *conetar*.
++
+Você pode adicionar vários endereços IP, se necessário, clicando em *Adicionar IP*.
+
++
+image:screenshot_compliance_active_directory_dialog.png["Uma captura de tela da caixa de diálogo onde você define o ative Directory que deseja integrar com a classificação BlueXP ."]
+
++
+A classificação do BlueXP  integra-se ao ative Directory e uma nova seção é adicionada à página Configuração.
+
++
+image:screenshot_compliance_active_directory_added.png["Uma captura de tela mostrando o novo ative Directory integrado na classificação do BlueXP ."]
+
+
+
+
+
+== Gerencie sua integração com o ative Directory
+
+Se você precisar modificar quaisquer valores na integração do ative Directory, clique no botão *Editar* e faça as alterações.
+
+Você também pode excluir a integração se não precisar mais clicando no image:screenshot_gallery_options.gif["Botão mais"] botão e depois em *Remover ative Directory*.

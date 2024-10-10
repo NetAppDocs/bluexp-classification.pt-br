@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: task-view-compliance-actions.html 
+keywords: compliance, actions, view progress 
+summary: Quando você executa uma ação do painel de resultados da investigação em muitos arquivos, por exemplo, excluindo arquivos 100, o processo pode levar algum tempo. Você pode monitorar o status dessas ações assíncronas no painel Status da Ação para saber quando ela foi aplicada a todos os arquivos. 
+---
+= Visualização do status de suas ações de conformidade
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando você executa uma ação assíncrona do painel de resultados da investigação em muitos arquivos, por exemplo, mover ou excluir arquivos 100, o processo pode levar algum tempo. Você pode monitorar o status dessas ações no painel _Action Status_ para saber quando ele foi aplicado a todos os arquivos.
+
+Isso permite que você veja as ações que foram concluídas com sucesso, as que estão em andamento e as que falharam para que você possa diagnosticar e corrigir quaisquer problemas. Observe que operações curtas que são concluídas rapidamente, como mover um único arquivo, não aparecem no painel Status das ações.
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+O estado pode ser:
+
+* Sucesso - Uma ação de classificação BlueXP  está concluída e todos os itens foram bem-sucedidos.
+* Sucesso parcial - Uma ação de classificação BlueXP  está concluída e alguns itens falharam e alguns foram bem-sucedidos.
+* Em curso - a ação ainda está em andamento.
+* Em fila de espera - a ação não foi iniciada.
+* Cancelado - a ação foi cancelada.
+* Falha - a ação falhou.
+
+
+Observe que você pode cancelar quaisquer ações que tenham o status "em fila" ou "em andamento".
+
+.Passos
+. Na parte inferior direita da IU de classificação do BlueXP , você pode ver o botão *Status das ações* image:button_actions_status.png[""].
+. Clique neste botão e as ações 20 mais recentes são listadas.
++
+image:screenshot_compliance_action_status.png["Uma captura de tela que mostra as últimas 20 ações e seu status na página Configuração."]
+
+
+
+Pode clicar no nome de uma ação para ver os detalhes correspondentes a essa operação.

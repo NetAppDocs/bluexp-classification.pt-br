@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-google-drive.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, google drive, data sense 
+summary: Conclua algumas etapas para começar a digitalizar arquivos de usuário em suas contas do Google Drive com a classificação BlueXP . 
+---
+= Analisar contas do Google Drive
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Conclua algumas etapas para começar a digitalizar arquivos de usuário em suas contas do Google Drive com a classificação BlueXP .
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+
+
+== Início rápido
+
+Comece rapidamente seguindo estas etapas ou role para baixo até as seções restantes para obter detalhes completos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Reveja os pré-requisitos do Google Drive
+[role="quick-margin-para"]
+Certifique-se de que tem as credenciais de administrador para iniciar sessão na conta do Google Drive.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Implantar a classificação BlueXP 
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implantar a classificação BlueXP "^] se ainda não houver uma instância implantada.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Faça login na conta do Google Drive
+[role="quick-margin-para"]
+Usando credenciais de usuário Admin, faça login na conta do Google Drive que você deseja acessar para que ela seja adicionada como uma nova fonte de dados.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"] Selecione o tipo de digitalização para os ficheiros de utilizador
+[role="quick-margin-para"]
+Selecione o tipo de digitalização que pretende executar nos ficheiros de utilizador; mapeamento ou mapeamento e classificação.
+
+
+
+== Reveja os requisitos do Google Drive
+
+Reveja os seguintes pré-requisitos para se certificar de que está pronto para ativar a classificação do BlueXP  numa conta Google Drive.
+
+* Você deve ter as credenciais de login de administrador para a conta do Google Drive que fornece acesso de leitura aos arquivos do usuário
+
+
+
+
+=== Restrições atuais
+
+Os seguintes recursos de classificação do BlueXP  não são atualmente suportados com arquivos do Google Drive:
+
+* Ao visualizar arquivos na página Investigação de dados, as ações na barra de botões não estão ativas. Você não pode copiar, mover, excluir, etc. quaisquer arquivos.
+* As permissões não podem ser identificadas em arquivos no Google Drive, portanto, nenhuma informação de permissão é exibida na página de investigação.
+
+
+
+
+== Implantar a classificação BlueXP 
+
+Implante a classificação do BlueXP  se ainda não houver uma instância implantada.
+
+A classificação BlueXP  pode ser link:task-deploy-cloud-compliance.html["implantado na nuvem"^] ou link:task-deploy-compliance-onprem.html["em um local no local que tem acesso à internet"^].
+
+As atualizações para o software de classificação BlueXP  são automatizadas, desde que a instância tenha conetividade com a Internet.
+
+
+
+== Adicione a conta do Google Drive
+
+Adicione a conta do Google Drive onde os arquivos de usuário residem. Se você quiser digitalizar arquivos de vários usuários, precisará executar esta etapa para cada usuário.
+
+.Passos
+. Na página Configuração de ambientes de trabalho, clique em *Adicionar fonte de dados* > *Adicionar conta do Google Drive*.
++
+image:screenshot_compliance_add_google_drive_button.png["Uma captura de tela da página Configuração de digitalização, onde você pode clicar no botão Adicionar Google Drive."]
+
+. Na caixa de diálogo Adicionar uma conta do Google Drive, clique em *entrar no Google Drive*.
+. Na página do Google exibida, selecione a conta do Google Drive e insira o usuário e a senha de administrador necessários e clique em *aceitar* para permitir que a classificação do BlueXP  leia os dados dessa conta.
+
+
+A conta do Google Drive é adicionada à lista de ambientes de trabalho.
+
+
+
+== Selecione o tipo de digitalização para dados do utilizador
+
+Selecione o tipo de digitalização que a classificação BlueXP  executará nos dados do utilizador.
+
+.Passos
+. Na página _Configuration_, clique no botão *Configuration* da conta do Google Drive.
++
+image:screenshot_compliance_google_drive_add_sites.png["Uma captura de tela da página Configuração onde você pode selecionar o botão Configuração."]
+
+. Ative digitalizações apenas de mapeamento ou digitalizações de mapeamento e classificação nos ficheiros da conta do Google Drive.
++
+image:screenshot_compliance_google_drive_select_scan.png["Uma captura de tela mostrando como selecionar o tipo de classificação BlueXP  de digitalização será executada nos dados do Google Drive."]
+
++
+[cols="45,45"]
+|===
+| Para: | Faça isso: 
+
+
+| Ativar digitalizações apenas de mapeamento em ficheiros | Clique em *mapa* 
+
+
+| Ative digitalizações completas em ficheiros | Clique em *Map & Classify* 
+
+
+| Desativar a digitalização em ficheiros | Clique em *Off* 
+|===
+
+
+.Resultado
+A classificação do BlueXP  começa a digitalizar os arquivos na conta do Google Drive que você adicionou, e os resultados são exibidos no Painel e em outros locais.
+
+
+
+== Remova uma conta do Google Drive das verificações de conformidade
+
+Como apenas os arquivos do Google Drive de um único usuário fazem parte de uma única conta do Google Drive, se você quiser parar de digitalizar arquivos da conta do Google Drive de um usuário, você deve link:task-managing-compliance.html["Exclua a conta do Google Drive da classificação do BlueXP "].

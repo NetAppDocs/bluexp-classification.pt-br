@@ -1,0 +1,140 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-onedrive.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedrive, data sense 
+summary: Conclua algumas etapas para iniciar a digitalização de arquivos nas pastas do OneDrive do usuário com a classificação BlueXP . 
+---
+= Digitalizar contas OneDrive
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Conclua algumas etapas para iniciar a digitalização de arquivos nas pastas do OneDrive do usuário com a classificação BlueXP .
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+
+
+== Início rápido
+
+Comece rapidamente seguindo estas etapas ou role para baixo até as seções restantes para obter detalhes completos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Reveja os pré-requisitos do OneDrive
+[role="quick-margin-para"]
+Certifique-se de que tem as credenciais de administrador para iniciar sessão na conta do OneDrive.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Implante a instância de classificação do BlueXP 
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implantar a classificação BlueXP "^] se ainda não houver uma instância implantada.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Adicione a conta do OneDrive
+[role="quick-margin-para"]
+Usando credenciais de usuário Admin, faça login na conta do OneDrive que você deseja acessar para que ela seja adicionada como um novo ambiente de trabalho.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"] Adicione os usuários e selecione o tipo de digitalização
+[role="quick-margin-para"]
+Adicione a lista de usuários da conta do OneDrive que você deseja digitalizar e selecione o tipo de digitalização. Você pode adicionar até 100 usuários ao mesmo tempo.
+
+
+
+== Rever os requisitos do OneDrive
+
+Reveja os seguintes pré-requisitos para se certificar de que tem uma configuração suportada antes de ativar a classificação BlueXP .
+
+* Tem de ter as credenciais de início de sessão Admin para a conta OneDrive for Business que forneça acesso de leitura aos ficheiros do utilizador.
+* Você precisará de uma lista separada por linha dos endereços de e-mail para todos os usuários cujas pastas do OneDrive você deseja digitalizar.
+
+
+
+
+== Implantando a instância de classificação do BlueXP 
+
+Implante a classificação do BlueXP  se ainda não houver uma instância implantada.
+
+A classificação BlueXP  pode ser link:task-deploy-cloud-compliance.html["implantado na nuvem"^] ou link:task-deploy-compliance-onprem.html["em um local no local que tem acesso à internet"^].
+
+As atualizações para o software de classificação BlueXP  são automatizadas, desde que a instância tenha conetividade com a Internet.
+
+
+
+== Adicionar a conta OneDrive
+
+Adicione a conta do OneDrive onde os arquivos de usuário residem.
+
+.Passos
+. Na página Configuração de ambientes de trabalho, clique em *Adicionar fonte de dados* > *Adicionar conta OneDrive*.
++
+image:screenshot_compliance_add_onedrive_button.png["Uma captura de tela da página Configuração de digitalização, onde você pode clicar no botão Adicionar OneDrive."]
+
+. Na caixa de diálogo Adicionar uma conta do OneDrive, clique em *entrar no OneDrive*.
+. Na página da Microsoft exibida, selecione a conta do OneDrive e insira o usuário e a senha de administrador necessários e clique em *aceitar* para permitir que a classificação do BlueXP  leia os dados dessa conta.
+
+
+A conta do OneDrive é adicionada à lista de ambientes de trabalho.
+
+
+
+== Adicionando usuários do OneDrive às verificações de conformidade
+
+Você pode adicionar usuários individuais do OneDrive, ou todos os usuários do OneDrive, para que seus arquivos sejam verificados pela classificação do BlueXP .
+
+.Passos
+. Na página _Configuration_, clique no botão *Configuration* da conta OneDrive.
++
+image:screenshot_compliance_onedrive_add_users.png["Uma captura de tela da página Configuração de digitalização, onde você pode selecionar o botão Configuração."]
+
+. Se esta for a primeira vez que adicionar usuários para esta conta do OneDrive, clique em *Adicionar seus primeiros usuários do OneDrive*.
++
+image:screenshot_compliance_onedrive_add_initial_users.png["Uma captura de tela mostrando o botão Adicionar seus primeiros usuários do OneDrive para adicionar usuários iniciais a uma conta."]
+
++
+Se você estiver adicionando usuários adicionais de uma conta do OneDrive, clique em *Adicionar usuários do OneDrive*.
+
++
+image:screenshot_compliance_onedrive_add_more_users.png["Uma captura de tela mostrando o botão Adicionar usuários do OneDrive para adicionar mais usuários a uma conta."]
+
+. Adicione os endereços de e-mail para os usuários cujos arquivos você deseja digitalizar - um endereço de e-mail por linha (máximo de 100 por sessão) - e clique em *Adicionar usuários*.
++
+image:screenshot_compliance_onedrive_add_email_addresses.png["Uma captura de tela da página Adicionar usuários do OneDrive, onde você pode adicionar usuários a serem digitalizados."]
+
++
+Uma caixa de diálogo de confirmação exibe o número de usuários que foram adicionados.
+
++
+Se a caixa de diálogo listar os usuários que não puderam ser adicionados, Capture essas informações para que você possa resolver o problema. Em alguns casos, você pode adicionar novamente o usuário com um endereço de e-mail corrigido.
+
+. Ative digitalizações apenas de mapeamento ou digitalizações de mapeamento e classificação em ficheiros do utilizador.
++
+[cols="45,45"]
+|===
+| Para: | Faça isso: 
+
+
+| Ativar digitalizações apenas de mapeamento em ficheiros de utilizador | Clique em *mapa* 
+
+
+| Ative digitalizações completas em ficheiros de utilizador | Clique em *Map & Classify* 
+
+
+| Desativar a digitalização em ficheiros de utilizador | Clique em *Off* 
+|===
+
+
+.Resultado
+A classificação do BlueXP  começa a digitalizar os arquivos para os usuários adicionados e os resultados são exibidos no Painel e em outros locais.
+
+
+
+== Remover um usuário do OneDrive das verificações de conformidade
+
+Se os usuários saírem da empresa ou se o endereço de e-mail mudar, você poderá remover usuários individuais do OneDrive de ter seus arquivos digitalizados a qualquer momento. Basta clicar em *Remover usuário do OneDrive* da página Configuração.
+
+image:screenshot_compliance_onedrive_remove_user.png["Uma captura de tela mostrando como remover um único usuário de ter seus arquivos digitalizados."]

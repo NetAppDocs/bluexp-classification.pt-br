@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: task-uninstall-data-sense.html 
+keywords: remove, delete, stop, stop scans, stop scanning, cloud data sense, delete cloud data sense, terminate, deactivate, data sense 
+summary: Você pode desinstalar o software de classificação BlueXP  para solucionar problemas ou remover permanentemente o software do host. A exclusão da instância também exclui os discos associados onde residem os dados indexados - todas as informações que a classificação BlueXP  digitalizada serão excluídas permanentemente. 
+---
+= Desinstalar a classificação BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode desinstalar o software de classificação BlueXP  para solucionar problemas ou remover permanentemente o software do host. A exclusão da instância também exclui os discos associados onde residem os dados indexados - todas as informações que a classificação BlueXP  digitalizada serão excluídas permanentemente.
+
+As etapas que você precisa usar dependem da implantação da classificação do BlueXP  na nuvem ou em um host local.
+
+
+
+== Desinstalar a classificação do BlueXP  de uma implantação na nuvem
+
+Você pode desinstalar e excluir a instância de classificação do BlueXP  do ambiente do provedor de nuvem se não quiser mais usar a classificação do BlueXP .
+
+. Na parte superior da página de classificação do BlueXP , clique image:screenshot_gallery_options.gif["Botão mais"]em *Desinstalar o Sensor de dados*.
++
+image:screenshot_compliance_uninstall.png["Uma captura de tela do botão para desinstalar o software de classificação BlueXP ."]
+
+. Na caixa de diálogo _Uninstall Data Sense_, digite *uninstall* para confirmar que deseja desconetar a instância de classificação BlueXP  do conetor BlueXP  e clique em *Uninstall*.
+. Vá para o console do seu provedor de nuvem e exclua a instância de classificação do BlueXP . A instância é chamada _CloudCompliance_ com um hash gerado (UUID) concatenado a ela. Por exemplo: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
++
+Isso exclui a instância e todos os dados associados que foram coletados pela classificação BlueXP .
+
+
+
+
+
+== Desinstalar a classificação do BlueXP  de uma implantação local
+
+Você pode desinstalar a classificação do BlueXP  de um host se não quiser mais usar a classificação do BlueXP  ou se tiver um problema que exija a reinstalação.
+
+. Na parte superior da página de classificação do BlueXP , clique image:screenshot_gallery_options.gif["Botão mais"]em *Desinstalar o Sensor de dados*.
++
+image:screenshot_compliance_uninstall.png["Uma captura de tela do botão para desinstalar o software de classificação BlueXP ."]
+
+. Na caixa de diálogo _Uninstall Data Sense_, digite *uninstall* para confirmar que deseja desconetar a instância de classificação BlueXP  do conetor BlueXP  e clique em *Uninstall*.
+. Para desinstalar o software do host, execute o `cleanup.sh` script na máquina host, por exemplo:
++
+[source, cli]
+----
+cleanup.sh
+----
+
+
+Consulte como link:reference-log-in-to-instance.html["Faça login na máquina host de classificação BlueXP "].

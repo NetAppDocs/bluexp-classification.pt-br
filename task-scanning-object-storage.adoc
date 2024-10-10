@@ -1,0 +1,129 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-object-storage.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, data sense 
+summary: 'Conclua algumas etapas para iniciar a digitalização de dados dentro do armazenamento de objetos diretamente com a classificação BlueXP . A classificação do BlueXP  pode analisar dados de qualquer serviço de armazenamento de objetos que use o protocolo Simple Storage Service (S3). Isso inclui NetApp StorageGRID, IBM Cloud Object Store, Linode, B2 Cloud Storage, Amazon S3 e muito mais.' 
+---
+= Digitalizar dados StorageGRID
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Conclua algumas etapas para iniciar a digitalização de dados dentro do armazenamento de objetos diretamente com a classificação BlueXP . A classificação do BlueXP  pode analisar dados de qualquer serviço de armazenamento de objetos que use o protocolo Simple Storage Service (S3). Isso inclui NetApp StorageGRID, IBM Cloud Object Store, Linode, B2 Cloud Storage, Amazon S3 e muito mais.
+
+[]
+====
+*NOTA* usando a classificação BlueXP  que faz parte do BlueXP  principal, agora você pode digitalizar dados do StorageGRID. Consulte link:task-scanning-storagegrid.html["Digitalizar dados StorageGRID"]. As informações restantes aqui são relevantes apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+
+
+== Início rápido
+
+Comece rapidamente seguindo estas etapas ou role para baixo até as seções restantes para obter detalhes completos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Reveja os pré-requisitos de armazenamento de objetos
+[role="quick-margin-para"]
+Você precisa ter o URL do endpoint para se conetar ao serviço de armazenamento de objetos.
+
+[role="quick-margin-para"]
+Você precisa ter a chave de acesso e a chave secreta do provedor de armazenamento de objetos para que a classificação BlueXP  possa acessar os buckets.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Implante a instância de classificação do BlueXP 
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implantar a classificação BlueXP "^] se ainda não houver uma instância implantada.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Adicione o Object Storage Service
+[role="quick-margin-para"]
+Adicione o serviço de storage de objetos à classificação do BlueXP .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"] Selecione os intervalos para digitalizar
+[role="quick-margin-para"]
+Selecione os intervalos que você gostaria de digitalizar e a classificação BlueXP  começará a digitalizá-los.
+
+
+
+== Revisão dos requisitos de armazenamento de objetos
+
+Reveja os seguintes pré-requisitos para se certificar de que tem uma configuração suportada antes de ativar a classificação BlueXP .
+
+* Você precisa ter o URL do endpoint para se conetar ao serviço de armazenamento de objetos.
+* Você precisa ter a chave de acesso e a chave secreta do provedor de armazenamento de objetos para que a classificação BlueXP  possa acessar os buckets.
+
+
+
+
+== Implantando a instância de classificação do BlueXP 
+
+Implante a classificação do BlueXP  se ainda não houver uma instância implantada.
+
+Se você estiver digitalizando dados do armazenamento de objetos S3 que é acessível pela Internet, você pode link:task-deploy-cloud-compliance.html["Implante a classificação do BlueXP  na nuvem"^] ou link:task-deploy-compliance-onprem.html["Implante a classificação BlueXP  em um local local que tenha acesso à Internet"^].
+
+Se você estiver digitalizando dados do armazenamento de objetos S3 que foi instalado em um site escuro que não tem acesso à Internet, é necessário link:task-deploy-compliance-dark-site.html["Implante a classificação BlueXP  no mesmo local que não tem acesso à Internet"^]. Isso também requer que o BlueXP  Connector seja implantado no mesmo local.
+
+As atualizações para o software de classificação BlueXP  são automatizadas, desde que a instância tenha conetividade com a Internet.
+
+
+
+== Adicionando o serviço de storage de objetos à classificação do BlueXP 
+
+Adicione o serviço de storage de objetos.
+
+.Passos
+. Na página Configuração de ambientes de trabalho, clique em *Adicionar fonte de dados* > *Adicionar serviço de armazenamento de objetos*.
++
+image:screenshot_compliance_add_object_storage_button.png["Uma captura de tela da página Configuração de digitalização, onde você pode clicar no botão Adicionar grupo de compartilhamentos de arquivos."]
+
+. Na caixa de diálogo Adicionar serviço de armazenamento de objetos, insira os detalhes do serviço de armazenamento de objetos e clique em *continuar*.
++
+.. Introduza o nome que pretende utilizar para o ambiente de trabalho. Esse nome deve refletir o nome do serviço de storage de objetos ao qual você está se conetando.
+.. Insira o URL do endpoint para acessar o serviço de armazenamento de objetos.
+.. Insira a chave de acesso e a chave secreta para que a classificação BlueXP  possa acessar os buckets no armazenamento de objetos.
++
+image:screenshot_compliance_add_object_storage.png["Uma captura de tela da caixa de diálogo onde você insere os valores para acessar o serviço de armazenamento de objetos."]
+
+
+
+
+
+.Resultado
+O novo Object Storage Service é adicionado à lista de ambientes de trabalho.
+
+
+
+== Habilitando e desabilitando varreduras de conformidade em buckets de armazenamento de objetos
+
+Depois de ativar a classificação do BlueXP  no seu Serviço de armazenamento de objetos, a próxima etapa é configurar os intervalos que você deseja analisar. A classificação BlueXP  descobre esses buckets e os exibe no ambiente de trabalho que você criou.
+
+.Passos
+. Na página Configuração, clique em *Configuração* no ambiente de trabalho Serviço de armazenamento de objetos.
++
+image:screenshot_compliance_object_storage_config.png["Uma captura de tela de clicar em Configuração para o ambiente de trabalho para que você possa escolher os buckets que deseja digitalizar."]
+
+. Ative digitalizações apenas de mapeamento ou digitalizações de mapeamento e classificação nos seus buckets.
++
+image:screenshot_compliance_object_storage_select_buckets.png["Uma captura de tela de seleção dos buckets de armazenamento de objetos que você deseja analisar."]
+
++
+[cols="45,45"]
+|===
+| Para: | Faça isso: 
+
+
+| Ative digitalizações apenas de mapeamento num balde | Clique em *mapa* 
+
+
+| Ative digitalizações completas num balde | Clique em *Map & Classify* 
+
+
+| Desative a digitalização em um balde | Clique em *Off* 
+|===
+
+
+.Resultado
+A classificação BlueXP  começa a digitalizar os intervalos que você ativou. Se houver algum erro, eles aparecerão na coluna Status, juntamente com a ação necessária para corrigir o erro.

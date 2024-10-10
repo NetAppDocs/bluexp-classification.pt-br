@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-multi-host-install-dark-site.html 
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode, docker, podman, bluexp classification, classification, install 
+summary: 'Complete alguns passos para instalar a classificação BlueXP  em um host Linux em um site local que não tem acesso à Internet - também conhecido como "modo privado". Este tipo de instalação é perfeito para seus sites seguros.' 
+---
+= Instale a classificação BlueXP  em vários hosts para grandes configurações sem acesso à Internet
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Conclua algumas etapas para instalar a classificação BlueXP  em vários hosts em um site local que não tenha acesso à Internet - também conhecido como _modo privado_. Este tipo de instalação é perfeito para seus sites seguros.
+
+Para configurações muito grandes em que você estará verificando petabytes de dados em sites sem acesso à Internet, você pode incluir vários hosts para fornecer poder de processamento adicional. Ao usar vários sistemas host, o sistema primário é chamado de nó _Manager_ e os sistemas adicionais que fornecem poder de processamento extra são chamados de _nó do scanner_.
+
+Siga estas etapas ao instalar o software de classificação BlueXP  em vários hosts locais em um ambiente off-line.
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+.O que você vai precisar
+* Verifique se todos os seus sistemas Linux para os nós de Gerenciador e scanner atendem aos requisitos do host.
+* Verifique se você instalou os dois pacotes de software pré-requisito (Docker Engine ou Podman, e Python 3).
+* Certifique-se de que você tem Privileges root nos sistemas Linux.
+* Verifique se seu ambiente off-line atende às permissões e conetividade necessárias.
+* Você deve ter os endereços IP dos hosts do nó do scanner que você pretende usar.
+* As seguintes portas e protocolos devem estar ativados em todos os hosts:
++
+[cols="15,20,55"]
+|===
+| Porta | Protocolos | Descrição 
+
+
+| 2377 | TCP | Comunicações de gerenciamento de cluster 
+
+
+| 7946 | TCP, UDP | Comunicação entre nós 
+
+
+| 4789 | UDP | Sobreponha o tráfego de rede 
+
+
+| 50 | ESP | Tráfego de rede de sobreposição IPsec criptografada (ESP) 
+
+
+| 111 | TCP, UDP | Servidor NFS para compartilhamento de arquivos entre os hosts (necessário de cada nó do scanner para nó do gerente) 
+
+
+| 2049 | TCP, UDP | Servidor NFS para compartilhamento de arquivos entre os hosts (necessário de cada nó do scanner para nó do gerente) 
+|===
+
+
+.Passos
+. Siga as etapas de 1 a 8 do link:task-deploy-compliance-dark-site.html#single-host-installation-for-typical-configurations["Instalação de host único"]no nó do gerente.
+. Como mostrado na etapa 9, quando solicitado pelo instalador, você pode inserir os valores necessários em uma série de prompts, ou você pode fornecer os parâmetros necessários como argumentos de linha de comando para o instalador.
++
+Além das variáveis disponíveis para uma instalação de um único host, uma nova opção *-n <node_ip>* é usada para especificar os endereços IP dos nós do scanner. Vários IPs de nó são separados por uma vírgula.
+
++
+Por exemplo, este comando adiciona 3 nós de scanner:
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --host <ds_host> --manager-host <cm_host> *-n <node_ip1>,<node_ip2>,<node_ip3>* --no-proxy --darksite`
+
+. Antes da conclusão da instalação do nó do gerente, uma caixa de diálogo exibe o comando de instalação necessário para os nós do scanner. Copie o comando (por exemplo: `sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF-1-3u69m1-1s35212`) E salve-o em um arquivo de texto.
+. No host *Each* do nó do scanner:
++
+.. Copie o arquivo do instalador do Data Sense (*cc_onprem_installer.tar.gz*) para a máquina host.
+.. Descompacte o arquivo do instalador.
+.. Cole e execute o comando que você copiou na etapa 3.
++
+Quando a instalação termina em todos os nós do scanner e eles foram Unidos ao nó do gerente, a instalação do nó do gerente também termina.
+
+
+
+
+
+.Resultado
+O instalador de classificação BlueXP  termina a instalação de pacotes e Registra a instalação. A instalação pode levar de 15 a 25 minutos.
+
+.O que vem a seguir
+Na página Configuração, pode selecionar o local link:task-getting-started-compliance.html["Clusters ONTAP no local"] e o local link:task-scanning-databases.html["bancos de dados"] que pretende digitalizar.

@@ -1,0 +1,177 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-sharepoint.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, sharepoint, sharepoint online, sharepoint on-premises, data sense 
+summary: Conclua algumas etapas para iniciar a digitalização de arquivos em suas contas on-premise do SharePoint Online e SharePoint com a classificação BlueXP . 
+---
+= Analisar contas do SharePoint
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Conclua algumas etapas para iniciar a digitalização de arquivos em suas contas on-premise do SharePoint Online e SharePoint com a classificação BlueXP .
+
+[]
+====
+*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+====
+
+
+== Início rápido
+
+Comece rapidamente seguindo estas etapas ou role para baixo até as seções restantes para obter detalhes completos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Revise os pré-requisitos do SharePoint
+[role="quick-margin-para"]
+Certifique-se de que tem credenciais qualificadas para iniciar sessão na conta do SharePoint e de que tem as URLs dos sites do SharePoint que pretende analisar.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Implante a instância de classificação do BlueXP 
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implantar a classificação BlueXP "^] se ainda não houver uma instância implantada.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Faça login na conta do SharePoint
+[role="quick-margin-para"]
+Usando credenciais de usuário qualificadas, faça login na conta do SharePoint que você deseja acessar para que ela seja adicionada como uma nova fonte de dados/ambiente de trabalho.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"] Adicione os URLs do site do SharePoint à verificação
+[role="quick-margin-para"]
+Adicione a lista de URLs de sites do SharePoint que você deseja analisar na conta do SharePoint e selecione o tipo de digitalização. Você pode adicionar até 100 URLs ao mesmo tempo - e até 1.000 sites no total para cada conta.
+
+
+
+== Revise os requisitos do SharePoint
+
+Reveja os seguintes pré-requisitos para se certificar de que está pronto para ativar a classificação do BlueXP  numa conta do SharePoint.
+
+* Você deve ter as credenciais de login do usuário Admin para a conta do SharePoint que fornece acesso de leitura a todos os sites do SharePoint.
++
+** Para o SharePoint Online, você pode usar uma conta que não seja de administrador, mas esse usuário deve ter permissão para acessar todos os sites do SharePoint que você deseja analisar.
+
+
+* Para o SharePoint no local, você também precisará da URL do SharePoint Server.
+* Você precisará de uma lista separada por linha dos URLs do site do SharePoint para todos os dados que deseja analisar.
+
+
+
+
+== Implante a instância de classificação do BlueXP 
+
+Implante a classificação do BlueXP  se ainda não houver uma instância implantada.
+
+* Para o SharePoint Online, a classificação do BlueXP  pode ser link:task-deploy-cloud-compliance.html["implantado na nuvem"^].
+* Para SharePoint on-premises, a classificação BlueXP  pode ser instalada link:task-deploy-compliance-onprem.html["em um local no local que tem acesso à internet"^] ou link:task-deploy-compliance-dark-site.html["em um local no local que não tem acesso à internet"^].
+
+
+Quando a classificação BlueXP  é instalada em um site sem acesso à Internet, o conetor BlueXP  também deve ser instalado nesse mesmo site sem acesso à Internet. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Saiba mais"^].
+
+As atualizações para o software de classificação BlueXP  são automatizadas, desde que a instância tenha conetividade com a Internet.
+
+
+
+== Adicione uma conta do SharePoint Online
+
+Adicione a conta do SharePoint Online onde os arquivos de usuário residem.
+
+.Passos
+. Na página Configuração de ambientes de trabalho, clique em *Adicionar fonte de dados* > *Adicionar conta do SharePoint Online*.
++
+image:screenshot_compliance_add_sharepoint_button.png["Uma captura de tela da página Configuração onde você pode clicar no botão Adicionar SharePoint Online."]
+
+. Na caixa de diálogo Adicionar uma conta do SharePoint Online, clique em *entrar no SharePoint*.
+. Na página da Microsoft exibida, selecione a conta do SharePoint e insira o usuário e a senha (usuário administrador ou outro usuário com acesso aos sites do SharePoint) e clique em *Accept* para permitir que a classificação do BlueXP  leia os dados dessa conta.
+
+
+A conta do SharePoint Online é adicionada à lista de ambientes de trabalho.
+
+
+
+== Adicione uma conta no local do SharePoint
+
+Adicione a conta no local do SharePoint onde os arquivos de usuário residem.
+
+.Passos
+. Na página Configuração de ambientes de trabalho, clique em *Adicionar fonte de dados* > *Adicionar conta no local do SharePoint*.
++
+image:screenshot_compliance_add_sharepoint_onprem_button.png["Uma captura de tela da página Configuração onde você pode clicar no botão Adicionar SharePoint on-premise."]
+
+. Na caixa de diálogo Log in the SharePoint On-Premise Server (Iniciar sessão no servidor no local do SharePoint), introduza as seguintes informações:
++
+** Admin usuário no formato "domínio/usuário" ou "usuário no domínio", e senha de administrador
+** URL do SharePoint Server
++
+image:screenshot_compliance_sharepoint_onprem.png["Uma captura de tela mostrando as informações de login de uma conta no SharePoint no local."]
+
+
+
+. Clique em *Connect*.
+
+
+A conta no local do SharePoint é adicionada à lista de ambientes de trabalho.
+
+
+
+== Adicione sites do SharePoint às verificações de conformidade
+
+Você pode adicionar sites individuais do SharePoint ou até 1.000 sites do SharePoint na conta, para que os arquivos associados sejam verificados pela classificação do BlueXP . As etapas são as mesmas se você estiver adicionando sites no local do SharePoint Online ou SharePoint.
+
+.Passos
+. Na página _Configuration_, clique no botão *Configuration* da conta do SharePoint.
++
+image:screenshot_compliance_sharepoint_add_sites.png["Uma captura de tela da página Configuração de digitalização, onde você pode selecionar o botão Configuração."]
+
+. Se esta for a primeira vez que adicionar sites para esta conta do SharePoint, clique em *Adicionar seu primeiro site do SharePoint*.
++
+image:screenshot_compliance_sharepoint_add_initial_sites.png["Uma captura de tela mostrando o botão Adicionar seus primeiros sites do SharePoint para adicionar sites iniciais a serem digitalizados."]
+
++
+Se você estiver adicionando usuários adicionais de uma conta do SharePoint, clique em *Adicionar sites do SharePoint*.
+
++
+image:screenshot_compliance_sharepoint_add_more_sites.png["Uma captura de tela mostrando o botão Adicionar sites do SharePoint para adicionar mais sites a uma conta."]
+
+. Adicione os URLs para os sites cujos arquivos você deseja digitalizar - um URL por linha (até 100 no máximo por sessão) - e clique em *Adicionar sites*.
++
+image:screenshot_compliance_sharepoint_add_site.png["Uma captura de tela da página Adicionar sites do SharePoint, onde você pode adicionar sites a serem digitalizados."]
+
++
+Uma caixa de diálogo de confirmação exibe o número de sites que foram adicionados.
+
++
+Se a caixa de diálogo listar quaisquer sites que não possam ser adicionados, Capture essas informações para que você possa resolver o problema. Em alguns casos, você pode adicionar novamente o site com um URL corrigido.
+
+. Se você precisar adicionar mais de 100 sites para essa conta, basta clicar em *Adicionar sites do SharePoint* novamente até que você tenha adicionado todos os sites para essa conta (até 1.000 sites no total para cada conta).
+. Ative varreduras somente de mapeamento ou varreduras de mapeamento e classificação nos arquivos nos sites do SharePoint.
++
+[cols="45,45"]
+|===
+| Para: | Faça isso: 
+
+
+| Ativar digitalizações apenas de mapeamento em ficheiros | Clique em *mapa* 
+
+
+| Ative digitalizações completas em ficheiros | Clique em *Map & Classify* 
+
+
+| Desativar a digitalização em ficheiros | Clique em *Off* 
+|===
+
+
+.Resultado
+A classificação do BlueXP  começa a digitalizar os arquivos nos sites do SharePoint que você adicionou, e os resultados são exibidos no Painel e em outros locais.
+
+
+
+== Remover um site do SharePoint de verificações de conformidade
+
+Se você remover um site do SharePoint no futuro ou decidir não digitalizar arquivos em um site do SharePoint, você poderá remover sites individuais do SharePoint de ter seus arquivos digitalizados a qualquer momento. Basta clicar em *Remove SharePoint Site* da página Configuração.
+
+image:screenshot_compliance_sharepoint_remove_site.png["Uma captura de tela mostrando como remover um único site do SharePoint de ter seus arquivos digitalizados."]
+
+Observe que você pode link:task-managing-compliance.html["Exclua toda a conta do SharePoint da classificação do BlueXP "] se você não quiser mais verificar os dados de usuário da conta do SharePoint.

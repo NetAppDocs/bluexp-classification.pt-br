@@ -1,0 +1,118 @@
+---
+sidebar: sidebar 
+permalink: task-using-policies-deprecated.html 
+keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
+summary: As políticas são como uma lista de favoritos de filtros personalizados que fornecem resultados de pesquisa na página de investigação para consultas de conformidade comumente solicitadas. A classificação BlueXP  fornece um conjunto de políticas predefinidas com base em solicitações comuns do cliente. Você pode criar políticas personalizadas que fornecem resultados para pesquisas específicas para sua organização. 
+---
+= Envie alertas por e-mail quando dados não compatíveis forem encontrados
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A classificação do BlueXP  pode enviar alertas por e-mail para usuários do BlueXP  em sua conta quando certas políticas críticas retornam resultados para que você possa receber notificações para proteger seus dados. Você pode optar por enviar as notificações por e-mail diariamente, semanalmente ou mensalmente. Você também pode optar por enviar alertas de e-mail para qualquer outro endereço de e-mail - até 20 endereços de e-mail - que não esteja em sua conta do BlueXP .
+
+Você pode configurar essa configuração ao criar a política ou ao editar qualquer política.
+
+Siga estas etapas para adicionar atualizações de e-mail a uma política existente.
+
+.Passos
+. Na página Lista de políticas, clique em *Editar* para a política em que você deseja adicionar (ou alterar) a configuração de e-mail.
++
+image:screenshot_compliance_add_email_alert_1.png["Uma captura de tela mostrando como editar uma política existente."]
+
+. Na página Editar política:
++
+.. Marque a caixa "Enviar e-mail a todos os usuários nesta conta" se você quiser que os e-mails de notificação sejam enviados aos usuários em sua conta do BlueXP  e escolha o intervalo no qual o e-mail é enviado (por exemplo, *todos os dias*).
+.. Marque a caixa "Enviar e-mail" se quiser que os e-mails de notificação sejam enviados para usuários adicionais, escolha o intervalo no qual o e-mail é enviado e insira até 20 endereços de e-mail.
++
+image:screenshot_compliance_add_email_alert_2.png["Uma captura de tela mostrando como escolher o material de e-mail a ser enviado para a Política."]
+
+
+
+. Clique em *Salvar política* e o intervalo no qual o e-mail é enviado aparece na descrição da política.
+
+
+.Resultado
+O primeiro e-mail é enviado agora se houver resultados da política - mas somente se algum arquivo atender aos critérios da política. Nenhuma informação pessoal é enviada nos e-mails de notificação. O e-mail indica que há arquivos que correspondem aos critérios da política e fornece um link para os resultados da política.
+
+
+
+== Excluir arquivos de origem automaticamente usando políticas
+
+Você pode criar uma política personalizada para excluir arquivos que correspondam à política. Por exemplo, você pode querer excluir arquivos que contêm informações confidenciais e foram descobertos pela classificação BlueXP  nos últimos 30 dias.
+
+Somente administradores de conta podem criar uma política para excluir arquivos automaticamente.
+
+
+NOTE: Todos os arquivos que correspondem à política serão excluídos permanentemente uma vez por dia.
+
+.Passos
+. Na página Investigação de dados, defina sua pesquisa selecionando todos os filtros que deseja usar. link:task-investigate-data.html["Filtrando dados na página Investigação de dados"^]Consulte para obter detalhes.
+. Depois de ter todas as caraterísticas do filtro exatamente como você deseja, clique em *criar política a partir desta pesquisa*.
+. Nomeie a política e selecione outras ações que podem ser executadas pela política:
++
+.. Introduza um nome e uma descrição únicos.
+.. Marque a caixa para "excluir automaticamente arquivos que correspondem a esta política" e digite *excluir permanentemente* para confirmar que deseja que os arquivos sejam excluídos permanentemente por esta política.
+.. Clique em *criar política*.
++
+image:screenshot_compliance_delete_files_using_policies.png["Uma captura de tela que mostra como configurar a política e salvá-la."]
+
+
+
+
+
+.Resultado
+A nova política é exibida na guia políticas. Os arquivos que correspondem à política são excluídos uma vez por dia quando a política é executada.
+
+Pode visualizar a lista de ficheiros que foram eliminados no link:task-view-compliance-actions.html["Painel Status ações"].
+
+
+
+== Atribua rótulos AIP automaticamente com políticas
+
+Você pode atribuir um rótulo AIP a todos os arquivos que atendam aos critérios da política. Você pode especificar o rótulo AIP ao criar a política ou adicionar o rótulo ao editar qualquer política.
+
+As etiquetas são adicionadas ou atualizadas continuamente em ficheiros à medida que a classificação BlueXP  verifica os seus ficheiros.
+
+Dependendo se um rótulo já está aplicado a um arquivo e do nível de classificação do rótulo, as seguintes ações são tomadas ao alterar um rótulo:
+
+[cols="60,40"]
+|===
+| Se o ficheiro... | Então... 
+
+
+| Não tem etiqueta | A etiqueta é adicionada 
+
+
+| Tem uma etiqueta existente de um nível mais baixo de classificação | A etiqueta de nível superior é adicionada 
+
+
+| Tem uma etiqueta existente de um nível mais elevado de classificação | A etiqueta de nível superior é mantida 
+
+
+| É atribuído um rótulo manualmente e por uma política | A etiqueta de nível superior é adicionada 
+
+
+| É atribuído dois rótulos diferentes por duas políticas | A etiqueta de nível superior é adicionada 
+|===
+Siga estas etapas para adicionar um rótulo AIP a uma política existente.
+
+.Passos
+. Na página Lista de políticas, clique em *Editar* para a política em que você deseja adicionar (ou alterar) o rótulo AIP.
++
+image:screenshot_compliance_add_label_highlight_1.png["Uma captura de tela mostrando como editar uma política existente."]
+
+. Na página Editar política, marque a caixa para habilitar rótulos automáticos para arquivos que correspondam aos parâmetros de política e selecione o rótulo (por exemplo, *Geral*).
++
+image:screenshot_compliance_add_label_highlight_2.png["Uma captura de tela mostrando como selecionar o rótulo a ser atribuído aos arquivos que correspondem à Política."]
+
+. Clique em *Salvar política* e o rótulo aparecerá na descrição da política.
+
+
+
+NOTE: Se uma diretiva foi configurada com um rótulo, mas o rótulo foi removido do AIP, o nome do rótulo é desativado e o rótulo não é mais atribuído.
