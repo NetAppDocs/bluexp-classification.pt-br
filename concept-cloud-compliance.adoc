@@ -91,7 +91,7 @@ A classificação BlueXP  pode digitalizar e analisar dados estruturados e não
 
 
 
-A classificação BlueXP  é compatível com as versões NFS 3.x e CIFS 1.x, 2,0, 2,1 e 3,0.
+A classificação do BlueXP  é compatível com as versões NFS 3.x, 4,0 e 4,1, e as versões CIFS 1.x, 2,0, 2,1 e 3,0.
 
 
 

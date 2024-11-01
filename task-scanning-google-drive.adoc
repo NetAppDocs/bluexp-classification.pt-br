@@ -97,8 +97,7 @@ Selecione o tipo de digitalização que a classificação BlueXP  executará no
 
 .Passos
 . Na página _Configuration_, clique no botão *Configuration* da conta do Google Drive.
-+
-image:screenshot_compliance_google_drive_add_sites.png["Uma captura de tela da página Configuração onde você pode selecionar o botão Configuração."]
+
 
 . Ative digitalizações apenas de mapeamento ou digitalizações de mapeamento e classificação nos ficheiros da conta do Google Drive.
 +

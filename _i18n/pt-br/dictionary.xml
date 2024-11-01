@@ -130,7 +130,6 @@
   <block id="399bd1ee587245ecac6f39beaa99886f" category="list-text">PostgreSQL</block>
   <block id="86083f3ea21c2385b4f013aae3c57858" category="list-text">SAP HANA</block>
   <block id="0db2daf3d07a81feeb571f78c0af87fa" category="list-text">SQL Server (MSSQL)</block>
-  <block id="bf9330c0401cb1794286325e86e14bc1" category="paragraph">A classificação BlueXP  é compatível com as versões NFS 3.x e CIFS 1.x, 2,0, 2,1 e 3,0.</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Custo</block>
   <block id="1d4f5c4d2298eeba0567ba65029151d4" category="paragraph">A classificação BlueXP  é agora livre de usar. Nenhuma licença de classificação ou assinatura paga é necessária.</block>
   <block id="bcf2e25b0a67b74f2ef04fa33cb52b61" category="section-title">Custos de infraestrutura</block>
@@ -1103,40 +1102,8 @@
   <block id="6033e7117e1fdf38561d007aabe17e6b" category="list-text">Clique no menu suspenso filtro, selecione os ambientes de trabalho para os quais deseja exibir dados e clique em *Exibir*.</block>
   <block id="47b574d50f0f0cc7ac6ae3ba6d39951f" category="inline-image-macro">Uma captura de tela mostrando como filtrar os resultados da investigação para ambientes de trabalho específicos.</block>
   <block id="7675f7474f9e9ad03c6a7bb35d2d9fad" category="paragraph"><block ref="7675f7474f9e9ad03c6a7bb35d2d9fad" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="236c6909a2aaaf6c54865574731a2519" category="summary">Conclua algumas etapas para adicionar nós de scanner em um host Linux na nuvem, que tenha acesso à Internet.</block>
-  <block id="054d10b91a2e5ce49cf12f8ebacd96f3" category="doc">Adicione nós do scanner a uma implantação existente</block>
-  <block id="cbbd546102a0bc266daf8b091654a2b4" category="paragraph">Você pode adicionar nós de scanner a uma implantação existente em um host Linux com acesso à Internet.</block>
-  <block id="0a4316eaec4759a96358821b3d6d871e" category="paragraph">Você pode adicionar mais nós de scanner se descobrir que você precisa de mais poder de processamento de digitalização para digitalizar suas fontes de dados. Você pode adicionar os nós do scanner imediatamente após a instalação do nó do gerenciador ou pode adicionar um nó do scanner mais tarde. Por exemplo, se você perceber que a quantidade de dados em uma de suas fontes de dados duplicou ou triplicou de tamanho após 6 meses, você pode adicionar um novo nó de scanner para ajudar na digitalização de dados.</block>
-  <block id="f114439eeb05a82baaead56da0d70a54" category="paragraph">Existem duas maneiras pelas quais você pode adicionar nós de scanner adicionais:</block>
-  <block id="5df28ba528c6160d29730e9d7fc50471" category="list-text">adicione um nó para ajudar na digitalização de todas as fontes de dados</block>
-  <block id="610e28574a4dbf2d34e497e3ed7bd822" category="list-text">adicionar um nó para ajudar na digitalização de uma fonte de dados específica ou de um grupo específico de fontes de dados (normalmente com base no local)</block>
-  <block id="0047b4042b118692c1d7c579abdeaefe" category="paragraph">Por padrão, todos os novos nós de scanner adicionados são adicionados ao conjunto geral de recursos de digitalização. Isso é chamado de "grupo de scanner padrão". Na imagem abaixo, há 1 nó Manager e 3 nós de scanner no grupo "padrão" que são todos os dados de digitalização de todas as fontes de dados 6.</block>
-  <block id="a58267ce752204348883eaa09d46e8e1" category="inline-image-macro">Um diagrama de como os scanners de classificação BlueXP  digitalizam fontes de dados quando estão no grupo de scanners padrão.</block>
-  <block id="8b726f585c8d35d4b9fa6c080b6cf5c3" category="paragraph"><block ref="8b726f585c8d35d4b9fa6c080b6cf5c3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="69aeb258470eedf7afb44d66a993f4d8" category="paragraph">Se você tiver certas fontes de dados que deseja ser digitalizadas por nós do scanner que estão fisicamente mais perto das fontes de dados, pode definir um nó do scanner ou um grupo de nós do scanner para digitalizar uma fonte de dados específica ou um grupo de fontes de dados. Na imagem abaixo, há 1 nó Manager e 3 nós scanner.</block>
-  <block id="96990c600d9debe09076ef4bcf06d1eb" category="list-text">O nó Manager está no grupo "Default" (padrão) e está a digitalizar a fonte de dados 1D.</block>
-  <block id="042304bf8365f5eb21d79ca01b78d44d" category="list-text">O nó do scanner 1 está no grupo "united_States" e está a digitalizar 2 fontes de dados</block>
-  <block id="fce59aaa378d30cc0381e7eefc22f0ca" category="list-text">Os nós de scanner 2 e 3 estão no grupo "europa" e compartilham as tarefas de digitalização para fontes de dados 3</block>
-  <block id="b2e82a12fe141edcc3076d819a99c43d" category="inline-image-macro">Um diagrama de como os scanners de classificação BlueXP  digitalizam fontes de dados quando atribuídos a diferentes grupos de scanners.</block>
-  <block id="165f08a0e944c5264c6cfcb58cf6d842" category="paragraph"><block ref="165f08a0e944c5264c6cfcb58cf6d842" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2ae436bff38e681584b2d98366a60d53" category="paragraph">Os grupos de scanner de classificação BlueXP  podem ser definidos como áreas geográficas separadas onde seus dados são armazenados. Você pode implantar vários nós de scanner de classificação BlueXP  em todo o mundo e escolher um grupo de scanners para cada nó. Dessa forma, cada nó do scanner digitalizará os dados mais próximos a ele. Quanto mais próximo o nó do scanner estiver dos dados, melhor, pois reduz a latência da rede o máximo possível durante a digitalização de dados.</block>
-  <block id="b07c98462d1539c2be49d642a4205223" category="paragraph">Você pode escolher quais grupos de scanner adicionar à classificação BlueXP  e escolher seus nomes. A classificação BlueXP  não impõe que um nó mapeado para um grupo de scanners chamado "europa" seja implantado na Europa.</block>
-  <block id="e813ef1a90bc3c33aa7351454a0f3d1d" category="paragraph">Siga estas etapas para instalar nós adicionais do scanner de classificação do BlueXP :</block>
-  <block id="f8655d78a4818956ec9919a65a7f089b" category="list-text">Prepare os sistemas host Linux que atuarão como os nós do scanner</block>
-  <block id="c9680eb28f36717df9004e52c8105d05" category="list-text">Baixe o software Data Sense para esses sistemas Linux</block>
-  <block id="c65de7b0c08505f3e13c93ead522765f" category="list-text">Execute um comando no nó Manager para identificar os nós do scanner</block>
-  <block id="b2fe6e75aa67d3e83769c7fce0162b2e" category="list-text">Siga os passos para implementar o software nos nós do scanner (e para definir opcionalmente um "grupo de scanner" para determinados nós do scanner)</block>
-  <block id="37151576493b3aebc74476f19e767278" category="list-text">Se você definiu um grupo de scanner, no nó Gerenciador:</block>
-  <block id="5a838e350187be3ad79ae1b63fe95a2b" category="list-text">Abra o arquivo "working_environment_to_scanner_group_config.yml" e defina os ambientes de trabalho que serão verificados por cada grupo de scanner</block>
-  <block id="23dcbd39a65a485d50a0307dbfaed624" category="list-text">Execute o seguinte script para Registrar essas informações de mapeamento com todos os nós do scanner:<block ref="095075046e7ff767d3fd56d02f6fdfdb" prefix=" " category="inline-code"></block></block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">O que você vai precisar</block>
-  <block id="c9e3afc5b6aaffe6ac686b4597beb1c2" category="list-text">Verifique se todos os seus sistemas Linux para nós de scanner atendem aos requisitos de host.</block>
-  <block id="70982664d9f01c2eb3895d455947c83d" category="list-text">Verifique se os sistemas têm os dois pacotes de software pré-requisitos instalados (Docker Engine ou Podman, e Python 3).</block>
   <block id="95476067517016e17d42573817f40913" category="list-text">Certifique-se de que você tem Privileges root nos sistemas Linux.</block>
-  <block id="b265c78ad0089ab8d45e4e16de6c955f" category="list-text">Verifique se o seu ambiente atende às permissões e conetividade necessárias.</block>
-  <block id="b24a973a5aa3fefd5ec9cba471feff39" category="list-text">Você deve ter os endereços IP dos hosts de nó do scanner que você está adicionando.</block>
-  <block id="7516f4f6c5fbdf54b5b78be3de1b7d8a" category="list-text">Você deve ter o endereço IP do sistema host do nó do Gerenciador de classificação do BlueXP </block>
-  <block id="3fe624f4914417740fe3cf68a4327554" category="list-text">Você deve ter o endereço IP ou o nome do host do sistema do conetor, o ID da conta do NetApp, o ID do cliente do conetor e o token de acesso do usuário. Se você está planejando usar grupos de scanner, precisará saber a ID do ambiente de trabalho para cada fonte de dados em sua conta. Consulte *_etapas de pré-requisito_* abaixo para obter essas informações.</block>
   <block id="03004a9b42bb90f829b688b381ea2e84" category="list-text">As seguintes portas e protocolos devem estar ativados em todos os hosts:</block>
   <block id="9985b4390c40137573e6da05caf85874" category="cell">Protocolos</block>
   <block id="269d837afada308dd4aeab28ca2d57e4" category="cell">2377</block>
@@ -1153,54 +1120,13 @@
   <block id="698d51a19d8a121ce581499d7b701668" category="cell">111</block>
   <block id="edcc6720ea7c450bc260e04210895e7c" category="cell">Servidor NFS para compartilhamento de arquivos entre os hosts (necessário de cada nó do scanner para nó do gerente)</block>
   <block id="06b1338ba02add2b5d2da67663b19ebe" category="cell">2049</block>
-  <block id="af7b7b7195a95f1ff1362b8290d4942b" category="list-text">Se estiver a utilizar<block ref="7ba21652408bcade58b8719451511f2a" prefix=" " category="inline-code"></block> nas suas máquinas de classificação BlueXP , recomendamos que o ative antes de instalar a classificação BlueXP . Execute os seguintes comandos para configurar<block ref="7ba21652408bcade58b8719451511f2a" prefix=" " category="inline-code"></block> de modo que seja compatível com a classificação BlueXP :</block>
   <block id="ab7a4d49b4e814b44fcc2e4e34cdc29b" category="paragraph">Observe que você deve reiniciar o Docker ou o Podman sempre que ativar ou atualizar<block ref="7ba21652408bcade58b8719451511f2a" prefix=" " category="inline-code"></block> as configurações.</block>
-  <block id="a27db93614949e38a138b99356391903" category="paragraph-title">Etapas de pré-requisito</block>
-  <block id="e498e68245d2d68d5d4b94b2fd3a608f" category="paragraph">Siga estas etapas para obter o ID da conta do NetApp, o ID do cliente do conetor, o nome do servidor do conetor e o token de acesso do usuário necessários para adicionar nós do scanner.</block>
-  <block id="eabdc901feba22c87ee7a01af9e34801" category="list-text">Na barra de menus do BlueXP , clique em *conta &gt; Gerenciar contas*.</block>
-  <block id="f5ffeabde3d0f311232b751083215871" category="inline-image-macro">Uma captura de tela dos detalhes da conta do BlueXP .</block>
-  <block id="fa64916819288af5c8c616d80ff8c824" category="paragraph"><block ref="fa64916819288af5c8c616d80ff8c824" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="146d19c418f2c6c81536f28aa8c7bf6c" category="list-text">Copie o _ID de conta_.</block>
-  <block id="854bcb8a525626fd08f8d87ffe0c041a" category="list-text">Na barra de menus do BlueXP , clique em *Ajuda &gt; suporte &gt; conetor BlueXP *.</block>
-  <block id="91b88d5bc6686e901520c8c6a109242f" category="inline-image-macro">Uma captura de tela das configurações do conetor BlueXP .</block>
-  <block id="1b2f697aae0e3b9b314fa04d847f3c19" category="paragraph"><block ref="1b2f697aae0e3b9b314fa04d847f3c19" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c65db7be59edaf2b09cc38b7c56763c6" category="list-text">Copie o conetor _Client ID_ e o _Server Name_.</block>
-  <block id="65377fdf29d2c6ab4f8df0a9d2506c57" category="list-text">Se estiver a planear utilizar grupos de scanner, no separador Configuração da classificação BlueXP , copie a ID do ambiente de trabalho para cada ambiente de trabalho que pretende adicionar a um grupo de scanner.</block>
-  <block id="7b919e251245304b6a04299b541b6ef0" category="inline-image-macro">Uma captura de tela do ID do ambiente de trabalho na página Configuração da classificação do BlueXP .</block>
-  <block id="73aa6f158c137c1058a103cdeac0a40e" category="paragraph"><block ref="73aa6f158c137c1058a103cdeac0a40e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b082b3834881d0e39e85d933337fa35f" category="inline-link">API Documentação Developer Hub</block>
-  <block id="e3aca1bee4b16554fd364b73482af4f3" category="list-text">Vá para<block ref="100b541e6046352c2cfaf3c9e6ddaf4d" category="inline-link-rx"></block> e clique em *Saiba como autenticar*.</block>
-  <block id="7ef314f37951a4ffae65aed3439a8da1" category="inline-image-macro">Uma captura de tela da página Documentação da API, com um link para instruções de autenticação.</block>
-  <block id="e7897b39cbb592afc0430305aca32cc1" category="paragraph"><block ref="e7897b39cbb592afc0430305aca32cc1" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="81ca64cf8cdaf987cf8d5efa54a4b6fd" category="list-text">Siga as instruções de autenticação, usando o nome de usuário e senha do administrador da conta nos parâmetros "nome de usuário" e "senha".</block>
-  <block id="1edd72049e168646cdf62fc97f08f63c" category="list-text">Em seguida, copie o _access token_ da resposta.</block>
-  <block id="b63ac9fcb193ee06e327c293934aaba4" category="list-text">No nó Gerenciador de classificação do BlueXP , execute o script "add_scanner_node.sh". Por exemplo, este comando adiciona 2 nós de scanner:</block>
-  <block id="1480262c4a9656977a70cff8c21b5dc0" category="paragraph"><block ref="0d45fd4edeb386e475963435f8cc230a" prefix="" category="inline-code"></block></block>
   <block id="99a5b8fe9eadd5739e3e760584c579fc" category="paragraph">Valores variáveis:</block>
   <block id="82fbba9871c4c69830c0ea5c2c6fa6f8" category="list-text">_Account_id_ - ID da conta do NetApp</block>
-  <block id="79dad5af8e7ba04bd45d58a3d10d4209" category="list-text">ID do cliente do conetor (adicione o sufixo "clients" ao ID do cliente que você copiou nas etapas de pré-requisito)</block>
-  <block id="5d0fd32ac4fe744d7966c459776a6b4c" category="list-text">_Cm_host_: Endereço IP ou nome de host do sistema do conetor</block>
-  <block id="9d303bf713b934df67ac3fc8db55e1df" category="list-text">_DS_Manager_IP_: Endereço IP privado do sistema de nós do Gerenciador de classificação do BlueXP </block>
-  <block id="63cd14dda48c5ae594fd32586e8adbe6" category="list-text">_Node_private_ip_: Endereços IP dos sistemas de nó do scanner de classificação BlueXP  (vários IPs de nó de scanner são separados por uma vírgula)</block>
   <block id="33b07d0ffb66d0a6cd8a0162e20adca4" category="list-text">_User_token_: Token de acesso de usuário JWT</block>
-  <block id="3aa548170d376264933f54bb0d2c3ad6" category="list-text">Antes da conclusão do script add_scanner_node, uma caixa de diálogo exibe o comando de instalação necessário para os nós do scanner. Copie o comando (por exemplo:<block ref="7c95eda18e13e25941273928f0d149ba" prefix=" " category="inline-code"></block>) E salve-o em um arquivo de texto.</block>
   <block id="611c763bf4c9dbb7098d6afa814b754f" category="list-text">No host *Each* do nó do scanner:</block>
-  <block id="67fe0972cc96651c7684b8e71ee21edd" category="list-text">Copie o arquivo do instalador do Data Sense (*DATASENSE-installer-&lt;version&gt;.tar.gz*) para a máquina host (usando<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block> ou algum outro método).</block>
   <block id="d3d41a6c99806d8a969b69a369935644" category="list-text">Descompacte o arquivo do instalador.</block>
-  <block id="b0c80b9aebe2393782fd3bb0680a791b" category="list-text">Cole e execute o comando que você copiou na etapa 2.</block>
-  <block id="4ab1272ad311bec96f677d25b0901105" category="list-text">Se quiser adicionar um nó de scanner a um "grupo de scanner", adicione o parâmetro *-r &lt;scanner_group_name&gt;* ao comando. Caso contrário, o nó do scanner é adicionado ao grupo "padrão".</block>
-  <block id="8dd42ed78b27180f93de7913ecab156f" category="paragraph">Quando a instalação termina em todos os nós do scanner e eles foram Unidos ao nó do gerente, o script "add_scanner_node.sh" também é concluído. A instalação pode levar de 10 a 20 minutos.</block>
-  <block id="ced90f42fe9747f4578603471ea454a3" category="list-text">Se você tiver adicionado qualquer nó de scanner a um grupo de scanner, retorne ao nó Gerenciador e execute as seguintes 2 tarefas:</block>
-  <block id="3b78d440a5ebfde1b671393949a4e52a" category="list-text">Abra o arquivo "/opt/NetApp/config/custom_Configuration/working_environment_to_scanner_group_config.yml" e insira o mapeamento para o qual os grupos de scanner irão digitalizar ambientes de trabalho específicos. Você precisará ter o _Working Environment ID_ para cada fonte de dados. Por exemplo, as seguintes entradas adicionam 2 ambientes de trabalho ao grupo de scanners "europa" e 2 ao grupo de scanners "estados unidos":</block>
-  <block id="f76b6e3dc68f5a15976b3f64aae23646" category="paragraph">Qualquer ambiente de trabalho que não seja adicionado à lista é digitalizado pelo grupo "padrão" - você deve ter pelo menos um gerente ou nó de scanner no grupo "padrão".</block>
-  <block id="b77072323352dd1724df6d20002eb9f2" category="list-text">Execute o seguinte script para Registrar essas informações de mapeamento com todos os nós do scanner:<block ref="f484d7848213083a72fafef02f452b57" prefix=" " category="inline-code"></block></block>
-  <block id="66860472392a03bca0e5ca8e62545a3d" category="paragraph">A classificação do BlueXP  é configurada com os nós de Gerenciador e scanner para verificar todas as suas fontes de dados.</block>
   <block id="ad5480f838ed67e92fecf7af3cef120d" category="paragraph-title">O que vem a seguir</block>
-  <block id="1d4c3c5a59e200a8cf6bd280a00b8b39" category="paragraph">Na página Configuração, pode selecionar as fontes de dados que pretende analisar - se ainda não o tiver feito. Se você criou grupos de scanner, cada fonte de dados será digitalizada pelos nós do scanner no respetivo grupo.</block>
-  <block id="00c5c673cfa296bce54ec77743dbf5a5" category="paragraph">Você pode ver o nome do Grupo do scanner para cada ambiente de trabalho na página Configuração.</block>
-  <block id="1f3259fd3977a2467ab298df6a6d44d1" category="paragraph">Você também pode ver a lista de todos os grupos de scanner, juntamente com o endereço IP e o status de cada nó de scanner no grupo, na parte inferior da página Configuração.</block>
-  <block id="e1f976f12c87e7d413491bc2ea717ca3" category="inline-image-macro">Uma captura de tela mostrando todos os grupos de scanner juntamente com o endereço IP de cada nó de scanner no grupo.</block>
-  <block id="254be716f61cb4173917688092391cd9" category="paragraph"><block ref="254be716f61cb4173917688092391cd9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6e18247604a8052dc71602b0c7f668f1" category="summary">Conclua algumas etapas para implantar a classificação do BlueXP  na nuvem. O BlueXP  implantará a instância de classificação BlueXP  na mesma rede de provedores de nuvem que o BlueXP  Connector.</block>
   <block id="f17567dce8b42196f094527d71dfd823" category="doc">Implante a classificação do BlueXP  na nuvem usando o BlueXP </block>
   <block id="7db569d61b5920a213ff0ee64b30da31" category="inline-link-macro">Instale a classificação BlueXP  em um host Linux que tenha acesso à Internet</block>
@@ -1445,7 +1371,6 @@
   <block id="52c31809bdb836acfc2de3ee032c0faa" category="paragraph">Para configurações muito grandes em que você digitalizará petabytes de dados, nas versões 1,30 e anteriores, é possível incluir vários hosts para fornecer poder de processamento adicional. Ao usar vários sistemas host, o sistema primário é chamado de nó _Manager_, e os sistemas adicionais que fornecem poder de processamento extra são chamados de _nó do scanner_.</block>
   <block id="84055ee6e3998954234f68ebc7991766" category="inline-link-macro">Instale a classificação BlueXP  em um site local que não tenha acesso à Internet</block>
   <block id="0dcde9bea70f4948a25486523fde4e97" category="paragraph">Você também pode <block ref="76c224cc80265848284829e2886db42b" category="inline-link-macro-rx"></block>para sites completamente seguros.</block>
-  <block id="85aa6acd6442a61f72e7d0ea942bae6f" category="admonition">Para versões antigas 1,30 e anteriores, para adicionar nós de scanner, <block ref="6201a969fc4638d8cfca1139fbc49a51" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="bb928959b278e9a5a488494ff139d0d9" category="paragraph">Se você ainda não tiver um conetor,<block ref="8635e4adecf532f5cc2442da36c54c5a" category="inline-link-rx"></block> em um host Linux em sua rede ou em um host Linux na nuvem.</block>
   <block id="7b80abc0703fcbc544c0ea34a81361df" category="paragraph">Você também pode criar um conetor com seu provedor de nuvem. Consulte<block ref="43c354a9e10c487e79b72ac55319f506" category="inline-link-rx"></block><block ref="f57cc468ab9bea4198c876368a971c60" category="inline-link-rx"></block> , , ou<block ref="4ed2379781d8ba33fa9fe0959039a8e2" category="inline-link-rx"></block>.</block>
   <block id="336bcdf5ccce2f7faf69504d6bb691bc" category="paragraph">Certifique-se de que seu ambiente atenda aos pré-requisitos. Isso inclui acesso de saída à Internet, por exemplo, conetividade entre o conetor e a classificação BlueXP  na porta 443 e muito mais. <block ref="ccadfe94f5aed3b0ce58eed3720936a8" category="inline-xref-macro-rx"></block>.</block>
@@ -1882,8 +1807,6 @@
   <block id="7c0a9b3e555cf595d3d01d33df76df82" category="list-text">Os volumes criados inicialmente como volumes CIFS no sistema ONTAP de origem exigem que você insira credenciais CIFS para verificar esses volumes DP. Se você já inseriu credenciais do ative Directory para que a classificação do BlueXP  possa analisar volumes CIFS, você pode usar essas credenciais ou especificar um conjunto diferente de credenciais de administrador.</block>
   <block id="65ba2ff339305392b787952e007185f1" category="inline-image-macro">Uma captura de tela das duas opções para habilitar volumes de proteção de dados CIFS.</block>
   <block id="044f0d646b3277f06b2a18a6e8980572" category="paragraph"><block ref="044f0d646b3277f06b2a18a6e8980572" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c47a93a4db0f3326b39699f2c268ed84" category="inline-xref">da mesma forma que ativou outros volumes</block>
-  <block id="2061db071134423faf2176bf292d0b95" category="list-text">Ative cada volume DP que pretende digitalizar <block ref="86192a8c12894873fcc3d879f4018d85" category="inline-xref-macro-rx"></block>.</block>
   <block id="b9061f396efcc4df381ceed3ac729d32" category="paragraph">Uma vez ativada, a classificação BlueXP  cria um compartilhamento NFS a partir de cada volume DP que foi ativado para digitalização. As políticas de exportação de compartilhamento só permitem acesso a partir da instância de classificação BlueXP .</block>
   <block id="abcdab0f1cbbe968798a52245b476c30" category="paragraph">*Observação:* se você não tiver volumes de proteção de dados CIFS quando você ativou inicialmente o acesso a volumes DP e depois adicionar alguns, o botão *Ativar acesso ao CIFS DP* aparece na parte superior da página Configuração. Clique neste botão e adicione credenciais CIFS para permitir o acesso a esses volumes CIFS DP.</block>
   <block id="21118277527dde4297826bff350dbf36" category="admonition">As credenciais do active Directory são registradas apenas na VM de storage do primeiro volume CIFS DP, de modo que todos os volumes de DP nesse SVM serão verificados. Quaisquer volumes que residam em outros SVMs não terão as credenciais do ative Directory registradas, portanto, esses volumes DP não serão verificados.</block>
@@ -2768,8 +2691,6 @@
   <block id="18b57e2e68f1be182173d49ffbcd4e0c" category="paragraph">*Observação:* a implantação da classificação do BlueXP  em um local local local não é suportada atualmente ao digitalizar volumes FSX.</block>
   <block id="3ae736236dde2535cad4ec42745a0cbd" category="paragraph">Você pode ativar a classificação do BlueXP  para o FSX for ONTAP volumes.</block>
   <block id="2cc6e87dfb5a6f87bc1fcbd217a498de" category="paragraph"><block ref="2cc6e87dfb5a6f87bc1fcbd217a498de" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9fa58f0e5c00772b9262b1da0ff9f2cb" category="inline-xref">Ativar e desativar verificações de conformidade em volumes</block>
-  <block id="415692946bae6c6ee848f8732518a045" category="paragraph"><block ref="30e9b0cd02d911bb04c0ac893b6f8372" category="inline-xref-macro-rx"></block>Consulte para obter detalhes.</block>
   <block id="6bc94b69811d2b0b701e915104066612" category="paragraph">Verifique se a classificação do BlueXP  pode acessar volumes verificando suas políticas de rede, grupos de segurança e exportação.</block>
   <block id="24f2d84d2538ae621015886e3ec8b0c0" category="paragraph">Você precisará fornecer a classificação BlueXP  com credenciais CIFS para que possa acessar volumes CIFS.</block>
   <block id="d7f427e021c7b93fd75b9364e170beaa" category="list-text">Na página _Configuration_, clique em *View Details* (Ver detalhes) para rever o estado e corrigir quaisquer erros.</block>
@@ -2811,8 +2732,6 @@
   <block id="0e7a5e9d36355cf131cc56b8f94ae787" category="section-title">Selecione o tipo de digitalização para dados do utilizador</block>
   <block id="1afc2fddca51ee5a2748c87f10b983f8" category="paragraph">Selecione o tipo de digitalização que a classificação BlueXP  executará nos dados do utilizador.</block>
   <block id="00d7735cfe1be11b0d6c0c162ce477f6" category="list-text">Na página _Configuration_, clique no botão *Configuration* da conta do Google Drive.</block>
-  <block id="0dc1656c50d90854618395b6a5005845" category="inline-image-macro">Uma captura de tela da página Configuração onde você pode selecionar o botão Configuração.</block>
-  <block id="9d94963dd1bda0d610b26873050a7b25" category="paragraph"><block ref="9d94963dd1bda0d610b26873050a7b25" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a546beb16c321b4c611cf0b9c297e9de" category="list-text">Ative digitalizações apenas de mapeamento ou digitalizações de mapeamento e classificação nos ficheiros da conta do Google Drive.</block>
   <block id="301798d9c3ea0ac63d5929808bf55c03" category="inline-image-macro">Uma captura de tela mostrando como selecionar o tipo de classificação BlueXP  de digitalização será executada nos dados do Google Drive.</block>
   <block id="7ae746a0d79985b2b808dae0d29bf230" category="paragraph"><block ref="7ae746a0d79985b2b808dae0d29bf230" category="inline-image-macro-rx" type="image"></block></block>
@@ -3310,9 +3229,6 @@
   <block id="c8607e69aac6730ea98a4ebb489331b1" category="paragraph"><block ref="c8607e69aac6730ea98a4ebb489331b1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d64089f867aa0c6a5cf811a28ddf72cc" category="paragraph">Pode clicar no nome de uma ação para ver os detalhes correspondentes a essa operação.</block>
   <block id="08aececdd8070f547d2aa65ea8c35446" category="summary">Saiba o que há de novo na classificação BlueXP .</block>
-  <block id="406ca16c022fe122c7920a69664a84f2" category="doc">O que há de novo na classificação BlueXP </block>
-  <block id="b05347ded7555dfe4b18afd3dfa678f3" category="paragraph">Saiba o que há de novo na classificação BlueXP  (Cloud Data Sense).</block>
-  <block id="e75804de09e19a35ad3cd360d45cd0fb" category="section-title">10 de Outubro de 2024 (versão 1,36)</block>
   <block id="e5450ac8535429efc574bc7d9388dd9a" category="paragraph">Esta versão de classificação do BlueXP  inclui as seguintes atualizações.</block>
   <block id="44b53ed30a4c420b95b8adba575b84a6" category="section-title">Suporte para RHEL 9,4</block>
   <block id="409886e91bb1c98ce7537a6ea025aa8e" category="paragraph">Esta versão fornece suporte para Red Hat Enterprise Linux v9,4, além de versões anteriormente suportadas. Isso é aplicável a qualquer instalação manual no local da classificação do BlueXP , incluindo implantações em locais escuros.</block>
@@ -3321,10 +3237,8 @@
   <block id="b7f7cb3b83ae19c923f62035dd4305fd" category="paragraph">Saiba mais<block ref="cea7a7dae9f7d88b97fa434e79201c9b" category="inline-link-rx"></block> sobre o .</block>
   <block id="7062dd46798946172bc9078744756dfc" category="section-title">Desempenho de digitalização melhorado</block>
   <block id="8455b67ff73ad2f75c922d81e0449780" category="paragraph">Esta versão proporciona um melhor desempenho de digitalização.</block>
-  <block id="597f26a63507bfee99f67909c68d5354" category="section-title">2 de Setembro de 2024 (versão 1,35)</block>
   <block id="70d1ac1a529ac546d3e60b81ee464a1d" category="paragraph">Esta versão de classificação do BlueXP  inclui a seguinte atualização.</block>
   <block id="83bceb987dd495cde1a148944580e473" category="paragraph">A classificação BlueXP  pode agora digitalizar dados no StorageGRID.</block>
-  <block id="60c09f1a3afdb367fc787929a52bce2c" category="paragraph">Para obter detalhes, <block ref="01dac562b0502c43b97eebbd4bf4b35d" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="a5ac20c838605b872613985f5c302c61" category="section-title">5 de Agosto de 2024 (versão 1,34)</block>
   <block id="44a73383773bebac3194e73bd06397a8" category="section-title">Mude de CentOS para Ubuntu</block>
   <block id="6a1611bc2c4a6c8c16154f81c0323dc2" category="paragraph">A classificação BlueXP  atualizou seu sistema operacional Linux para Microsoft Azure e Google Cloud Platform (GCP) do CentOS 7,9 para o Ubuntu 22,04.04.</block>
@@ -3422,8 +3336,6 @@
   <block id="b5ba343fa4469021dbdf64181a67e909" category="section-title">A classificação BlueXP  pode ser configurada como um Coletor FPolicy para receber eventos FPolicy de sistemas ONTAP</block>
   <block id="cf39647f74e2ee71e92d2dcb020dab2d" category="paragraph">Você pode habilitar logs de auditoria de acesso a arquivos para serem coletados no sistema de classificação do BlueXP  para eventos de acesso a arquivos detetados em volumes em seus ambientes de trabalho. A classificação BlueXP  pode capturar os seguintes tipos de eventos FPolicy e os usuários que realizaram as ações em seus arquivos: Criar, ler, gravar, excluir, renomear, alterar proprietário/permissões e alterar SACL/DACL.</block>
   <block id="e1161f065b10936afc930fd3d9d0c76f" category="section-title">As licenças BYOL do Data Sense agora são compatíveis com dark sites</block>
-  <block id="1ab65443ec0af7e5e1aee32a3cf59dcc" category="inline-link">Veja como obter e carregar sua licença BYOL do Data Sense</block>
-  <block id="645f5675426bc396b45b524635e93bc7" category="paragraph">Agora você pode carregar sua licença BYOL do Data Sense para a carteira digital BlueXP  em um site escuro para que você seja notificado quando sua licença estiver ficando baixa.<block ref="bd823f9b4dce457c0ea2a8dcca6e749f" category="inline-link-rx"></block>.</block>
   <block id="f42926ae5eb2834453e4706e43354d5c" category="section-title">3 de abril de 2023 (versão 1,22)</block>
   <block id="e4279e9f497576fcde3caeb67ed0f96d" category="section-title">Novo Relatório de avaliação de descoberta de dados</block>
   <block id="5b9233dec22bab321ca47a360d9950b6" category="inline-link">Veja como gerar e usar o Relatório de avaliação de descoberta de dados</block>
@@ -3539,4 +3451,23 @@
   <block id="aeb69ebcaffd7e18cd55db906e582bf5" category="sidebar">Remova uma conta do OneDrive, SharePoint ou Google Drive</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">Referência</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conhecimento e apoio</block>
+  <block id="33131c83033941e511576a90476300a6" category="paragraph">A classificação do BlueXP  é compatível com as versões NFS 3.x, 4,0 e 4,1, e as versões CIFS 1.x, 2,0, 2,1 e 3,0.</block>
+  <block id="5f9318195cc151f5faab62105798a8f9" category="list-text">Ative cada volume DP que pretende digitalizar.</block>
+  <block id="2940154367c6f9a7ec39da3423e3eb0a" category="paragraph">Consulte Ativar e desativar verificações de conformidade em volumes para obter detalhes.</block>
+  <block id="713b2126f7ad5917ea8d35b725b0aacf" category="doc">O que há de novo na classificação BlueXP </block>
+  <block id="8339f3b73dd5a0afa74d7cfbebd1b2c2" category="section-title">4 de novembro de 2024</block>
+  <block id="c1922490c576eff789b323f98c667589" category="section-title">Versão 1,37</block>
+  <block id="415b27bc5d78b639dc8c74a6e8f93e19" category="section-title">Suporte para RHEL 8,10</block>
+  <block id="52ff638e6cd24bd3aebc0578d753181c" category="paragraph">Esta versão fornece suporte para Red Hat Enterprise Linux v8,10, além de versões anteriormente suportadas. Isso é aplicável a qualquer instalação manual no local da classificação do BlueXP , incluindo implantações em locais escuros.</block>
+  <block id="d4f80552d7e61deedef657200662a6be" category="paragraph">Os seguintes sistemas operacionais requerem o uso do motor de contentor Podman, e eles exigem a classificação BlueXP  versão 1,30 ou superior: Red Hat Enterprise Linux versão 8,8, 8,10, 9,0, 9,1, 9,2, 9,3 e 9,4.</block>
+  <block id="4cc849f381058f76f6b72a1c4279393d" category="inline-link">Classificação BlueXP</block>
+  <block id="2b569c1a8e17ba534c2e1f57f9d1bbe9" category="paragraph">Saiba mais<block ref="491ed29a13fdb2b66f8e1bbeefef79a5" category="inline-link-rx"></block> sobre o .</block>
+  <block id="a7e418c0221e06b9bb3fa8ebc082ece2" category="section-title">Suporte para NFS v4,1</block>
+  <block id="f1a9c2f106d86fe27271e4f8f0c0bd59" category="paragraph">Esta versão fornece suporte para NFS v4,1, além de versões com suporte anterior.</block>
+  <block id="a1fe52ea216874a5214f41ae7e5bbd63" category="section-title">10 de outubro de 2024</block>
+  <block id="5413a43995a4a97a249b7b24fbf3e785" category="section-title">Versão 1,36</block>
+  <block id="28dc8814bfe656bc8e29052d1508b999" category="section-title">2 de setembro de 2024</block>
+  <block id="2808185c0a48de3cd5dcc0d92f453531" category="section-title">Versão 1,35</block>
+  <block id="1aa327f677148af5679dfc598fb8f539" category="paragraph">Para obter detalhes,<block ref="3e1b901b9270f6f4c97e16e88c4e3161" category="inline-link-rx"></block> consulte .</block>
+  <block id="164199ecac7ab88714ff0c68b5fb98f0" category="paragraph">Agora você pode carregar sua licença BYOL do Data Sense para a carteira digital BlueXP  em um site escuro para que você seja notificado quando sua licença estiver ficando baixa.</block>
 </blocks>

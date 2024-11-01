@@ -14,17 +14,49 @@ summary: Saiba o que há de novo na classificação BlueXP .
 
 
 [role="lead"]
-Saiba o que há de novo na classificação BlueXP  (Cloud Data Sense).
+Saiba o que há de novo na classificação BlueXP .
 
 
 
-== 10 de Outubro de 2024 (versão 1,36)
+== 4 de novembro de 2024
+
+
+
+=== Versão 1,37
 
 Esta versão de classificação do BlueXP  inclui as seguintes atualizações.
 
 
 
-=== Suporte para RHEL 9,4
+==== Suporte para RHEL 8,10
+
+Esta versão fornece suporte para Red Hat Enterprise Linux v8,10, além de versões anteriormente suportadas. Isso é aplicável a qualquer instalação manual no local da classificação do BlueXP , incluindo implantações em locais escuros.
+
+Os seguintes sistemas operacionais requerem o uso do motor de contentor Podman, e eles exigem a classificação BlueXP  versão 1,30 ou superior: Red Hat Enterprise Linux versão 8,8, 8,10, 9,0, 9,1, 9,2, 9,3 e 9,4.
+
+Saiba mais https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Classificação BlueXP"] sobre o .
+
+
+
+==== Suporte para NFS v4,1
+
+Esta versão fornece suporte para NFS v4,1, além de versões com suporte anterior.
+
+Saiba mais https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Classificação BlueXP"] sobre o .
+
+
+
+== 10 de outubro de 2024
+
+
+
+=== Versão 1,36
+
+Esta versão de classificação do BlueXP  inclui as seguintes atualizações.
+
+
+
+==== Suporte para RHEL 9,4
 
 Esta versão fornece suporte para Red Hat Enterprise Linux v9,4, além de versões anteriormente suportadas. Isso é aplicável a qualquer instalação manual no local da classificação do BlueXP , incluindo implantações em locais escuros.
 
@@ -34,23 +66,27 @@ Saiba mais https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overv
 
 
 
-=== Desempenho de digitalização melhorado
+==== Desempenho de digitalização melhorado
 
 Esta versão proporciona um melhor desempenho de digitalização.
 
 
 
-== 2 de Setembro de 2024 (versão 1,35)
+== 2 de setembro de 2024
+
+
+
+=== Versão 1,35
 
 Esta versão de classificação do BlueXP  inclui a seguinte atualização.
 
 
 
-=== Digitalizar dados StorageGRID
+==== Digitalizar dados StorageGRID
 
 A classificação BlueXP  pode agora digitalizar dados no StorageGRID.
 
-Para obter detalhes, link:task-scanning-storagegrid.html["Digitalizar dados StorageGRID"]consulte .
+Para obter detalhes, https://docs.netapp.com/us-en/bluexp-classification/task-scanning-storagegrid.html["Digitalizar dados StorageGRID"] consulte .
 
 
 
@@ -331,7 +367,7 @@ Você pode habilitar logs de auditoria de acesso a arquivos para serem coletados
 
 === As licenças BYOL do Data Sense agora são compatíveis com dark sites
 
-Agora você pode carregar sua licença BYOL do Data Sense para a carteira digital BlueXP  em um site escuro para que você seja notificado quando sua licença estiver ficando baixa. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-datasense.html#obtain-your-bluexp-classification-license-file["Veja como obter e carregar sua licença BYOL do Data Sense"].
+Agora você pode carregar sua licença BYOL do Data Sense para a carteira digital BlueXP  em um site escuro para que você seja notificado quando sua licença estiver ficando baixa.
 
 
 

@@ -226,7 +226,7 @@ image:screenshot_compliance_dp_cifs_volumes.png["Uma captura de tela das duas op
 
 
 
-. Ative cada volume DP que pretende digitalizar <<Ativar e desativar verificações de conformidade em volumes,da mesma forma que ativou outros volumes>>.
+. Ative cada volume DP que pretende digitalizar.
 
 
 .Resultado

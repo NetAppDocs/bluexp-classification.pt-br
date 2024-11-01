@@ -36,9 +36,6 @@ NOTE: Para versões antigas 1,30 e anteriores, se for necessário instalar a cla
 Você também pode link:task-deploy-compliance-dark-site.html["Instale a classificação BlueXP  em um site local que não tenha acesso à Internet"]para sites completamente seguros.
 
 
-NOTE: Para versões antigas 1,30 e anteriores, para adicionar nós de scanner, link:task-deploy-add-scanner-nodes.html["Adicione nós do scanner a uma implantação existente"]consulte .
-
-
 
 == Início rápido
 

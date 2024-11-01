@@ -107,7 +107,7 @@ image:screenshot_fsx_scanning_activate.png["Uma captura de tela da guia Configur
 ** Para mapear e classificar todos os volumes, clique em *Map & Classify All volumes*.
 ** Para personalizar a digitalização para cada volume, clique em *ou selecione o tipo de digitalização para cada volume* e, em seguida, escolha os volumes que pretende mapear e/ou classificar.
 +
-<<Ative e desative verificações de conformidade em volumes,Ativar e desativar verificações de conformidade em volumes>>Consulte para obter detalhes.
+Consulte Ativar e desativar verificações de conformidade em volumes para obter detalhes.
 
 
 
@@ -230,7 +230,7 @@ image:screenshot_compliance_dp_cifs_volumes.png["Uma captura de tela das duas op
 
 
 
-. Ative cada volume DP que pretende digitalizar <<Ativar e desativar verificações de conformidade em volumes,da mesma forma que ativou outros volumes>>.
+. Ative cada volume DP que pretende digitalizar.
 
 
 .Resultado
