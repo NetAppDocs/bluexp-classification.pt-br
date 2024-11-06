@@ -1,0 +1,12 @@
+= Versão 1,35
+:allow-uri-read: 
+
+
+
+
+=== Versão 1,35
+
+.Digitalizar dados StorageGRID
+A classificação BlueXP  pode agora digitalizar dados no StorageGRID.
+
+Para obter detalhes, link:task-scanning-storagegrid.html["Digitalizar dados StorageGRID"]consulte .

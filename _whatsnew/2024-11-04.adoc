@@ -1,0 +1,21 @@
+= Versão 1,37
+:allow-uri-read: 
+
+
+
+
+=== Versão 1,37
+
+Esta versão de classificação do BlueXP  inclui as seguintes atualizações.
+
+.Suporte para RHEL 8,10
+Esta versão fornece suporte para Red Hat Enterprise Linux v8,10, além de versões anteriormente suportadas. Isso é aplicável a qualquer instalação manual no local da classificação do BlueXP , incluindo implantações em locais escuros.
+
+Os seguintes sistemas operacionais requerem o uso do motor de contentor Podman, e eles exigem a classificação BlueXP  versão 1,30 ou superior: Red Hat Enterprise Linux versão 8,8, 8,10, 9,0, 9,1, 9,2, 9,3 e 9,4.
+
+Saiba mais https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Classificação BlueXP"] sobre o .
+
+.Suporte para NFS v4,1
+Esta versão fornece suporte para NFS v4,1, além de versões com suporte anterior.
+
+Saiba mais https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Classificação BlueXP"] sobre o .

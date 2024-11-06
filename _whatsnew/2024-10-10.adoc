@@ -1,0 +1,17 @@
+= Versão 1,36
+:allow-uri-read: 
+
+
+
+
+=== Versão 1,36
+
+.Suporte para RHEL 9,4
+Esta versão fornece suporte para Red Hat Enterprise Linux v9,4, além de versões anteriormente suportadas. Isso é aplicável a qualquer instalação manual no local da classificação do BlueXP , incluindo implantações em locais escuros.
+
+Os seguintes sistemas operacionais requerem o uso do motor de contentor Podman, e eles exigem a classificação BlueXP  versão 1,30 ou superior: Red Hat Enterprise Linux versão 8,8, 9,0, 9,1, 9,2, 9,3 e 9,4.
+
+Saiba mais https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["Visão geral das implantações de classificação BlueXP "] sobre o .
+
+.Desempenho de digitalização melhorado
+Esta versão proporciona um melhor desempenho de digitalização.
