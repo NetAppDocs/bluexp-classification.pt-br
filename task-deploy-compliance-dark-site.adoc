@@ -14,7 +14,7 @@ summary: 'Complete alguns passos para instalar a classificação BlueXP  em um 
 
 
 [role="lead"]
-Conclua algumas etapas para instalar a classificação BlueXP  em um host Linux em um site local que não tenha acesso à Internet - também conhecido como _modo privado_. Este tipo de instalação é perfeito para seus sites seguros.
+Conclua algumas etapas para instalar a classificação BlueXP  em um host Linux em um site local que não tenha acesso à Internet - também conhecido como _modo privado_. Esse tipo de instalação, que usa um script de instalação, não tem conetividade com a camada SaaS do BlueXP .
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Saiba mais sobre os diferentes modos de implantação para o conetor BlueXP  e a classificação BlueXP "^].
 
@@ -248,8 +248,6 @@ Você deve ter as informações do ative Directory:
 
 | Se um firewall for usado no host Linux | 9000 | Necessário para processos internos dentro de um servidor Ubuntu. 
 |===
-Se você estiver usando vários hosts de classificação BlueXP  para fornecer poder de processamento adicional para verificar suas fontes de dados, precisará ativar portas/protocolos adicionais. link:task-deploy-compliance-dark-site.html["Consulte os requisitos de porta adicionais"].
-
 
 
 == Instale a classificação BlueXP  no host Linux local
@@ -257,8 +255,6 @@ Se você estiver usando vários hosts de classificação BlueXP  para fornecer 
 Para configurações típicas, você instalará o software em um único sistema host.
 
 image:diagram_deploy_onprem_single_host_no_internet.png["Um diagrama mostrando a localização das fontes de dados que você pode verificar ao usar uma única instância de classificação do BlueXP  implantada no local sem acesso à Internet."]
-
-image:diagram_deploy_onprem_multi_host_no_internet.png["Um diagrama mostrando a localização das fontes de dados que você pode verificar ao usar várias instâncias de classificação do BlueXP  implantadas no local sem acesso à Internet."]
 
 
 

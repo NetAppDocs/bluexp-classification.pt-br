@@ -1232,7 +1232,6 @@
   <block id="9b305ee4bd352f956f4cb24478769e42" category="paragraph">Na página Configuração, pode selecionar as fontes de dados que pretende digitalizar.</block>
   <block id="e1add3649abfc02bc2a83bd64183210e" category="summary">Complete alguns passos para instalar a classificação BlueXP  em um host Linux em um site local que não tem acesso à Internet - também conhecido como "modo privado". Este tipo de instalação é perfeito para seus sites seguros.</block>
   <block id="f943db85a7c2edd799890ddb18f29cab" category="doc">Instale a classificação BlueXP  em um host Linux sem acesso à Internet</block>
-  <block id="e920147793c6514a998387c74226605b" category="paragraph">Conclua algumas etapas para instalar a classificação BlueXP  em um host Linux em um site local que não tenha acesso à Internet - também conhecido como _modo privado_. Este tipo de instalação é perfeito para seus sites seguros.</block>
   <block id="05e22c2c931d6a4218f029a72eeb9206" category="inline-link">Saiba mais sobre os diferentes modos de implantação para o conetor BlueXP  e a classificação BlueXP </block>
   <block id="3c86f5b7f0c9db7841cc30ae9d32c2c2" category="paragraph"><block ref="a9635649936a46cf7723db5b3c00a913" category="inline-link-rx"></block>.</block>
   <block id="4f7157701d2db96edcc01457067a6771" category="inline-link-macro">Implante a classificação BlueXP  em um site local que tenha acesso à Internet</block>
@@ -1303,14 +1302,10 @@
   <block id="c29fe88a82cdd613769957d60ae7e623" category="cell">Se um firewall for usado no host Linux</block>
   <block id="d5ab8dc7ef67ca92e41d730982c5c602" category="cell">9000</block>
   <block id="2c68446a47623409683fed996b7df333" category="cell">Necessário para processos internos dentro de um servidor Ubuntu.</block>
-  <block id="baeedc928ad10edb5cbbe96bbe80e8d0" category="inline-link-macro">Consulte os requisitos de porta adicionais</block>
-  <block id="3fba2d2072ada5e4a305ed49625f7c97" category="paragraph">Se você estiver usando vários hosts de classificação BlueXP  para fornecer poder de processamento adicional para verificar suas fontes de dados, precisará ativar portas/protocolos adicionais. <block ref="8ab506a6f74eff926eb35a8eb7627a1d" category="inline-link-macro-rx"></block>.</block>
   <block id="31960e3a0a5575dab07c414d0f050b5e" category="section-title">Instale a classificação BlueXP  no host Linux local</block>
   <block id="ce9b3c0997395cdac24ac84544289f19" category="paragraph">Para configurações típicas, você instalará o software em um único sistema host.</block>
   <block id="0698c1d2033d1d237a564aa425785c93" category="inline-image-macro">Um diagrama mostrando a localização das fontes de dados que você pode verificar ao usar uma única instância de classificação do BlueXP  implantada no local sem acesso à Internet.</block>
   <block id="903ab6306b53df8d7e387c78c2dcb7e5" category="paragraph"><block ref="903ab6306b53df8d7e387c78c2dcb7e5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="95ca4827847440176f97092b65a75679" category="inline-image-macro">Um diagrama mostrando a localização das fontes de dados que você pode verificar ao usar várias instâncias de classificação do BlueXP  implantadas no local sem acesso à Internet.</block>
-  <block id="9a796537f743745021babac25c346996" category="paragraph"><block ref="9a796537f743745021babac25c346996" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fadc42ee050a70884c159ab263e06542" category="section-title">Instalação de um único host para configurações típicas</block>
   <block id="c4c8ed9ed1210b4b825ecd4522c73de9" category="paragraph">Siga estas etapas ao instalar o software de classificação BlueXP  em um único host local em um ambiente off-line.</block>
   <block id="5c2d28b4f3a99b0fe3968b98ea7d88e5" category="inline-link-macro">Veja mais detalhes aqui</block>
@@ -1368,9 +1363,7 @@
   <block id="0b0f1899ec6aba7470224b92502a86ac" category="paragraph"><block ref="0b0f1899ec6aba7470224b92502a86ac" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f6e3ad4e2f1393513d919f090b15ac68" category="paragraph">A instalação típica em um host Linux _na nuvem_ tem os seguintes componentes e conexões.</block>
   <block id="19c8d978817f5ad2c7d566851ddf6e4e" category="paragraph"><block ref="19c8d978817f5ad2c7d566851ddf6e4e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="52c31809bdb836acfc2de3ee032c0faa" category="paragraph">Para configurações muito grandes em que você digitalizará petabytes de dados, nas versões 1,30 e anteriores, é possível incluir vários hosts para fornecer poder de processamento adicional. Ao usar vários sistemas host, o sistema primário é chamado de nó _Manager_, e os sistemas adicionais que fornecem poder de processamento extra são chamados de _nó do scanner_.</block>
   <block id="84055ee6e3998954234f68ebc7991766" category="inline-link-macro">Instale a classificação BlueXP  em um site local que não tenha acesso à Internet</block>
-  <block id="0dcde9bea70f4948a25486523fde4e97" category="paragraph">Você também pode <block ref="76c224cc80265848284829e2886db42b" category="inline-link-macro-rx"></block>para sites completamente seguros.</block>
   <block id="bb928959b278e9a5a488494ff139d0d9" category="paragraph">Se você ainda não tiver um conetor,<block ref="8635e4adecf532f5cc2442da36c54c5a" category="inline-link-rx"></block> em um host Linux em sua rede ou em um host Linux na nuvem.</block>
   <block id="7b80abc0703fcbc544c0ea34a81361df" category="paragraph">Você também pode criar um conetor com seu provedor de nuvem. Consulte<block ref="43c354a9e10c487e79b72ac55319f506" category="inline-link-rx"></block><block ref="f57cc468ab9bea4198c876368a971c60" category="inline-link-rx"></block> , , ou<block ref="4ed2379781d8ba33fa9fe0959039a8e2" category="inline-link-rx"></block>.</block>
   <block id="336bcdf5ccce2f7faf69504d6bb691bc" category="paragraph">Certifique-se de que seu ambiente atenda aos pré-requisitos. Isso inclui acesso de saída à Internet, por exemplo, conetividade entre o conetor e a classificação BlueXP  na porta 443 e muito mais. <block ref="ccadfe94f5aed3b0ce58eed3720936a8" category="inline-xref-macro-rx"></block>.</block>
@@ -1400,9 +1393,6 @@
   <block id="cdcaeff13fccb06b7b310f6f966ada4f" category="paragraph">Para configurações típicas, você instalará o software em um único sistema host. <block ref="b071f364f4daf7049825f5b1c726d17b" category="inline-xref-macro-rx"></block>.</block>
   <block id="6935fb258dcaa809f3c08a4aaa082315" category="inline-image-macro">Um diagrama mostrando a localização das fontes de dados que você pode verificar ao usar uma única instância de classificação do BlueXP  implantada no local com acesso à Internet.</block>
   <block id="ec5760b557b54a69b5d29fb05e68b8c1" category="paragraph"><block ref="ec5760b557b54a69b5d29fb05e68b8c1" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="428a85a15f039350823864cdd9f6711b" category="paragraph">Para configurações muito grandes em que você digitalizará petabytes de dados, você pode incluir vários hosts para fornecer poder de processamento adicional. Saiba mais link:task-deploy-multi-host-install-dark-site.html&gt; sobre a instalação em vários hosts para configurações grandes.</block>
-  <block id="bfd2c96cae6d29697ceac4feda921426" category="inline-image-macro">Um diagrama mostrando a localização das fontes de dados que você pode verificar ao usar várias instâncias de classificação do BlueXP  implantadas no local com acesso à Internet.</block>
-  <block id="b1030a584c34dcb45c3a231937109e48" category="paragraph"><block ref="b1030a584c34dcb45c3a231937109e48" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ab6f827b404fc74a3d59a176e44dce54" category="inline-xref">Preparando o sistema host Linux</block>
   <block id="636fc171536ff74e5a90b2da701bb09c" category="inline-xref">Rever pré-requisitos</block>
   <block id="c0eb32e59a3574faaca63218c3f5922f" category="paragraph"><block ref="dc1d236e8ef0d554549faeaffd48b8b2" category="inline-xref-macro-rx"></block>Consulte e <block ref="2360c56931bf3d2d23fb74a3dc780c78" category="inline-xref-macro-rx"></block> para obter a lista completa de requisitos antes de implantar a classificação do BlueXP .</block>
@@ -1467,7 +1457,6 @@
   <block id="7c454725651fa93e75c3603da01e3ae2" category="inline-link-macro">Instale em um host Linux com acesso à Internet</block>
   <block id="112a4fbc92b6e9c424407aa2efa54779" category="list-text"><block ref="953e3010369667b8110edc0847a61543" category="inline-link-macro-rx"></block>. Instale a classificação BlueXP  em um host Linux em sua rede, ou em um host Linux na nuvem, que tenha acesso à Internet. Esse tipo de instalação pode ser uma boa opção se você preferir digitalizar sistemas ONTAP locais usando uma instância de classificação BlueXP  que também está localizada no local, mas isso não é um requisito.</block>
   <block id="5be81ee840734d5fff39d8fb451e87de" category="inline-link-macro">Instale em um host Linux em um site no local sem acesso à Internet</block>
-  <block id="7c5fdd74ce4770d435a4270b4817294a" category="list-text"><block ref="7ec82fd84f3aea81a9c6badedcfda318" category="inline-link-macro-rx"></block>, Também conhecido como _private mode._ este tipo de instalação, que usa um script de instalação, é bom para seus sites seguros.</block>
   <block id="a59f7e9514f364f5b3574b8ad02f202d" category="paragraph">Tanto a instalação em um host Linux com acesso à Internet quanto a instalação no local em um host Linux sem acesso à Internet usam um script de instalação. O script começa verificando se o sistema e o ambiente atendem aos pré-requisitos. Se os pré-requisitos forem atendidos, a instalação será iniciada. Se você quiser verificar os pré-requisitos independentemente de executar a instalação de classificação do BlueXP , há um pacote de software separado que você pode baixar que apenas testa os pré-requisitos.</block>
   <block id="7c7a9443e0597003702e5cc73c6d075a" category="inline-link-macro">Verifique se o seu host Linux está pronto para instalar a classificação BlueXP </block>
   <block id="1e4c9e5b4eb9656593e357ac3f61cdc1" category="paragraph"><block ref="a838f62b35f046b790a8a32eff3e63b6" category="inline-link-macro-rx"></block>Consulte a .</block>
@@ -3486,4 +3475,7 @@
   <block id="4d892f9a0cb70711d12ffb41d4d77d8b" category="section-title">Versão 1,20</block>
   <block id="88a11892e7418e1eee8c952df9545b46" category="section-title">9 de janeiro de 2023</block>
   <block id="58080b77f4121259ffde5ce32650fff6" category="section-title">Versão 1,19</block>
+  <block id="d201913c731a2c485562d2197234ff40" category="paragraph">Conclua algumas etapas para instalar a classificação BlueXP  em um host Linux em um site local que não tenha acesso à Internet - também conhecido como _modo privado_. Esse tipo de instalação, que usa um script de instalação, não tem conetividade com a camada SaaS do BlueXP .</block>
+  <block id="eea715e21fdd29a12f087199006074c7" category="paragraph">Você também <block ref="76c224cc80265848284829e2886db42b" category="inline-link-macro-rx"></block>pode .</block>
+  <block id="6ff9945c9b8d3c1700dad8f9a06d2ab2" category="list-text"><block ref="7ec82fd84f3aea81a9c6badedcfda318" category="inline-link-macro-rx"></block>, Também conhecido como _private mode._ este tipo de instalação, que usa um script de instalação, não tem conetividade com a camada SaaS do BlueXP .</block>
 </blocks>

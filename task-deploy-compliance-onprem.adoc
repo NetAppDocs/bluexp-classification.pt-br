@@ -28,12 +28,10 @@ A instalação típica em um host Linux _na nuvem_ tem os seguintes componentes 
 
 image:diagram_deploy_onprem_cloud_instance.png["Um diagrama do BlueXP  e dos componentes de rede necessários e das ligações relacionadas."]
 
-Para configurações muito grandes em que você digitalizará petabytes de dados, nas versões 1,30 e anteriores, é possível incluir vários hosts para fornecer poder de processamento adicional. Ao usar vários sistemas host, o sistema primário é chamado de nó _Manager_, e os sistemas adicionais que fornecem poder de processamento extra são chamados de _nó do scanner_.
-
 
 NOTE: Para versões antigas 1,30 e anteriores, se for necessário instalar a classificação BlueXP  em vários hosts, link:task-deploy-multi-host-install-dark-site.html["Instale a classificação BlueXP  em vários hosts sem acesso à Internet"]consulte .
 
-Você também pode link:task-deploy-compliance-dark-site.html["Instale a classificação BlueXP  em um site local que não tenha acesso à Internet"]para sites completamente seguros.
+Você também link:task-deploy-compliance-dark-site.html["Instale a classificação BlueXP  em um site local que não tenha acesso à Internet"]pode .
 
 
 
@@ -279,10 +277,6 @@ Você deve ter as informações do ative Directory:
 Para configurações típicas, você instalará o software em um único sistema host. <<Instalação de um único host para configurações típicas,Veja esses passos aqui>>.
 
 image:diagram_deploy_onprem_single_host_internet.png["Um diagrama mostrando a localização das fontes de dados que você pode verificar ao usar uma única instância de classificação do BlueXP  implantada no local com acesso à Internet."]
-
-Para configurações muito grandes em que você digitalizará petabytes de dados, você pode incluir vários hosts para fornecer poder de processamento adicional. Saiba mais link:task-deploy-multi-host-install-dark-site.html> sobre a instalação em vários hosts para configurações grandes.
-
-image:diagram_deploy_onprem_multi_host_internet.png["Um diagrama mostrando a localização das fontes de dados que você pode verificar ao usar várias instâncias de classificação do BlueXP  implantadas no local com acesso à Internet."]
 
 <<Prepare o sistema host Linux,Preparando o sistema host Linux>>Consulte e <<Ative o acesso de saída à Internet a partir da classificação BlueXP ,Rever pré-requisitos>> para obter a lista completa de requisitos antes de implantar a classificação do BlueXP .
 
