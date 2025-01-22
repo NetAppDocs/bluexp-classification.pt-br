@@ -667,7 +667,6 @@
   <block id="3b6b18ad7909031011a3960e81ac99e4" category="paragraph">A classificação BlueXP  identifica dois tipos de dados pessoais:</block>
   <block id="85542d81e9687ba10d962e859cdaf35a" category="list-text">* Informações de identificação pessoal (PII) *</block>
   <block id="874a594310f3c66b96cad8a1ef4af095" category="list-text">*Informações pessoais sensíveis (SPii)*</block>
-  <block id="092e6dee95258860d663bccecea3a137" category="admonition">Se você precisar da classificação BlueXP  para identificar outros tipos de dados privados, como números de identificação nacionais adicionais ou identificadores de saúde, envie um e-mail para NetApp.com com com sua solicitação.</block>
   <block id="10ff4e7c2ffc1fd426aa6f784a05da66" category="section-title">Tipos de dados pessoais</block>
   <block id="664f12aee95db5001901ada82a66a117" category="inline-link-macro">validação de proximidade</block>
   <block id="185a6c810ca281a80052f73d8e326953" category="paragraph">Os dados pessoais, ou _informações pessoais identificáveis_ (PII), encontrados em arquivos podem ser dados pessoais gerais ou identificadores nacionais. A terceira coluna da tabela abaixo identifica se a classificação BlueXP  usa <block ref="af3f1f2f9514770a1cfe0f9a422e763d" category="inline-link-macro-rx"></block> para validar seus resultados para o identificador.</block>
@@ -1931,23 +1930,16 @@
   <block id="bcd3dc09170e331762d1f098247c3974" category="paragraph">A classificação BlueXP  usa a tecnologia de hash para determinar arquivos duplicados. Se qualquer arquivo tiver o mesmo código hash que outro arquivo, podemos ter 100% de certeza de que os arquivos são duplicados exatos - mesmo que os nomes dos arquivos sejam diferentes.</block>
   <block id="fc9033d933e9132cc23bfe396744d214" category="inline-link-macro">elimine o ficheiro</block>
   <block id="e6bbcb2826ce1a4f58fd341c4f5ae5f3" category="paragraph">Você pode baixar a lista de arquivos duplicados e enviá-la para o administrador de armazenamento para que eles possam decidir quais arquivos, se houver, podem ser excluídos. Ou você pode <block ref="53c8cd880d15e2953a8e763d6f4dff0c" category="inline-link-macro-rx"></block> se você estiver confiante de que uma versão específica do arquivo não é necessária.</block>
-  <block id="11b431a799ad33cee933ceccc5de850c" category="section-title">Ver todos os ficheiros duplicados</block>
   <block id="5b00edf3a5903017b22e268ae58998c0" category="paragraph">Se você quiser uma lista de todos os arquivos duplicados nos ambientes de trabalho e fontes de dados que você está digitalizando, você pode usar o filtro chamado *Duplicates &gt; has duplicatas* na página Investigação de dados.</block>
   <block id="285a3049428c6b155fde44a18621f551" category="paragraph">Todos os arquivos duplicados são exibidos na página de resultados.</block>
-  <block id="3c4c508b343b43aeeceba1d0993025fc" category="section-title">Exibir se um arquivo específico é duplicado</block>
   <block id="481ee5e06ca7a72cfe4a783b39c7d0e3" category="paragraph">Se você quiser ver se um único arquivo tem duplicatas, no painel resultados da investigação de dados, você pode clicar <block ref="3cc4b517e471a9470762ff8efb27bddb" category="inline-image-macro-rx" type="image"></block> em para qualquer arquivo para exibir os metadados do arquivo. Se houver duplicatas de um determinado arquivo, essas informações serão exibidas ao lado do campo _Duplicates_.</block>
   <block id="b478c70cc88f62deb519e4d41609fff2" category="paragraph">Para exibir a lista de arquivos duplicados e onde eles estão localizados, clique em *Exibir detalhes*. Na próxima página, clique em *Exibir duplicados* para exibir os arquivos na página de investigação.</block>
   <block id="68309bcfd455803ffbae49714037b789" category="inline-image-macro">Uma captura de tela mostrando como exibir onde os arquivos duplicados estão localizados.</block>
   <block id="0dc6d718adece3621c4a40fa3b4b2a82" category="paragraph"><block ref="0dc6d718adece3621c4a40fa3b4b2a82" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f89dc042c7b1c3561acf8c224411dd1a" category="admonition">Você pode usar o valor "hash de arquivo" fornecido nesta página e inseri-lo diretamente na página de investigação para procurar um arquivo duplicado específico a qualquer momento - ou você pode usá-lo em uma Política.</block>
   <block id="b783177554ae1d03f46ea830d39a7822" category="section-title">Relatório de investigação de dados</block>
-  <block id="fbc24f64c5cfaa3ec5851bea3459db25" category="paragraph">O relatório está disponível como um arquivo .CSV que você pode salvar na máquina local.</block>
-  <block id="d9f65abd84f27877cbba1b5ea828d53d" category="section-title">Gerar o Relatório de Investigação de dados</block>
-  <block id="707592628336b767af6468130ccb5f10" category="list-text">Selecione para fazer o download de um relatório .CSV dos dados e clique em *Download Report*.</block>
   <block id="02b8107c002e6577adbfdfd6d6f1b208" category="inline-image-macro">Uma captura de tela da página Download Investigation Report com várias opções.</block>
-  <block id="0b0eacf696b45d65c53ff1b5473edb39" category="paragraph"><block ref="0b0eacf696b45d65c53ff1b5473edb39" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c7fa83e1836cada62d287dfbba3779c2" category="paragraph">Uma caixa de diálogo exibe uma mensagem informando que os relatórios estão sendo baixados.</block>
-  <block id="376c2577995f32a4c8892e8aefb140ba" category="section-title">O que está incluído no Relatório de Investigação de dados</block>
   <block id="6dc6bf0d1023a1b5714c777b474cce12" category="paragraph">O *Relatório de dados de arquivos não estruturados* inclui as seguintes informações sobre seus arquivos:</block>
   <block id="34082694d21dbdcfc31e6e32d9fb2b9f" category="list-text">Nome do ficheiro</block>
   <block id="8c16f0464e311229da94de789324309e" category="list-text">Tipo de localização</block>
@@ -3089,7 +3081,6 @@
   <block id="961ca08e58e9f85191f5707bc4dac07a" category="paragraph">Isso exclui a instância e todos os dados associados que foram coletados pela classificação BlueXP .</block>
   <block id="a3b42cd70d6e63a58b881566f7a8992b" category="section-title">Desinstalar a classificação do BlueXP  de uma implantação local</block>
   <block id="19699e7aed7e972e489e53b7a581039d" category="paragraph">Você pode desinstalar a classificação do BlueXP  de um host se não quiser mais usar a classificação do BlueXP  ou se tiver um problema que exija a reinstalação.</block>
-  <block id="2c81bcce32daace3a1e27ca8e62dfd40" category="list-text">Para desinstalar o software do host, execute o<block ref="cc561bef4dbd2996ec2b2478f3e1042d" prefix=" " category="inline-code"></block> script na máquina host, por exemplo:</block>
   <block id="2556206d42384bb829190e0aafdb0def" category="inline-link-macro">Faça login na máquina host de classificação BlueXP </block>
   <block id="3d156543c6fce54302812044d96a7f13" category="paragraph">Consulte como <block ref="4d88ed2399fdae83afcc83672f5b6c79" category="inline-link-macro-rx"></block>.</block>
   <block id="bf9282cd68ceb267317aa336c787020b" category="summary">As políticas são como uma lista de favoritos de filtros personalizados que fornecem resultados de pesquisa na página de investigação para consultas de conformidade comumente solicitadas. A classificação BlueXP  fornece um conjunto de políticas predefinidas com base em solicitações comuns do cliente. Você pode criar políticas personalizadas que fornecem resultados para pesquisas específicas para sua organização.</block>
@@ -3377,7 +3368,6 @@
   <block id="8d097e38d6920ece5917d57da5699e5c" category="sidebar">ONTAP volumes no local</block>
   <block id="c7596ffa8d20a8a14d1f631c94185f72" category="sidebar">Volumes Azure NetApp Files</block>
   <block id="fd2fd9101d9dde8ab7090da05f8117ff" category="sidebar">Amazon FSX para ONTAP volumes</block>
-  <block id="34a23f91ee1733d5151d67d6f922e573" category="sidebar">Compartilhamentos de arquivo sem NetApp</block>
   <block id="3305adbdafef990b45e1b0ded7f5a486" category="sidebar">Ver detalhes sobre os seus dados</block>
   <block id="f72e4f10556fdc1e84c715407cbda16b" category="sidebar">Exibir arquivos que contêm informações privadas</block>
   <block id="53aba5c7ba7952b6d58e9dfb83a4516e" category="sidebar">Exibir arquivos duplicados em seu armazenamento</block>
@@ -3481,4 +3471,28 @@
   <block id="5ae300808387123005a76abbd5a99f46" category="doc">Versão 1,38</block>
   <block id="074f06822cc9864b1be34066c52ec21d" category="paragraph">Esta versão de classificação do BlueXP  inclui melhorias gerais e correções de bugs.</block>
   <block id="c33f35ab44944cc0d09e5bb702125592" category="section-title">16 de dezembro de 2024</block>
+  <block id="0a401367ec8a2cd84bb197e6d12c99af" category="doc">Versão 1,39</block>
+  <block id="1a58f9988f87b599ed71b9c7430034c2" category="paragraph">Esta versão de classificação do BlueXP  atualiza o processo de exportação para o relatório de investigação de dados. Esta atualização de exportação é útil para realizar análises adicionais sobre seus dados, criar visualizações adicionais sobre os dados ou compartilhar os resultados de sua investigação de dados com outras pessoas.</block>
+  <block id="a4a7057d917e03803441c79badd6d519" category="paragraph">Anteriormente, a exportação do relatório de investigação de dados estava limitada a 10.000 linhas. Com esta versão, o limite foi removido para que você possa exportar todos os seus dados. Essa alteração permite exportar mais dados dos relatórios de investigação de dados, fornecendo mais flexibilidade na análise de dados.</block>
+  <block id="72fa9e7ff6f311a170ad8d720dff3f2f" category="paragraph">Você pode escolher o ambiente de trabalho, volumes, pasta de destino e formato JSON ou CSV. O nome do arquivo exportado inclui um carimbo de data/hora para ajudá-lo a identificar quando os dados foram exportados.</block>
+  <block id="7afa5ec6a3f715e47b3c6fa2655f18b0" category="paragraph">Os ambientes de trabalho suportados incluem:</block>
+  <block id="253b40ae359ba25b56231803430c4873" category="list-text">ONTAP</block>
+  <block id="a512cd9b163bcb1be6bf96aa95fdfe74" category="list-text">Compartilhar grupo</block>
+  <block id="d3fdc77553ad7d05684cea9b7806dac8" category="paragraph">A exportação de dados do relatório de investigação de dados tem as seguintes limitações:</block>
+  <block id="d33a90467b78849917ec44b3e694a192" category="list-text">O número máximo de Registros para download é de 500 milhões. Por tipo (arquivos, diretórios e tabelas)</block>
+  <block id="9720aabb6c8d5eb9cfcffd189ef86ed1" category="list-text">Espera-se que um milhão de Registros leve cerca de 35 minutos para exportação.</block>
+  <block id="e7b42111154b9b878df538017c7943a0" category="inline-link">Investigue os dados armazenados na sua organização</block>
+  <block id="e771ad044e30754f4af0addbc217531d" category="paragraph">Para obter detalhes sobre a investigação de dados e o relatório,<block ref="5490a248bca38f18b55b559976dbad47" category="inline-link-rx"></block> consulte .</block>
+  <block id="251452e49ab5b88b5d8545e58cd46509" category="admonition">Se você precisar da classificação do BlueXP  para identificar outros tipos de dados privados, como números de identificação nacionais adicionais ou identificadores de saúde, entre em Contato com o gerente de conta.</block>
+  <block id="2a09f412ecce26a24c17d782c064aa73" category="paragraph">Você pode investigar os dados da sua organização exibindo detalhes na página Investigação de dados. É possível navegar para essa página em várias áreas da IU de classificação do BlueXP , incluindo os painéis de governança e conformidade. Você pode exportar os dados para um arquivo CSV ou JSON para análise posterior ou para compartilhar com outras pessoas.</block>
+  <block id="b995ac679338c896401b451552e5d419" category="paragraph">*Exibir todos os arquivos duplicados*</block>
+  <block id="ee27fa3e6dfe09f89a9d57742c167aa9" category="paragraph">*Exibir se um arquivo específico é duplicado*</block>
+  <block id="47b72e580332bb9da872607466b406bc" category="paragraph">O relatório está disponível como um arquivo .CSV ou .json que você pode salvar na máquina local.</block>
+  <block id="f257e5460f3ab87ec47290dc11518fc8" category="paragraph">*O que está incluído no Relatório de Investigação de dados*</block>
+  <block id="f3f4c1edbf92907aa9051152a36ae4cc" category="list-title">Etapas para gerar o relatório</block>
+  <block id="868f49e80cf5d3f7ac26cbec13a8d0be" category="list-text">Selecione para fazer o download de um relatório .CSV ou .json dos dados e clique em *Download Report*.</block>
+  <block id="8b93cae59bfdd9d1f5373c4f243f1891" category="paragraph"><block ref="8b93cae59bfdd9d1f5373c4f243f1891" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1f22985ba0d865da0fb0dc1149ac8684" category="list-text">Para desinstalar o software do host, execute o<block ref="cc561bef4dbd2996ec2b2478f3e1042d" prefix=" " category="inline-code"></block> script na máquina host de classificação BlueXP , por exemplo:</block>
+  <block id="009d2060a609114df262eff04e83f241" category="section-title">22 de janeiro de 2025</block>
+  <block id="987a49b32f868f747d862315b00a6b36" category="sidebar">Compartilhamentos de arquivos (CIFS, NFS)</block>
 </blocks>

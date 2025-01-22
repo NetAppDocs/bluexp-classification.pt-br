@@ -67,12 +67,11 @@ A classificação BlueXP  pode digitalizar e analisar dados estruturados e não
 
 *Ambientes de trabalho*
 
+* Amazon FSX para ONTAP
+* Azure NetApp Files
 * Cloud Volumes ONTAP (implantado na AWS, Azure ou GCP)
 * Clusters ONTAP on-premises
 * StorageGRID
-* Azure NetApp Files
-* Amazon FSX para ONTAP
-* Google Cloud NetApp volumes
 
 
 * Fontes de dados*

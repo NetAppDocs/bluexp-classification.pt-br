@@ -14,7 +14,7 @@ summary: Você pode investigar os dados da sua organização exibindo detalhes n
 
 
 [role="lead"]
-Você pode investigar os dados da sua organização exibindo detalhes na página Investigação de dados. É possível navegar para essa página em várias áreas da IU de classificação do BlueXP , incluindo os painéis de governança e conformidade.
+Você pode investigar os dados da sua organização exibindo detalhes na página Investigação de dados. É possível navegar para essa página em várias áreas da IU de classificação do BlueXP , incluindo os painéis de governança e conformidade. Você pode exportar os dados para um arquivo CSV ou JSON para análise posterior ou para compartilhar com outras pessoas.
 
 
 NOTE: As capacidades descritas nesta secção só estão disponíveis se tiver optado por efetuar uma análise de classificação completa nas suas fontes de dados. As fontes de dados que tiveram uma varredura somente de mapeamento não mostram detalhes no nível do arquivo.
@@ -236,17 +236,13 @@ A classificação BlueXP  usa a tecnologia de hash para determinar arquivos dup
 
 Você pode baixar a lista de arquivos duplicados e enviá-la para o administrador de armazenamento para que eles possam decidir quais arquivos, se houver, podem ser excluídos. Ou você pode link:task-managing-highlights.html#delete-source-files["elimine o ficheiro"] se você estiver confiante de que uma versão específica do arquivo não é necessária.
 
-
-
-=== Ver todos os ficheiros duplicados
+*Exibir todos os arquivos duplicados*
 
 Se você quiser uma lista de todos os arquivos duplicados nos ambientes de trabalho e fontes de dados que você está digitalizando, você pode usar o filtro chamado *Duplicates > has duplicatas* na página Investigação de dados.
 
 Todos os arquivos duplicados são exibidos na página de resultados.
 
-
-
-=== Exibir se um arquivo específico é duplicado
+*Exibir se um arquivo específico é duplicado*
 
 Se você quiser ver se um único arquivo tem duplicatas, no painel resultados da investigação de dados, você pode clicar image:button_down_caret.png["cuidado com os pés"] em para qualquer arquivo para exibir os metadados do arquivo. Se houver duplicatas de um determinado arquivo, essas informações serão exibidas ao lado do campo _Duplicates_.
 
@@ -263,28 +259,11 @@ TIP: Você pode usar o valor "hash de arquivo" fornecido nesta página e inseri-
 
 O Relatório de Investigação de dados é um download do conteúdo filtrado da página Investigação de dados.
 
-O relatório está disponível como um arquivo .CSV que você pode salvar na máquina local.
+O relatório está disponível como um arquivo .CSV ou .json que você pode salvar na máquina local.
 
 Pode haver até três arquivos de relatório baixados se a classificação do BlueXP  estiver escaneando arquivos (dados não estruturados), diretórios (pastas e compartilhamentos de arquivos) e bancos de dados (dados estruturados).
 
-
-
-=== Gerar o Relatório de Investigação de dados
-
-.Passos
-. Na página Investigação de dados, clique no image:button_download.png["botão de transferência"] botão na parte superior direita da página.
-. Selecione para fazer o download de um relatório .CSV dos dados e clique em *Download Report*.
-+
-image:screenshot_compliance_investigation_report.png["Uma captura de tela da página Download Investigation Report com várias opções."]
-
-
-
-.Resultado
-Uma caixa de diálogo exibe uma mensagem informando que os relatórios estão sendo baixados.
-
-
-
-=== O que está incluído no Relatório de Investigação de dados
+*O que está incluído no Relatório de Investigação de dados*
 
 O *Relatório de dados de arquivos não estruturados* inclui as seguintes informações sobre seus arquivos:
 
@@ -337,3 +316,14 @@ O *Relatório de dados estruturados* inclui as seguintes informações sobre as 
 * Informações pessoais
 * Informações pessoais sensíveis
 
+
+.Etapas para gerar o relatório
+. Na página Investigação de dados, clique no image:button_download.png["botão de transferência"] botão na parte superior direita da página.
+. Selecione para fazer o download de um relatório .CSV ou .json dos dados e clique em *Download Report*.
++
+image:screenshot_compliance_investigation_report2.png["Uma captura de tela da página Download Investigation Report com várias opções."]
+
+
+
+.Resultado
+Uma caixa de diálogo exibe uma mensagem informando que os relatórios estão sendo baixados.

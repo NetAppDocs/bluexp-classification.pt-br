@@ -18,6 +18,36 @@ Saiba o que há de novo na classificação BlueXP .
 
 
 
+== 22 de janeiro de 2025
+
+
+
+=== Versão 1,39
+
+Esta versão de classificação do BlueXP  atualiza o processo de exportação para o relatório de investigação de dados. Esta atualização de exportação é útil para realizar análises adicionais sobre seus dados, criar visualizações adicionais sobre os dados ou compartilhar os resultados de sua investigação de dados com outras pessoas.
+
+Anteriormente, a exportação do relatório de investigação de dados estava limitada a 10.000 linhas. Com esta versão, o limite foi removido para que você possa exportar todos os seus dados. Essa alteração permite exportar mais dados dos relatórios de investigação de dados, fornecendo mais flexibilidade na análise de dados.
+
+Você pode escolher o ambiente de trabalho, volumes, pasta de destino e formato JSON ou CSV. O nome do arquivo exportado inclui um carimbo de data/hora para ajudá-lo a identificar quando os dados foram exportados.
+
+Os ambientes de trabalho suportados incluem:
+
+* Cloud Volumes ONTAP
+* FSX para ONTAP
+* ONTAP
+* Compartilhar grupo
+
+
+A exportação de dados do relatório de investigação de dados tem as seguintes limitações:
+
+* O número máximo de Registros para download é de 500 milhões. Por tipo (arquivos, diretórios e tabelas)
+* Espera-se que um milhão de Registros leve cerca de 35 minutos para exportação.
+
+
+Para obter detalhes sobre a investigação de dados e o relatório, https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Investigue os dados armazenados na sua organização"] consulte .
+
+
+
 == 16 de dezembro de 2024
 
 
