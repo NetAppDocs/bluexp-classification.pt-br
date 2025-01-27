@@ -23,7 +23,7 @@ NOTE: As capacidades descritas nesta secção só estão disponíveis se tiver o
 
 == Filtre os dados na página Investigação de dados
 
-Você pode filtrar o conteúdo da página de investigação para exibir apenas os resultados que deseja ver. Este é um recurso muito poderoso porque depois de ter refinado os dados, você pode usar a barra de botões na parte superior da página para executar uma variedade de ações, incluindo copiar arquivos, mover arquivos, adicionar uma tag ou rótulo AIP aos arquivos e muito mais.
+Você pode filtrar o conteúdo da página de investigação para exibir apenas os resultados que deseja ver.
 
 Se você quiser baixar o conteúdo da página como um relatório depois de refiná-lo, clique no image:button_download.png["botão de transferência"]botão . <<Relatório de investigação de dados,Acesse aqui para obter detalhes sobre o relatório de investigação de dados>>.
 

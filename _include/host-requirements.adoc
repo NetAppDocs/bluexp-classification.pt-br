@@ -10,10 +10,24 @@
 | Tamanho do sistema | CPU | RAM (a memória swap deve ser desativada) | Disco 
 
 
-| * Extra grande * | 32 CPUs | 128 GB DE RAM | 1 TIB SSD ON /, OR - 100 GiB disponível em /opt - 895 GiB disponível em /var/lib/docker - 5 GiB em /tmp 
+| * Extra grande * | 32 CPUs | 128 GB DE RAM  a| 
+** SSD TIB de 1 GB ligado / ou 100 GiB disponível em /opt
+** 895 GiB disponível em /var/lib/docker
+** 5 GiB em /tmp
+** *Para Podman, 5 GB em /tmp*
+** *Para Podman, 30 GB em /var/tmp*
 
 
-| * Grande * | 16 CPUs | 64 GB DE RAM | 500 GiB SSD ON /, OR - 100 GiB disponível em /opt - 395 GiB disponível em /var/lib/docker ou Podman /var/lib/containers ou Podman /var/lib/containers - 5 GiB em /tmp 
+
+
+| * Grande * | 16 CPUs | 64 GB DE RAM  a| 
+** SSD de 500 GiB em / ou 100 GiB disponível em /opt
+** 395 GiB disponível em /var/lib/docker ou Podman /var/lib/containers ou Podman /var/lib/containers
+** 5 GiB em /tmp
+** *Para Podman, 5 GB em /tmp*
+** *Para Podman, 30 GB em /var/tmp*
+
+
 |===
 * Ao implantar uma instância de computação na nuvem para sua instalação de classificação do BlueXP , recomendamos um sistema que atenda aos requisitos "grandes" do sistema acima:
 +

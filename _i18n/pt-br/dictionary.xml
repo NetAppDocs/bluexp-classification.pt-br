@@ -11,11 +11,9 @@
   <block id="acff74627293e3e739a3c24e5fec03c2" category="cell">* Extra grande *</block>
   <block id="8a0a1142229b3b639f68556794cbd985" category="cell">32 CPUs</block>
   <block id="228d50520d6c2a627ecce76f2775d5e1" category="cell">128 GB DE RAM</block>
-  <block id="92194a80ea376740e10d5ee7343f171c" category="cell">1 TIB SSD ON /, OR - 100 GiB disponível em /opt - 895 GiB disponível em /var/lib/docker - 5 GiB em /tmp</block>
   <block id="c1b7308083354b8b60760460bcce3ccc" category="cell">* Grande *</block>
   <block id="dc8179e6e72156a5578bf35cf9574540" category="cell">16 CPUs</block>
   <block id="5a1fdf37d5cd85436f7504641d78b95f" category="cell">64 GB DE RAM</block>
-  <block id="30786f70a10900b6a9d4fd46363a55cb" category="cell">500 GiB SSD ON /, OR - 100 GiB disponível em /opt - 395 GiB disponível em /var/lib/docker ou Podman /var/lib/containers ou Podman /var/lib/containers - 5 GiB em /tmp</block>
   <block id="d5c832490c0ab9dcb105acd9ee7b4709" category="list-text">Ao implantar uma instância de computação na nuvem para sua instalação de classificação do BlueXP , recomendamos um sistema que atenda aos requisitos "grandes" do sistema acima:</block>
   <block id="e6414c92b8fa46238f4135e4d3e45674" category="inline-link-macro">Consulte tipos de instâncias adicionais da AWS</block>
   <block id="b5f08a168a732355a95d9acdc430dcaf" category="list-text">*Tipo de instância do Amazon Elastic Compute Cloud (Amazon EC2)*: Recomendamos "m6i.4xlarge". <block ref="2fad631c28a07a1344ecdbaabb5084bf" category="inline-link-macro-rx"></block>.</block>
@@ -1234,7 +1232,6 @@
   <block id="05e22c2c931d6a4218f029a72eeb9206" category="inline-link">Saiba mais sobre os diferentes modos de implantação para o conetor BlueXP  e a classificação BlueXP </block>
   <block id="3c86f5b7f0c9db7841cc30ae9d32c2c2" category="paragraph"><block ref="a9635649936a46cf7723db5b3c00a913" category="inline-link-rx"></block>.</block>
   <block id="4f7157701d2db96edcc01457067a6771" category="inline-link-macro">Implante a classificação BlueXP  em um site local que tenha acesso à Internet</block>
-  <block id="90815e3d99ff61b4887b2f941fff4e46" category="paragraph">Observe que você também <block ref="1a9c56cdde8c9a93a744fbe95f12b64a" category="inline-link-macro-rx"></block>pode .</block>
   <block id="e75f898f4dbad5388881095e9582c693" category="inline-link-macro">Veja como verificar se o seu host Linux está pronto para instalar a classificação BlueXP </block>
   <block id="e883a1e45b8fba8675ed0e79f4a46200" category="paragraph">O script de instalação da classificação BlueXP  começa verificando se o sistema e o ambiente atendem aos pré-requisitos necessários. Se todos os pré-requisitos forem atendidos, a instalação será iniciada. Se você quiser verificar os pré-requisitos independentemente de executar a instalação de classificação do BlueXP , há um pacote de software separado que você pode baixar que apenas testa os pré-requisitos. <block ref="18e558c0c5f7db863c39638301013423" category="inline-link-macro-rx"></block>.</block>
   <block id="166af9c4abcdeaeaa01f2df7fcd961a7" category="inline-link-macro">Instale a classificação BlueXP  em vários hosts sem acesso à Internet</block>
@@ -1356,7 +1353,6 @@
   <block id="c22cac5d13be450c907e1e287edd3bb0" category="paragraph">Você pode verificar se o software foi atualizado verificando a versão na parte inferior das páginas da IU de classificação do BlueXP .</block>
   <block id="7d2b76399031094bccc00e1ddb38ac56" category="summary">Conclua algumas etapas para instalar a classificação BlueXP  em um host Linux em sua rede, ou em um host Linux na nuvem, que tenha acesso à Internet. Você precisará implantar o host Linux manualmente em sua rede ou na nuvem como parte dessa instalação.</block>
   <block id="0989b495229f449df36968cf973306ca" category="doc">Instale a classificação BlueXP  em um host que tenha acesso à Internet</block>
-  <block id="945fde4f1ebdd85f6388e97e6bcab270" category="paragraph">A instalação no local pode ser uma boa opção se você preferir digitalizar sistemas ONTAP locais usando uma instância de classificação do BlueXP  que também esteja localizada no local, mas isso não é um requisito. O software funciona exatamente da mesma forma, independentemente do método de instalação que você escolher.</block>
   <block id="829124a47242d374aed9d0704a781736" category="paragraph">A instalação típica em um host Linux _in Your Premises_ tem os seguintes componentes e conexões.</block>
   <block id="f1250c9b73cd8f5ef391e449f0b5dcb4" category="inline-image-macro">Um diagrama do BlueXP  e dos componentes de rede necessários e das ligações relacionadas.</block>
   <block id="0b0f1899ec6aba7470224b92502a86ac" category="paragraph"><block ref="0b0f1899ec6aba7470224b92502a86ac" category="inline-image-macro-rx" type="image"></block></block>
@@ -3032,7 +3028,6 @@
   <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">Se você precisar atualizar seus tokens de credenciais de login, há também uma opção *Atualizar credenciais* <block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block>no menu.</block>
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">Usando esta opção, você solicita que você faça login novamente. Observe que o token para essas contas expira após 90 dias. Uma notificação será postada para alertá-lo sobre isso.</block>
   <block id="11f000270c03dc2a6cc3e9a5e9262aa8" category="summary">Antes de instalar a classificação BlueXP  manualmente em um host Linux, você pode executar um script no host para verificar se todos os pré-requisitos estão em vigor para instalar a classificação BlueXP . Você pode executar esse script em um host Linux em sua rede ou em um host Linux na nuvem. O host pode ser conetado à internet, ou o host pode residir em um site que não tem acesso à internet.</block>
-  <block id="5f0111c9b1c6f9cd6124c008eaaa60d2" category="paragraph">Antes de instalar a classificação BlueXP  manualmente em um host Linux, você pode executar um script no host para verificar se todos os pré-requisitos estão em vigor para instalar a classificação BlueXP . Você pode executar esse script em um host Linux em sua rede ou em um host Linux na nuvem. O host pode ser conetado à internet, ou o host pode residir em um site que não tem acesso à internet (um _site escuro_).</block>
   <block id="b739631d891333c2d4cfa4c6421ccdcb" category="paragraph">Há também um script de teste pré-requisito que faz parte do script de instalação de classificação BlueXP . O script descrito aqui é projetado especificamente para usuários que desejam verificar o host Linux independentemente de executar o script de instalação de classificação BlueXP .</block>
   <block id="bf647454e36069fd16f1a7a35cf6a865" category="section-title">Como começar</block>
   <block id="88a37f7fbc3214e9153d0377c4db9ded" category="paragraph">Você executará as seguintes tarefas.</block>
@@ -3496,4 +3491,16 @@
   <block id="009d2060a609114df262eff04e83f241" category="section-title">22 de janeiro de 2025</block>
   <block id="987a49b32f868f747d862315b00a6b36" category="sidebar">Compartilhamentos de arquivos (CIFS, NFS)</block>
   <block id="0476d890c406400d4a4b0337b0492ab6" category="paragraph">O script está localizado no<block ref="ef7bc183495180bf03292b7d03184b05" prefix=" " category="inline-code"></block> diretório.</block>
+  <block id="74110511ebf4f8eea597c953392110f9" category="list-text">SSD TIB de 1 GB ligado / ou 100 GiB disponível em /opt</block>
+  <block id="4056804c808441484593a6cd5998f06e" category="list-text">895 GiB disponível em /var/lib/docker</block>
+  <block id="f9ddd233a713e3719c7d8046ab62cc1e" category="list-text">5 GiB em /tmp</block>
+  <block id="79d1a6d2ec5f279b488952c279f36449" category="list-text">*Para Podman, 5 GB em /tmp*</block>
+  <block id="0e1cb4b06a070e11230e1c8de75a1db8" category="list-text">*Para Podman, 30 GB em /var/tmp*</block>
+  <block id="16b9e4a3843d82aedd78ddf5568f32cc" category="list-text">SSD de 500 GiB em / ou 100 GiB disponível em /opt</block>
+  <block id="7d5ad3bf21c571c611eed766c4a188c1" category="list-text">395 GiB disponível em /var/lib/docker ou Podman /var/lib/containers ou Podman /var/lib/containers</block>
+  <block id="155acacab86f1c55608330de83b4e05f" category="paragraph">Você também <block ref="1a9c56cdde8c9a93a744fbe95f12b64a" category="inline-link-macro-rx"></block>pode .</block>
+  <block id="f9cb03d21a26b2f64053d2e527396790" category="paragraph">A instalação no local pode ser uma boa opção se você preferir digitalizar sistemas ONTAP locais usando uma instância de classificação do BlueXP  que também está localizada no local, mas isso não é um requisito. O software funciona exatamente da mesma forma, independentemente do método de instalação que você escolher.</block>
+  <block id="ee8870d1e0595ddae329cf8ef1ee89fa" category="paragraph">Você pode filtrar o conteúdo da página de investigação para exibir apenas os resultados que deseja ver.</block>
+  <block id="260af28d48ba051bd7cdd887380f9ece" category="paragraph">Antes de instalar a classificação BlueXP  manualmente em um host Linux, opcionalmente execute um script no host para verificar se todos os pré-requisitos estão em vigor para instalar a classificação BlueXP . Você pode executar esse script em um host Linux em sua rede ou em um host Linux na nuvem. O host pode ser conetado à internet, ou o host pode residir em um site que não tem acesso à internet (um _site escuro_).</block>
+  <block id="b64eea97fe56778b0e28c568854873ed" category="paragraph">Desinstale o software de classificação BlueXP  para solucionar problemas ou remover permanentemente o software do host. A exclusão da instância também exclui os discos associados onde residem os dados indexados - todas as informações que a classificação BlueXP  digitalizada serão excluídas permanentemente.</block>
 </blocks>

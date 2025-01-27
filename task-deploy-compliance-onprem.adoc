@@ -16,7 +16,7 @@ summary: Conclua algumas etapas para instalar a classificação BlueXP  em um h
 [role="lead"]
 Conclua algumas etapas para instalar a classificação BlueXP  em um host Linux em sua rede, ou em um host Linux na nuvem, que tenha acesso à Internet. Você precisará implantar o host Linux manualmente em sua rede ou na nuvem como parte dessa instalação.
 
-A instalação no local pode ser uma boa opção se você preferir digitalizar sistemas ONTAP locais usando uma instância de classificação do BlueXP  que também esteja localizada no local, mas isso não é um requisito. O software funciona exatamente da mesma forma, independentemente do método de instalação que você escolher.
+A instalação no local pode ser uma boa opção se você preferir digitalizar sistemas ONTAP locais usando uma instância de classificação do BlueXP  que também está localizada no local, mas isso não é um requisito. O software funciona exatamente da mesma forma, independentemente do método de instalação que você escolher.
 
 O script de instalação da classificação BlueXP  começa verificando se o sistema e o ambiente atendem aos pré-requisitos necessários. Se todos os pré-requisitos forem atendidos, a instalação será iniciada. Se você quiser verificar os pré-requisitos independentemente de executar a instalação de classificação do BlueXP , há um pacote de software separado que você pode baixar que apenas testa os pré-requisitos. link:task-test-linux-system.html["Veja como verificar se o seu host Linux está pronto para instalar a classificação BlueXP "].
 
@@ -97,10 +97,24 @@ Certifique-se de que você pode manter a classificação BlueXP  em execução.
 | Tamanho do sistema | CPU | RAM (a memória swap deve ser desativada) | Disco 
 
 
-| * Extra grande * | 32 CPUs | 128 GB DE RAM | 1 TIB SSD ON /, OR - 100 GiB disponível em /opt - 895 GiB disponível em /var/lib/docker - 5 GiB em /tmp 
+| * Extra grande * | 32 CPUs | 128 GB DE RAM  a| 
+** SSD TIB de 1 GB ligado / ou 100 GiB disponível em /opt
+** 895 GiB disponível em /var/lib/docker
+** 5 GiB em /tmp
+** *Para Podman, 5 GB em /tmp*
+** *Para Podman, 30 GB em /var/tmp*
 
 
-| * Grande * | 16 CPUs | 64 GB DE RAM | 500 GiB SSD ON /, OR - 100 GiB disponível em /opt - 395 GiB disponível em /var/lib/docker ou Podman /var/lib/containers ou Podman /var/lib/containers - 5 GiB em /tmp 
+
+
+| * Grande * | 16 CPUs | 64 GB DE RAM  a| 
+** SSD de 500 GiB em / ou 100 GiB disponível em /opt
+** 395 GiB disponível em /var/lib/docker ou Podman /var/lib/containers ou Podman /var/lib/containers
+** 5 GiB em /tmp
+** *Para Podman, 5 GB em /tmp*
+** *Para Podman, 30 GB em /var/tmp*
+
+
 |===
 * Ao implantar uma instância de computação na nuvem para sua instalação de classificação do BlueXP , recomendamos um sistema que atenda aos requisitos "grandes" do sistema acima:
 +
