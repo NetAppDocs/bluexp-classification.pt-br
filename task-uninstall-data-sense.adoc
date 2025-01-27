@@ -52,6 +52,9 @@ image:screenshot_compliance_uninstall.png["Uma captura de tela do botão para de
 ----
 cleanup.sh
 ----
++
+O script está localizado no `/install/light_probe/onprem_installer/cleanup.sh` diretório.
+
 
 
 Consulte como link:reference-log-in-to-instance.html["Faça login na máquina host de classificação BlueXP "].
