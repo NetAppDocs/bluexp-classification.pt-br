@@ -186,15 +186,19 @@ Você pode ativar e desativar digitalizações no nível de volume ou no nível 
 
 === Qual é a diferença entre Mapeamento e classificação digitalizações
 
-A classificação BlueXP  permite-lhe executar uma digitalização geral de "mapeamento" em fontes de dados selecionadas. O mapeamento fornece apenas uma visão geral de alto nível dos seus dados, enquanto a classificação fornece uma varredura de nível profundo dos seus dados. O mapeamento pode ser feito em suas fontes de dados muito rapidamente, porque não acessa arquivos para ver os dados dentro.
+Pode realizar dois tipos de exames na classificação BlueXP :
 
-Muitos usuários gostam dessa funcionalidade porque desejam Escanear rapidamente seus dados para identificar as fontes de dados que exigem mais pesquisas e, em seguida, podem habilitar varreduras de classificação apenas nas fontes de dados ou volumes necessários.
+* **As digitalizações somente para mapeamento** fornecem apenas uma visão geral de alto nível de seus dados e são realizadas em fontes de dados selecionadas. As digitalizações somente de mapeamento demoram menos tempo do que mapear e classificar digitalizações porque o não acessa arquivos para ver os dados dentro.
+* **As digitalizações de mapa e classificação** fornecem uma varredura de nível profundo de seus dados.
+
+
+As digitalizações apenas de mapeamento permitem-lhe digitalizar rapidamente os seus dados e identificar fontes de dados que possam necessitar de mais investigação, nas quais pode, em seguida, executar uma leitura de mapa e classificação.
 
 A tabela abaixo mostra algumas das diferenças:
 
 [cols="47,18,18"]
 |===
-| Recurso | Classificação | Mapeamento 
+| Recurso | Mapear e classificar digitalizações | Digitalizações apenas de mapeamento 
 
 
 | Velocidade de digitalização | Lento | Rápido 
@@ -413,8 +417,8 @@ A tabela abaixo mostra algumas das diferenças:
 
 A velocidade de digitalização é afetada pela latência da rede, latência do disco, largura de banda da rede, tamanho do ambiente e tamanhos de distribuição de arquivos.
 
-* Ao realizar exames de mapeamento, a classificação BlueXP  pode digitalizar entre 100-150 Tibs de dados por dia.
-* Ao executar exames de classificação, a classificação BlueXP  pode digitalizar entre 15-40 Tibs de dados por dia.
+* Ao executar exames somente de mapeamento, a classificação BlueXP  pode digitalizar entre 100-150 Tibs de dados por dia.
+* Ao executar exames de mapa e classificação, a classificação BlueXP  pode digitalizar entre 15-40 MB de dados por dia.
 
 
 

@@ -37,7 +37,6 @@
   <block id="156e173d1de86766f5cb22a057c779e9" category="list-text">Ubuntu 22,04 (requer classificação BlueXP  versão 1,23 ou superior)</block>
   <block id="70e7e6a41e0598a3902dbaf5ca936aa0" category="list-text">Ubuntu 24,04 (requer classificação BlueXP  versão 1,23 ou superior)</block>
   <block id="8e75bb9e135d127903c8df1b4d72574d" category="list-text">Os seguintes sistemas operacionais requerem o uso do motor de contentores Podman, e eles exigem a classificação BlueXP  versão 1,30 ou superior:</block>
-  <block id="c5910ee83de42fbe3194b03bc2ba3298" category="list-text">Red Hat Enterprise Linux versão 8,8, 9,0, 9,1, 9,2, 9,3, 9,4</block>
   <block id="f2183b09e54e4aa491c008ea8ca08bbc" category="list-text">*Red Hat Subscription Management*: O host deve estar registrado no Red Hat Subscription Management. Se não estiver registrado, o sistema não poderá acessar repositórios para atualizar o software necessário de 3rd partes durante a instalação.</block>
   <block id="7299a589db31a0bc8b28dedaafe896cd" category="list-text">* Software adicional*: Você deve instalar o seguinte software no host antes de instalar a classificação BlueXP :</block>
   <block id="2a2958e5280a05650587dc8d454a5f8d" category="list-text">Dependendo do sistema operacional que você estiver usando, você precisará instalar um dos motores de contentor:</block>
@@ -186,12 +185,8 @@
   <block id="9c8736affefce89efb819f7f63f5a237" category="paragraph">Após a verificação inicial, a classificação do BlueXP  verifica continuamente os seus dados de forma redonda para detetar alterações incrementais (é por isso que é importante manter a instância em execução).</block>
   <block id="b40a529e19b349b56269e632043e4fe8" category="paragraph">Você pode ativar e desativar digitalizações no nível de volume ou no nível do esquema do banco de dados.</block>
   <block id="9868eea85c69d464c823a4c7e185121a" category="section-title">Qual é a diferença entre Mapeamento e classificação digitalizações</block>
-  <block id="c7eecba843c437de6a7f23657d755812" category="paragraph">A classificação BlueXP  permite-lhe executar uma digitalização geral de "mapeamento" em fontes de dados selecionadas. O mapeamento fornece apenas uma visão geral de alto nível dos seus dados, enquanto a classificação fornece uma varredura de nível profundo dos seus dados. O mapeamento pode ser feito em suas fontes de dados muito rapidamente, porque não acessa arquivos para ver os dados dentro.</block>
-  <block id="dc3d679737d761f6e72564d962617ffa" category="paragraph">Muitos usuários gostam dessa funcionalidade porque desejam Escanear rapidamente seus dados para identificar as fontes de dados que exigem mais pesquisas e, em seguida, podem habilitar varreduras de classificação apenas nas fontes de dados ou volumes necessários.</block>
   <block id="a6555d8888ac95f7925f179ea7e8d4a8" category="paragraph">A tabela abaixo mostra algumas das diferenças:</block>
   <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">Recurso</block>
-  <block id="5c9335b28e6277ddbe0137f04e5e58a7" category="cell">Classificação</block>
-  <block id="0014f8b96d996135614c21355a053994" category="cell">Mapeamento</block>
   <block id="626304e3316770d796d3bcb75212949d" category="cell">Velocidade de digitalização</block>
   <block id="efa5397985b8609a5dbeb430a4bcadd3" category="cell">Lento</block>
   <block id="e16b5b7f26f54214445cbe38d72c2828" category="cell">Rápido</block>
@@ -272,8 +267,6 @@
   <block id="c24fc9c3402e7cb47c72d71cf6d864be" category="cell">Tipo de diretório</block>
   <block id="4aa06a2b4191eee9b59686458a3cf0e5" category="section-title">A rapidez com que a classificação BlueXP  analisa os dados</block>
   <block id="9ece336caf3d2b843dafc984e27b323e" category="paragraph">A velocidade de digitalização é afetada pela latência da rede, latência do disco, largura de banda da rede, tamanho do ambiente e tamanhos de distribuição de arquivos.</block>
-  <block id="55795bc7bfe5b0cf7482dda2aaed1c41" category="list-text">Ao realizar exames de mapeamento, a classificação BlueXP  pode digitalizar entre 100-150 Tibs de dados por dia.</block>
-  <block id="6d80dbce43d8c1cfc10f843e571e2f05" category="list-text">Ao executar exames de classificação, a classificação BlueXP  pode digitalizar entre 15-40 Tibs de dados por dia.</block>
   <block id="41723bb4585becfa9d2ed4726536b953" category="section-title">Informação que a classificação BlueXP  categoriza</block>
   <block id="28e66615c1e04c19b63a24061d462220" category="paragraph">A classificação BlueXP  coleta, indexa e atribui categorias aos seus dados (arquivos). Os dados que a classificação BlueXP  indexa incluem os seguintes:</block>
   <block id="6cd355a083ac0c0abfe0db956ac0ab54" category="list-text">* Metadados padrão* sobre arquivos: O tipo de arquivo, seu tamanho, datas de criação e modificação, e assim por diante.</block>
@@ -963,7 +956,6 @@
   <block id="c25ad118eb89526500bf75c7b98bc13a" category="list-text">*Dados não comerciais* - dados considerados não relacionados ao negócio, com base na sua Categoria ou tipo de ficheiro. Isso inclui:</block>
   <block id="b77538c14bb334b644fd69d280cca12f" category="list-text">Diversos (categoria geral "outros")</block>
   <block id="dc6d9a4419750aae3db17878ffe18e5c" category="inline-link-macro">Veja que tipos de arquivos duplicados são exibidos</block>
-  <block id="079997081651f8a82d27ca6d62534f5e" category="list-text">*Duplicate Files* - arquivos que são duplicados em outros locais nas fontes de dados que você está digitalizando. <block ref="fcb1526de99321017edbeb7796592372" category="inline-link-macro-rx"></block>.</block>
   <block id="312ffbf4bf2c65989ebbd000c725c369" category="admonition">Se alguma das suas fontes de dados implementar a disposição em camadas de dados, os dados antigos que já residem no armazenamento de objetos podem ser identificados na categoria _dados obsoletos_.</block>
   <block id="2b4d8a4ffe486173d89394fc3d6ccdb3" category="section-title">Políticas com o maior número de resultados</block>
   <block id="8eb1fec334dabbaf8e8ce1c5c57d9629" category="paragraph">Na área _policies_, as políticas com o maior número de resultados aparecem no topo da lista. Clique no nome de uma política para exibir os resultados na página de investigação. Clique em *Exibir tudo* para exibir a lista de todas as políticas disponíveis.</block>
@@ -1690,32 +1682,12 @@
   <block id="2ea260929e27ffcb623c8aa35689bd18" category="paragraph"><block ref="2ea260929e27ffcb623c8aa35689bd18" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7323ab6aab1dfb48468b77bc771127f5" category="summary">Conclua algumas etapas para iniciar a digitalização de volumes Cloud Volumes ONTAP e ONTAP locais usando a classificação BlueXP .</block>
   <block id="8e285296eea347aa1a2f1fe8f2397693" category="doc">Analise volumes Cloud Volumes ONTAP e ONTAP no local com a classificação BlueXP </block>
-  <block id="2b91239a08044af034941b142fbcb9a9" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Descubra as fontes de dados que pretende digitalizar</block>
-  <block id="502657836c4445c93e125dc0c25c08c9" category="paragraph">Antes de poder digitalizar volumes, você deve adicionar os sistemas como ambientes de trabalho no BlueXP :</block>
-  <block id="d192455efa584e015f67ddf2679e991a" category="list-text">Para sistemas Cloud Volumes ONTAP, esses ambientes de trabalho já devem estar disponíveis no BlueXP </block>
-  <block id="95c6a4075477a94df7d6ca6d51fde02e" category="inline-link">O BlueXP  precisa descobrir os clusters do ONTAP</block>
-  <block id="96b988aeea7df07c150c06631b8e1023" category="list-text">Para sistemas ONTAP on-premises,<block ref="00999886c013da85fef603135c9ef779" category="inline-link-rx"></block></block>
   <block id="a09cd5116a782af05884c8d339915769" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Implante a instância de classificação do BlueXP </block>
   <block id="0ce4d42838344488f607ff306088fae9" category="inline-link-macro">Implantar a classificação BlueXP </block>
   <block id="5c0eee20a6bf4ad2ff2c7646e93e6147" category="paragraph"><block ref="41d9750d1a3a84ad5c474fb18cb4f237" category="inline-link-macro-rx"></block> se ainda não houver uma instância implantada.</block>
-  <block id="0a1d05c09ebe4e90b8b31f3bbb2b6119" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Ative a classificação BlueXP  e selecione os volumes a digitalizar</block>
-  <block id="f5aca25d4df16b3dc611c34ed1ccb71d" category="paragraph">Selecione a guia *Configuração* e ative as verificações de conformidade para volumes em ambientes de trabalho específicos.</block>
   <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">Quatro</block>
-  <block id="a464b933df257e13e398798317ac784a" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Garanta o acesso aos volumes</block>
-  <block id="95fcbd3be2c054418d2b9c92aff0825f" category="paragraph">Agora que a classificação BlueXP  está ativada, certifique-se de que ela pode acessar todos os volumes.</block>
-  <block id="1ba0d6aa3ccd6f872c6c6e6d87024c69" category="list-text">A instância de classificação BlueXP  precisa de uma conexão de rede para cada sub-rede Cloud Volumes ONTAP ou sistema ONTAP local.</block>
-  <block id="305e305ac52012ce5ec303cdd558523f" category="list-text">Os grupos de segurança para Cloud Volumes ONTAP devem permitir conexões de entrada da instância de classificação BlueXP .</block>
   <block id="162627490dd9e3bfa1451fcbd693e2df" category="list-text">Para NFS - portas 111 e 2049.</block>
   <block id="ebc566be80d2aa97a2d54b51da6e0306" category="list-text">Para CIFS - portas 139 e 445.</block>
-  <block id="084b5e624d2227ca06a3f828bced0f33" category="list-text">A classificação do BlueXP  precisa de credenciais do ative Directory para analisar volumes CIFS.</block>
-  <block id="d98982ed425bb70925dcb326c8228f2b" category="paragraph">Clique em *Compliance* &gt; *Configuration* &gt; *Edit CIFS Credentials* e forneça as credenciais.</block>
-  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">Cinco</block>
-  <block id="2f16858adc0a1e155de180519a9e4591" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Gerencie os volumes que deseja digitalizar</block>
-  <block id="7f8a1c2e37ed73e275da69b1e885636c" category="paragraph">Selecione ou anule a seleção dos volumes que pretende digitalizar e a classificação BlueXP  iniciará ou deixará de os digitalizar.</block>
-  <block id="effe342ed6fdd5b79625bb273c6f43da" category="section-title">Descubra as fontes de dados que pretende digitalizar</block>
-  <block id="0c482db6ff22c3a7bd9036d861655cbf" category="paragraph">Se as fontes de dados que você deseja digitalizar ainda não estiverem em seu ambiente BlueXP , você poderá adicioná-las à tela neste momento.</block>
-  <block id="f0d07e71c0ad5ba2b297c19c3e9347e0" category="inline-link">BlueXP  Descubra esses clusters</block>
-  <block id="93d98288c3d4c3fe1a384ea14c84db4e" category="paragraph">Seus sistemas Cloud Volumes ONTAP já devem estar disponíveis no Canvas no BlueXP . Para sistemas ONTAP on-premises, você precisará ter<block ref="764bc5313eb3242221adb26dbbb188c9" category="inline-link-rx"></block>o .</block>
   <block id="846eb83e821481bdeafbcc34c9138401" category="section-title">Implante a instância de classificação do BlueXP </block>
   <block id="66d6758c1474f6b831dd835dbec91562" category="paragraph">Implante a classificação do BlueXP  se ainda não houver uma instância implantada.</block>
   <block id="d040d135cea4209ef4244e9d6e171fee" category="inline-link-macro">Implante a classificação do BlueXP  na nuvem</block>
@@ -1725,7 +1697,6 @@
   <block id="e64472941265caa02b01ea0d866661fd" category="paragraph">Se você estiver digitalizando sistemas ONTAP locais que foram instalados em um site escuro que não tem acesso à Internet, você precisa <block ref="3beeea1c5d12940092999048e1c30313" category="inline-link-macro-rx"></block>. Isso também requer que o BlueXP  Connector seja implantado no mesmo local.</block>
   <block id="3e07df694cbf4c604aed3e0514e35653" category="section-title">Ative a classificação BlueXP  nos seus ambientes de trabalho</block>
   <block id="4c2c1b5a11a3d5aab7dd2061acb786b6" category="paragraph">É possível habilitar a classificação do BlueXP  em sistemas Cloud Volumes ONTAP em qualquer fornecedor de nuvem compatível e em clusters de ONTAP on-premises.</block>
-  <block id="79212600af75dc48b9f7e59a9927a88e" category="list-text">No menu de navegação esquerdo do BlueXP , clique em *Governança &gt; classificação* e selecione a guia *Configuração*.</block>
   <block id="cb3aa3f952775ea9178b718df187d59d" category="inline-image-macro">Uma captura de tela da guia Configuração imediatamente após implantar a instância de classificação do BlueXP .</block>
   <block id="ecfa3501fa1e651a3fb40a15dd82d18a" category="paragraph"><block ref="ecfa3501fa1e651a3fb40a15dd82d18a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dd786557a341a9cbd5fb1a642121a675" category="inline-link-macro">Saiba mais sobre o mapeamento e a classificação de exames</block>
@@ -1750,13 +1721,11 @@
   <block id="ede9a6fd89b6e139fff80209cdd2ea8d" category="list-text">Se você usar o CIFS, forneça a classificação do BlueXP  com credenciais do ative Directory para que ele possa analisar volumes CIFS.</block>
   <block id="2d680ca666fd821f3c51a507d41a26cb" category="inline-image-macro">Uma captura de tela da guia conformidade que mostra o botão Status da digitalização que está disponível no canto superior direito do painel de conteúdo.</block>
   <block id="b70232fe808c101066f1d5f669f6a6cd" category="paragraph"><block ref="b70232fe808c101066f1d5f669f6a6cd" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9e92253b6d2be639aec08d4cfd0246c8" category="list-text">Para cada ambiente de trabalho, clique em *Editar credenciais CIFS* e introduza o nome de utilizador e a palavra-passe de que a classificação BlueXP  necessita para aceder aos volumes CIFS no sistema.</block>
   <block id="6057fa1a60f3ec92856060b18a0cc112" category="paragraph">As credenciais podem ser somente leitura, mas fornecer credenciais de administrador garante que a classificação do BlueXP  possa ler qualquer dado que exija permissões elevadas. As credenciais são armazenadas na instância de classificação do BlueXP .</block>
   <block id="a1c4e88cdf8e157dbb344fe556f58d28" category="paragraph">Se você quiser garantir que seus arquivos "últimos tempos acessados" sejam inalterados pelas verificações de classificação do BlueXP , recomendamos que o usuário tenha permissões de atributos de gravação em CIFS ou permissões de gravação em NFS. Se possível, recomendamos tornar o usuário configurado do ative Directory parte de um grupo pai na organização que tem permissões para todos os arquivos.</block>
   <block id="b401c479fc7a1b8aa216a7173ee8782f" category="paragraph">Depois de inserir as credenciais, você verá uma mensagem informando que todos os volumes CIFS foram autenticados com êxito.</block>
   <block id="87c4bf333272894340d4edac3e344ef9" category="inline-image-macro">Uma captura de tela que mostra a página Configuração e um sistema Cloud Volumes ONTAP para o qual as credenciais CIFS foram fornecidas com sucesso.</block>
   <block id="f7a83214cccc2107033915c49ad94424" category="paragraph"><block ref="f7a83214cccc2107033915c49ad94424" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3b3fdf77c5795749c544638b9ce207c2" category="list-text">Na página _Configuration_, clique em *View Details* (Ver detalhes) para rever o status de cada volume CIFS e NFS e corrigir quaisquer erros.</block>
   <block id="deac3e968547dd790d466a9d21cdb95b" category="paragraph">Por exemplo, a imagem a seguir mostra quatro volumes; um dos quais a classificação BlueXP  não pode digitalizar devido a problemas de conetividade de rede entre a instância de classificação BlueXP  e o volume.</block>
   <block id="b0a3025d1916192a93025bd8b729731e" category="inline-image-macro">Uma captura de tela da página Exibir detalhes na configuração de digitalização que mostra quatro volumes; um dos quais não está sendo digitalizado devido à conetividade de rede entre a classificação BlueXP  e o volume.</block>
   <block id="2875279e7093015cd8ccf93240c548e9" category="paragraph"><block ref="2875279e7093015cd8ccf93240c548e9" category="inline-image-macro-rx" type="image"></block></block>
@@ -1766,18 +1735,6 @@
   <block id="a981acc4f50e3ee8e07a0e56bb5a7350" category="paragraph"><block ref="a981acc4f50e3ee8e07a0e56bb5a7350" category="inline-image-macro-rx" type="image"></block></block>
   <block id="33caa076f23f453dd4061726f3706325" category="cell">Para:</block>
   <block id="5a2a9933405c81b69e2cbdd9151f9197" category="cell">Faça isso:</block>
-  <block id="0aa4f886295e6aefb21e182a00cb3e9a" category="cell">Ative digitalizações apenas de mapeamento num volume</block>
-  <block id="5e93e08d38ca32cba574c24ba6b90c3e" category="cell">Na área de volume, clique em *Map*</block>
-  <block id="c8314ae9c5afbdcb360caee8048fc977" category="cell">Ative a digitalização completa num volume</block>
-  <block id="4511fe4fe229715bd617e8230a142efa" category="cell">Na área de volume, clique em *Map &amp; Classify*</block>
-  <block id="c05c2346359cb3a22c91c597c763a732" category="cell">Desativar a digitalização num volume</block>
-  <block id="7cb45ab7942dd3db5aafe0df6f476d66" category="cell">Na área de volume, clique em *Off*</block>
-  <block id="0d7feeb5f32fc807b5f792304e1ee1ed" category="cell">Ative digitalizações apenas de mapeamento em todos os volumes</block>
-  <block id="5ed8f35d5eaa0541e4f19a32f3ccdb0a" category="cell">Na área de cabeçalho, clique em *Map*</block>
-  <block id="7ca4c771e9b087b572ae2b7caff0c388" category="cell">Ative a digitalização completa em todos os volumes</block>
-  <block id="9d8bcbb0f5b04854f5a4e2bd48be47bd" category="cell">Na área de cabeçalho, clique em *Map &amp; Classify*</block>
-  <block id="b630526833dea659599fd366bda99475" category="cell">Desative a digitalização em todos os volumes</block>
-  <block id="f7b5fb19f08d635e70f43c38cc7e0a67" category="cell">Na área de cabeçalho, clique em *Off*</block>
   <block id="1456e5fc169a243504826034d14947c3" category="admonition">Os novos volumes adicionados ao ambiente de trabalho são automaticamente digitalizados apenas quando você definir a configuração *Map* ou *Map &amp; Classify* na área de cabeçalho. Quando definido como *Custom* ou *Off* na área de cabeçalho, você precisará ativar o mapeamento e/ou a digitalização completa em cada novo volume adicionado no ambiente de trabalho.</block>
   <block id="3f0bbcbd675537960ef9995a958d5fe0" category="section-title">Analisar volumes de proteção de dados</block>
   <block id="e7fa07083790a8112d00af542356ec88" category="paragraph">Por padrão, os volumes de proteção de dados (DP) não são verificados porque não são expostos externamente e a classificação BlueXP  não pode acessá-los. Esses são os volumes de destino para operações do SnapMirror a partir de um sistema ONTAP no local ou de um sistema Cloud Volumes ONTAP.</block>
@@ -1786,14 +1743,11 @@
   <block id="5527bf6460aac122d9350ebcc432db9e" category="paragraph"><block ref="5527bf6460aac122d9350ebcc432db9e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="178dc62002a72846660e90787e11f939" category="paragraph">Se você quiser analisar esses volumes de proteção de dados:</block>
   <block id="3d6de382dcb4bfdce280387a9542d9bd" category="list-text">Clique em *Ativar o acesso aos volumes DP* na parte superior da página.</block>
-  <block id="8de37b1fc48639ff3e29b3f1341842a4" category="list-text">Revise a mensagem de confirmação e clique em *Ativar o acesso aos volumes DP* novamente.</block>
   <block id="f13aece6b768921832b7bb943cab9f19" category="list-text">Os volumes inicialmente criados como volumes NFS no sistema ONTAP de origem são ativados.</block>
   <block id="7c0a9b3e555cf595d3d01d33df76df82" category="list-text">Os volumes criados inicialmente como volumes CIFS no sistema ONTAP de origem exigem que você insira credenciais CIFS para verificar esses volumes DP. Se você já inseriu credenciais do ative Directory para que a classificação do BlueXP  possa analisar volumes CIFS, você pode usar essas credenciais ou especificar um conjunto diferente de credenciais de administrador.</block>
   <block id="65ba2ff339305392b787952e007185f1" category="inline-image-macro">Uma captura de tela das duas opções para habilitar volumes de proteção de dados CIFS.</block>
   <block id="044f0d646b3277f06b2a18a6e8980572" category="paragraph"><block ref="044f0d646b3277f06b2a18a6e8980572" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b9061f396efcc4df381ceed3ac729d32" category="paragraph">Uma vez ativada, a classificação BlueXP  cria um compartilhamento NFS a partir de cada volume DP que foi ativado para digitalização. As políticas de exportação de compartilhamento só permitem acesso a partir da instância de classificação BlueXP .</block>
-  <block id="abcdab0f1cbbe968798a52245b476c30" category="paragraph">*Observação:* se você não tiver volumes de proteção de dados CIFS quando você ativou inicialmente o acesso a volumes DP e depois adicionar alguns, o botão *Ativar acesso ao CIFS DP* aparece na parte superior da página Configuração. Clique neste botão e adicione credenciais CIFS para permitir o acesso a esses volumes CIFS DP.</block>
-  <block id="21118277527dde4297826bff350dbf36" category="admonition">As credenciais do active Directory são registradas apenas na VM de storage do primeiro volume CIFS DP, de modo que todos os volumes de DP nesse SVM serão verificados. Quaisquer volumes que residam em outros SVMs não terão as credenciais do ative Directory registradas, portanto, esses volumes DP não serão verificados.</block>
   <block id="786452cdc534ba8395eb7a26c9ab3efc" category="summary">Você pode investigar os dados da sua organização exibindo detalhes na página Investigação de dados. É possível navegar para essa página em várias áreas da IU de classificação do BlueXP , incluindo os painéis de governança e conformidade.</block>
   <block id="493287f21a2aa7f90cebc83c869352a4" category="doc">Investigue os dados armazenados na página Investigação de dados</block>
   <block id="8d2b3a00bc0d44767cf3d5dfed11884d" category="section-title">Filtre os dados na página Investigação de dados</block>
@@ -1956,92 +1910,6 @@
   <block id="24588d9873aeb10a7d918f9f39a921ad" category="list-text">Repositório de armazenamento (por exemplo, um esquema)</block>
   <block id="ab8a843d390e68d7263eb4d3758cbb94" category="list-text">Contagem de colunas</block>
   <block id="8914a2ab502c2e892c90f9e40240866c" category="list-text">Contagem de linhas</block>
-  <block id="19cffc0053aafa946f7ebe7f34c7193e" category="summary">Os primeiros 1 TB de dados que a classificação BlueXP  verifica em um projeto ou espaço de trabalho do BlueXP  são gratuitos. É necessária uma licença BYOL da NetApp ou uma assinatura do seu fornecedor de nuvem Marketplace para continuar a digitalizar dados após esse ponto.</block>
-  <block id="2d403d52aec87c9291e770c63009d05a" category="doc">Configure uma avaliação gratuita ou traga sua própria licença para a classificação BlueXP </block>
-  <block id="932933f9ba6b9665ae6c1e4717709ac0" category="paragraph">Para as versões 1,30 e anteriores, os primeiros 1 TB de dados que a classificação BlueXP  verifica em um projeto ou espaço de trabalho do BlueXP  são gratuitos por 30 dias. Uma licença BYOL da NetApp, ou uma assinatura do mercado do seu fornecedor de nuvem, é necessária para continuar a verificar os dados após esse ponto.</block>
-  <block id="80186f1230af2267e2c2e4d2ab8c030e" category="paragraph">Algumas notas antes de ler mais:</block>
-  <block id="3f626dca09c3d8c920c3fb187cbf82d3" category="list-text">A classificação do BlueXP  (Data Sense) bring-your-own-license (BYOL) é uma licença _flutuante_ que pode ser usada em todos os ambientes de trabalho e fontes de dados no projeto ou espaço de trabalho do BlueXP  que você planeja digitalizar. Você verá uma assinatura ativa na carteira digital BlueXP .</block>
-  <block id="66f5e7d970f0cf4b79e5b61fd2dba7c1" category="list-text">A quantidade de dados digitalizados é calculada com base no tamanho do arquivo lógico, sem qualquer eficiência de storage.</block>
-  <block id="1fe75a0ab5171136a5ec6503ed9e85d1" category="inline-link-macro">Saiba mais sobre o licenciamento e os custos relacionados à classificação BlueXP </block>
-  <block id="e01ae5b37a34fb436f617365e020721a" category="paragraph"><block ref="5547e182cd4b08f09049a0606997f4a9" category="inline-link-macro-rx"></block>.</block>
-  <block id="5ef05167488611c5bd4ff0f410595ce4" category="section-title">teste gratuito de 30 dias</block>
-  <block id="d2160d301fecae093e137b07230bc3c6" category="paragraph">Uma avaliação gratuita de 30 dias está disponível para até 1 TB de dados que a classificação BlueXP  verifica em um projeto ou espaço de trabalho do BlueXP . Você precisará comprar uma licença BYOL da NetApp ou se inscrever para uma assinatura no mercado do seu provedor de nuvem para continuar a verificar os dados após esse ponto.</block>
-  <block id="defd0f223a0cf4f1e58e88bd1721d45e" category="paragraph">Você pode se inscrever a qualquer momento e você não será cobrado até que o teste de 30 dias termine, ou a quantidade de dados exceda 1 TB. Você sempre pode ver a quantidade total de dados que está sendo digitalizada a partir do Painel de Governança de classificação da BlueXP . E o botão _Inscrever-se agora_ facilita a assinatura quando estiver pronto.</block>
-  <block id="8e8f343d4d11cb796ed5e3db94f54fe3" category="inline-image-macro">Uma captura de tela mostrando a quantidade de dados que estão sendo digitalizados e o botão assinar para assinar o serviço.</block>
-  <block id="a503bdaee5c948e64f10ac7ae38b987f" category="paragraph"><block ref="a503bdaee5c948e64f10ac7ae38b987f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="66145e361f72b54aa011f59d543dfb08" category="section-title">Use um contrato anual</block>
-  <block id="5eaba7c2dc62e15a7621fd6721ea170d" category="paragraph">Pague pela classificação BlueXP  anualmente através da compra de um contrato anual. Eles estão disponíveis em termos de 1, 2 ou 3 anos.</block>
-  <block id="5d88ecbc0b3e3130da7993534c150ab6" category="paragraph">Se você tiver um contrato anual de um mercado, toda a verificação de dados de classificação do BlueXP  será cobrada contra esse contrato. Você não pode misturar e combinar um contrato de mercado anual com um BYOL.</block>
-  <block id="8ceedd80ab3ad72f595a01a7d5ea8d33" category="inline-link">Acesse a oferta do mercado BlueXP  para obter detalhes sobre preços</block>
-  <block id="bd433a8ffac0add0e12c4270b960de4b" category="list-text">AWS:<block ref="acdf2fddcae41b5d9e2a00300f214a12" category="inline-link-rx"></block>.</block>
-  <block id="f3688be07a05c277e8cb7dcec2630b7e" category="list-text">Azure:<block ref="1f8e94c7a027569b83a80d73b2d9761d" category="inline-link-rx"></block>.</block>
-  <block id="dae6b2941afcce1328dee9f363e692e3" category="list-text">Google Cloud: Entre em Contato com seu representante de vendas da NetApp para adquirir um contrato anual. O contrato está disponível como uma oferta privada no Google Cloud Marketplace. Depois que o NetApp compartilhar a oferta privada com você, você poderá selecionar o plano anual ao se inscrever no Google Cloud Marketplace durante a ativação da classificação do BlueXP .</block>
-  <block id="a64334705690e391576da973a9b22ed9" category="section-title">Use uma licença BYOL de classificação BlueXP </block>
-  <block id="c9532f19df489d117c681943ff72b47e" category="paragraph">As licenças bring-your-own da NetApp fornecem termos de 1, 2 ou 3 anos. A licença BYOL BlueXP  Classification (Data Sense) é uma licença _flutuante_ onde a capacidade total é compartilhada entre *todos* de seus ambientes de trabalho e fontes de dados, facilitando o licenciamento e a renovação iniciais.</block>
-  <block id="5bae938f4e490a5e1f1b65254d8e3ef5" category="paragraph">Se você não tiver uma licença de classificação BlueXP , entre em Contato conosco para comprar uma:</block>
-  <block id="f6b0b01ee34208ec2e76e1fb8b0c7faf" category="list-text">O NetApp.com está licenciado[Enviar e-mail para comprar uma licença].</block>
-  <block id="6193e62acb4a86204633b2d093e49546" category="list-text">Clique no ícone de bate-papo no canto inferior direito do BlueXP  para solicitar uma licença.</block>
-  <block id="6aa300e24ddf3ee5a99bbb1cf5bb4a72" category="inline-link">Acesse aqui para obter detalhes</block>
-  <block id="6a79ed48a5fce7523ab5bc4c5c5c16bc" category="paragraph">Opcionalmente, se você tiver uma licença não atribuída baseada em nó para o Cloud Volumes ONTAP que você não usará, poderá convertê-la em uma licença de classificação BlueXP  com a mesma equivalência em dólar e a mesma data de expiração.<block ref="f4c32a82791cf9fc58c736c0aed05092" category="inline-link-rx"></block>.</block>
-  <block id="bc4b68566420a250ac774580fe4c63ac" category="paragraph">Você usa a carteira digital BlueXP  para gerenciar licenças BYOL de classificação BlueXP . Pode adicionar novas licenças, atualizar licenças existentes e ver o estado da licença a partir da carteira digital BlueXP .</block>
-  <block id="656e076fbf2897c36a85dea0c00f2ddf" category="section-title">Obtenha o seu ficheiro de licença de classificação BlueXP </block>
-  <block id="bbffe9d9bab8f2f862116a36d9e1e226" category="paragraph">Depois de adquirir sua licença de classificação BlueXP  (Data Sense), você ativa a licença no BlueXP  inserindo o número de série da classificação BlueXP  e a conta do site de suporte da NetApp (NSS) ou carregando o arquivo de licença NetApp (NLF). As etapas abaixo mostram como obter o arquivo de licença NLF se você planeja usar esse método.</block>
-  <block id="f3cd3d23d33dfe26418bbc5243171a69" category="inline-link">modo privado</block>
-  <block id="aaf2f102dd6df6f644ec8a4989bbaa59" category="paragraph">Se você implantou a classificação do BlueXP  em um host em um site local que não tenha acesso à Internet, o que significa que implantou o conetor BlueXP  no<block ref="6426a8a427a5eadce24d979d317c10cc" category="inline-link-rx"></block>, você precisará obter o arquivo de licença de um sistema conetado à Internet. A ativação da licença utilizando o número de série e a conta NSS não está disponível para instalações em modo privado.</block>
-  <block id="e3286b69a705d4ed944e904722ab7c8f" category="paragraph">Você precisará ter as seguintes informações antes de começar:</block>
-  <block id="9a0032efa4fb526fb96562269c928b44" category="list-text">Número de série da classificação BlueXP </block>
-  <block id="079aeecf06b109e4316b0a68ea943f2b" category="paragraph">Localize esse número no seu pedido de vendas ou entre em Contato com a equipe da conta para obter essas informações.</block>
-  <block id="bcbbd9a155e07caa8b31001adc835c79" category="list-text">ID da conta BlueXP </block>
-  <block id="3013e5a381c02243fda59b6191eacc44" category="paragraph">Você pode encontrar seu ID de conta do BlueXP  selecionando o menu suspenso *Account* na parte superior do BlueXP  e clicando em *Gerenciar conta* ao lado de sua conta. O ID da sua conta está no separador Visão geral. Para sites em modo privado sem acesso à Internet, use *Account-DARKSITE1*.</block>
-  <block id="80c4b6e3dfa1d4f33033585b7c74e7e9" category="list-text">Inicie sessão no<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block> e clique em *sistemas &gt; licenças de software*.</block>
-  <block id="91be63c0508d6a7954379847241750fe" category="list-text">Introduza o número de série da licença de classificação BlueXP .</block>
-  <block id="5190e9ec018f5e661ec4b31ff1b34423" category="inline-image-macro">Uma captura de tela que mostra uma tabela de licenças depois de pesquisar por número de série.</block>
-  <block id="d15379b9f839ac6523d1b06ad8763875" category="paragraph"><block ref="d15379b9f839ac6523d1b06ad8763875" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="450f374ea7faf8a2818e9556a4ab9a8a" category="list-text">Na coluna *chave de licença*, clique em *obter ficheiro de licença NetApp*.</block>
-  <block id="f68bf28051d836364652b5a91d1bcd3a" category="list-text">Introduza a sua ID de conta do BlueXP  (chamada ID do locatário no site de suporte) e clique em *Enviar* para transferir o ficheiro de licença.</block>
-  <block id="56273f3344c87fabbf5196fba9816fff" category="inline-image-macro">Uma captura de tela que mostra a caixa de diálogo obter licença onde você insere seu ID de locatário e, em seguida, clique em Enviar para baixar o arquivo de licença.</block>
-  <block id="212f5a95c637538f9375d966345ca9f7" category="paragraph"><block ref="212f5a95c637538f9375d966345ca9f7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ab75085a52c32bc4b667115d2ca1861b" category="section-title">Adicione licenças BYOL de classificação BlueXP  à sua conta</block>
-  <block id="9f685573d36b3e4610c00dee293b7790" category="paragraph">Depois de adquirir uma licença de classificação BlueXP  (Data Sense) para sua conta BlueXP , você precisa adicionar a licença ao BlueXP  para usar o serviço de classificação BlueXP .</block>
-  <block id="8d080a0104c2b8b29f5fc2be913926af" category="list-text">No menu BlueXP , clique em *Governança &gt; carteira digital* e selecione a guia *licenças de serviços de dados*.</block>
-  <block id="ea9a2b9ac34c9aab133f21aa5b67976e" category="list-text">Clique em *Adicionar licença*.</block>
-  <block id="c1b2dc0798d3960e25b8a12c751f53ec" category="list-text">Na caixa de diálogo _Adicionar licença_, insira as informações da licença e clique em *Adicionar licença*:</block>
-  <block id="0173f2cb0bfd96ead28f0580c171e723" category="list-text">Se tiver o número de série da licença de classificação BlueXP  e souber a sua conta NSS, selecione a opção *introduzir número de série* e introduza essas informações.</block>
-  <block id="bae190eec3db4a0dd635ae72756acde8" category="inline-link">Adicione a conta NSS ao BlueXP </block>
-  <block id="30fc689a9c3cd4222329fe3a4c818a33" category="paragraph">Se a conta do site de suporte da NetApp não estiver disponível na lista suspensa,<block ref="06a3bc9d474b5d4e44d1a2733cac785a" category="inline-link-rx"></block>.</block>
-  <block id="4da6525c8724f13e73085493e61c4d42" category="list-text">Se você tiver o arquivo de licença de classificação BlueXP  (necessário quando instalado em um site escuro), selecione a opção *carregar arquivo de licença* e siga as instruções para anexar o arquivo.</block>
-  <block id="bbf3b6ee5bbc1b6693b7f6c692389b8d" category="inline-image-macro">Uma captura de tela que mostra a página para adicionar a licença BYOL de classificação do BlueXP .</block>
-  <block id="d6a2ea8b4137bd407e96f8425a463067" category="paragraph"><block ref="d6a2ea8b4137bd407e96f8425a463067" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2a1bc71dc01f495b56f0abaa74f037c9" category="paragraph">O BlueXP  adiciona a licença para que seu serviço de classificação BlueXP  esteja ativo.</block>
-  <block id="aeeaa2e73e02b9dcec81e87c55fe939e" category="section-title">Atualizar uma licença BYOL de classificação BlueXP </block>
-  <block id="ee28dd0aeae91008620b667fd834dc53" category="paragraph">Se o seu prazo licenciado estiver próximo da data de expiração ou se a sua capacidade licenciada estiver atingindo o limite, você será notificado na IU de classificação.</block>
-  <block id="fda03e39c339d6d7b96a67b975fb9d35" category="inline-image-macro">Uma captura de tela que mostra uma licença expirando na página de classificação do BlueXP .</block>
-  <block id="085d74f778426c6b55cefb26f0da08db" category="paragraph"><block ref="085d74f778426c6b55cefb26f0da08db" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a274f4d4670213a9045ce258c6c56b80" category="inline-link">Notificações</block>
-  <block id="697511e8d7a1e79b59a32ea4cdfd567a" category="paragraph">Este estado também aparece na carteira digital BlueXP  e em<block ref="5ed52bf872a49314e95419b00a21b97c" category="inline-link-rx"></block>.</block>
-  <block id="0553876f11122be0920f9fa9c803d152" category="inline-image-macro">Uma captura de tela que mostra uma licença expirando na página da carteira digital do BlueXP .</block>
-  <block id="8a3fa7f55e818c5876f14bd9da4cabf0" category="paragraph"><block ref="8a3fa7f55e818c5876f14bd9da4cabf0" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d039bd2d493e18dac3e687d097f645c3" category="paragraph">Você pode atualizar sua licença de classificação do BlueXP  antes que ela expire para que não haja interrupção na sua capacidade de acessar seus dados digitalizados.</block>
-  <block id="15f4e537c6c3c2957b6e194cb0894a09" category="list-text">Clique no ícone de bate-papo no canto inferior direito do BlueXP  para solicitar uma extensão para o seu termo ou capacidade adicional para a licença do Cloud Data Sense para o número de série específico. Você também pode NetApp enviar um e-mail para solicitar uma atualização para a sua licença.</block>
-  <block id="b23b97d3c26b0f7e2265329756cea9ca" category="paragraph">Depois de pagar a licença e esta ser registada no Site de suporte da NetApp, a BlueXP  atualiza automaticamente a licença na carteira digital da BlueXP  e a página licenças dos Serviços de dados refletirá a alteração em 5 a 10 minutos.</block>
-  <block id="5810a6765696da7b12979cf90b9b287c" category="list-text">Se o BlueXP  não puder atualizar automaticamente a licença (por exemplo, quando instalado em um site escuro), você precisará fazer o upload manual do arquivo de licença.</block>
-  <block id="b2b168bd64a341a85c749cb61bba40cb" category="inline-xref">Obtenha o arquivo de licença no site de suporte da NetApp</block>
-  <block id="9c8dbc16cd72bbe77bfe80d17598e07d" category="list-text">Você pode <block ref="886f08a728ba8be871be0e99b40e3948" category="inline-xref-macro-rx"></block>.</block>
-  <block id="8f0a75d2d5a82f31f2cf069c3b0ee684" category="inline-image-macro">Ícone mais</block>
-  <block id="70196feeb01dc8dfdb5276a2398e60f9" category="list-text">Na página carteira digital do BlueXP  na guia _licenças de serviços de dados_, clique <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> para obter o número de série do serviço que você está atualizando e clique em *Atualizar licença*.</block>
-  <block id="3ce750f001c2369e23b68f3210d9f100" category="inline-image-macro">Uma captura de tela da seleção do botão Atualizar Licença para um serviço específico.</block>
-  <block id="2bdb7af2b6613fafdba930fb09034d3f" category="paragraph"><block ref="2bdb7af2b6613fafdba930fb09034d3f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="41e921305ae1b027e5d364af4a2a9df2" category="list-text">Na página _Atualizar Licença_, carregue o arquivo de licença e clique em *Atualizar Licença*.</block>
-  <block id="4e43e8a24acd7193b6d8eed036253e35" category="paragraph">O BlueXP  atualiza a licença para que seu serviço de classificação BlueXP  continue ativo.</block>
-  <block id="7d3786abf2ebb473a5ba70b680734525" category="section-title">Considerações sobre a licença BYOL</block>
-  <block id="55fd9f49dc52e3918479d0efc4578246" category="paragraph">Ao usar uma licença BYOL de classificação BlueXP  (Data Sense), o BlueXP  exibe um aviso na IU de classificação do BlueXP  e na IU da carteira digital do BlueXP  quando o tamanho de todos os dados que você está digitalizando estiver próximo ao limite de capacidade ou se aproximando da data de expiração da licença. Você recebe estes avisos:</block>
-  <block id="e95058755e821bf6cb439e37f1f068d7" category="list-text">Quando a quantidade de dados que está a digitalizar tiver atingido 80% da capacidade licenciada e novamente quando tiver atingido o limite</block>
-  <block id="d8ea74d0bc0e6f3c5be22312a953d7fb" category="list-text">30 dias antes da expiração de uma licença e novamente quando a licença expirar</block>
-  <block id="379dea20c8734742bd3f9c78de134135" category="paragraph">Use o ícone de bate-papo no canto inferior direito da interface do BlueXP  para renovar sua licença quando você vir esses avisos.</block>
-  <block id="158effa984590da91d7a27bb0f349168" category="paragraph">Se sua licença expirar ou você tiver atingido o limite BYOL, a classificação do BlueXP  continuará sendo executada, mas o acesso aos painéis será bloqueado para que você não possa exibir informações sobre nenhum dos seus dados digitalizados. Apenas a página _Configuration_ está disponível no caso de você desejar reduzir o número de volumes que estão sendo digitalizados para potencialmente colocar seu uso de capacidade sob o limite de licença.</block>
-  <block id="643ba31a7063051c9d564b6faa4299ac" category="inline-xref">Como atualizar uma licença de classificação BlueXP </block>
-  <block id="0c5b37935376b963ef78697061a74cb2" category="paragraph">Depois de renovar sua licença BYOL, o BlueXP  atualiza automaticamente a licença na carteira digital BlueXP  e fornece acesso total a todos os painéis. Se o BlueXP  não puder acessar o arquivo de licença pela conexão segura à Internet (por exemplo, quando instalado em um site escuro), você poderá obter o arquivo sozinho e enviá-lo manualmente para o BlueXP . Para obter instruções, <block ref="c44ca7e9f7d88504527c3375fbf81785" category="inline-xref-macro-rx"></block>consulte .</block>
-  <block id="dad8edf6c4b2d149686fdcf79277d242" category="admonition">Se a conta que você está usando tiver uma licença BYOL e uma assinatura PAYGO, a classificação BlueXP  _não_ mudará para a assinatura PAYGO quando a licença BYOL expirar. Você deve renovar a licença BYOL.</block>
   <block id="4c119835311ae84a5afed96ff0102202" category="summary">Se necessário, você pode impedir que a classificação do BlueXP  examine um ou mais ambientes de trabalho, bancos de dados, grupos de compartilhamento de arquivos, contas do OneDrive, contas do Google Drive ou contas do SharePoint.</block>
   <block id="1b37870dae094b28860019e52e52b4ff" category="doc">Remova uma conta do OneDrive, SharePoint ou Google Drive da classificação do BlueXP </block>
   <block id="433023fd6c6c23d39387bf9b74dda504" category="paragraph">Se você não quiser mais analisar arquivos de usuário de uma determinada conta do OneDrive, de uma conta específica do SharePoint ou de uma conta do Google Drive, você pode excluir a conta da interface de classificação do BlueXP  e parar todas as verificações.</block>
@@ -2519,13 +2387,8 @@
   <block id="8afeb311b4ff23155bae9b80ec79273f" category="list-text">Você pode desativar a varredura lenta clicando em *Disable* nesta mensagem.</block>
   <block id="784e4b64058d5e48385415f461c592f1" category="summary">Complete alguns passos para começar a usar a classificação BlueXP  para Azure NetApp Files.</block>
   <block id="cd459404fa850adef50a1d5a0b9fb8e7" category="doc">Digitalize volumes Azure NetApp Files com a classificação BlueXP </block>
-  <block id="86e6b4ce8205c2db3b733482275e7c94" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Descubra os sistemas Azure NetApp Files que pretende digitalizar</block>
-  <block id="877f09bae1b7112a88e564afe0b39149" category="inline-link">O BlueXP  deve ser configurado para descobrir a configuração</block>
-  <block id="5f9774634d612de809265cc23871cf47" category="paragraph">Antes de poder digitalizar volumes Azure NetApp Files,<block ref="877b71a5c09299b4320d1e533ba73086" category="inline-link-rx"></block>.</block>
   <block id="cbf510286e078f482973b70a376262f2" category="inline-link-macro">Implantar a classificação BlueXP  no BlueXP </block>
   <block id="fd990ee0c3ae484223002ef0361fbd4c" category="paragraph"><block ref="5901ad58df96e4468fa86bc2351fb6ec" category="inline-link-macro-rx"></block> se ainda não houver uma instância implantada.</block>
-  <block id="8e6b2e179301ba8e4086645fd738ff9d" category="paragraph">Clique em *Compliance*, selecione a guia *Configuration* e ative as verificações de conformidade para volumes em ambientes de trabalho específicos.</block>
-  <block id="8d50e02b2718494115c81eb90fb74ae8" category="list-text">A instância de classificação BlueXP  precisa de uma conexão de rede para cada sub-rede Azure NetApp Files.</block>
   <block id="c780a7831238096b62ccda3512612e65" category="list-text">Para NFS – portas 111 e 2049.</block>
   <block id="cfbd3eaf6a26b5c0c06de5f5b3d138b9" category="list-text">Para CIFS – portas 139 e 445.</block>
   <block id="8c89db674531ab536128087dfb6cbe4f" category="section-title">Descubra o sistema Azure NetApp Files que pretende digitalizar</block>
@@ -2541,12 +2404,6 @@
   <block id="0c0c3b0c55f2b5101c7ea7c5d755cabe" category="paragraph"><block ref="0c0c3b0c55f2b5101c7ea7c5d755cabe" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ac52c241aeb9f87cb4b7f2458fab533d" category="summary">Conclua algumas etapas para começar a digitalizar seus esquemas de banco de dados com a classificação BlueXP .</block>
   <block id="2cac5148836fcc4449c2a57f4d2f787c" category="doc">Analise esquemas de banco de dados com classificação BlueXP </block>
-  <block id="1b189011c424e8c00ecd3f9bc8925c86" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Rever pré-requisitos da base de dados</block>
-  <block id="6ba6f62eaa922e3764dfb0e34527892f" category="paragraph">Certifique-se de que a sua base de dados é suportada e de que tem as informações necessárias para se ligar à base de dados.</block>
-  <block id="9603ea8b40ce9806f5c742bedf6353c3" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Adicione o servidor de banco de dados</block>
-  <block id="18145622150e1a809831297a4332c742" category="paragraph">Adicione o servidor de banco de dados que você deseja acessar.</block>
-  <block id="207288dfb0e2353fa1e1661a7548545e" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Selecione os esquemas</block>
-  <block id="5a810676627d546e80218e706059b849" category="paragraph">Selecione os esquemas que pretende digitalizar.</block>
   <block id="90aa8899e851e5f50cce574a93280c92" category="paragraph">Reveja os seguintes pré-requisitos para se certificar de que tem uma configuração suportada antes de ativar a classificação BlueXP .</block>
   <block id="1416008fc37354356eb0ecd95dfddc96" category="section-title">Bancos de dados compatíveis</block>
   <block id="5ad2532f51093d157a604c23276c33d5" category="paragraph">A classificação BlueXP  pode digitalizar esquemas a partir dos seguintes bancos de dados:</block>
@@ -2563,9 +2420,6 @@
   <block id="eb8fe754fdca3b53d48ac9eda9c61fba" category="paragraph">Se você estiver escaneando esquemas de banco de dados que foram instalados em um site escuro que não tem acesso à Internet, você precisará <block ref="3beeea1c5d12940092999048e1c30313" category="inline-link-macro-rx"></block>. Isso também requer que o BlueXP  Connector seja implantado no mesmo local.</block>
   <block id="117276e96b89d072e0a833596332ef29" category="section-title">Adicione o servidor de banco de dados</block>
   <block id="a4d915351d456b98e430d4b56f363817" category="paragraph">Adicione o servidor de banco de dados onde os esquemas residem.</block>
-  <block id="6a92144fbc213814d38b4fcd8dc7ba49" category="list-text">Na página Configuração de ambientes de trabalho, clique em *Adicionar fonte de dados* &gt; *Adicionar servidor de banco de dados*.</block>
-  <block id="3a0e5c0a3596c957b4947c3009360640" category="inline-image-macro">Uma captura de tela da página Configuração de digitalização, onde você pode clicar no botão Adicionar servidor de banco de dados.</block>
-  <block id="1f7c15e8f11ab744a1ec4276f35a79dd" category="paragraph"><block ref="1f7c15e8f11ab744a1ec4276f35a79dd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8d6202533ffe78d883d48c7a6de071c0" category="list-text">Introduza as informações necessárias para identificar o servidor da base de dados.</block>
   <block id="7c7aad6b41666f8abe556bca9c0f0260" category="list-text">Selecione o tipo de banco de dados.</block>
   <block id="32db81c06e2a7821cf1360fe09d10171" category="list-text">Insira a porta e o nome do host ou endereço IP para se conetar ao banco de dados.</block>
@@ -2578,24 +2432,16 @@
   <block id="0dacbfa35e4a190378a78ef8c1f6a644" category="section-title">Ative e desative verificações de conformidade em esquemas de banco de dados</block>
   <block id="b7a17432eb09c32a574991d9b6b0be00" category="paragraph">Você pode parar ou iniciar a varredura completa de seus esquemas a qualquer momento.</block>
   <block id="bee9dc960933af9ecc3b6f30878d28e4" category="admonition">Não há opção para selecionar digitalizações somente de mapeamento para esquemas de banco de dados.</block>
-  <block id="66a2cf8e7e33f076420fc7afe01ab7b3" category="list-text">Na página _Configuration_, clique no botão *Configuration* do banco de dados que deseja configurar.</block>
   <block id="eeca65dd888a9508e6e72469e53273ff" category="inline-image-macro">Uma captura de tela da página Configuração de digitalização, onde você pode selecionar o botão Configuração.</block>
   <block id="501ae739773eaa9fbbe222d59498ef96" category="paragraph"><block ref="501ae739773eaa9fbbe222d59498ef96" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b1f7c7e36d5ee01af131dd25c658e41f" category="list-text">Selecione os esquemas que deseja digitalizar movendo o controle deslizante para a direita.</block>
   <block id="cc939570e2fbb3d7e526d9e3e757a5f0" category="inline-image-macro">Uma captura de tela da página Configuração de digitalização, onde você pode escolher os esquemas a serem verificados.</block>
   <block id="46e57bba2892a9df10ae0b7ae9e43f45" category="paragraph"><block ref="46e57bba2892a9df10ae0b7ae9e43f45" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e7161999dbadbbf09541cb6606d43f78" category="paragraph">A classificação BlueXP  começa a digitalizar os esquemas de banco de dados que você ativou. Se houver algum erro, eles aparecerão na coluna Status, juntamente com a ação necessária para corrigir o erro.</block>
-  <block id="d22c09811fd17d0b22a0df48541e5fd9" category="paragraph">Observe que a classificação do BlueXP  verifica seus bancos de dados uma vez por dia - os bancos de dados não são verificados continuamente como outras fontes de dados.</block>
   <block id="c4758ec8f4163fa99b08557425a59f56" category="summary">Conclua algumas etapas para iniciar a verificação de compartilhamentos de arquivos NFS ou CIFS não NetApp diretamente com a classificação BlueXP . Esses compartilhamentos de arquivos podem residir no local ou na nuvem.</block>
   <block id="b5e00ff2b7559dfa6fc6fe96058ede54" category="doc">Partilha de ficheiros de leitura com a classificação BlueXP </block>
   <block id="12a96925a3b6ebd1419915c8b0bfada9" category="paragraph">Conclua algumas etapas para iniciar a verificação de compartilhamentos de arquivos NFS ou CIFS a partir de volumes do Google Cloud NetApp e de sistemas NetApp 7-modo mais antigos. Esses compartilhamentos de arquivos podem residir no local ou na nuvem.</block>
   <block id="f146ec0537a829117da7d3ce3e588d3b" category="admonition">A digitalização de dados de compartilhamentos de arquivos não NetApp não é suportada na versão principal da classificação BlueXP .</block>
-  <block id="a3f1215a60ced30f6b58ece6e4fb2da2" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Rever pré-requisitos de partilha de ficheiros</block>
-  <block id="8b30b43b2d32f52db456a78f120bec50" category="paragraph">Para compartilhamentos CIFS (SMB), verifique se você tem credenciais para acessar os compartilhamentos.</block>
-  <block id="116ef64523fed5112220351fa1d75dc4" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Crie um grupo para manter os compartilhamentos de arquivo</block>
-  <block id="d2ea2bf943bb8c943367ebfd6b8aec96" category="paragraph">O grupo é um contentor para os compartilhamentos de arquivo que você deseja analisar e é usado como o nome do ambiente de trabalho para esses compartilhamentos de arquivo.</block>
-  <block id="e08c39eeecbac5d5f73dff71e2512def" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Adicione os compartilhamentos de arquivo ao grupo</block>
-  <block id="925a5b3d46766546e19dbce83a2fefb6" category="paragraph">Adicione a lista de compartilhamentos de arquivo que você deseja digitalizar e selecione o tipo de digitalização. Você pode adicionar até 100 compartilhamentos de arquivo de cada vez.</block>
   <block id="9850feff1aac1d886b7a010236318d49" category="section-title">Reveja os requisitos de compartilhamento de arquivos</block>
   <block id="d809bb142c0a96aef201dfc891e977e3" category="list-text">Os compartilhamentos podem ser hospedados em qualquer lugar, inclusive na nuvem ou no local. Os compartilhamentos CIFS de sistemas de storage NetApp 7-Mode mais antigos podem ser verificados como compartilhamentos de arquivos.</block>
   <block id="061d9924baf4222bf79058b2beddbe21" category="paragraph">Observe que a classificação BlueXP  não pode extrair permissões ou o "último tempo de acesso" de sistemas do modo 7. Além disso, devido a um problema conhecido entre algumas versões do Linux e compartilhamentos CIFS em sistemas 7-Mode, você deve configurar o compartilhamento para usar apenas SMB v1 com autenticação NTLM ativada.</block>
@@ -2607,39 +2453,28 @@
   <block id="763e254befdcc246f3e8569877b63340" category="section-title">Crie o grupo para os compartilhamentos de arquivo</block>
   <block id="60d7a85c8e73898b7ffc998f747e0883" category="paragraph">Você deve adicionar um "grupo" de compartilhamentos de arquivos antes de adicionar seus compartilhamentos de arquivo. O grupo é um recipiente para os compartilhamentos de arquivo que você deseja analisar e o nome do grupo é usado como o nome do ambiente de trabalho para esses compartilhamentos de arquivo.</block>
   <block id="96fdaabb157bbdb2dbe197904f9a4dbb" category="paragraph">Você pode misturar compartilhamentos NFS e CIFS no mesmo grupo. No entanto, todos os compartilhamentos de arquivos CIFS em um grupo precisam estar usando as mesmas credenciais do active Directory. Se você planeja adicionar compartilhamentos CIFS que usam credenciais diferentes, será necessário criar um grupo separado para cada conjunto exclusivo de credenciais.</block>
-  <block id="859b0486d18f528c8edbdaa7f41170d0" category="list-text">Na página Configuração de ambientes de trabalho, clique em *Adicionar fonte de dados* &gt; *Adicionar grupo de compartilhamentos de arquivos*.</block>
   <block id="28a37c29073d01b41af962aa45f11615" category="inline-image-macro">Uma captura de tela da página Configuração de digitalização, onde você pode clicar no botão Adicionar grupo de compartilhamentos de arquivos.</block>
-  <block id="0c3c72a2a46a4dd5c0107a9f0b07c592" category="paragraph"><block ref="0c3c72a2a46a4dd5c0107a9f0b07c592" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b5fa1ae0f2b7152c1235520708fb1af0" category="list-text">Na caixa de diálogo Grupo Adicionar compartilhamentos de arquivos, digite o nome do grupo de compartilhamentos e clique em *continuar*.</block>
   <block id="69438cb2e4a059b421af50a7d06c8f93" category="paragraph">O novo Grupo de compartilhamentos de arquivo é adicionado à lista de ambientes de trabalho.</block>
   <block id="8c7259d7b7f8962c22537c08f66b5e09" category="section-title">Adicionar compartilhamentos de arquivo a um grupo</block>
   <block id="a5847332edc397d8726675e5b89d4f7a" category="paragraph">Você adiciona compartilhamentos de arquivo ao Grupo compartilhamentos de arquivo para que os arquivos nesses compartilhamentos sejam verificados pela classificação BlueXP . Você adiciona os compartilhamentos no formato<block ref="5d0795d5bd729889f583de7b0928eaea" prefix=" " category="inline-code"></block>.</block>
   <block id="7f36799e4767f2e3733ee3f582eeec9d" category="paragraph">Você pode adicionar compartilhamentos de arquivo individuais ou fornecer uma lista separada por linha dos compartilhamentos de arquivo que deseja analisar. Você pode adicionar até 100 compartilhamentos de cada vez.</block>
   <block id="c9ce688a21fc0a13e7a592a39d9b66de" category="paragraph">Ao adicionar compartilhamentos NFS e CIFS em um único grupo, você precisará executar o processo duas vezes, uma vez que adicionar compartilhamentos NFS e, em seguida, adicionar novamente os compartilhamentos CIFS.</block>
-  <block id="c696377eeab0348c7bd52ac7b4a8f54f" category="list-text">Na página _ambientes de trabalho_, clique no botão *Configuração* do Grupo compartilhamentos de arquivos.</block>
   <block id="d9a6785fa0ca31901cf49acc5951aefc" category="paragraph"><block ref="d9a6785fa0ca31901cf49acc5951aefc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9535e8d73656c91d40193e1352899f5b" category="list-text">Se esta for a primeira vez que adicionar compartilhamentos de arquivo para este Grupo de compartilhamentos de arquivo, clique em *Adicionar seus primeiros compartilhamentos*.</block>
   <block id="e12f851045a5dd03b63ec08942496b87" category="inline-image-macro">Uma captura de tela mostrando o botão Adicionar seus primeiros compartilhamentos para adicionar compartilhamentos iniciais ao grupo.</block>
   <block id="71802feecdbf246a5878ffd0776c9188" category="paragraph"><block ref="71802feecdbf246a5878ffd0776c9188" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e2fac2c70d1c0b8b442edf54cdc057a1" category="paragraph">Se você estiver adicionando compartilhamentos de arquivo a um grupo existente, clique em *Adicionar compartilhamentos*.</block>
   <block id="320628295265baf9bb69f0998f0f2fff" category="inline-image-macro">Uma captura de tela mostrando o botão Adicionar compartilhamentos para adicionar mais compartilhamentos ao grupo.</block>
   <block id="8fedda70275ec7ba2bbf1cf099d2a559" category="paragraph"><block ref="8fedda70275ec7ba2bbf1cf099d2a559" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f1defe21c2a372d658838710c3847b34" category="list-text">Selecione o protocolo para os compartilhamentos de arquivo que você está adicionando, adicione os compartilhamentos de arquivo que você deseja digitalizar - um compartilhamento de arquivo por linha - e clique em *continuar*.</block>
   <block id="eb78bc82dacf7ba8a0b44a1fcffc4ddf" category="paragraph">Ao adicionar compartilhamentos CIFS (SMB), você precisa inserir as credenciais do ative Directory que fornecem acesso de leitura aos compartilhamentos. As credenciais de administrador são preferidas.</block>
   <block id="ea83a70e9aaa2fe5cdb89ca736c3f60f" category="inline-image-macro">Uma captura de tela da página Adicionar compartilhamentos de arquivo, onde você pode adicionar os compartilhamentos a serem verificados.</block>
   <block id="a9d3544fdaa80db23d985cc9024d392a" category="paragraph"><block ref="a9d3544fdaa80db23d985cc9024d392a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="17ac351ddbea073b035b83b540983f6f" category="paragraph">Uma caixa de diálogo de confirmação exibe o número de compartilhamentos que foram adicionados.</block>
   <block id="87dced2b98ff65890acdcbfd5902920a" category="paragraph">Se a caixa de diálogo listar quaisquer compartilhamentos que não possam ser adicionados, Capture essas informações para que você possa resolver o problema. Em alguns casos, você pode adicionar novamente o compartilhamento com um nome de host ou nome de compartilhamento corrigido.</block>
   <block id="5a05b6cef18f9bb7455b9c5cd36ddc47" category="list-text">Ative digitalizações apenas de mapeamento ou digitalizações de mapeamento e classificação em cada partilha de ficheiros.</block>
-  <block id="53642e15bf631c93172b796ba5a78cc2" category="cell">Ativar varreduras somente de mapeamento em compartilhamentos de arquivo</block>
   <block id="ae70ae1b93c56367429b7d2bb0ece139" category="cell">Clique em *mapa*</block>
-  <block id="80023efd80f3cd8c1fcad9523d36efb1" category="cell">Ative digitalizações completas em compartilhamentos de arquivo</block>
   <block id="c8f32db0b52a7b7e31ee04bd02eddbb6" category="cell">Clique em *Map &amp; Classify*</block>
-  <block id="ff947db636909b9c7791229bf6b5dd0a" category="cell">Desative a digitalização em compartilhamentos de arquivo</block>
   <block id="a988b0977fb89f6574cfc55d252b1cf9" category="cell">Clique em *Off*</block>
   <block id="07ada1e73188e64ef4fd43b06b4a2a48" category="paragraph">A classificação do BlueXP  começa a digitalizar os arquivos nos compartilhamentos de arquivo adicionados e os resultados são exibidos no Painel e em outros locais.</block>
   <block id="0eb30c84638dc32a52a08e70a70b2a55" category="section-title">Remover um compartilhamento de arquivos de verificações de conformidade</block>
-  <block id="4de725d331cf276fac026642a5f17603" category="paragraph">Se você não precisar mais digitalizar certos compartilhamentos de arquivo, você pode remover compartilhamentos de arquivo individuais de ter seus arquivos digitalizados a qualquer momento. Basta clicar em *Remover compartilhamento* na página Configuração.</block>
   <block id="90777a343fd7f5c83c97f473d59a2af2" category="inline-image-macro">Uma captura de tela mostrando como remover um único compartilhamento de arquivo de ter seus arquivos digitalizados.</block>
   <block id="c8716632d7055f530ad579b6f751cf3a" category="paragraph"><block ref="c8716632d7055f530ad579b6f751cf3a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="65f7d3315d8640ef3d8c452f389f943f" category="summary">Conclua algumas etapas para começar a digitalizar o volume do Amazon FSX for ONTAP com a classificação BlueXP .</block>
@@ -2652,31 +2487,17 @@
   <block id="7c04897feb206ad3e6d38ea88ccde2d4" category="paragraph"><block ref="7c04897feb206ad3e6d38ea88ccde2d4" category="inline-link-rx"></block></block>
   <block id="7ffe245546d3b7b3225d3db681da37ae" category="inline-link">Interfaces de rede AWS Elastic (ENI)</block>
   <block id="0e07c8e30d5d787d70fbc93583eb3032" category="paragraph"><block ref="0e07c8e30d5d787d70fbc93583eb3032" category="inline-link-rx"></block></block>
-  <block id="360c11bcd9a9bfedb1aa5353935d21cd" category="paragraph">Comece rapidamente seguindo estes passos ou role para baixo para obter detalhes completos.</block>
-  <block id="d9c5a199091edda801a88fd2fdabd9d0" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Descubra os sistemas de arquivos FSX for ONTAP que você deseja digitalizar</block>
-  <block id="d0e7ae8581484b514e52b4bee068c4f2" category="inline-link">Você deve ter um ambiente de trabalho do FSX com volumes configurados</block>
-  <block id="abefc4760bb681a677a193d3f612cf4f" category="paragraph">Antes de poder digitalizar o FSX para ONTAP volumes<block ref="7452eb54bbdeb3cd1b4f5d5a58a8a661" category="inline-link-rx"></block>, .</block>
-  <block id="4b90970a73b6d625403168dd7b622461" category="list-text">A instância de classificação do BlueXP  precisa de uma conexão de rede para cada sub-rede do FSX for ONTAP.</block>
-  <block id="931681dae1bd3e08d5eaf02377942fff" category="list-text">Certifique-se de que as seguintes portas estejam abertas para a instância de classificação BlueXP :</block>
-  <block id="0b4a0190dbaa2e1dcde2987291a8fda7" category="list-text">A classificação do BlueXP  precisa de credenciais do ative Directory para analisar volumes CIFS. Clique em *Compliance* &gt; *Configuration* &gt; *Edit CIFS Credentials* e forneça as credenciais.</block>
-  <block id="08f13635125ca31ad0dd4c558af740d0" category="paragraph">Selecione ou anule a seleção dos volumes que pretende digitalizar e a classificação BlueXP  inicia ou pára de os digitalizar.</block>
-  <block id="7189cf24cfe83953d8a6800deef41472" category="section-title">Descubra o sistema de arquivos FSX for ONTAP que você deseja digitalizar</block>
-  <block id="42161ed94a32c7fa5d4458da4f8fd247" category="paragraph">Se o sistema de arquivos FSX for ONTAP que você deseja digitalizar ainda não está no BlueXP  como um ambiente de trabalho, você pode adicioná-lo à tela neste momento.</block>
-  <block id="7c71ca28422eaaaf66d759fac9ddacd8" category="inline-link">Veja como descobrir ou criar o sistema de arquivos FSX for ONTAP no BlueXP </block>
-  <block id="bbb49ffca9a7a090a24129f517c49921" category="paragraph"><block ref="cfae4f09920e34de0a804a19a3f6c70a" category="inline-link-rx"></block>.</block>
   <block id="be2976cf8226247a23c06d21cc561154" category="paragraph">Você deve implantar a classificação do BlueXP  na mesma rede da AWS que o conetor para AWS e os volumes do FSX que deseja analisar.</block>
   <block id="18b57e2e68f1be182173d49ffbcd4e0c" category="paragraph">*Observação:* a implantação da classificação do BlueXP  em um local local local não é suportada atualmente ao digitalizar volumes FSX.</block>
   <block id="3ae736236dde2535cad4ec42745a0cbd" category="paragraph">Você pode ativar a classificação do BlueXP  para o FSX for ONTAP volumes.</block>
   <block id="2cc6e87dfb5a6f87bc1fcbd217a498de" category="paragraph"><block ref="2cc6e87dfb5a6f87bc1fcbd217a498de" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6bc94b69811d2b0b701e915104066612" category="paragraph">Verifique se a classificação do BlueXP  pode acessar volumes verificando suas políticas de rede, grupos de segurança e exportação.</block>
   <block id="24f2d84d2538ae621015886e3ec8b0c0" category="paragraph">Você precisará fornecer a classificação BlueXP  com credenciais CIFS para que possa acessar volumes CIFS.</block>
-  <block id="d7f427e021c7b93fd75b9364e170beaa" category="list-text">Na página _Configuration_, clique em *View Details* (Ver detalhes) para rever o estado e corrigir quaisquer erros.</block>
   <block id="57b038ede182cd587e669c8a0afda2ca" category="paragraph">Por exemplo, a imagem a seguir mostra uma classificação de volume BlueXP  não pode ser verificada devido a problemas de conetividade de rede entre a instância de classificação BlueXP  e o volume.</block>
   <block id="6aba3e790f0d136fccde9108bbcb6e54" category="inline-image-macro">Uma captura de tela da página Exibir detalhes na configuração de digitalização mostrando o volume não sendo digitalizado devido à conetividade de rede entre a classificação BlueXP  e o volume.</block>
   <block id="938a0c53f3b8295f00211aa4aa636d59" category="paragraph"><block ref="938a0c53f3b8295f00211aa4aa636d59" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e9e6eb440f640e08bc3c5103228122dd" category="list-text">Verifique se há uma conexão de rede entre a instância de classificação do BlueXP  e cada rede que inclua volumes para o FSX for ONTAP.</block>
   <block id="4c38967920351f8ebcaa4e690d701258" category="admonition">Para o FSX for ONTAP, a classificação BlueXP  pode digitalizar volumes apenas na mesma região que o BlueXP .</block>
-  <block id="a6861649492b63cf2f2a487ef03dd6c9" category="list-text">Certifique-se de que as portas a seguir estejam abertas para a instância de classificação BlueXP .</block>
   <block id="f80a9a7914afa1563740cc402c8af25d" category="list-text">Garanta que as políticas de exportação de volume NFS incluam o endereço IP da instância de classificação BlueXP  para que ela possa acessar os dados em cada volume.</block>
   <block id="96b3aa8095ad0bcd3eaec96c37810623" category="paragraph">Por padrão, os volumes de proteção de dados (DP) não são verificados porque não são expostos externamente e a classificação BlueXP  não pode acessá-los. Estes são os volumes de destino para operações do SnapMirror a partir de um sistema de arquivos FSX for ONTAP.</block>
   <block id="fc8033e05bdb5950218106d24c9f7b6c" category="list-text">Os volumes criados inicialmente como volumes NFS no sistema de arquivos FSX for ONTAP de origem estão ativados.</block>
@@ -2867,12 +2688,6 @@
   <block id="c235e8dcaa6dc2ac0f78ac4ac2cdc749" category="paragraph">A classificação BlueXP  começa a digitalizar os novos buckets S3 ativados.</block>
   <block id="bd55f8107f06cc057a2ee0b7487375bc" category="summary">Conclua algumas etapas para iniciar a digitalização de arquivos em suas contas on-premise do SharePoint Online e SharePoint com a classificação BlueXP .</block>
   <block id="6d6f3f8c3e87f4e41fd51dc3695310ba" category="doc">Analisar contas do SharePoint</block>
-  <block id="5f416f277e6c7af36efa90cbe31fdc89" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Revise os pré-requisitos do SharePoint</block>
-  <block id="13e71bc7a750dcb909f7b6e859dba7aa" category="paragraph">Certifique-se de que tem credenciais qualificadas para iniciar sessão na conta do SharePoint e de que tem as URLs dos sites do SharePoint que pretende analisar.</block>
-  <block id="9fe6e2fee7993c52383e8b7d6305217d" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Faça login na conta do SharePoint</block>
-  <block id="6d3bb929d06fa3023ab7239f4567ed1a" category="paragraph">Usando credenciais de usuário qualificadas, faça login na conta do SharePoint que você deseja acessar para que ela seja adicionada como uma nova fonte de dados/ambiente de trabalho.</block>
-  <block id="3c584664ee2c98abe2634d62c3ff9951" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Adicione os URLs do site do SharePoint à verificação</block>
-  <block id="6af032d0de89339877509ae11ea19c63" category="paragraph">Adicione a lista de URLs de sites do SharePoint que você deseja analisar na conta do SharePoint e selecione o tipo de digitalização. Você pode adicionar até 100 URLs ao mesmo tempo - e até 1.000 sites no total para cada conta.</block>
   <block id="16976b9bcf6240cdf0301678ba12a525" category="section-title">Revise os requisitos do SharePoint</block>
   <block id="30a7d0aa212920161c46f31812859285" category="paragraph">Reveja os seguintes pré-requisitos para se certificar de que está pronto para ativar a classificação do BlueXP  numa conta do SharePoint.</block>
   <block id="7a8c400460fcd57ab61e646f8f7222ff" category="list-text">Você deve ter as credenciais de login do usuário Admin para a conta do SharePoint que fornece acesso de leitura a todos os sites do SharePoint.</block>
@@ -2929,19 +2744,12 @@
   <block id="afa7a7418ec887770e17d3e7f22e7124" category="paragraph">Observe que você pode <block ref="8a8cc9ad51b15be1143c5a5de2ed3576" category="inline-link-macro-rx"></block> se você não quiser mais verificar os dados de usuário da conta do SharePoint.</block>
   <block id="c44712318b0c4e33e9d361583871c49c" category="summary">Conclua algumas etapas para iniciar a digitalização de dados dentro do StorageGRID diretamente com a classificação BlueXP .</block>
   <block id="98e210281b17a386ae53922f3fb716a8" category="doc">Analisar dados StorageGRID com classificação BlueXP </block>
-  <block id="59b7feee7c455334bdb5e4ec5e6894ed" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Reveja os pré-requisitos do StorageGRID</block>
-  <block id="38717cae919e1e294cc3518a554d11f1" category="paragraph">Você precisa ter o URL do endpoint para se conetar ao serviço StorageGRID.</block>
   <block id="62756ad365a0397e368bc1fff7694d09" category="paragraph">Você precisa ter a chave de acesso e a chave secreta do StorageGRID para que a classificação BlueXP  possa acessar os buckets.</block>
-  <block id="1e296ed773c248e6872c66d3f89ebe11" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Adicione o Serviço StorageGRID</block>
-  <block id="a1a191ce069b9cd9855c29e830e5edb1" category="paragraph">Adicione o serviço StorageGRID à classificação BlueXP .</block>
   <block id="dc3fd4fe9b1bb66db60a59be3884a90c" category="section-title">Rever os requisitos do StorageGRID</block>
   <block id="75fb1719288a18e42bbcf12474e638ab" category="paragraph">Se estiver a digitalizar dados a partir do StorageGRID que está acessível através da Internet, pode <block ref="8faa540c15177bc62b151869f0948a64" category="inline-link-macro-rx"></block> ou <block ref="15df3adeb2abcc06430d6dc64cee819e" category="inline-link-macro-rx"></block>.</block>
   <block id="b7f5835679149c7ad528a93130c54fd2" category="paragraph">Se você estiver digitalizando dados do StorageGRID que foram instalados em um site escuro que não tem acesso à Internet, será necessário <block ref="3beeea1c5d12940092999048e1c30313" category="inline-link-macro-rx"></block>. Isso também requer que o BlueXP  Connector seja implantado no mesmo local.</block>
   <block id="8da203a5374e4d2ee4312dc1aafd619c" category="section-title">Adicione o serviço StorageGRID à classificação BlueXP </block>
   <block id="51fd71ec3cd52fe8a3a0c2ca75ecb69e" category="paragraph">Adicione o serviço StorageGRID.</block>
-  <block id="771f36ecee826264fd1ac1390344dbca" category="list-text">Na página Configuração de ambientes de trabalho, clique em *Adicionar fonte de dados* &gt; *Adicionar StorageGRID*.</block>
-  <block id="a7796c18f1e58491acf905cde2f55b58" category="inline-image-macro">Uma captura de tela da página Configuração de digitalização, onde você pode clicar no botão Adicionar StorageGRID.</block>
-  <block id="6c352ef7f53a039992102d86911d18fa" category="paragraph"><block ref="6c352ef7f53a039992102d86911d18fa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="31d1c614924f93f76d5d59b499ae01ba" category="list-text">Na caixa de diálogo Adicionar serviço StorageGRID, insira os detalhes do serviço StorageGRID e clique em *continuar*.</block>
   <block id="f153721d9ef26ee125af0b2bd9b6a3e4" category="list-text">Introduza o nome que pretende utilizar para o ambiente de trabalho. Esse nome deve refletir o nome do serviço StorageGRID ao qual você está se conetando.</block>
   <block id="9352a83c797b7c34cb58ee6504218644" category="list-text">Insira a chave de acesso e a chave secreta para que a classificação BlueXP  possa acessar os buckets no StorageGRID.</block>
@@ -2950,8 +2758,6 @@
   <block id="33d7a3218c026536f68e6f9eb287287c" category="paragraph">O StorageGRID é adicionado à lista de ambientes de trabalho.</block>
   <block id="149bb086304a69799f52fb84d5e33370" category="section-title">Ative e desative verificações de conformidade em buckets do StorageGRID</block>
   <block id="81959d6a19d62d0f6e5ccbbd1a01c2f0" category="paragraph">Depois de ativar a classificação BlueXP  no StorageGRID, a próxima etapa é configurar os intervalos que você deseja digitalizar. A classificação BlueXP  descobre esses buckets e os exibe no ambiente de trabalho que você criou.</block>
-  <block id="ffc704586971ad083fdf8dd3a75b06c9" category="list-text">Na página Configuração, clique em *Configuração* no ambiente de trabalho do StorageGRID.</block>
-  <block id="83a1ac14de85f87d0324d9f2a2d89105" category="paragraph"><block ref="83a1ac14de85f87d0324d9f2a2d89105" category="inline-image-macro-rx" type="image"></block></block>
   <block id="48e1eb4f3a8c9056e5dc0d4943a84ada" category="inline-image-macro">Uma captura de tela da seleção dos buckets do StorageGRID que você deseja Escanear.</block>
   <block id="d63ea5297bdc582794b89a4fc7b492d8" category="paragraph"><block ref="d63ea5297bdc582794b89a4fc7b492d8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="243263104c829e77835d632f591230d5" category="summary">Antes de poder abrir um caso de suporte com o suporte técnico da NetApp, você precisa adicionar uma conta do site de suporte da NetApp à BlueXP  e, em seguida, Registrar-se para suporte.</block>
@@ -3225,7 +3031,6 @@
   <block id="240625d3ff2ba7b1a3949f7ddfb468d3" category="section-title">Dados adicionais em painéis</block>
   <block id="43ac3190fe70b3bdb1f5d5b7083f374a" category="paragraph">Esta versão atualiza os dados que aparecem nos painéis de governança, conformidade e investigação durante verificações de mapeamento.</block>
   <block id="9b28a6e87457a6a3bfb03009dcd0b84a" category="inline-link">Qual é a diferença entre mapeamento e classificação de exames</block>
-  <block id="c7fb92ca31125e81e2a4f2982bc6a806" category="paragraph">Para obter detalhes, consulte<block ref="4062fc8e6e6df1b01a1de644d8a7eeca" category="inline-link-rx"></block></block>
   <block id="7910c8307cac3d62eca8ac0d42301b38" category="section-title">Nova coluna de estado do mapeamento na página Configuração</block>
   <block id="cfbaa8108dcd3c438f032a03ea5c380b" category="paragraph">Esta versão agora mostra uma nova coluna de status do Mapeamento na página Configuração. A nova coluna ajuda a identificar se o mapeamento está em execução, na fila, em pausa ou mais.</block>
   <block id="6195c7a1534de8abb0c4706e15d24a3c" category="inline-link">Alterar as definições de digitalização</block>
@@ -3408,7 +3213,6 @@
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conhecimento e apoio</block>
   <block id="33131c83033941e511576a90476300a6" category="paragraph">A classificação do BlueXP  é compatível com as versões NFS 3.x, 4,0 e 4,1, e as versões CIFS 1.x, 2,0, 2,1 e 3,0.</block>
   <block id="5f9318195cc151f5faab62105798a8f9" category="list-text">Ative cada volume DP que pretende digitalizar.</block>
-  <block id="2940154367c6f9a7ec39da3423e3eb0a" category="paragraph">Consulte Ativar e desativar verificações de conformidade em volumes para obter detalhes.</block>
   <block id="713b2126f7ad5917ea8d35b725b0aacf" category="doc">O que há de novo na classificação BlueXP </block>
   <block id="8339f3b73dd5a0afa74d7cfbebd1b2c2" category="section-title">4 de novembro de 2024</block>
   <block id="c1922490c576eff789b323f98c667589" category="section-title">Versão 1,37</block>
@@ -3451,7 +3255,6 @@
   <block id="6a7140fd5370f297d9a834d30e26ffde" category="section-title">6 de junho de 2023</block>
   <block id="5a78709b3e68f78b25a72a31cfcaa8f0" category="section-title">Versão 1,23</block>
   <block id="1ab65443ec0af7e5e1aee32a3cf59dcc" category="inline-link">Veja como obter e carregar sua licença BYOL do Data Sense</block>
-  <block id="645f5675426bc396b45b524635e93bc7" category="paragraph">Agora você pode carregar sua licença BYOL do Data Sense para a carteira digital BlueXP  em um site escuro para que você seja notificado quando sua licença estiver ficando baixa.<block ref="bd823f9b4dce457c0ea2a8dcca6e749f" category="inline-link-rx"></block>.</block>
   <block id="102787ed6297b34a7504b527e91d01d3" category="section-title">3 de abril de 2023</block>
   <block id="288d139ea0d21561e65bec74c2f7c646" category="section-title">Versão 1,22</block>
   <block id="4b10c384bd11c38afbbe24f979f5519d" category="section-title">7 de março de 2023</block>
@@ -3503,4 +3306,92 @@
   <block id="ee8870d1e0595ddae329cf8ef1ee89fa" category="paragraph">Você pode filtrar o conteúdo da página de investigação para exibir apenas os resultados que deseja ver.</block>
   <block id="260af28d48ba051bd7cdd887380f9ece" category="paragraph">Antes de instalar a classificação BlueXP  manualmente em um host Linux, opcionalmente execute um script no host para verificar se todos os pré-requisitos estão em vigor para instalar a classificação BlueXP . Você pode executar esse script em um host Linux em sua rede ou em um host Linux na nuvem. O host pode ser conetado à internet, ou o host pode residir em um site que não tem acesso à internet (um _site escuro_).</block>
   <block id="b64eea97fe56778b0e28c568854873ed" category="paragraph">Desinstale o software de classificação BlueXP  para solucionar problemas ou remover permanentemente o software do host. A exclusão da instância também exclui os discos associados onde residem os dados indexados - todas as informações que a classificação BlueXP  digitalizada serão excluídas permanentemente.</block>
+  <block id="378c20222de970dbe3321fec8e32e947" category="list-text">Red Hat Enterprise Linux versão 8,8, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5</block>
+  <block id="6b9d9a04ff593ff427731819f0c3618f" category="doc">Versão 1,40</block>
+  <block id="dc4b47101650865122105745fe8d0a2c" category="paragraph-title">Suporte para RHEL 9,5</block>
+  <block id="1d26b47b0bf4a8a52ca8e66bcb8661dc" category="paragraph">Esta versão fornece suporte para Red Hat Enterprise Linux v9,5, além de versões anteriormente suportadas. Isso é aplicável a qualquer instalação manual no local da classificação do BlueXP , incluindo implantações em locais escuros.</block>
+  <block id="3461c6d70dff5780cf443e0892f0b5af" category="paragraph">Os sistemas operacionais a seguir requerem o uso do motor de contentor Podman, e eles exigem a classificação BlueXP  versão 1,30 ou superior: Red Hat Enterprise Linux versão 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5.</block>
+  <block id="ce7ca903497eb6081e95129584ddf094" category="paragraph-title">Priorizar exames</block>
+  <block id="82716fc746867fe082dcc9cbf84eae8a" category="paragraph">Ao digitalizar a configuração, você pode priorizar as digitalizações mais importantes para que elas sejam feitas antes de outras digitalizações. Este recurso ajuda quando você tem muitos ambientes de trabalho e você deseja garantir que as verificações de alta prioridade estão sendo feitas com sucesso no início.</block>
+  <block id="eeea9543c2f8c1038eccd6eeec85921c" category="paragraph">Existem dois tipos de digitalizações:</block>
+  <block id="ab5b6069c85f999f926e29058a40aec2" category="list-text">*As digitalizações somente de mapeamento* fornecem apenas uma visão geral de alto nível de seus dados. O mapeamento pode ser feito em suas fontes de dados muito rapidamente, porque não acessa arquivos para ver os dados dentro.</block>
+  <block id="e5e1cbf6654ebd60cb667a224f96576b" category="list-text">*Map e Classify* digitalizações fornecem varredura de nível profundo de seus dados.</block>
+  <block id="c124c4f02a2ca2f9d44b7fba00db37c1" category="paragraph">Você pode se beneficiar do uso de varreduras somente de mapeamento para verificar rapidamente seus dados para identificar as fontes de dados que exigem mais pesquisas e, em seguida, ativar o mapa e classificar varreduras somente nas fontes de dados ou volumes necessários.</block>
+  <block id="50c745bad209edbd34224bb42d16a2f2" category="paragraph">A prioridade é atribuída apenas a digitalizações só de mapeamento, e não a mapear e classificar digitalizações.</block>
+  <block id="e6d9a832ce4714fadf7ccc119cafd52e" category="paragraph">A prioridade é definida como 1 por padrão, e você pode alterá-la para qualquer número entre 1 e 10. Quanto menor o número, maior a prioridade. Se você não definir uma prioridade, a digitalização recebe uma prioridade de 5.</block>
+  <block id="6dc81f0ce39e2f29f7002163498374d6" category="paragraph">Para alterar a prioridade, faça o seguinte:</block>
+  <block id="09d7e52dfc68f84cd7ef45e3c26a0389" category="list-text">No menu classificação BlueXP , selecione *Configuração*.</block>
+  <block id="9ad22d134d0b57050c5d4d4a8e861bf9" category="list-text">Selecione os recursos que deseja priorizar.</block>
+  <block id="dde93fd6ebd9f31996e0ca6a50869101" category="list-text">Na opção ações ..., selecione *priorizar a digitalização*.</block>
+  <block id="23f3ca8acf289a9744eaee823b84a174" category="paragraph-title">Tente novamente as digitalizações</block>
+  <block id="27bb502975756d8e8d38bf7fd6d53965" category="paragraph">Com esta versão, você pode tentar novamente digitalizações que falharam. Este recurso é útil quando você tem uma varredura que falhou devido a um problema temporário, como uma interrupção da rede. Pode tentar novamente a digitalização sem ter de a reconfigurar.</block>
+  <block id="8e7dae065f11c6b2679636ea5e03849d" category="paragraph">Para tentar novamente uma digitalização, faça o seguinte:</block>
+  <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">Execute um dos seguintes procedimentos:</block>
+  <block id="8e66898002589c26f968e6fd94a57988" category="list-text">Para tentar novamente todas as digitalizações com falha, selecione *Repetir todas as digitalizações*.</block>
+  <block id="a2cf857a70e312df7b376e0516470728" category="list-text">Para tentar novamente uma digitalização específica, selecione o recurso e selecione *Repetir digitalização* na opção ações ....</block>
+  <block id="e59c558837a0bee73ac15f544f275cae" category="paragraph">A digitalização é novamente testada com a mesma configuração que a digitalização original. Se a digitalização falhar novamente, pode tentar novamente quantas vezes for necessário.</block>
+  <block id="c05a4c0b45b0c78ba3771a3530738f78" category="paragraph">Ao realizar exames somente de mapeamento, você pode priorizar os exames mais importantes. Este recurso ajuda quando você tem muitos ambientes de trabalho e quer garantir que as verificações de alta prioridade sejam concluídas primeiro.</block>
+  <block id="03b61f1818fbb0c7e0a356c942abdc31" category="paragraph">Por padrão, as digitalizações são enfileiradas com base na ordem em que são iniciadas. Com a capacidade de priorizar digitalizações, agora você pode mover digitalizações para a frente da fila. Várias digitalizações podem ser priorizadas. A prioridade é designada em uma ordem de primeira entrada e primeira saída, o que significa que a primeira digitalização que você prioriza se move para a frente da fila; a segunda digitalização que você prioriza se torna segunda na fila, e assim por diante.</block>
+  <block id="e04ee48d980fd3722fe28400afcc0416" category="paragraph">A prioridade é concedida de uma só vez. As redigitalizações automáticas de dados de mapeamento ocorrem na ordem padrão.</block>
+  <block id="c92ddb2e7e35e5bd406e62b822c22b14" category="inline-link-macro">digitalizações apenas de mapeamento</block>
+  <block id="92fbf5243922258219f1e304b1549560" category="paragraph">A priorização é limitada a <block ref="4fb1432e3e9b17c8a7a21683abcd7d6c" category="inline-link-macro-rx"></block>; ela não está disponível para mapear e classificar digitalizações.</block>
+  <block id="42968807986d9cd74ea7703d63bf3408" category="paragraph">Para alterar a prioridade:</block>
+  <block id="c3f4889bec03e0a3ba10184db92b3b07" category="paragraph-title">Tente novamente todas as digitalizações</block>
+  <block id="06243660aeb549bac73e7c160d2d2a70" category="paragraph">A classificação BlueXP  agora suporta a capacidade de tentar em lote novamente todas as digitalizações com falha.</block>
+  <block id="18dfe95c4c66dde6d275ff14f1c99ea9" category="paragraph">Agora você pode tentar novamente digitalizações em uma operação em lote com a função **Repetir tudo**. Se as verificações de classificação estiverem falhando devido a um problema temporário, como uma interrupção da rede, você pode tentar novamente todas as verificações ao mesmo tempo com um botão em vez de tentar novamente individualmente. As digitalizações podem ser tentadas quantas vezes forem necessárias.</block>
+  <block id="c50aaae687f0c98cc88e1445aecee2d4" category="paragraph">Para tentar novamente todas as digitalizações:</block>
+  <block id="b12f5b59c684a779545a1b1213dd66bc" category="paragraph">Pode realizar dois tipos de exames na classificação BlueXP :</block>
+  <block id="9d3df32a3f2de154b8990ebd35c31613" category="list-text">**As digitalizações somente para mapeamento** fornecem apenas uma visão geral de alto nível de seus dados e são realizadas em fontes de dados selecionadas. As digitalizações somente de mapeamento demoram menos tempo do que mapear e classificar digitalizações porque o não acessa arquivos para ver os dados dentro.</block>
+  <block id="1066c61e667e291ec5e73b4dacd940cc" category="list-text">**As digitalizações de mapa e classificação** fornecem uma varredura de nível profundo de seus dados.</block>
+  <block id="521c4c041b2018425d0b51d58630dbd6" category="paragraph">As digitalizações apenas de mapeamento permitem-lhe digitalizar rapidamente os seus dados e identificar fontes de dados que possam necessitar de mais investigação, nas quais pode, em seguida, executar uma leitura de mapa e classificação.</block>
+  <block id="942a04054c6b1ae7f7628fd51272bc4f" category="cell">Mapear e classificar digitalizações</block>
+  <block id="4ece5b80f66f48ae87ab10eeb6098ee4" category="cell">Digitalizações apenas de mapeamento</block>
+  <block id="199f10f735e14c906492368f8756c40f" category="list-text">Ao executar exames somente de mapeamento, a classificação BlueXP  pode digitalizar entre 100-150 Tibs de dados por dia.</block>
+  <block id="2035b28633c5d248f8b4834a49bb61e4" category="list-text">Ao executar exames de mapa e classificação, a classificação BlueXP  pode digitalizar entre 15-40 MB de dados por dia.</block>
+  <block id="f7bdd4178a7e1813735f80fdd04c8365" category="list-text">*Duplicate Files* - arquivos que são duplicados em outros locais nas fontes de dados que você está digitalizando. <block ref="4919d6fe6d27551fddf3eb8948477168" category="inline-link-macro-rx"></block>.</block>
+  <block id="b74906233eebd14b41614d235251d36a" category="list-text">No menu de navegação esquerdo do BlueXP , selecione *Governança &gt; classificação*.</block>
+  <block id="f3bf83f2c7aadc341ac1678567775abc" category="list-text">Para mapear todos os volumes, selecione *Mapear todos os volumes*.</block>
+  <block id="c854572c2f5a5368403f0ee57aa1bb29" category="list-text">Para mapear e classificar todos os volumes, selecione *Map &amp; Classify all volumes*.</block>
+  <block id="9071a661cd1f2da138650405c0f6579b" category="list-text">Para personalizar a digitalização para cada volume, selecione *ou selecione o tipo de digitalização para cada volume* e, em seguida, escolha os volumes que pretende mapear e/ou classificar.</block>
+  <block id="ddcb8a6902a96c1a35295d1f7fd7e95e" category="list-text">Para cada ambiente de trabalho, selecione *Editar credenciais CIFS* e insira o nome de usuário e a senha que a classificação BlueXP  precisa para acessar volumes CIFS no sistema.</block>
+  <block id="61777805153edfb68af7738669a8fa28" category="list-text">Na página Configuração, selecione *Exibir detalhes* para revisar o status de cada volume CIFS e NFS e corrigir quaisquer erros.</block>
+  <block id="c3341bb4de7c50914afc4d1735bc5a60" category="list-text">Para ativar as digitalizações apenas de mapeamento num volume, na área de volume, selecione *Map*. Ou, para ativar em todos os volumes, na área de cabeçalho, selecione *mapa*. Para ativar a digitalização completa num volume, na área de volume, selecione *Map &amp; Classify*. Ou, para ativar em todos os volumes, na área de cabeçalho, selecione *Map &amp; Classify*.</block>
+  <block id="c2855e2ec2a3b644fcf3de0a8f9d45c5" category="list-text">Para desativar a digitalização em um volume, na área de volume, selecione *Off*. Para desativar a digitalização em todos os volumes, na área de cabeçalho, selecione *Off*.</block>
+  <block id="68dcec37c7e93a47d1ae41152c0801ce" category="admonition">Os novos volumes adicionados ao ambiente de trabalho são automaticamente digitalizados apenas quando você definir a configuração *Map* ou *Map &amp; Classify* na área de cabeçalho. Quando a opção estiver definida como *Personalizado* ou *Desligado* na área de cabeçalho, você precisará ativar o mapeamento e/ou a digitalização completa em cada novo volume adicionado no ambiente de trabalho.</block>
+  <block id="dfa8ad96ab6729352fe85576aaf7b1b5" category="list-text">Reveja a mensagem de confirmação e selecione *Ativar o acesso aos volumes DP* novamente.</block>
+  <block id="c836dbd0445ab0238fdc8bf8e9e5d884" category="paragraph">Se você não tiver volumes de proteção de dados CIFS quando você ativou inicialmente o acesso a volumes DP e depois adicionar alguns, o botão *Ativar acesso ao CIFS DP* será exibido na parte superior da página Configuração. Clique neste botão e adicione credenciais CIFS para permitir o acesso a esses volumes CIFS DP.</block>
+  <block id="adcb3e6ce7bf6f310cc7c150d73e39d4" category="admonition">As credenciais do active Directory são registradas apenas na VM de storage do primeiro volume CIFS DP, de modo que todos os volumes de DP nesse SVM serão verificados. Quaisquer volumes que residam em outros SVMs não terão as credenciais do ative Directory registradas, portanto, esses volumes DP não serão verificados.</block>
+  <block id="6edf97cc23559e08bb64258c2b9a21df" category="list-text">Na caixa de diálogo de confirmação, selecione *Approve* para que a classificação BlueXP  comece a digitalizar seus volumes.</block>
+  <block id="d1d296f2b9e5b8b2cc3d8284c315711a" category="list-text">Para ativar as digitalizações apenas de mapeamento num volume, na área de volume, selecione *Map*. Para ativar em todos os volumes, na área de cabeçalho, selecione *mapa*.</block>
+  <block id="2510c0a0455bb61d4cb97e4ad009c1bd" category="list-text">Para ativar a digitalização completa num volume, na área de volume, selecione *Map &amp; Classify*. Para ativar em todos os volumes, na área de cabeçalho, selecione *Map &amp; Classify*.</block>
+  <block id="92f397877839fc7c4e3e7587d5fb9803" category="list-text">Na página Configuração, selecione *Adicionar ambiente de trabalho* &gt; *Adicionar servidor de banco de dados*.</block>
+  <block id="64f99cdcf52c853ffbb49b495c84036b" category="list-text">Na página Configuração, selecione o botão *Configuração* para o banco de dados que deseja configurar.</block>
+  <block id="b068bd6072b65d7af1c49c844084245e" category="paragraph">A classificação do BlueXP  verifica seus bancos de dados uma vez por dia; os bancos de dados não são verificados continuamente como outras fontes de dados.</block>
+  <block id="063de98df490e1963f70c3177e6360fb" category="list-text">Na página Configuração, selecione *Adicionar ambiente de trabalho* &gt; *Adicionar grupo de compartilhamentos de arquivo*.</block>
+  <block id="e88a3447811c9aed002c31e544c9189c" category="list-text">Na caixa de diálogo Grupo Adicionar compartilhamentos de arquivos, digite o nome do grupo de compartilhamentos e selecione *continuar*.</block>
+  <block id="3cbbc2871603074b8a3d479fe12b1dc4" category="list-text">No mosaico ambientes de trabalho na página Configuração, selecione o botão *Configuração* para o Grupo compartilhamentos de arquivos.</block>
+  <block id="b24f1e5ca1e698decbe4352557abec98" category="list-text">Se esta for a primeira vez que adicionar compartilhamentos de arquivo para este Grupo de compartilhamentos de arquivo, selecione *Adicionar seus primeiros compartilhamentos*.</block>
+  <block id="5ae48a7275e9dd8700efd2d3ab4c5e7c" category="paragraph">Se você estiver adicionando compartilhamentos de arquivo a um grupo existente, selecione *Adicionar compartilhamentos*.</block>
+  <block id="1530f296e4dbcb68d3bd72414e0bc29f" category="list-text">Selecione o protocolo para os compartilhamentos de arquivo que você está adicionando, adicione os compartilhamentos de arquivo que você deseja digitalizar (um compartilhamento de arquivo por linha) e selecione *continuar*.</block>
+  <block id="c1caffc666c49e212352548248fb6e42" category="list-text">Execute um dos seguintes procedimentos para ativar ou desativar exames:</block>
+  <block id="c33a545f4674eb3c362c25d231db29f7" category="list-text">Para ativar digitalizações apenas de mapeamento em compartilhamentos de arquivos, selecione *Map*.</block>
+  <block id="e80b5dfbb6519cb4346daba78481ae2e" category="list-text">Para ativar análises completas em compartilhamentos de arquivo, selecione *Map &amp; Classify*.</block>
+  <block id="6bfd17d888fc4197713ca925797fb9c5" category="list-text">Para desativar a digitalização em compartilhamentos de arquivo, selecione *Off*.</block>
+  <block id="05383cbb22b67f6ba641527f070ae7e9" category="paragraph">Se você não precisar mais digitalizar certos compartilhamentos de arquivo, você pode remover compartilhamentos de arquivo individuais de ter seus arquivos digitalizados a qualquer momento.</block>
+  <block id="aad9882d7ab92fc074e89f265f252c19" category="list-text">Na página Configuração, selecione *Remover compartilhamento*.</block>
+  <block id="26df3c05a484f6dafaf2085e9f725f92" category="list-text">Na página Configuração, selecione *Exibir detalhes* para revisar o status e corrigir quaisquer erros.</block>
+  <block id="4d9ba07ef41ab1650dd0b2fb24f34e06" category="list-text">Na página Configuração, localize o ambiente de trabalho com os volumes que deseja digitalizar.</block>
+  <block id="82fdcf8611938284b66932937e4f812f" category="list-text">Selecione *Ativar acesso a volumes DP* na parte superior da página.</block>
+  <block id="82d339604c21f53ea7581b006f5d839c" category="paragraph">Se você não tiver volumes de proteção de dados CIFS quando você ativou inicialmente o acesso a volumes DP e depois adicionar alguns, o botão *Ativar acesso ao CIFS DP* será exibido na parte superior da página Configuração. Selecione este botão e adicione credenciais CIFS para permitir o acesso a esses volumes CIFS DP.</block>
+  <block id="b54631daf68d4f40b608528eac113c54" category="list-text">No menu classificação BlueXP , selecione a opção *Configuração*.</block>
+  <block id="1cb9b85f9cbfa22745193d5d7b0cb90c" category="list-text">Na página Configuração, selecione *Adicionar ambiente de trabalho* &gt; *Adicionar StorageGRID*.</block>
+  <block id="704d44ad7247865a77f2dbbbf81e6e58" category="list-text">Na página Configuração, localize o ambiente de trabalho do StorageGRID.</block>
+  <block id="5378a3bbfc65f4ccd535c2b88344cca5" category="list-text">No bloco ambiente de trabalho do StorageGRID, selecione *Configuração*.</block>
+  <block id="caec025f78d821f7d62a91fa9f5076d6" category="list-text">Execute um dos seguintes passos para ativar ou desativar a digitalização:</block>
+  <block id="cad17ad9f8ba6bb8222f2cda47d69fec" category="list-text">Para ativar as digitalizações apenas de mapeamento num intervalo, selecione *Map*.</block>
+  <block id="de112667eda744a4b358697bb7edc818" category="list-text">Para ativar as digitalizações completas num intervalo, selecione *Map &amp; Classify*.</block>
+  <block id="da912e25717291a31093b36e55bb8641" category="list-text">Para desativar a digitalização em um balde, selecione *Off*.</block>
+  <block id="79043fd5ff3b61216207b60882cd72cd" category="section-title">19 de fevereiro de 2025</block>
+  <block id="5904eed2db8ef4855e1fd04bcf8b7d97" category="paragraph">Para obter detalhes, consulte <block ref="45d8326cb72a8fa1d7ca8c887062a7ee" category="inline-link-macro-rx"></block></block>
+  <block id="279961977f7de811c4eeee90a2454c87" category="paragraph">Agora você pode carregar sua licença BYOL do Data Sense para a carteira digital BlueXP  em um site escuro para que você seja notificado quando sua licença estiver ficando baixa.<block ref="3e32e5c3cf84ce7c25efff198a230761" category="inline-link-rx"></block>.</block>
 </blocks>

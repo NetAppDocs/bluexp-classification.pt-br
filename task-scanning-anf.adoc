@@ -18,47 +18,6 @@ Complete alguns passos para começar a usar a classificação BlueXP  para Azur
 
 
 
-== Início rápido
-
-Comece rapidamente seguindo estas etapas ou role para baixo até as seções restantes para obter detalhes completos.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Descubra os sistemas Azure NetApp Files que pretende digitalizar
-[role="quick-margin-para"]
-Antes de poder digitalizar volumes Azure NetApp Files, https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["O BlueXP  deve ser configurado para descobrir a configuração"^].
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Implante a instância de classificação do BlueXP 
-[role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html["Implantar a classificação BlueXP  no BlueXP "^] se ainda não houver uma instância implantada.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Ative a classificação BlueXP  e selecione os volumes a digitalizar
-[role="quick-margin-para"]
-Clique em *Compliance*, selecione a guia *Configuration* e ative as verificações de conformidade para volumes em ambientes de trabalho específicos.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"] Garanta o acesso aos volumes
-[role="quick-margin-para"]
-Agora que a classificação BlueXP  está ativada, certifique-se de que ela pode acessar todos os volumes.
-
-[role="quick-margin-list"]
-* A instância de classificação BlueXP  precisa de uma conexão de rede para cada sub-rede Azure NetApp Files.
-* Certifique-se de que essas portas estejam abertas para a instância de classificação BlueXP :
-+
-** Para NFS – portas 111 e 2049.
-** Para CIFS – portas 139 e 445.
-
-
-* As políticas de exportação de volume NFS devem permitir o acesso a partir da instância de classificação BlueXP .
-* A classificação do BlueXP  precisa de credenciais do ative Directory para analisar volumes CIFS.
-+
-Clique em *Compliance* > *Configuration* > *Edit CIFS Credentials* e forneça as credenciais.
-
-
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"] Gerencie os volumes que deseja digitalizar
-[role="quick-margin-para"]
-Selecione ou anule a seleção dos volumes que pretende digitalizar e a classificação BlueXP  iniciará ou deixará de os digitalizar.
-
-
-
 == Descubra o sistema Azure NetApp Files que pretende digitalizar
 
 Se o sistema Azure NetApp Files que você deseja digitalizar ainda não estiver no BlueXP  como um ambiente de trabalho, você pode adicioná-lo à tela neste momento.
@@ -75,29 +34,28 @@ A classificação do BlueXP  deve ser implantada na nuvem ao digitalizar volume
 
 *Observação:* a implantação da classificação do BlueXP  em um local local local não é suportada atualmente ao digitalizar volumes do Azure NetApp Files.
 
-As atualizações para o software de classificação BlueXP  são automatizadas, desde que a instância tenha conetividade com a Internet.
-
 
 
 == Ative a classificação BlueXP  nos seus ambientes de trabalho
 
 Você pode ativar a classificação BlueXP  no Azure NetApp Files volumes.
 
-. No menu de navegação esquerdo do BlueXP , clique em *Governança > classificação* e selecione a guia *Configuração*.
+. No menu de navegação esquerdo do BlueXP , clique em *Governança > classificação*.
+. No menu classificação BlueXP , selecione *Configuração*.
 +
 image:screenshot_cloud_compliance_anf_scan_config.png["Uma captura de tela da guia Configuração imediatamente após implantar a instância de classificação do BlueXP ."]
 
 . Selecione como pretende digitalizar os volumes em cada ambiente de trabalho. link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans["Saiba mais sobre o mapeamento e a classificação de exames"]:
 +
-** Para mapear todos os volumes, clique em *Mapear todos os volumes*.
-** Para mapear e classificar todos os volumes, clique em *Map & Classify All volumes*.
-** Para personalizar a digitalização para cada volume, clique em *ou selecione o tipo de digitalização para cada volume* e, em seguida, escolha os volumes que pretende mapear e/ou classificar.
+** Para mapear todos os volumes, selecione *Mapear todos os volumes*.
+** Para mapear e classificar todos os volumes, selecione *Map & Classify all volumes*.
+** Para personalizar a digitalização para cada volume, selecione *ou selecione o tipo de digitalização para cada volume* e, em seguida, escolha os volumes que pretende mapear e/ou classificar.
 +
 <<Ative e desative verificações de conformidade em volumes,Ative e desative verificações de conformidade em volumes>>Consulte para obter detalhes.
 
 
 
-. Na caixa de diálogo de confirmação, clique em *Approve* para que a classificação BlueXP  comece a digitalizar seus volumes.
+. Na caixa de diálogo de confirmação, selecione *Approve* para que a classificação BlueXP  comece a digitalizar seus volumes.
 
 
 .Resultado
@@ -116,12 +74,11 @@ A classificação BlueXP  inicia a digitalização dos volumes selecionados no 
 
 Certifique-se de que a classificação do BlueXP  possa acessar volumes verificando suas políticas de rede, grupos de segurança e exportação. Você precisará fornecer a classificação BlueXP  com credenciais CIFS para que possa acessar volumes CIFS.
 
-.Passos
-. Verifique se há uma conexão de rede entre a instância de classificação BlueXP  e cada rede que inclua volumes para Azure NetApp Files.
-+
 
 NOTE: Para o Azure NetApp Files, a classificação BlueXP  só pode digitalizar volumes que estejam na mesma região que o BlueXP .
 
+.Passos
+. Verifique se há uma conexão de rede entre a instância de classificação BlueXP  e cada rede que inclua volumes para Azure NetApp Files.
 . Certifique-se de que as seguintes portas estejam abertas para a instância de classificação BlueXP :
 +
 ** Para NFS – portas 111 e 2049.
@@ -131,11 +88,15 @@ NOTE: Para o Azure NetApp Files, a classificação BlueXP  só pode digitalizar
 . Certifique-se de que as políticas de exportação de volume NFS incluam o endereço IP da instância de classificação BlueXP  para que ela possa acessar os dados em cada volume.
 . Se você usar o CIFS, forneça a classificação do BlueXP  com credenciais do ative Directory para que ele possa analisar volumes CIFS.
 +
-.. No menu de navegação esquerdo do BlueXP , clique em *Governança > classificação* e selecione a guia *Configuração*.
+.. No menu de navegação esquerdo do BlueXP , selecione *Governança > classificação*.
+
+
+. No menu classificação BlueXP , selecione *Configuração*.
 +
 image:screenshot_cifs_credentials.gif["Uma captura de tela da guia conformidade que mostra o botão Status da digitalização que está disponível no canto superior direito do painel de conteúdo."]
 
-.. Para cada ambiente de trabalho, clique em *Editar credenciais CIFS* e introduza o nome de utilizador e a palavra-passe de que a classificação BlueXP  necessita para aceder aos volumes CIFS no sistema.
++
+.. Para cada ambiente de trabalho, selecione *Editar credenciais CIFS* e insira o nome de usuário e a senha que a classificação BlueXP  precisa para acessar volumes CIFS no sistema.
 +
 As credenciais podem ser somente leitura, mas fornecer credenciais de administrador garante que a classificação do BlueXP  possa ler qualquer dado que exija permissões elevadas. As credenciais são armazenadas na instância de classificação do BlueXP .
 
@@ -150,7 +111,7 @@ image:screenshot_cifs_status.gif["Uma captura de tela que mostra a página Confi
 
 
 
-. Na página _Configuration_, clique em *View Details* (Ver detalhes) para rever o status de cada volume CIFS e NFS e corrigir quaisquer erros.
+. Na página Configuração, selecione *Exibir detalhes* para revisar o status de cada volume CIFS e NFS e corrigir quaisquer erros.
 +
 Por exemplo, a imagem a seguir mostra quatro volumes; um dos quais a classificação BlueXP  não pode digitalizar devido a problemas de conetividade de rede entre a instância de classificação BlueXP  e o volume.
 
@@ -165,34 +126,20 @@ image:screenshot_compliance_volume_details.gif["Uma captura de tela da página E
 
 Pode iniciar ou parar exames apenas de mapeamento ou exames de mapeamento e classificação num ambiente de trabalho a qualquer momento a partir da página Configuração. Você também pode mudar de digitalizações somente de mapeamento para digitalizações de mapeamento e classificação, e vice-versa. Recomendamos que você digitalize todos os volumes.
 
+
+TIP: Os novos volumes adicionados ao ambiente de trabalho são automaticamente digitalizados apenas quando você definir a configuração *Map* ou *Map & Classify* na área de cabeçalho. Quando definido como *Custom* ou *Off* na área de cabeçalho, você precisará ativar o mapeamento e/ou a digitalização completa em cada novo volume adicionado no ambiente de trabalho.
+
 A opção na parte superior da página para *Scan when missing "write attributes" permissions* está desativada por padrão. Isso significa que se a classificação BlueXP  não tiver permissões de atributos de gravação no CIFS ou permissões de gravação no NFS, o sistema não verificará os arquivos porque a classificação BlueXP  não poderá reverter o "último tempo de acesso" para o carimbo de data/hora original. Se você não se importa se a última hora de acesso é redefinida, LIGUE o interrutor e todos os arquivos serão digitalizados independentemente das permissões. link:reference-collected-metadata.html#last-access-time-timestamp["Saiba mais"^].
 
 image:screenshot_volume_compliance_selection.png["Uma captura de tela da página Configuração onde você pode ativar ou desativar a digitalização de volumes individuais."]
 
-[cols="45,45"]
-|===
-| Para: | Faça isso: 
+.Passos
+. No menu classificação BlueXP , selecione *Configuração*.
+. Execute um dos seguintes procedimentos:
++
+** Para ativar as digitalizações apenas de mapeamento num volume, na área de volume, selecione *Map*. Para ativar em todos os volumes, na área de cabeçalho, selecione *mapa*.
+** Para ativar a digitalização completa num volume, na área de volume, selecione *Map & Classify*. Para ativar em todos os volumes, na área de cabeçalho, selecione *Map & Classify*.
+** Para desativar a digitalização em um volume, na área de volume, selecione *Off*. Para desativar a digitalização em todos os volumes, na área de cabeçalho, selecione *Off*.
 
 
-| Ative digitalizações apenas de mapeamento num volume | Na área de volume, clique em *Map* 
 
-
-| Ative a digitalização completa num volume | Na área de volume, clique em *Map & Classify* 
-
-
-| Desativar a digitalização num volume | Na área de volume, clique em *Off* 
-
-
-|  |  
-
-
-| Ative digitalizações apenas de mapeamento em todos os volumes | Na área de cabeçalho, clique em *Map* 
-
-
-| Ative a digitalização completa em todos os volumes | Na área de cabeçalho, clique em *Map & Classify* 
-
-
-| Desative a digitalização em todos os volumes | Na área de cabeçalho, clique em *Off* 
-|===
-
-NOTE: Os novos volumes adicionados ao ambiente de trabalho são automaticamente digitalizados apenas quando você definir a configuração *Map* ou *Map & Classify* na área de cabeçalho. Quando definido como *Custom* ou *Off* na área de cabeçalho, você precisará ativar o mapeamento e/ou a digitalização completa em cada novo volume adicionado no ambiente de trabalho.

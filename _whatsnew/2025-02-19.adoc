@@ -1,0 +1,41 @@
+= Versão 1,40
+:allow-uri-read: 
+
+
+
+
+=== Versão 1,40
+
+Esta versão de classificação do BlueXP  inclui as seguintes atualizações.
+
+.Suporte para RHEL 9,5
+Esta versão fornece suporte para Red Hat Enterprise Linux v9,5, além de versões anteriormente suportadas. Isso é aplicável a qualquer instalação manual no local da classificação do BlueXP , incluindo implantações em locais escuros.
+
+Os sistemas operacionais a seguir requerem o uso do motor de contentor Podman, e eles exigem a classificação BlueXP  versão 1,30 ou superior: Red Hat Enterprise Linux versão 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5.
+
+.Priorizar exames
+Ao realizar exames somente de mapeamento, você pode priorizar os exames mais importantes. Este recurso ajuda quando você tem muitos ambientes de trabalho e quer garantir que as verificações de alta prioridade sejam concluídas primeiro.
+
+Por padrão, as digitalizações são enfileiradas com base na ordem em que são iniciadas. Com a capacidade de priorizar digitalizações, agora você pode mover digitalizações para a frente da fila. Várias digitalizações podem ser priorizadas. A prioridade é designada em uma ordem de primeira entrada e primeira saída, o que significa que a primeira digitalização que você prioriza se move para a frente da fila; a segunda digitalização que você prioriza se torna segunda na fila, e assim por diante.
+
+A prioridade é concedida de uma só vez. As redigitalizações automáticas de dados de mapeamento ocorrem na ordem padrão.
+
+A priorização é limitada a link:concept-cloud-compliance.md#whats-the-difference-between-mapping-and-classification-scans["digitalizações apenas de mapeamento"]; ela não está disponível para mapear e classificar digitalizações.
+
+Para alterar a prioridade:
+
+. No menu classificação BlueXP , selecione *Configuração*.
+. Selecione os recursos que deseja priorizar.
+. Na opção ações ..., selecione *priorizar a digitalização*.
+
+
+.Tente novamente todas as digitalizações
+A classificação BlueXP  agora suporta a capacidade de tentar em lote novamente todas as digitalizações com falha.
+
+Agora você pode tentar novamente digitalizações em uma operação em lote com a função **Repetir tudo**. Se as verificações de classificação estiverem falhando devido a um problema temporário, como uma interrupção da rede, você pode tentar novamente todas as verificações ao mesmo tempo com um botão em vez de tentar novamente individualmente. As digitalizações podem ser tentadas quantas vezes forem necessárias.
+
+Para tentar novamente todas as digitalizações:
+
+. No menu classificação BlueXP , selecione *Configuração*.
+. Para tentar novamente todas as digitalizações com falha, selecione *Repetir todas as digitalizações*.
+

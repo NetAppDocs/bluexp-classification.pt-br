@@ -23,28 +23,6 @@ Conclua algumas etapas para iniciar a digitalização de arquivos em suas contas
 ====
 
 
-== Início rápido
-
-Comece rapidamente seguindo estas etapas ou role para baixo até as seções restantes para obter detalhes completos.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Revise os pré-requisitos do SharePoint
-[role="quick-margin-para"]
-Certifique-se de que tem credenciais qualificadas para iniciar sessão na conta do SharePoint e de que tem as URLs dos sites do SharePoint que pretende analisar.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Implante a instância de classificação do BlueXP 
-[role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html["Implantar a classificação BlueXP "^] se ainda não houver uma instância implantada.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Faça login na conta do SharePoint
-[role="quick-margin-para"]
-Usando credenciais de usuário qualificadas, faça login na conta do SharePoint que você deseja acessar para que ela seja adicionada como uma nova fonte de dados/ambiente de trabalho.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"] Adicione os URLs do site do SharePoint à verificação
-[role="quick-margin-para"]
-Adicione a lista de URLs de sites do SharePoint que você deseja analisar na conta do SharePoint e selecione o tipo de digitalização. Você pode adicionar até 100 URLs ao mesmo tempo - e até 1.000 sites no total para cada conta.
-
-
-
 == Revise os requisitos do SharePoint
 
 Reveja os seguintes pré-requisitos para se certificar de que está pronto para ativar a classificação do BlueXP  numa conta do SharePoint.
