@@ -3306,7 +3306,6 @@
   <block id="ee8870d1e0595ddae329cf8ef1ee89fa" category="paragraph">Você pode filtrar o conteúdo da página de investigação para exibir apenas os resultados que deseja ver.</block>
   <block id="260af28d48ba051bd7cdd887380f9ece" category="paragraph">Antes de instalar a classificação BlueXP  manualmente em um host Linux, opcionalmente execute um script no host para verificar se todos os pré-requisitos estão em vigor para instalar a classificação BlueXP . Você pode executar esse script em um host Linux em sua rede ou em um host Linux na nuvem. O host pode ser conetado à internet, ou o host pode residir em um site que não tem acesso à internet (um _site escuro_).</block>
   <block id="b64eea97fe56778b0e28c568854873ed" category="paragraph">Desinstale o software de classificação BlueXP  para solucionar problemas ou remover permanentemente o software do host. A exclusão da instância também exclui os discos associados onde residem os dados indexados - todas as informações que a classificação BlueXP  digitalizada serão excluídas permanentemente.</block>
-  <block id="378c20222de970dbe3321fec8e32e947" category="list-text">Red Hat Enterprise Linux versão 8,8, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5</block>
   <block id="6b9d9a04ff593ff427731819f0c3618f" category="doc">Versão 1,40</block>
   <block id="dc4b47101650865122105745fe8d0a2c" category="paragraph-title">Suporte para RHEL 9,5</block>
   <block id="1d26b47b0bf4a8a52ca8e66bcb8661dc" category="paragraph">Esta versão fornece suporte para Red Hat Enterprise Linux v9,5, além de versões anteriormente suportadas. Isso é aplicável a qualquer instalação manual no local da classificação do BlueXP , incluindo implantações em locais escuros.</block>
@@ -3394,4 +3393,6 @@
   <block id="79043fd5ff3b61216207b60882cd72cd" category="section-title">19 de fevereiro de 2025</block>
   <block id="5904eed2db8ef4855e1fd04bcf8b7d97" category="paragraph">Para obter detalhes, consulte <block ref="45d8326cb72a8fa1d7ca8c887062a7ee" category="inline-link-macro-rx"></block></block>
   <block id="279961977f7de811c4eeee90a2454c87" category="paragraph">Agora você pode carregar sua licença BYOL do Data Sense para a carteira digital BlueXP  em um site escuro para que você seja notificado quando sua licença estiver ficando baixa.<block ref="3e32e5c3cf84ce7c25efff198a230761" category="inline-link-rx"></block>.</block>
+  <block id="84ea0db5b42f134872fbf35016e39cf9" category="list-text">Red Hat Enterprise Linux versão 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5</block>
+  <block id="e69d7b651771ff110228ddae78e71631" category="list-text">As extensões avançadas de vetor (AVX) devem estar ativadas no sistema anfitrião.</block>
 </blocks>

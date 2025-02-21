@@ -152,9 +152,10 @@ Certifique-se de que você pode manter a classificação BlueXP  em execução.
 
 ** Os seguintes sistemas operacionais requerem o uso do motor de contentores Podman, e eles exigem a classificação BlueXP  versão 1,30 ou superior:
 +
-*** Red Hat Enterprise Linux versão 8,8, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5
+*** Red Hat Enterprise Linux versão 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5
 
 
+** As extensões avançadas de vetor (AVX) devem estar ativadas no sistema anfitrião.
 
 
 * *Red Hat Subscription Management*: O host deve estar registrado no Red Hat Subscription Management. Se não estiver registrado, o sistema não poderá acessar repositórios para atualizar o software necessário de 3rd partes durante a instalação.
@@ -173,7 +174,11 @@ Certifique-se de que você pode manter a classificação BlueXP  em execução.
 * Python versão 3,6 ou superior. https://www.python.org/downloads/["Veja as instruções de instalação"^].
 +
 ** *Considerações de NTP*: A NetApp recomenda configurar o sistema de classificação BlueXP  para usar um serviço de protocolo de tempo de rede (NTP). O tempo deve ser sincronizado entre o sistema de classificação BlueXP  e o sistema de conetores BlueXP .
-** *Considerações sobre o Firewalld*: Se você estiver planejando usar `firewalld`, recomendamos que você a ative antes de instalar a classificação do BlueXP . Execute os seguintes comandos para configurar `firewalld` de modo que seja compatível com a classificação BlueXP :
+
+
+
+
+* *Considerações sobre o Firewalld*: Se você estiver planejando usar `firewalld`, recomendamos que você a ative antes de instalar a classificação do BlueXP . Execute os seguintes comandos para configurar `firewalld` de modo que seja compatível com a classificação BlueXP :
 +
 ....
 firewall-cmd --permanent --add-service=http
@@ -195,8 +200,6 @@ firewall-cmd --permanent --add-port=4789/udp
 ....
 +
 Observe que você deve reiniciar o Docker ou o Podman sempre que ativar ou atualizar `firewalld` as configurações.
-
-
 
 
 

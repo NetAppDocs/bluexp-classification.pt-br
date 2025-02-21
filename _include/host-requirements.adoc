@@ -65,9 +65,10 @@
 
 ** Os seguintes sistemas operacionais requerem o uso do motor de contentores Podman, e eles exigem a classificação BlueXP  versão 1,30 ou superior:
 +
-*** Red Hat Enterprise Linux versão 8,8, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5
+*** Red Hat Enterprise Linux versão 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5
 
 
+** As extensões avançadas de vetor (AVX) devem estar ativadas no sistema anfitrião.
 
 
 * *Red Hat Subscription Management*: O host deve estar registrado no Red Hat Subscription Management. Se não estiver registrado, o sistema não poderá acessar repositórios para atualizar o software necessário de 3rd partes durante a instalação.
