@@ -39,3 +39,6 @@ Para tentar novamente todas as digitalizações:
 . No menu classificação BlueXP , selecione *Configuração*.
 . Para tentar novamente todas as digitalizações com falha, selecione *Repetir todas as digitalizações*.
 
+
+.Precisão melhorada do modelo de categorização
+A precisão do modelo de aprendizado de máquina para link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories["categorias predefinidas"]melhorou em 11%.
