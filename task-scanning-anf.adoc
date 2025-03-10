@@ -59,7 +59,7 @@ image:screenshot_cloud_compliance_anf_scan_config.png["Uma captura de tela da gu
 
 
 .Resultado
-A classificação BlueXP  inicia a digitalização dos volumes selecionados no ambiente de trabalho. Os resultados estarão disponíveis no painel de conformidade assim que a classificação BlueXP  terminar as verificações iniciais. O tempo que leva depende da quantidade de dados - pode ser de alguns minutos ou horas.
+A classificação BlueXP  inicia a digitalização dos volumes selecionados no ambiente de trabalho. Os resultados estarão disponíveis no painel de conformidade assim que a classificação BlueXP  terminar as verificações iniciais. O tempo que leva depende da quantidade de dados - pode ser de alguns minutos ou horas. Você pode acompanhar o progresso da digitalização inicial navegando até o menu **Configuração** e, em seguida, selecionando **Configuração do ambiente de trabalho**. O progresso de cada exame é apresentado como uma barra de progresso. Você também pode passar o Mouse sobre a barra de progresso para ver o número de arquivos digitalizados em relação ao total de arquivos no volume.
 
 [NOTE]
 ====

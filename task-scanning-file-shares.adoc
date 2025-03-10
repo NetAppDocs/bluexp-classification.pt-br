@@ -119,7 +119,7 @@ Se a caixa de diálogo listar quaisquer compartilhamentos que não possam ser ad
 A opção na parte superior da página para *Scan when missing "write attributes" permissions* está desativada por padrão. Isso significa que se a classificação BlueXP  não tiver permissões de atributos de gravação no CIFS ou permissões de gravação no NFS, o sistema não verificará os arquivos porque a classificação BlueXP  não poderá reverter o "último tempo de acesso" para o carimbo de data/hora original. Se você não se importa se a última hora de acesso é redefinida, LIGUE o interrutor e todos os arquivos serão digitalizados independentemente das permissões. link:reference-collected-metadata.html#last-access-time-timestamp["Saiba mais"^].
 
 .Resultado
-A classificação do BlueXP  começa a digitalizar os arquivos nos compartilhamentos de arquivo adicionados e os resultados são exibidos no Painel e em outros locais.
+A classificação do BlueXP  começa a digitalizar os arquivos nos compartilhamentos de arquivo adicionados e os resultados são exibidos no Painel e em outros locais. Você pode acompanhar o progresso da digitalização inicial navegando até o menu **Configuração** e, em seguida, selecionando **Configuração do ambiente de trabalho**. O progresso de cada exame é apresentado como uma barra de progresso. Você também pode passar o Mouse sobre a barra de progresso para ver o número de arquivos digitalizados em relação ao total de arquivos no volume.
 
 
 

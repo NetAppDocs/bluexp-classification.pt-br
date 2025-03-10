@@ -111,6 +111,6 @@ image:screenshot_compliance_select_schemas.png["Uma captura de tela da página C
 
 
 .Resultado
-A classificação BlueXP  começa a digitalizar os esquemas de banco de dados que você ativou. Se houver algum erro, eles aparecerão na coluna Status, juntamente com a ação necessária para corrigir o erro.
+A classificação BlueXP  começa a digitalizar os esquemas de banco de dados que você ativou. Você pode acompanhar o progresso da digitalização inicial navegando até o menu **Configuração** e, em seguida, selecionando **Configuração do ambiente de trabalho**. O progresso de cada exame é apresentado como uma barra de progresso. Você também pode passar o Mouse sobre a barra de progresso para ver o número de arquivos digitalizados em relação ao total de arquivos no volume. Se houver algum erro, eles aparecerão na coluna Status, juntamente com a ação necessária para corrigir o erro.
 
 A classificação do BlueXP  verifica seus bancos de dados uma vez por dia; os bancos de dados não são verificados continuamente como outras fontes de dados.

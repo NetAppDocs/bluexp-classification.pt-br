@@ -82,4 +82,4 @@ image:screenshot-scanning-add-storagegrid-buckets.png["Uma captura de tela da se
 
 
 .Resultado
-A classificação BlueXP  começa a digitalizar os intervalos que você ativou. Se houver algum erro, eles aparecerão na coluna Status, juntamente com a ação necessária para corrigir o erro.
+A classificação BlueXP  começa a digitalizar os intervalos que você ativou. Você pode acompanhar o progresso da digitalização inicial navegando até o menu **Configuração** e, em seguida, selecionando **Configuração do ambiente de trabalho**. O progresso de cada exame é apresentado como uma barra de progresso. Você também pode passar o Mouse sobre a barra de progresso para ver o número de arquivos digitalizados em relação ao total de arquivos no volume. Se houver algum erro, eles aparecerão na coluna Status, juntamente com a ação necessária para corrigir o erro.
