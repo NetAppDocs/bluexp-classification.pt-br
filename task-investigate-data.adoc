@@ -25,7 +25,7 @@ NOTE: As capacidades descritas nesta secção só estão disponíveis se tiver o
 
 Você pode filtrar o conteúdo da página de investigação para exibir apenas os resultados que deseja ver.
 
-Se você quiser baixar o conteúdo da página como um relatório depois de refiná-lo, clique no image:button_download.png["botão de transferência"]botão . <<Relatório de investigação de dados,Acesse aqui para obter detalhes sobre o relatório de investigação de dados>>.
+Se pretender transferir o conteúdo da página como um relatório depois de o ter refinado, selecione o image:button_download.png["botão de transferência"] botão. <<Relatório de investigação de dados,Acesse aqui para obter detalhes sobre o relatório de investigação de dados>>.
 
 image:screenshot_compliance_investigation_filtered.png["Uma captura de tela dos filtros disponíveis ao refinar os resultados na página de investigação."]
 
@@ -33,6 +33,9 @@ image:screenshot_compliance_investigation_filtered.png["Uma captura de tela dos 
 * Os controles na parte superior de cada coluna permitem classificar os resultados em ordem numérica ou alfabética.
 * Os filtros do painel esquerdo permitem refinar os resultados selecionando os atributos descritos nas próximas seções.
 
+
+
+NOTE: Você só pode exibir os primeiros 10.000 resultados (ou 500 páginas) para uma digitalização na página Investigação de dados.
 
 
 
@@ -202,7 +205,7 @@ Use o filtro a seguir para exibir arquivos duplicados em seu armazenamento.
 
 == Ver metadados do ficheiro
 
-No painel resultados da investigação de dados, você pode clicar image:button_down_caret.png["cuidado com os pés"] em qualquer arquivo para exibir os metadados do arquivo.
+No painel resultados da investigação de dados, selecione o botão de baixo cuidado image:button_down_caret.png["cuidado com os pés"]de qualquer arquivo para visualizar os metadados do arquivo.
 
 image:screenshot_compliance_file_details.png["Uma captura de tela mostrando os detalhes dos metadados de um arquivo na página Investigação de dados."]
 
@@ -214,15 +217,15 @@ Note que nem todas as informações estão disponíveis para todas as fontes de 
 
 == Exibir permissões para arquivos e diretórios
 
-Para exibir uma lista de todos os usuários ou grupos que têm acesso a um arquivo ou a um diretório e os tipos de permissões que eles têm, clique em *Exibir todas as permissões*. Este botão está disponível apenas para dados em compartilhamentos CIFS.
+Para exibir uma lista de todos os usuários ou grupos que têm acesso a um arquivo ou a um diretório e os tipos de permissões que eles têm, selecione *Exibir todas as permissões*. Este botão está disponível apenas para dados em compartilhamentos CIFS.
 
 Observe que se você vir SIDs (identificadores de segurança) em vez de nomes de usuários e grupos, você deve integrar seu ative Directory à classificação do BlueXP . link:task-add-active-directory-datasense.html["Veja como fazer isso"].
 
 image:screenshot_compliance_permissions.png["Uma captura de tela mostrando permissões detalhadas de arquivos."]
 
-Você pode clicar image:button_down_caret.png["cuidado com os pés"] em para qualquer grupo para ver a lista de usuários que fazem parte do grupo.
+Selecione o botão para baixo image:button_down_caret.png["cuidado com os pés"]para qualquer grupo para ver a lista de usuários que fazem parte do grupo.
 
-Além disso, você pode clicar no nome de um usuário ou grupo e a página de investigação é exibida com o nome desse usuário ou grupo preenchido no filtro "permissões de usuário / grupo" para que você possa ver todos os arquivos e diretórios aos quais o usuário ou grupo tem acesso.
+Selecionar o nome de um usuário ou grupo atualiza a página de investigação para que você possa ver todos os arquivos e diretórios aos quais o usuário ou grupo tem acesso.
 
 
 
@@ -244,9 +247,9 @@ Todos os arquivos duplicados são exibidos na página de resultados.
 
 *Exibir se um arquivo específico é duplicado*
 
-Se você quiser ver se um único arquivo tem duplicatas, no painel resultados da investigação de dados, você pode clicar image:button_down_caret.png["cuidado com os pés"] em para qualquer arquivo para exibir os metadados do arquivo. Se houver duplicatas de um determinado arquivo, essas informações serão exibidas ao lado do campo _Duplicates_.
+Se você quiser ver se um único arquivo tem duplicatas, no painel resultados da investigação de dados, image:button_down_caret.png["cuidado com os pés"]selecione para qualquer arquivo único para exibir os metadados do arquivo. Se houver duplicatas de um determinado arquivo, essas informações serão exibidas ao lado do campo _Duplicates_.
 
-Para exibir a lista de arquivos duplicados e onde eles estão localizados, clique em *Exibir detalhes*. Na próxima página, clique em *Exibir duplicados* para exibir os arquivos na página de investigação.
+Para exibir a lista de arquivos duplicados e onde eles estão localizados, selecione *Exibir detalhes*. Na próxima página, selecione *Exibir duplicados* para exibir os arquivos na página de investigação.
 
 image:screenshot_compliance_duplicate_file.png["Uma captura de tela mostrando como exibir onde os arquivos duplicados estão localizados."]
 
@@ -318,8 +321,9 @@ O *Relatório de dados estruturados* inclui as seguintes informações sobre as 
 
 
 .Etapas para gerar o relatório
-. Na página Investigação de dados, clique no image:button_download.png["botão de transferência"] botão na parte superior direita da página.
-. Selecione para fazer o download de um relatório .CSV ou .json dos dados e clique em *Download Report*.
+. Na página Investigação de dados, selecione o image:button_download.png["botão de transferência"] botão na parte superior direita da página.
+. Escolha o tipo de relatório: CSV ou JSON e forneça um ** Nome do relatório**. Selecione um ** ambiente de trabalho** e **volume** e, em seguida, forneça um **caminho de pasta de destino**.
+. Selecione **Transferir relatório**.
 +
 image:screenshot_compliance_investigation_report2.png["Uma captura de tela da página Download Investigation Report com várias opções."]
 
