@@ -4,7 +4,7 @@ permalink: task-investigate-data-deprecated.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies 
 summary: Você pode investigar os dados da sua organização exibindo detalhes na página Investigação de dados. É possível navegar para essa página em várias áreas da IU de classificação do BlueXP , incluindo os painéis de governança e conformidade. 
 ---
-= Investigue os dados armazenados na página Investigação de dados
+= Investigue os dados armazenados na página Investigação de dados de classificação do BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

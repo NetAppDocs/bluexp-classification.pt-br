@@ -4,7 +4,7 @@ permalink: task-view-compliance-actions.html
 keywords: compliance, actions, view progress 
 summary: Quando você executa uma ação do painel de resultados da investigação em muitos arquivos, por exemplo, excluindo arquivos 100, o processo pode levar algum tempo. Você pode monitorar o status dessas ações assíncronas no painel Status da Ação para saber quando ela foi aplicada a todos os arquivos. 
 ---
-= Visualização do status de suas ações de conformidade
+= Veja o status de suas ações de conformidade na classificação do BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

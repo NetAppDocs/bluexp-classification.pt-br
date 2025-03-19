@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-managing-repo-scanning-deprecated.html 
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan 
-summary: 'Você pode gerenciar como seus dados estão sendo digitalizados em cada um de seus ambientes de trabalho e fontes de dados. Você pode fazer as alterações em uma base "repositório"; o que significa que você pode fazer alterações para cada volume, intervalo, compartilhamento, esquema, usuário, etc., dependendo do tipo de fonte de dados que você está digitalizando.' 
+summary: Você pode gerenciar como seus dados estão sendo digitalizados em cada um de seus ambientes de trabalho e fontes de dados. Você pode fazer as alterações em uma base de repositório; o que significa que você pode fazer alterações para cada volume, intervalo, compartilhamento, esquema, usuário, etc., dependendo do tipo de fonte de dados que você está digitalizando. 
 ---
-= Redigitalizar dados para um repositório existente
+= Redigitalizar dados para um repositório existente com classificação BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

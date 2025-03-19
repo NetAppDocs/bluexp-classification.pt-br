@@ -4,7 +4,7 @@ permalink: task-managing-highlights.html
 keywords: compliance, privacy, filter data, delete files, move files, copy files, clone files, sync files, data sense, migration 
 summary: A classificação do BlueXP  fornece várias maneiras de gerenciar seus dados privados. Algumas funcionalidades facilitam a preparação para a migração dos seus dados, enquanto outras funcionalidades permitem-lhe fazer alterações nos dados. 
 ---
-= Gerencie seus dados privados
+= Gerencie seus dados privados com a classificação BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

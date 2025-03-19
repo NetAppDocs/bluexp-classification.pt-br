@@ -4,7 +4,7 @@ permalink: task-using-policies-deprecated.html
 keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
 summary: As políticas são como uma lista de favoritos de filtros personalizados que fornecem resultados de pesquisa na página de investigação para consultas de conformidade comumente solicitadas. A classificação BlueXP  fornece um conjunto de políticas predefinidas com base em solicitações comuns do cliente. Você pode criar políticas personalizadas que fornecem resultados para pesquisas específicas para sua organização. 
 ---
-= Envie alertas por e-mail quando dados não compatíveis forem encontrados
+= Envie alertas por e-mail quando a classificação BlueXP  encontrar dados não compatíveis
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-scanning-onedrive.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedrive, data sense 
 summary: Conclua algumas etapas para iniciar a digitalização de arquivos nas pastas do OneDrive do usuário com a classificação BlueXP . 
 ---
-= Digitalizar contas OneDrive
+= Digitalizar contas do OneDrive com classificação BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

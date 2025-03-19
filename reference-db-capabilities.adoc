@@ -4,7 +4,7 @@ permalink: reference-db-capabilities.html
 keywords: database actions, database filters, supported, unsupported 
 summary: Existem alguns recursos e funcionalidades que não estão disponíveis com a classificação BlueXP  quando você está digitalizando esquemas de banco de dados. 
 ---
-= Recursos de banco de dados suportados e não suportados
+= Recursos de banco de dados suportados e não suportados na classificação BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

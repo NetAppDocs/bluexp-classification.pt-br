@@ -4,7 +4,7 @@ permalink: task-scanning-sharepoint.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, sharepoint, sharepoint online, sharepoint on-premises, data sense 
 summary: Conclua algumas etapas para iniciar a digitalização de arquivos em suas contas on-premise do SharePoint Online e SharePoint com a classificação BlueXP . 
 ---
-= Analisar contas do SharePoint
+= Analise contas do SharePoint com a classificação BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
