@@ -568,7 +568,6 @@
   <block id="6505506a35d1d959ffb20a74a4238de6" category="cell">Volte a digitalizar os dados sob demanda</block>
   <block id="5f571f0f56802124061d64f7f5dac503" category="cell">Crie classificadores personalizados</block>
   <block id="c7d804294d8fa0d1ba6bfc80ead25ca0" category="cell">Excluir diretórios da digitalização</block>
-  <block id="46771ec1582c3b0b4aebfc19d6356451" category="cell">Exportar dados para NFS da investigação</block>
   <block id="cfe5d63c50c4794111fa6f65b931e130" category="cell">Exportar dados para CSV da investigação</block>
   <block id="5b161cf169bcf6263a5f04b0a0b391d6" category="cell">Suporte vários scanners</block>
   <block id="81ef4cd6c60d70e2956f5aceef3493d2" category="cell">Integrar o ative Directory</block>
@@ -3437,4 +3436,8 @@
   <block id="ca304384fad03eae82a8e99a165128d0" category="section-title">Reveja os tipos de ficheiros mais identificados</block>
   <block id="5af3bad2ce7ed86124fdaa43b19e15c1" category="list-text">No painel Governança &gt; seção classificação &gt; tipos de arquivo , para ver detalhes sobre um tipo de arquivo, selecione-o na seção tipos de arquivo do painel Governança. A página de investigação fornece dados filtrados apenas para esse tipo de arquivo.</block>
   <block id="3b879833e0c35c3e97d6bcec57a9aad0" category="list-text">Para exibir todos os tipos de arquivo, selecione *Exibir todos*.</block>
+  <block id="93a41f9744586b4edf90898527b71531" category="cell">Exportar dados para NFS/CIFS da investigação</block>
+  <block id="81aef4d88b3543fe7ce12740f599c026" category="paragraph">Os arquivos são divididos em arquivos com um número fixo de linhas ou Registros:</block>
+  <block id="65c07610fb212d644f234075537bbc84" category="list-text">CSV - 200.000 Registros</block>
+  <block id="8897cd6292ab12bb81d8704c400fca96" category="list-text">JSON - 100.000 Registros</block>
 </blocks>

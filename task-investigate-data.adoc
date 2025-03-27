@@ -266,6 +266,12 @@ O relatório está disponível como um arquivo .CSV ou .json que você pode salv
 
 Pode haver até três arquivos de relatório baixados se a classificação do BlueXP  estiver escaneando arquivos (dados não estruturados), diretórios (pastas e compartilhamentos de arquivos) e bancos de dados (dados estruturados).
 
+Os arquivos são divididos em arquivos com um número fixo de linhas ou Registros:
+
+* CSV - 200.000 Registros
+* JSON - 100.000 Registros
+
+
 *O que está incluído no Relatório de Investigação de dados*
 
 O *Relatório de dados de arquivos não estruturados* inclui as seguintes informações sobre seus arquivos:

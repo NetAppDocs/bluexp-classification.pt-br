@@ -130,7 +130,7 @@ Existem alguns recursos e funcionalidades que são obsoletos na versão do núcl
 | Procure nomes dentro de arquivos | Sim | Sim 
 
 
-| Exportar dados para NFS da investigação | Sim | Não 
+| Exportar dados para NFS/CIFS da investigação | Sim | Sim 
 
 
 | Exportar dados para CSV da investigação | Sim | Sim 
