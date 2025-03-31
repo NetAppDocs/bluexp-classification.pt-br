@@ -1,0 +1,258 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-overview.html 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, mapping-only scans, map and classify, map & classify 
+summary: Digitalize suas fontes de dados com a classificação BlueXP . 
+---
+= Descrição geral das fontes de dados do exame com a classificação BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A classificação do BlueXP  analisa os dados nos repositórios (volumes, esquemas de banco de dados ou outros dados de usuário) que você seleciona para identificar dados pessoais e confidenciais. A classificação do BlueXP  mapeia os dados organizacionais, categoriza cada arquivo e identifica padrões predefinidos nos dados. O resultado da digitalização é um índice de informações pessoais, informações pessoais confidenciais, categorias de dados e tipos de arquivos.
+
+Após a verificação inicial, a classificação BlueXP  verifica continuamente os seus dados de forma redonda para detetar alterações incrementais. É por isso que é importante manter a instância em execução.
+
+Você pode ativar e desativar digitalizações no nível de volume ou no nível do esquema do banco de dados.
+
+
+
+== Qual é a diferença entre Mapeamento e classificação digitalizações
+
+Pode realizar dois tipos de exames na classificação BlueXP :
+
+* **As digitalizações somente de mapeamento** fornecem apenas uma visão geral de alto nível de seus dados e são realizadas em fontes de dados selecionadas. As digitalizações somente de mapeamento demoram menos tempo do que mapear e classificar digitalizações porque o não acessa arquivos para ver os dados dentro. Pode pretender fazer isto inicialmente para identificar áreas de investigação e, em seguida, executar uma leitura de mapa e classificação nessas áreas.
+* **As digitalizações de mapa e classificação** fornecem uma digitalização de nível profundo dos seus dados.
+
+
+A tabela abaixo mostra algumas das diferenças:
+
+[cols="47,18,18"]
+|===
+| Recurso | Mapear e classificar digitalizações | Digitalizações apenas de mapeamento 
+
+
+| Velocidade de digitalização | Lento | Rápido 
+
+
+| Preços | Livre | Livre 
+
+
+| Capacidade | Limitado a 500 TB | Limitado a 500 TB 
+
+
+| Lista de tipos de arquivo e capacidade usada | Sim | Sim 
+
+
+| Número de arquivos e capacidade utilizada | Sim | Sim 
+
+
+| Idade e tamanho dos arquivos | Sim | Sim 
+
+
+| Capacidade de executar a. link:task-controlling-governance-data.html#data-mapping-report["Relatório de mapeamento de dados"] | Sim | Sim 
+
+
+| Página de investigação de dados para ver os detalhes do ficheiro | Sim | Não 
+
+
+| Procure nomes dentro de arquivos | Sim | Não 
+
+
+| Crie link:task-using-policies.html["políticas"] que forneça resultados de pesquisa personalizados | Sim | Não 
+
+
+| Capacidade de executar outros relatórios | Sim | Não 
+
+
+| Capacidade de ver metadados de arquivos* | Não | Sim 
+|===
+*Os seguintes metadados são extraídos de arquivos durante as varreduras de mapeamento:
+
+* Ambiente de trabalho
+* Tipo de ambiente de trabalho
+* Repositório de storage
+* Tipo de ficheiro
+* Capacidade utilizada
+* Número de ficheiros
+* Tamanho do ficheiro
+* Criação de ficheiros
+* Último acesso ao ficheiro
+* Ficheiro modificado pela última vez
+* Hora descoberta do ficheiro
+* Extração de permissões
+
+
+.Diferenças no painel de governança:
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Recurso | Mapear e classificar | Mapa 
+
+
+| Dados obsoletos | Sim | Sim 
+
+
+| Dados não comerciais | Sim | Sim 
+
+
+| Ficheiros duplicados | Sim | Sim 
+
+
+| Políticas predefinidas | Sim | Não 
+
+
+| Políticas personalizadas | Sim | Sim 
+
+
+| Relatório DDA | Sim | Sim 
+
+
+| Relatório de mapeamento | Sim | Sim 
+
+
+| Detecção do nível de sensibilidade | Sim | Não 
+
+
+| Dados confidenciais com permissões amplas | Sim | Não 
+
+
+| Abrir permissões | Sim | Sim 
+
+
+| Idade dos dados | Sim | Sim 
+
+
+| Tamanho dos dados | Sim | Sim 
+
+
+| Categorias | Sim | Não 
+
+
+| Tipos de ficheiros | Sim | Sim 
+|===
+====
+.Diferenças no dashboard de conformidade:
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Recurso | Mapear e classificar | Mapa 
+
+
+| Informações pessoais | Sim | Não 
+
+
+| Informações pessoais sensíveis | Sim | Não 
+
+
+| Relatório de avaliação de risco à privacidade | Sim | Não 
+
+
+| Relatório HIPAA | Sim | Não 
+
+
+| Relatório PCI DSS | Sim | Não 
+|===
+====
+.Diferenças de filtros de investigação:
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Recurso | Mapear e classificar | Mapa 
+
+
+| Políticas | Sim | Sim 
+
+
+| Tipo de ambiente de trabalho | Sim | Sim 
+
+
+| Ambiente de trabalho | Sim | Sim 
+
+
+| Repositório de storage | Sim | Sim 
+
+
+| Tipo de ficheiro | Sim | Sim 
+
+
+| Tamanho do ficheiro | Sim | Sim 
+
+
+| Hora criada | Sim | Sim 
+
+
+| Hora descoberta | Sim | Sim 
+
+
+| Modificado pela última vez | Sim | Sim 
+
+
+| Último acesso | Sim | Sim 
+
+
+| Abrir permissões | Sim | Sim 
+
+
+| Caminho do diretório de arquivos | Sim | Sim 
+
+
+| Categoria | Sim | Não 
+
+
+| Nível de sensibilidade | Sim | Não 
+
+
+| Número de identificadores | Sim | Não 
+
+
+| Dados pessoais | Sim | Não 
+
+
+| Dados pessoais confidenciais | Sim | Não 
+
+
+| Titular dos dados | Sim | Não 
+
+
+| Duplicatas | Sim | Sim 
+
+
+| Estado da classificação | Sim | O status é sempre "informações limitadas" 
+
+
+| Evento de análise de digitalização | Sim | Sim 
+
+
+| Hash de ficheiro | Sim | Sim 
+
+
+| Número de usuários com acesso | Sim | Sim 
+
+
+| Permissões de usuário/grupo | Sim | Sim 
+
+
+| Proprietário do ficheiro | Sim | Sim 
+
+
+| Tipo de diretório | Sim | Sim 
+|===
+====
+
+
+== A rapidez com que a classificação BlueXP  analisa os dados
+
+A velocidade de digitalização é afetada pela latência da rede, latência do disco, largura de banda da rede, tamanho do ambiente e tamanhos de distribuição de arquivos.
+
+* Ao executar exames somente de mapeamento, a classificação BlueXP  pode digitalizar entre 100-150 Tibs de dados por dia.
+* Ao executar exames de mapa e classificação, a classificação BlueXP  pode digitalizar entre 15-40 MB de dados por dia.
+

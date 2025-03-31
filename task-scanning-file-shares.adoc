@@ -21,7 +21,7 @@ NOTE: A digitalização de dados de compartilhamentos de arquivos não NetApp n�
 
 
 
-== Reveja os requisitos de compartilhamento de arquivos
+== Pré-requisitos
 
 Reveja os seguintes pré-requisitos para se certificar de que tem uma configuração suportada antes de ativar a classificação BlueXP .
 
@@ -30,12 +30,6 @@ Reveja os seguintes pré-requisitos para se certificar de que tem uma configura�
 Observe que a classificação BlueXP  não pode extrair permissões ou o "último tempo de acesso" de sistemas do modo 7. Além disso, devido a um problema conhecido entre algumas versões do Linux e compartilhamentos CIFS em sistemas 7-Mode, você deve configurar o compartilhamento para usar apenas SMB v1 com autenticação NTLM ativada.
 
 * É necessário haver conetividade de rede entre a instância de classificação BlueXP  e os compartilhamentos.
-* Certifique-se de que essas portas estejam abertas para a instância de classificação BlueXP :
-+
-** Para NFS – portas 111 e 2049.
-** Para CIFS – portas 139 e 445.
-
-
 * Você pode adicionar um compartilhamento DFS (Distributed File System) como um compartilhamento CIFS regular. No entanto, como a classificação do BlueXP  não sabe que o compartilhamento é construído em vários servidores/volumes combinados como um único compartilhamento CIFS, você pode receber erros de permissão ou conetividade sobre o compartilhamento quando a mensagem realmente se aplica a uma das pastas/compartilhamentos localizados em um servidor/volume diferente.
 * Para compartilhamentos CIFS (SMB), verifique se você tem credenciais do ative Directory que fornecem acesso de leitura aos compartilhamentos. As credenciais de administrador são preferidas no caso de a classificação do BlueXP  precisar analisar quaisquer dados que requeiram permissões elevadas.
 +
@@ -43,12 +37,6 @@ Se você quiser garantir que seus arquivos "últimos tempos acessados" sejam ina
 
 * Você precisará da lista de compartilhamentos que deseja adicionar no formato `<host_name>:/<share_path>`. Você pode inserir os compartilhamentos individualmente ou fornecer uma lista separada por linha dos compartilhamentos de arquivo que deseja analisar.
 
-
-
-
-== Implante a instância de classificação do BlueXP 
-
-Implante a classificação do BlueXP  se ainda não houver uma instância implantada.
 
 
 
@@ -81,32 +69,30 @@ Ao adicionar compartilhamentos NFS e CIFS em um único grupo, você precisará e
 . No menu classificação BlueXP , selecione *Configuração*.
 . No mosaico ambientes de trabalho na página Configuração, selecione o botão *Configuração* para o Grupo compartilhamentos de arquivos.
 +
-image:screenshot_compliance_fileshares_add_shares.png["Uma captura de tela da página Configuração de digitalização, onde você pode selecionar o botão Configuração."]
+image:screen-cl-config-file-shares.png["Uma captura de tela mostrando o botão Configuração para o Grupo compartilhamentos de arquivos."]
 
 . Se esta for a primeira vez que adicionar compartilhamentos de arquivo para este Grupo de compartilhamentos de arquivo, selecione *Adicionar seus primeiros compartilhamentos*.
 +
-image:screenshot_compliance_fileshares_add_initial_shares.png["Uma captura de tela mostrando o botão Adicionar seus primeiros compartilhamentos para adicionar compartilhamentos iniciais ao grupo."]
+image:screen-cl-config-file-shares-addshares.png["Uma captura de tela mostrando o botão Adicionar seus primeiros compartilhamentos para adicionar compartilhamentos iniciais ao grupo."]
 
 +
-Se você estiver adicionando compartilhamentos de arquivo a um grupo existente, selecione *Adicionar compartilhamentos*.
+Se você estiver adicionando compartilhamentos de arquivo a um grupo existente, selecione o grupo, selecione *Configuração* e selecione *Adicionar compartilhamentos*.
 
+. Selecione o protocolo para os compartilhamentos de arquivo que você está adicionando.
 +
-image:screenshot_compliance_fileshares_add_more_shares2.png["Uma captura de tela mostrando o botão Adicionar compartilhamentos para adicionar mais compartilhamentos ao grupo."]
+image:screen-cl-config-shares-add.png["Uma captura de tela mostrando as opções para adicionar compartilhamentos NFS ou CIFS ao grupo"]
 
-. Selecione o protocolo para os compartilhamentos de arquivo que você está adicionando, adicione os compartilhamentos de arquivo que você deseja digitalizar (um compartilhamento de arquivo por linha) e selecione *continuar*.
+. Adicione os compartilhamentos de arquivo que você deseja digitalizar (um compartilhamento de arquivo por linha).
 +
 Ao adicionar compartilhamentos CIFS (SMB), você precisa inserir as credenciais do ative Directory que fornecem acesso de leitura aos compartilhamentos. As credenciais de administrador são preferidas.
 
-+
-image:screenshot_compliance_fileshares_add_file_shares.png["Uma captura de tela da página Adicionar compartilhamentos de arquivo, onde você pode adicionar os compartilhamentos a serem verificados."]
-
+. Selecione *continuar*.
 +
 Uma caixa de diálogo de confirmação exibe o número de compartilhamentos que foram adicionados.
 
 +
 Se a caixa de diálogo listar quaisquer compartilhamentos que não possam ser adicionados, Capture essas informações para que você possa resolver o problema. Em alguns casos, você pode adicionar novamente o compartilhamento com um nome de host ou nome de compartilhamento corrigido.
 
-. Ative digitalizações apenas de mapeamento ou digitalizações de mapeamento e classificação em cada partilha de ficheiros.
 . Execute um dos seguintes procedimentos para ativar ou desativar exames:
 +
 ** Para ativar digitalizações apenas de mapeamento em compartilhamentos de arquivos, selecione *Map*.
@@ -114,12 +100,28 @@ Se a caixa de diálogo listar quaisquer compartilhamentos que não possam ser ad
 ** Para desativar a digitalização em compartilhamentos de arquivo, selecione *Off*.
 
 
+. Se você não se importa se a última hora de acesso é redefinida, ATIVE a opção *Scan when falt "write attributes" permissions* e todos os arquivos são verificados independentemente das permissões.
++
+A opção na parte superior da página para *Scan when missing "write attributes" permissions* está desativada por padrão. Isso significa que se a classificação BlueXP  não tiver permissões de atributos de gravação no CIFS ou permissões de gravação no NFS, o sistema não verificará os arquivos porque a classificação BlueXP  não poderá reverter o "último tempo de acesso" para o carimbo de data/hora original. link:reference-collected-metadata.html#last-access-time-timestamp["Saiba mais"^].
 
 
-A opção na parte superior da página para *Scan when missing "write attributes" permissions* está desativada por padrão. Isso significa que se a classificação BlueXP  não tiver permissões de atributos de gravação no CIFS ou permissões de gravação no NFS, o sistema não verificará os arquivos porque a classificação BlueXP  não poderá reverter o "último tempo de acesso" para o carimbo de data/hora original. Se você não se importa se a última hora de acesso é redefinida, LIGUE o interrutor e todos os arquivos serão digitalizados independentemente das permissões. link:reference-collected-metadata.html#last-access-time-timestamp["Saiba mais"^].
 
 .Resultado
-A classificação do BlueXP  começa a digitalizar os arquivos nos compartilhamentos de arquivo adicionados e os resultados são exibidos no Painel e em outros locais. Você pode acompanhar o progresso da digitalização inicial navegando até o menu **Configuração** e, em seguida, selecionando **Configuração do ambiente de trabalho**. O progresso de cada exame é apresentado como uma barra de progresso. Você também pode passar o Mouse sobre a barra de progresso para ver o número de arquivos digitalizados em relação ao total de arquivos no volume.
+A classificação do BlueXP  começa a digitalizar os arquivos nos compartilhamentos de arquivo adicionados e os resultados são exibidos no Painel e em outros locais.
+
+
+
+== Acompanhe o progresso da digitalização
+
+Pode acompanhar o progresso da digitalização inicial.
+
+. Selecione **Configuração** menu.
+. Selecione **Configuração do ambiente de trabalho**.
++
+O progresso de cada exame é apresentado como uma barra de progresso.
+
+. Passe o Mouse sobre a barra de progresso para ver o número de arquivos digitalizados em relação ao total de arquivos no volume.
+
 
 
 
@@ -129,8 +131,8 @@ Se você não precisar mais digitalizar certos compartilhamentos de arquivo, voc
 
 .Passos
 . No menu classificação BlueXP , selecione *Configuração*.
-. Na página Configuração, selecione *Remover compartilhamento*.
-+
-image:screenshot_compliance_fileshares_remove_share.png["Uma captura de tela mostrando como remover um único compartilhamento de arquivo de ter seus arquivos digitalizados."]
-
+. Selecione o ambiente de trabalho.
+. Selecione *Configuração*.
+. Na página Configuração, selecione as ações image:button-actions-horizontal.png["Ícone ações"] para o compartilhamento de arquivos que deseja remover.
+. No menu ações, selecione *Remover compartilhamento*.
 

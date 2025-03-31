@@ -40,6 +40,8 @@ sidebar:
         url: "/task-test-linux-system.html"
     - title: Ative a digitalização nas suas fontes de dados
       entries:
+      - title: Analise a visão geral das suas fontes de dados
+        url: "/task-scanning-overview.html"
       - title: Azure NetApp Files
         url: "/task-scanning-anf.html"
       - title: Amazon FSX para ONTAP
