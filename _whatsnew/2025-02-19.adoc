@@ -20,7 +20,7 @@ Por padrão, as digitalizações são enfileiradas com base na ordem em que são
 
 A prioridade é concedida de uma só vez. As redigitalizações automáticas de dados de mapeamento ocorrem na ordem padrão.
 
-A priorização é limitada a link:concept-cloud-compliance.md#whats-the-difference-between-mapping-and-classification-scans["digitalizações apenas de mapeamento"]; ela não está disponível para mapear e classificar digitalizações.
+A priorização é limitada a link:concept-cloud-compliance.html["digitalizações apenas de mapeamento"]; ela não está disponível para mapear e classificar digitalizações.
 
 Para alterar a prioridade:
 

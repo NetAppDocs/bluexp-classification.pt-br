@@ -56,7 +56,7 @@ indexpage:
     - title: Gerar relatórios de conformidade
       url: task-generating-compliance-reports.html
     - title: Responder a uma solicitação de acesso do titular dos dados
-      url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports
+      url: task-generating-compliance-reports.html
   - title: Funcionalidades obsoletas
     links:
     - title: Lista de recursos obsoletos

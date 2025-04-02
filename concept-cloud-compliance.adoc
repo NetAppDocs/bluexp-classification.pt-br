@@ -201,7 +201,7 @@ A classificação BlueXP  coleta, indexa e atribui categorias aos seus dados (a
 * *Dados pessoais sensíveis*: Tipos especiais de informações pessoais sensíveis (SPII), como dados de saúde, origem étnica ou opiniões políticas, conforme definido pelo GDPR e outras regulamentações de privacidade. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Saiba mais sobre dados pessoais confidenciais"^].
 * *Categorias*: A classificação BlueXP  leva os dados que digitalizou e divide-os em diferentes tipos de categorias. Categorias são tópicos baseados na análise de IA do conteúdo e metadados de cada arquivo. link:task-controlling-private-data.html#view-files-by-categories["Saiba mais sobre categorias"^].
 * * Tipos*: A classificação BlueXP  pega os dados que digitalizou e os divide por tipo de arquivo. link:task-controlling-private-data.html#view-files-by-file-types["Saiba mais sobre tipos"^].
-* * Reconhecimento de entidade de nome*: A classificação BlueXP  usa IA para extrair os nomes naturais das pessoas de documentos. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request["Saiba mais sobre como responder às solicitações de acesso do titular dos dados"^].
+* * Reconhecimento de entidade de nome*: A classificação BlueXP  usa IA para extrair os nomes naturais das pessoas de documentos. link:task-generating-compliance-reports.html["Saiba mais sobre como responder às solicitações de acesso do titular dos dados"^].
 
 
 
@@ -222,8 +222,4 @@ Se você tem exigências estritas da rede, link:task-deploy-cloud-compliance.htm
 
 == Funções de utilizador na classificação BlueXP 
 
-A função atribuída a cada utilizador fornece diferentes capacidades dentro da classificação BlueXP  e dentro da classificação BlueXP . Para obter detalhes, consulte o seguinte:
-
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Funções do BlueXP  IAM"] (Ao utilizar o BlueXP  no modo padrão)
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-user-roles.html["Funções de conta do BlueXP "^] (Ao utilizar o BlueXP  no modo restrito ou no modo privado)
-
+A função atribuída a cada utilizador fornece diferentes capacidades dentro da classificação BlueXP  e dentro da classificação BlueXP . Para obter mais informações, https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Funções do BlueXP  IAM"] consulte (quando utilizar o BlueXP  no modo padrão).

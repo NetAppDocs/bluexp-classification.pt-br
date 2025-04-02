@@ -55,7 +55,7 @@ A tabela abaixo mostra algumas das diferenças:
 | Idade e tamanho dos arquivos | Sim | Sim 
 
 
-| Capacidade de executar a. link:task-controlling-governance-data.html#data-mapping-report["Relatório de mapeamento de dados"] | Sim | Sim 
+| Capacidade de executar a. link:task-controlling-governance-data.html["Relatório de mapeamento de dados"] | Sim | Sim 
 
 
 | Página de investigação de dados para ver os detalhes do ficheiro | Sim | Não 

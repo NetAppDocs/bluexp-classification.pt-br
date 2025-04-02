@@ -63,7 +63,7 @@ Use os filtros a seguir para ver quanta informação sensível está contida em 
 | Dados pessoais confidenciais | Selecione o link:reference-private-data-categories.html#types-of-sensitive-personal-data["tipos de dados pessoais sensíveis"^]. 
 
 
-| Titular dos dados | Introduza o nome completo ou identificador conhecido do titular dos dados. link:task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports["Saiba mais sobre assuntos de dados aqui"^]. 
+| Titular dos dados | Introduza o nome completo ou identificador conhecido do titular dos dados. link:task-generating-compliance-reports.html["Saiba mais sobre assuntos de dados aqui"^]. 
 |===
 
 
