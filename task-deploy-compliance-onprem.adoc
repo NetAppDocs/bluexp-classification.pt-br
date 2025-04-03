@@ -308,7 +308,7 @@ NOTE: Atualmente, a classificação do BlueXP  não consegue digitalizar bucket
 
 Revise os requisitos e siga estas etapas ao instalar o software de classificação BlueXP  em um único host local.
 
-https://youtu.be/rFpmekdbORc["Assista a este vídeo"^] Para ver como instalar a classificação BlueXP .
+https://youtu.be/XiPLaJpfJEI["Assista a este vídeo"^] Para ver como instalar a classificação BlueXP .
 
 Observe que todas as atividades de instalação são registradas ao instalar a classificação BlueXP . Se você encontrar algum problema durante a instalação, poderá visualizar o conteúdo do log de auditoria de instalação. Está escrito para `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html["Veja mais detalhes aqui"].
 
@@ -348,7 +348,7 @@ image:screenshot_cloud_compliance_deploy_onprem.png["Uma captura de tela da sele
 . A caixa de diálogo _Deploy Data Sense on Premises_ é exibida. Copie o comando fornecido (por exemplo: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq`) E cole-o em um arquivo de texto para que você possa usá-lo mais tarde. Em seguida, clique em *Fechar* para ignorar a caixa de diálogo.
 . Na máquina host, digite o comando que você copiou e siga uma série de prompts, ou você pode fornecer o comando completo, incluindo todos os parâmetros necessários como argumentos de linha de comando.
 +
-Observe que o instalador executa uma pré-verificação para garantir que seus requisitos de sistema e rede estejam em vigor para uma instalação bem-sucedida. https://youtu.be/_RCYpuLXiV0["Assista a este vídeo"^] compreender as mensagens de pré-verificação e implicações.
+Observe que o instalador executa uma pré-verificação para garantir que seus requisitos de sistema e rede estejam em vigor para uma instalação bem-sucedida. https://youtu.be/5ONowfPWkFs["Assista a este vídeo"^] compreender as mensagens de pré-verificação e implicações.
 
 +
 [cols="50a,50"]
