@@ -155,13 +155,13 @@ image:screenshot-compliance-report-buttons.png["Uma captura de tela do Painel de
 .Resultado
 A classificação BlueXP  gera um relatório .pdf que pode rever e enviar para outros grupos, conforme necessário.
 
-Se o relatório for maior que 1 MB, o arquivo .pdf será retido na instância de classificação do BlueXP  e você verá uma mensagem pop-up sobre a localização exata. Quando a classificação do BlueXP  é instalada em uma máquina Linux em suas instalações ou em uma máquina Linux implantada na nuvem, você pode navegar diretamente para o arquivo .pdf. Quando a classificação do BlueXP  é implantada na nuvem, você precisará fazer SSH para a instância de classificação do BlueXP  para baixar o arquivo .pdf. link:task-audit-data-sense-actions.html#access-the-log-files["Veja como acessar dados na instância de classificação"^].
+Se o relatório for maior que 1 MB, o arquivo .pdf será retido na instância de classificação do BlueXP  e você verá uma mensagem pop-up sobre a localização exata. Quando a classificação do BlueXP  é instalada em uma máquina Linux em suas instalações ou em uma máquina Linux implantada na nuvem, você pode navegar diretamente para o arquivo .pdf. Quando a classificação do BlueXP  é implantada na nuvem, você precisará fazer SSH para a instância de classificação do BlueXP  para baixar o arquivo .pdf.
 
 
 
 === Reveja os principais repositórios de dados listados pela sensibilidade de dados
 
-A área _Top Data Repositories by Sensitivity Level_ lista os quatro principais repositórios de dados (ambientes de trabalho e fontes de dados) que contêm os itens mais sensíveis. O gráfico de barras para cada ambiente de trabalho é dividido em:
+A área _Top Data Repositories by Sensitivity Level_ do relatório Visão geral do mapeamento de dados lista os quatro principais repositórios de dados (ambientes de trabalho e fontes de dados) que contêm os itens mais confidenciais. O gráfico de barras para cada ambiente de trabalho é dividido em:
 
 * Dados não confidenciais
 * Dados pessoais
@@ -177,7 +177,7 @@ A área _Top Data Repositories by Sensitivity Level_ lista os quatro principais 
 
 === Revise dados confidenciais e permissões amplas
 
-A área _dados sensíveis e permissões amplas_ mostra a porcentagem de arquivos que contêm dados confidenciais e têm permissões amplas. O gráfico mostra os seguintes tipos de permissões:
+A área _dados sensíveis e permissões amplas_ do relatório Visão geral do mapeamento de dados mostra a porcentagem de arquivos que contêm dados confidenciais e têm permissões amplas. O gráfico mostra os seguintes tipos de permissões:
 
 * Das permissões mais restritivas às restrições mais permissivas no axix horizontal.
 * Dos dados menos sensitve aos dados mais sensíveis no eixo vertical.
@@ -192,7 +192,7 @@ A área _dados sensíveis e permissões amplas_ mostra a porcentagem de arquivos
 
 === Reveja os dados listados por tipos de permissões abertas
 
-A área _open permissions_ mostra a porcentagem para cada tipo de permissões que existem para todos os arquivos que estão sendo verificados. O gráfico mostra os seguintes tipos de permissões:
+A área _Open Permissions_ do relatório Visão geral do mapeamento de dados mostra a porcentagem para cada tipo de permissões que existem para todos os arquivos que estão sendo digitalizados. O gráfico mostra os seguintes tipos de permissões:
 
 * Sem permissões abertas
 * Aberto à Organização
@@ -209,7 +209,7 @@ A área _open permissions_ mostra a porcentagem para cada tipo de permissões qu
 
 === Reveja a idade e o tamanho dos dados
 
-Você pode querer investigar os itens nos gráficos _Age_ e _size_ para ver se há dados que você deve excluir ou categorizar para armazenamento de objetos mais barato.
+Você pode querer investigar os itens nos gráficos _idade_ e _tamanho_ do relatório Visão geral do Mapeamento de dados para ver se há dados que você deve excluir ou categorizar para armazenamento de objetos menos caro.
 
 .Passos
 . No gráfico idade dos dados, para ver detalhes sobre a idade dos dados, posicione o cursor sobre um ponto no gráfico.
@@ -228,11 +228,11 @@ NOTE: Se alguma das suas fontes de dados implementar a disposição em camadas d
 
 === Reveja as classificações de dados mais identificadas nos seus dados
 
-A área _Classification_ fornece uma lista dos dados mais identificados link:task-controlling-private-data.html#view-files-by-categories["Categorias"^] e link:task-controlling-private-data.html#view-files-by-file-types["Tipos de ficheiros"^]verificados.
+A área _classificação_ do relatório Visão geral do mapeamento de dados fornece uma lista dos dados mais identificados link:task-controlling-private-data.html["Categorias"] e link:task-controlling-private-data.html["Tipos de ficheiros"] em seus dados digitalizados.
 
 As categorias podem ajudá-lo a entender o que está acontecendo com seus dados, mostrando os tipos de informações que você tem. Por exemplo, uma categoria como "currículos" ou "contratos de funcionários" pode incluir dados confidenciais. Ao investigar os resultados, você pode descobrir que os contratos de funcionários são armazenados em um local não seguro. Você pode então corrigir esse problema.
 
-Consulte link:task-controlling-private-data.html#view-files-by-categories["Visualizar ficheiros por categorias"^] para obter mais informações.
+Consulte link:task-controlling-private-data.html["Visualizar ficheiros por categorias"] para obter mais informações.
 
 .Passos
 . No menu BlueXP , clique em *Governança > classificação*.

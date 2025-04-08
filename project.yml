@@ -71,7 +71,7 @@ sidebar:
     - title: Atribua políticas aos seus dados
       url: "/task-using-policies.html"
     - title: Alterar as definições de digitalização
-      url: task-managing-repo-scanning.html
+      url: "/task-managing-repo-scanning.html"
     - title: Gerar relatórios de conformidade
       url: "/task-generating-compliance-reports.html"
   - title: Gerir a classificação BlueXP 

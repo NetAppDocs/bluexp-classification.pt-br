@@ -16,7 +16,7 @@ summary: 'Você pode gerenciar como seus dados estão sendo digitalizados em cad
 [role="lead"]
 Você pode gerenciar como seus dados estão sendo digitalizados em cada um de seus ambientes de trabalho e fontes de dados. Você pode fazer as alterações em uma base "repositório"; o que significa que você pode fazer alterações para cada volume, esquema, usuário, etc., dependendo do tipo de fonte de dados que você está digitalizando.
 
-Algumas das coisas que você pode alterar são se um repositório é digitalizado ou não e se a classificação BlueXP  está executando um link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans["digitalização de mapeamento ou uma digitalização de classificação  de mapeamento"]. Você também pode pausar e retomar a digitalização, por exemplo, se precisar parar de digitalizar um volume por um período de tempo.
+Algumas das coisas que você pode alterar são se um repositório é digitalizado ou não e se a classificação BlueXP  está executando um link:concept-cloud-compliance.html["digitalização de mapeamento ou uma digitalização de classificação  de mapeamento"]. Você também pode pausar e retomar a digitalização, por exemplo, se precisar parar de digitalizar um volume por um período de tempo.
 
 
 
@@ -37,17 +37,17 @@ Pode visualizar o estado de digitalização de cada ambiente de trabalho na pág
 
 
 .Passos
-. Na guia Configuração, clique no botão *Configuração* para o ambiente de trabalho.
+. No menu classificação BlueXP , selecione *Configuração*.
 +
 image:screenshot_compliance_config_button.png["Uma captura de tela mostrando como clicar no botão Configuração para um ambiente de trabalho."]
 
-. Na página Scan Configuration (Configuração da digitalização), pode visualizar as definições de digitalização para todos os repositórios.
+. Na guia Configuração, selecione o botão *Configuração* para o ambiente de trabalho.
+. Na página Scan Configuration (Configuração de digitalização), visualize as definições de digitalização para todos os repositórios.
 +
 image:screenshot_compliance_repo_scan_settings.png["Uma captura de tela mostrando se seus buckets estão sendo digitalizados e o status atual da varredura."]
 
+. Passe o cursor sobre o gráfico na coluna _Mapping Status_ para ver o número de arquivos que ainda precisam ser mapeados ou classificados em cada repositório (bucket neste exemplo).
 
-
-Você pode passar o cursor sobre o gráfico na coluna _Mapping Status_ para ver o número de arquivos que permanecem mapeados ou classificados em cada repositório (bucket neste exemplo).
 
 
 
@@ -59,21 +59,25 @@ Pode iniciar ou parar exames apenas de mapeamento ou exames de mapeamento e clas
 TIP: Os bancos de dados não podem ser configurados para exames somente de mapeamento. A digitalização da base de dados pode estar desligada ou ligada; onde a opção ligada é equivalente a mapear e classificar.
 
 .Passos
-. Na guia Configuração, clique no botão *Configuração* para o ambiente de trabalho.
+. No menu classificação BlueXP , selecione *Configuração*.
+. Na guia Configuração, selecione o botão *Configuração* para o ambiente de trabalho.
 +
 image:screenshot_compliance_config_button.png["Uma captura de tela mostrando como clicar no botão Configuração para um ambiente de trabalho."]
 
-. Na página Configuração de digitalização, você pode alterar qualquer um dos repositórios (buckets neste exemplo) para executar varreduras *Map* ou *Map & Classify*.
+. Na página Configuração de digitalização, altere qualquer um dos repositórios (buckets neste exemplo) para executar digitalizações *Map* ou *Map & Classify*.
 +
 image:screenshot_compliance_repo_scan_settings.png["Uma captura de tela mostrando como selecionar o tipo de digitalização para um bucket."]
 
-
-
++
 Certos tipos de ambientes de trabalho permitem que você altere o tipo de digitalização globalmente para todos os repositórios usando uma barra de botões na parte superior da página. Isso é válido para sistemas Cloud Volumes ONTAP, ONTAP no local, Azure NetApp Files e Amazon FSX para ONTAP.
 
++
 O exemplo abaixo mostra esta barra de botões para um sistema Azure NetApp Files.
 
++
 image:screenshot_compliance_repo_scan_all.png["Uma captura de tela mostrando como configurar a mesma configuração de digitalização para todos os volumes em um ambiente de trabalho."]
+
+
 
 
 
@@ -82,13 +86,14 @@ image:screenshot_compliance_repo_scan_all.png["Uma captura de tela mostrando com
 Você pode parar de digitalizar um repositório (por exemplo, um volume) se não precisar mais monitorá-lo para conformidade. Você faz isso desativando a digitalização. Quando a digitalização é desligada, toda a indexação e informações sobre esse volume são removidas do sistema e o carregamento para a digitalização dos dados é interrompido.
 
 .Passos
-. Na guia Configuração, clique no botão *Configuração* para o ambiente de trabalho.
+. No menu classificação BlueXP , selecione *Configuração*.
+. Na guia Configuração, selecione o botão *Configuração* para o ambiente de trabalho.
 +
 image:screenshot_compliance_config_button.png["Uma captura de tela mostrando como clicar no botão Configuração para um ambiente de trabalho."]
 
 . Na página Configuração de digitalização, selecione *Off* para parar a digitalização de um determinado intervalo.
 +
-image:screenshot_compliance_stop_repo_scanning.png["Uma captura de tela mostrando como selecionar o tipo de digitalização para um bucket."]
+image:screenshot_compliance_repo_scan_settings.png["Uma captura de tela mostrando como selecionar o tipo de digitalização para um bucket."]
 
 
 
@@ -101,18 +106,11 @@ Você pode "pausar" a digitalização em um repositório se quiser parar tempora
 Você pode "retomar" a digitalização a qualquer momento.
 
 .Passos
-. Na guia Configuração, clique no botão *Configuração* para o ambiente de trabalho.
+. No menu classificação BlueXP , selecione *Configuração*.
+. Na guia Configuração, selecione o botão *Configuração* para o ambiente de trabalho.
 +
 image:screenshot_compliance_config_button.png["Uma captura de tela mostrando como clicar no botão Configuração para um ambiente de trabalho."]
 
-. Na página Scan Configuration (Configuração da digitalização), clique no botão Pause (Pausa) para interromper a digitalização de um volume ou prima o botão Resume (Retomar) para retomar a digitalização de um volume que tenha sido anteriormente pausado.
-+
-image:screenshot_compliance_repo_pause_resume.png["Uma captura de tela mostrando como pausar e retomar a digitalização em um volume."]
-
-+
-Observe que algumas fontes de dados fornecem a funcionalidade Pausa e Retomar em um menu, como mostrado abaixo para sites do SharePoint.
-
-+
-image:screenshot_compliance_repo_pause_resume2.png["Uma captura de tela mostrando como pausar e retomar a digitalização em um site do SharePoint."]
-
+. Na página Scan Configuration (Configuração de digitalização), selecione o ícone Actions (açõesimage:button-actions-horizontal.png["Ícone ações"]).
+. Selecione *Pausa* para pausar a digitalização de um volume ou selecione *Resume* para retomar a digitalização de um volume que tenha sido pausado anteriormente.
 

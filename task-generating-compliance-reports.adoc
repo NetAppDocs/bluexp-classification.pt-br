@@ -45,10 +45,11 @@ Você pode filtrar o conteúdo do painel de conformidade de classificação do B
 Quando você filtra o painel, a classificação do BlueXP  escoa os dados de conformidade e os relatórios apenas para os ambientes de trabalho selecionados.
 
 .Passos
-. Selecione a lista suspensa filtro e selecione os ambientes de trabalho.
+. No menu classificação BlueXP , selecione "*Compliance*."
+. Selecione a lista suspensa filtro de ambientes de trabalho e selecione os ambientes de trabalho.
 . Selecione *Ver*.
 +
-image:screenshot_cloud_compliance_filter.gif["Uma captura de tela para selecionar os ambientes de trabalho para os relatórios que você deseja executar."]
+image:screenshot_cloud_compliance_filter.png["Uma captura de tela para selecionar os ambientes de trabalho para os relatórios que você deseja executar."]
 
 
 
@@ -77,8 +78,8 @@ Procure o nome completo ou identificador conhecido do titular dos dados e, em se
 NOTE: O inglês, o alemão, o japonês e o espanhol são suportados ao procurar os nomes dos titulares dos dados. O suporte para mais idiomas será adicionado mais tarde.
 
 .Passos
-. A partir do menu BlueXP , selecione *Governança > classificação*.
-. Selecione *Assunto de dados*.
+. No menu classificação BlueXP , selecione "*Compliance*."
+. Na página de conformidade, role para baixo e selecione *Assunto de dados*.
 . Procure o nome completo ou identificador conhecido do titular dos dados.
 +
 Aqui está um exemplo que mostra uma pesquisa para o nome _john doe_:
@@ -125,8 +126,9 @@ O relatório inclui as seguintes informações:
 Vá para a guia conformidade para gerar o relatório.
 
 .Passos
-. A partir do menu BlueXP , selecione *Governança > classificação*.
-. Selecione *Compliance* e, em seguida, selecione o ícone de download ao lado de *Relatório HIPAA* em *relatórios*.
+. No menu classificação BlueXP , selecione "*Compliance*."
+. Role para baixo e localize o painel *relatórios*.
+. Selecione o ícone de download ao lado de *Relatório HIPAA*.
 +
 image:screenshot_hipaa.gif["Uma captura de tela da guia conformidade no BlueXP  que mostra o painel relatórios onde você pode clicar em HIPAA."]
 
@@ -155,8 +157,9 @@ O relatório inclui as seguintes informações:
 Vá para a guia conformidade para gerar o relatório.
 
 .Passos
-. A partir do menu BlueXP , selecione *Governança > classificação*.
-. Selecione *Compliance* e, em seguida, selecione o ícone de download ao lado de *Relatório PCI DSS* em *relatórios*.
+. No menu classificação BlueXP , selecione "*Compliance*."
+. Role para baixo e localize o painel *relatórios*.
+. Selecione o ícone de download ao lado de *Relatório PCI DSS*.
 +
 image:screenshot_pci_dss.gif["Uma captura de tela da guia conformidade no BlueXP  que mostra o painel relatórios onde você pode clicar em avaliação de risco de privacidade."]
 
@@ -183,8 +186,9 @@ O relatório inclui as seguintes informações:
 Vá para a guia conformidade para gerar o relatório.
 
 .Passos
-. A partir do menu BlueXP , selecione *Governança > classificação*.
-. Selecione *Compliance* e, em seguida, selecione o ícone de download ao lado de *Privacy Risk Assessment* em *Reports*.
+. No menu classificação BlueXP , selecione "*Compliance*."
+. Role para baixo e localize o painel *relatórios*.
+. Selecione o ícone de download ao lado de *avaliação de risco de privacidade*.
 +
 image:screenshot_privacy_risk_assessment.gif["Uma captura de tela da guia conformidade no BlueXP  que mostra o painel relatórios onde você pode clicar em avaliação de risco de privacidade."]
 
