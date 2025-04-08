@@ -164,7 +164,7 @@ A classificação BlueXP  permite-lhe executar uma análise geral de "mapeament
 +
 Após uma verificação rápida, você pode gerar um Relatório de Mapeamento de dados. Este relatório é uma visão geral dos dados armazenados em suas fontes de dados corporativas para ajudá-lo a tomar decisões sobre a utilização de recursos, migração, backup, segurança e processos de conformidade.
 
-* * Análise de classificação de dados (profunda) (varredura de mapa e classificação)*: Varre a classificação BlueXP  usando protocolos padrão e permissão somente leitura em todos os seus ambientes. Os arquivos selecionados são abertos e digitalizados para dados confidenciais relacionados a negócios, informações privadas e problemas relacionados ao ransomware.
+* * Análise profunda de classificação de dados (varredura de mapa e classificação)*: Varre a classificação BlueXP  usando protocolos padrão e permissão somente leitura em todos os seus ambientes. Os arquivos selecionados são abertos e digitalizados para dados confidenciais relacionados a negócios, informações privadas e problemas relacionados ao ransomware.
 +
 Depois de uma verificação completa, há muitos recursos adicionais de classificação do BlueXP  que você pode aplicar aos seus dados, como visualizar e refinar dados na página Investigação de dados, pesquisar nomes dentro de arquivos, copiar, mover e excluir arquivos de origem e muito mais.
 
