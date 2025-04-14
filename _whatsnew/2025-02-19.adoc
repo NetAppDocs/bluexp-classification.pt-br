@@ -22,12 +22,7 @@ A prioridade é concedida de uma só vez. As redigitalizações automáticas de 
 
 A priorização é limitada a link:concept-cloud-compliance.html["digitalizações apenas de mapeamento"]; ela não está disponível para mapear e classificar digitalizações.
 
-Para alterar a prioridade:
-
-. No menu classificação BlueXP , selecione *Configuração*.
-. Selecione os recursos que deseja priorizar.
-. Na opção ações ..., selecione *priorizar a digitalização*.
-
+Para obter mais informações, link:task-managing-repo-scanning.html#prioritize-scans["Priorizar exames"]consulte .
 
 .Tente novamente todas as digitalizações
 A classificação BlueXP  agora suporta a capacidade de tentar em lote novamente todas as digitalizações com falha.

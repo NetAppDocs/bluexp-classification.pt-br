@@ -81,6 +81,22 @@ image:screenshot_compliance_repo_scan_all.png["Uma captura de tela mostrando com
 
 
 
+== Priorizar exames
+
+Você pode priorizar as digitalizações mais importantes ---somente Mapeamento ou mapa e classificação. A capacidade de priorizar digitalizações permite garantir que as digitalizações de alta prioridade sejam concluídas primeiro.
+
+Por padrão, as digitalizações são enfileiradas com base na ordem em que são iniciadas. Com a capacidade de priorizar digitalizações, agora você pode mover digitalizações para a frente da fila. Várias digitalizações podem ser priorizadas. A prioridade é designada em uma ordem de primeira entrada e primeira saída, o que significa que a primeira digitalização que você prioriza se move para a frente da fila; a segunda digitalização que você prioriza se torna segunda na fila, e assim por diante.
+
+A prioridade é concedida de uma só vez. As redigitalizações automáticas de dados de mapeamento ocorrem na ordem padrão.
+
+.Passos
+. No menu classificação BlueXP , selecione *Configuração*.
+. Selecione os recursos que deseja priorizar.
+. Na opção ações `...`, selecione *priorizar a digitalização*.
+
+
+
+
 == Pare de procurar um repositório
 
 Você pode parar de digitalizar um repositório (por exemplo, um volume) se não precisar mais monitorá-lo para conformidade. Você faz isso desativando a digitalização. Quando a digitalização é desligada, toda a indexação e informações sobre esse volume são removidas do sistema e o carregamento para a digitalização dos dados é interrompido.

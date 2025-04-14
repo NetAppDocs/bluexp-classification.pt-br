@@ -3023,11 +3023,9 @@
   <block id="8e66898002589c26f968e6fd94a57988" category="list-text">Para tentar novamente todas as digitalizações com falha, selecione *Repetir todas as digitalizações*.</block>
   <block id="a2cf857a70e312df7b376e0516470728" category="list-text">Para tentar novamente uma digitalização específica, selecione o recurso e selecione *Repetir digitalização* na opção ações ....</block>
   <block id="e59c558837a0bee73ac15f544f275cae" category="paragraph">A digitalização é novamente testada com a mesma configuração que a digitalização original. Se a digitalização falhar novamente, pode tentar novamente quantas vezes for necessário.</block>
-  <block id="c05a4c0b45b0c78ba3771a3530738f78" category="paragraph">Ao realizar exames somente de mapeamento, você pode priorizar os exames mais importantes. Este recurso ajuda quando você tem muitos ambientes de trabalho e quer garantir que as verificações de alta prioridade sejam concluídas primeiro.</block>
   <block id="03b61f1818fbb0c7e0a356c942abdc31" category="paragraph">Por padrão, as digitalizações são enfileiradas com base na ordem em que são iniciadas. Com a capacidade de priorizar digitalizações, agora você pode mover digitalizações para a frente da fila. Várias digitalizações podem ser priorizadas. A prioridade é designada em uma ordem de primeira entrada e primeira saída, o que significa que a primeira digitalização que você prioriza se move para a frente da fila; a segunda digitalização que você prioriza se torna segunda na fila, e assim por diante.</block>
   <block id="e04ee48d980fd3722fe28400afcc0416" category="paragraph">A prioridade é concedida de uma só vez. As redigitalizações automáticas de dados de mapeamento ocorrem na ordem padrão.</block>
   <block id="c92ddb2e7e35e5bd406e62b822c22b14" category="inline-link-macro">digitalizações apenas de mapeamento</block>
-  <block id="42968807986d9cd74ea7703d63bf3408" category="paragraph">Para alterar a prioridade:</block>
   <block id="c3f4889bec03e0a3ba10184db92b3b07" category="paragraph-title">Tente novamente todas as digitalizações</block>
   <block id="06243660aeb549bac73e7c160d2d2a70" category="paragraph">A classificação BlueXP  agora suporta a capacidade de tentar em lote novamente todas as digitalizações com falha.</block>
   <block id="18dfe95c4c66dde6d275ff14f1c99ea9" category="paragraph">Agora você pode tentar novamente digitalizações em uma operação em lote com a função **Repetir tudo**. Se as verificações de classificação estiverem falhando devido a um problema temporário, como uma interrupção da rede, você pode tentar novamente todas as verificações ao mesmo tempo com um botão em vez de tentar novamente individualmente. As digitalizações podem ser tentadas quantas vezes forem necessárias.</block>
@@ -3411,9 +3409,6 @@
   <block id="c96bf252030be7d77f32e236939f6da2" category="list-text">Para exibir a lista de arquivos duplicados e onde eles estão localizados, selecione *Exibir detalhes*.</block>
   <block id="5e6ec4e1f88d65eaeb13fa82313d9809" category="list-text">Na próxima página, selecione *Exibir duplicados* para exibir os arquivos na página de investigação.</block>
   <block id="b9cf7636c1458813ea2386a78b8774cd" category="list-text">Escolha o tipo de relatório: CSV ou JSON.</block>
-  <block id="fc4f6fceccd6c5f18eabd79aacf08023" category="list-text">Forneça um ** Nome do relatório**.</block>
-  <block id="ef151ce6e85f07953f9567895b0703e3" category="list-text">Selecione um ** ambiente de trabalho** e **volume**</block>
-  <block id="cb013f85229d9d37e97ad54696f24544" category="list-text">Forneça um **caminho da pasta de destino**.</block>
   <block id="3acd7c6848524cfd6cd39d023db6c391" category="section-title">Crie uma política com base nos filtros selecionados</block>
   <block id="dbcfe39ddc3ef4e14d4b8ff904564614" category="paragraph">Pode ser útil salvar os filtros selecionados na página Investigação de dados como política. Desta forma, você pode executar os mesmos filtros a qualquer momento sem ter que selecioná-los novamente.</block>
   <block id="461f18298523b9780c64f7622a558e72" category="list-text">Na página Investigação de dados, selecione os filtros que deseja usar para criar uma política.</block>
@@ -3425,4 +3420,22 @@
   <block id="2a4930d89395c66bd221720bcaae06e3" category="list-text">*Enviar e-mail todos os &lt;Day&gt; para o &lt;email address&gt;*: Selecione esta opção se quiser enviar um e-mail a cada &lt;Day&gt; para um endereço de e-mail específico.</block>
   <block id="41025e9c551610edae39a167ecbe1b73" category="list-text">Selecione *criar política*.</block>
   <block id="97079a3b4a44ca52d28b2807f91a5ec0" category="admonition">Pode levar até 15 minutos para que os resultados apareçam na página políticas.</block>
+  <block id="bc19fc1fb9d36ac2eec32fb81f6e5cca" category="paragraph">Ao realizar exames somente de mapeamento, você pode priorizar os exames mais importantes. Este recurso ajuda quando você tem muitos ambientes de trabalho e quer garantir que as verificações de alta prioridade sejam concluídas primeiro.</block>
+  <block id="2e41eb33226717a4730fa2131336dc5a" category="paragraph">Para obter mais informações, <block ref="9493b318b51f384796e93c6ba74f5935" category="inline-link-macro-rx"></block>consulte .</block>
+  <block id="33fc2a8f6921fec02571495993aa2c6c" category="doc">Versão 1,42</block>
+  <block id="83962582dc3c189ba60063fe7990755c" category="paragraph">Esta versão de classificação BlueXP  inclui:</block>
+  <block id="2dcf334efa4f886393cac0e44ff5a917" category="paragraph-title">Digitalização em massa para ambientes de trabalho</block>
+  <block id="57e954d06c81eea089fcb04e61b1c429" category="paragraph">A classificação BlueXP  agora suporta operações em massa para ambientes de trabalho. Pode optar por ativar Mapeamento de digitalizações, ativar mapa e classificar digitalizações, desativar digitalizações ou criar uma configuração personalizada entre volumes no ambiente de trabalho. Se você fizer uma seleção para um volume individual, ele substituirá a seleção em massa. Para executar uma operação em massa, navegue até a página **Configuração** e faça a sua seleção.</block>
+  <block id="7c021042892d25e3e5d4271749e03344" category="paragraph-title">Baixe o relatório de investigação localmente</block>
+  <block id="a8539b02096aea65d2e102c01a482c71" category="paragraph">A classificação BlueXP  agora suporta a capacidade de baixar relatórios de investigação de dados localmente para visualizar no navegador. Se você escolher a opção local, a investigação de dados estará disponível apenas no formato CSV e exibirá apenas as primeiras 10.000 linhas de dados.</block>
+  <block id="95403a677c140fea03f157c2edb41c85" category="paragraph">Para obter mais informações, <block ref="55ff936b35b23a6f6693627bfb444c62" category="inline-link-macro-rx"></block>consulte .</block>
+  <block id="3e05db4c28329af069ba30406ce8330c" category="paragraph-title">Priorizar exames de classificação</block>
+  <block id="a9da1537a3e6bfb032d6a352bc5d82a7" category="paragraph">A classificação BlueXP  agora suporta a capacidade de priorizar exames de mapa e classificação, além de exames somente de mapeamento. A priorização dos exames de mapa e classificação é suportada durante e antes do início dos exames. Se optar por priorizar um exame enquanto este está em andamento, os exames de mapeamento e classificação são priorizados.</block>
+  <block id="84acc1c8e6e80bda04b6eac437f19154" category="admonition">Você pode baixar uma versão do arquivo CSV para visualizar neste navegador. Esta versão está limitada a 10.000 registos.</block>
+  <block id="05035e3bc31af3e060bb6a5ed03e7988" category="list-text">Digite um ** Nome do relatório**.</block>
+  <block id="1381344c0ad4a60786998569e040cb72" category="list-text">Se você escolheu CSV para tipo de relatório, selecione **local** para fazer o download do relatório no navegador. Observação esta opção limita o relatório às primeiras 10.000 linhas. Não são necessárias outras opções com esta opção.</block>
+  <block id="b73d8086c4fa1a5d2c97351fb3604a12" category="paragraph">Para obter o relatório completo, selecione **ambiente de trabalho** e, em seguida, escolha **ambiente de trabalho** e **volume** nos respetivos menus suspensos. Forneça um **caminho da pasta de destino**.</block>
+  <block id="345e1412843bf20361636f064c2a0359" category="paragraph">Você pode priorizar as digitalizações mais importantes ---somente Mapeamento ou mapa e classificação. A capacidade de priorizar digitalizações permite garantir que as digitalizações de alta prioridade sejam concluídas primeiro.</block>
+  <block id="634cb969225c406dc49fde5e0df02409" category="list-text">Na opção ações<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block>, selecione *priorizar a digitalização*.</block>
+  <block id="4409983c60e456858bb3e9ef5737f98a" category="section-title">14 de abril de 2025</block>
 </blocks>

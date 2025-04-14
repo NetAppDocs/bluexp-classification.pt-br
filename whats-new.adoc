@@ -18,6 +18,29 @@ Saiba o que há de novo na classificação BlueXP .
 
 
 
+== 14 de abril de 2025
+
+
+
+=== Versão 1,42
+
+Esta versão de classificação BlueXP  inclui:
+
+.Digitalização em massa para ambientes de trabalho
+A classificação BlueXP  agora suporta operações em massa para ambientes de trabalho. Pode optar por ativar Mapeamento de digitalizações, ativar mapa e classificar digitalizações, desativar digitalizações ou criar uma configuração personalizada entre volumes no ambiente de trabalho. Se você fizer uma seleção para um volume individual, ele substituirá a seleção em massa. Para executar uma operação em massa, navegue até a página **Configuração** e faça a sua seleção.
+
+.Baixe o relatório de investigação localmente
+A classificação BlueXP  agora suporta a capacidade de baixar relatórios de investigação de dados localmente para visualizar no navegador. Se você escolher a opção local, a investigação de dados estará disponível apenas no formato CSV e exibirá apenas as primeiras 10.000 linhas de dados.
+
+Para obter mais informações, link:task-investigate-data.html#create-the-data-investigation-report["Investigue os dados armazenados na sua organização com a classificação BlueXP "]consulte .
+
+.Priorizar exames de classificação
+A classificação BlueXP  agora suporta a capacidade de priorizar exames de mapa e classificação, além de exames somente de mapeamento. A priorização dos exames de mapa e classificação é suportada durante e antes do início dos exames. Se optar por priorizar um exame enquanto este está em andamento, os exames de mapeamento e classificação são priorizados.
+
+Para obter mais informações, link:task-managing-repo-scanning.html#prioritize-scans["Priorizar exames"]consulte .
+
+
+
 == 10 de março de 2025
 
 
@@ -55,12 +78,7 @@ A prioridade é concedida de uma só vez. As redigitalizações automáticas de 
 
 A priorização é limitada a link:concept-cloud-compliance.html["digitalizações apenas de mapeamento"]; ela não está disponível para mapear e classificar digitalizações.
 
-Para alterar a prioridade:
-
-. No menu classificação BlueXP , selecione *Configuração*.
-. Selecione os recursos que deseja priorizar.
-. Na opção ações ..., selecione *priorizar a digitalização*.
-
+Para obter mais informações, link:task-managing-repo-scanning.html#prioritize-scans["Priorizar exames"]consulte .
 
 .Tente novamente todas as digitalizações
 A classificação BlueXP  agora suporta a capacidade de tentar em lote novamente todas as digitalizações com falha.

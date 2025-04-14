@@ -283,8 +283,12 @@ Pode haver até três arquivos de relatório baixados se a classificação do Bl
 
 Os arquivos são divididos em arquivos com um número fixo de linhas ou Registros:
 
-* CSV - 200.000 Registros
 * JSON - 100.000 Registros
+* CSV - 200.000 Registros
++
+
+NOTE: Você pode baixar uma versão do arquivo CSV para visualizar neste navegador. Esta versão está limitada a 10.000 registos.
+
 
 
 *O que está incluído no Relatório de Investigação de dados*
@@ -344,9 +348,11 @@ O *Relatório de dados estruturados* inclui as seguintes informações sobre as 
 .Etapas para gerar o relatório
 . Na página Investigação de dados, selecione o image:button_download.png["botão de transferência"] botão na parte superior direita da página.
 . Escolha o tipo de relatório: CSV ou JSON.
-. Forneça um ** Nome do relatório**.
-. Selecione um ** ambiente de trabalho** e **volume**
-. Forneça um **caminho da pasta de destino**.
+. Digite um ** Nome do relatório**.
+. Se você escolheu CSV para tipo de relatório, selecione **local** para fazer o download do relatório no navegador. Observação esta opção limita o relatório às primeiras 10.000 linhas. Não são necessárias outras opções com esta opção.
++
+Para obter o relatório completo, selecione **ambiente de trabalho** e, em seguida, escolha **ambiente de trabalho** e **volume** nos respetivos menus suspensos. Forneça um **caminho da pasta de destino**.
+
 . Selecione **Transferir relatório**.
 +
 image:screenshot_compliance_investigation_report2.png["Uma captura de tela da página Download Investigation Report com várias opções."]
