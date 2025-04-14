@@ -349,9 +349,9 @@ O *Relatório de dados estruturados* inclui as seguintes informações sobre as 
 . Na página Investigação de dados, selecione o image:button_download.png["botão de transferência"] botão na parte superior direita da página.
 . Escolha o tipo de relatório: CSV ou JSON.
 . Digite um ** Nome do relatório**.
-. Se você escolheu CSV para tipo de relatório, selecione **local** para fazer o download do relatório no navegador. Observação esta opção limita o relatório às primeiras 10.000 linhas. Não são necessárias outras opções com esta opção.
+. Para baixar o relatório completo, selecione **ambiente de trabalho** e escolha **ambiente de trabalho** e **volume** nos respetivos menus suspensos. Forneça um **caminho da pasta de destino**.
 +
-Para obter o relatório completo, selecione **ambiente de trabalho** e, em seguida, escolha **ambiente de trabalho** e **volume** nos respetivos menus suspensos. Forneça um **caminho da pasta de destino**.
+Para fazer o download do relatório no navegador, selecione **local** . Observação esta opção limita o relatório às primeiras 10.000 linhas e é limitada ao formato **CSV**. Não é necessário preencher outros campos se selecionar **local**.
 
 . Selecione **Transferir relatório**.
 +
