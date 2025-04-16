@@ -58,7 +58,7 @@ Você pode querer investigar os itens na área _Saving Opportunities_ para ver s
 *** Diversos (categoria geral "outros")
 
 
-** *Duplicate Files* - arquivos que são duplicados em outros locais nas fontes de dados que você está digitalizando. link:task-investigate-data.html#filter-data-by-duplicates["Veja que tipos de arquivos duplicados são exibidos"].
+** *Duplicate Files* - arquivos que são duplicados em outros locais nas fontes de dados que você está digitalizando. link:task-investigate-data.html["Veja que tipos de arquivos duplicados são exibidos"].
 
 
 

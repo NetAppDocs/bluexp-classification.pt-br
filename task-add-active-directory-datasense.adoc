@@ -20,8 +20,8 @@ Quando você configura determinadas fontes de dados (listadas abaixo), você pre
 
 Esta integração fornece informações adicionais nos seguintes locais na classificação BlueXP :
 
-* Você pode usar o "proprietário do arquivo" link:task-investigate-data.html#filter-data-in-the-data-investigation-page["filtro"] e ver os resultados nos metadados do arquivo no painel de investigação. Em vez do proprietário do arquivo que contém o SID (identificador de segurança), ele é preenchido com o nome de usuário real.
-* Você pode ver link:task-investigate-data.html#view-permissions-for-files-and-directories["permissões de arquivo completas"] para cada arquivo e diretório quando você clicar no botão "Exibir todas as permissões".
+* Você pode usar o "proprietário do arquivo" link:task-investigate-data.html["filtro"] e ver os resultados nos metadados do arquivo no painel de investigação. Em vez do proprietário do arquivo que contém o SID (identificador de segurança), ele é preenchido com o nome de usuário real.
+* Você pode ver link:task-investigate-data.html["permissões de arquivo completas"] para cada arquivo e diretório quando você clicar no botão "Exibir todas as permissões".
 * No link:task-controlling-governance-data.html["Painel de governança"], o painel Open Permissions (permissões abertas) mostrará um maior nível de detalhes sobre os dados.
 
 
