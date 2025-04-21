@@ -56,7 +56,7 @@ Os idiomas em que esses itens podem ser reconhecidos são identificados na tabel
 | Palavra-passe | Sim | ✓ | ✓ | ✓ |  | ✓ 
 
 
-.57+| Identificadores nacionais | Australian TFN (número do ficheiro fiscal) | Sim | ✓ | ✓ | ✓ |  |  
+.88+| Identificadores nacionais | Australian TFN (número do ficheiro fiscal) | Sim | ✓ | ✓ | ✓ |  |  
 
 
 | Carteira de motorista australiana | Sim | ✓ | ✓ | ✓ |  |  
@@ -87,6 +87,99 @@ Os idiomas em que esses itens podem ser reconhecidos são identificados na tabel
 
 
 | ID búlgaro (UCN) | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| Números de informações bancárias do Canadá - número da conta | Sim | ✓ |  |  |  |  
+
+
+| Números de informações bancárias do Canadá - número de trânsito | Sim | ✓ |  |  |  |  
+
+
+| Número de residente Permanente/Cidadania Canadense - número de cartão PR (UCI) | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - Alberta | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - British Columbia | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - Manitoba | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - New Brunswick | Sim | ✓ |  |  |  |  
+
+
+| Licença de motorista Canadense - Terra Nova e Labrador | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - territórios do Noroeste | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - Nova Escócia | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - Nunavut | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - Ontario | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - Ilha do Príncipe Edward | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - Quebec | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - Saskatchewan | Sim | ✓ |  |  |  |  
+
+
+| Carteira de motorista Canadense - Yukon | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de saúde Canadense - Alberta PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de saúde Canadense - British Columbia PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de Saúde Canadense - Manitoba PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de saúde Canadense - PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de Saúde Canadense - Terra Nova e Labrador PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de Saúde Canadense - Northwest Territories PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de saúde Canadense - Nova Scotia PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de saúde Canadense - Nunavut PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de saúde Canadense - Ontario PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de saúde Canadense - Prince Edward Island PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de saúde Canadense - Quebec PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de saúde Canadense - Saskatchewan PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número do cartão de saúde Canadense - Yukon PHIN | Sim | ✓ |  |  |  |  
+
+
+| Número de passaporte Canadense | Sim | ✓ |  |  |  |  
+
+
+| Número do seguro Social Canadense (SIN) | Sim | ✓ |  |  |  |  
 
 
 | ID croata (OIB) | Sim | ✓ | ✓ | ✓ |  |  
@@ -209,9 +302,6 @@ Os idiomas em que esses itens podem ser reconhecidos são identificados na tabel
 | ID sueco | Sim | ✓ | ✓ | ✓ |  |  
 
 
-| Texas Driver's License | Sim | ✓ | ✓ | ✓ |  |  
-
-
 | ID DO REINO UNIDO (NINO) | Sim | ✓ | ✓ | ✓ |  |  
 
 
@@ -222,6 +312,9 @@ Os idiomas em que esses itens podem ser reconhecidos são identificados na tabel
 
 
 | EUA Nova York carteira de motorista | Sim | ✓ | ✓ | ✓ |  |  
+
+
+| EUA Texas Driver's License | Sim | ✓ | ✓ | ✓ |  |  
 
 
 | Número da Segurança Social dos EUA (SSN) | Sim | ✓ | ✓ | ✓ |  |  

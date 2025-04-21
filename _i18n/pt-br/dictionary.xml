@@ -636,8 +636,6 @@
   <block id="f9708a970f23f6246d00ed049441f725" category="cell">ID sul-africana</block>
   <block id="e2815889a4d51dfd383777dc337b2dd8" category="cell">Número de identificação fiscal espanhol</block>
   <block id="395e62e3c06087358ff2b2d60941c49e" category="cell">ID sueco</block>
-  <block id="9816532bdb11b99d3175be528e41c5b6" category="cell">Texas Driver's License</block>
-  <block id="3b5f87032b5dd0beea89f73c7f8f64c0" category="cell">ID DO REINO UNIDO (NINO)</block>
   <block id="5721a59dab5cc5d2f326b7e5464d9860" category="cell">EUA California Driver's License</block>
   <block id="162e79a198624ab621c2e0fcd8aa5099" category="cell">EUA Indiana carteira de motorista</block>
   <block id="56ee28a97ee2b5724da347257b198872" category="cell">EUA Nova York carteira de motorista</block>
@@ -3438,4 +3436,37 @@
   <block id="3ee1fee226155df3d1aec325193a3b4a" category="paragraph">Além de mostrar o ambiente de trabalho e o volume em que o arquivo reside, os metadados mostram muito mais informações, incluindo as permissões de arquivo, o proprietário do arquivo e se há duplicatas desse arquivo. Esta informação é útil se você está planejando <block ref="e4856c4af761ccf18001e0febd54584c" category="inline-link-macro-rx"></block>porque você pode ver todas as informações que você pode usar para filtrar seus dados.</block>
   <block id="1c3cd11405c2cc34d1b337f6a930a0e5" category="list-text">Durante a investigação de diretórios, a opção de calcular o número de dados pessoais identificáveis (PII) por diretórios não está disponível. <block ref="0b922dd9827c419654172323345089b8" category="inline-link-macro-rx"></block>Consulte a .</block>
   <block id="993d0cb387fd8414eea2cd1b17bc3b81" category="paragraph"><block ref="52b8cfc50608d81c1431f72921eeb174" prefix="" category="inline-code"></block></block>
+  <block id="c70458770b484ae39f3759b69683ab6b" category="cell">Números de informações bancárias do Canadá - número da conta</block>
+  <block id="ca969715fb69ff8e6cd2406dc42a0115" category="cell">Números de informações bancárias do Canadá - número de trânsito</block>
+  <block id="e796d7c04041aaf21b5af715ecc91a1c" category="cell">Número de residente Permanente/Cidadania Canadense - número de cartão PR (UCI)</block>
+  <block id="0e21a574f6f771c930f5b96ee62e58d2" category="cell">Carteira de motorista Canadense - Alberta</block>
+  <block id="d3d54a66bbef95b39a5bf70d16356891" category="cell">Carteira de motorista Canadense - British Columbia</block>
+  <block id="e6bf20a7b92554ffa4a006f36784e344" category="cell">Carteira de motorista Canadense - Manitoba</block>
+  <block id="5d6c26f97ac40514c041e668a130476c" category="cell">Carteira de motorista Canadense - New Brunswick</block>
+  <block id="1b282810fa2732305d9dc0bf289058d2" category="cell">Licença de motorista Canadense - Terra Nova e Labrador</block>
+  <block id="9bbc6181cfb500d57438b0e72bbbbcdf" category="cell">Carteira de motorista Canadense - territórios do Noroeste</block>
+  <block id="7de39f9c0a59ccdf4714f95f71735ead" category="cell">Carteira de motorista Canadense - Nova Escócia</block>
+  <block id="248a0eecdb5ec10c7b40cee019e506e1" category="cell">Carteira de motorista Canadense - Nunavut</block>
+  <block id="d1c337f706be4d36153af2262c152dfa" category="cell">Carteira de motorista Canadense - Ontario</block>
+  <block id="c8485c054ee19100ec49442e7d3bbb73" category="cell">Carteira de motorista Canadense - Ilha do Príncipe Edward</block>
+  <block id="c04fab42f5c20dc97099b923450c0105" category="cell">Carteira de motorista Canadense - Quebec</block>
+  <block id="2c6bc18ec1e34d47da15bf3c02864fcb" category="cell">Carteira de motorista Canadense - Saskatchewan</block>
+  <block id="842796c59314b42a40bc31c8dc0d5a9c" category="cell">Carteira de motorista Canadense - Yukon</block>
+  <block id="5928c27213a92b605205c5745b146789" category="cell">Número do cartão de saúde Canadense - Alberta PHIN</block>
+  <block id="9eb75aa530a0c8650bdb4d5fbfd4538e" category="cell">Número do cartão de saúde Canadense - British Columbia PHIN</block>
+  <block id="4d51f4c5ed69fb856530b63f706cac35" category="cell">Número do cartão de Saúde Canadense - Manitoba PHIN</block>
+  <block id="f365a08ef7ec43a95854d32593be96ea" category="cell">Número do cartão de saúde Canadense - PHIN</block>
+  <block id="7b4ed5f6ed12ca17f52bd8165efc93eb" category="cell">Número do cartão de Saúde Canadense - Terra Nova e Labrador PHIN</block>
+  <block id="58176267daff0c93f4359a1596b2d551" category="cell">Número do cartão de Saúde Canadense - Northwest Territories PHIN</block>
+  <block id="58a429a15bddcd81c4d3c04d245cf0d8" category="cell">Número do cartão de saúde Canadense - Nova Scotia PHIN</block>
+  <block id="3077c0a827bbd17b01774cfb07265e45" category="cell">Número do cartão de saúde Canadense - Nunavut PHIN</block>
+  <block id="0f07d697edcf5bae7eeab112c2b7dcf7" category="cell">Número do cartão de saúde Canadense - Ontario PHIN</block>
+  <block id="d98b7ba0c906c6a8afbace7bb119c736" category="cell">Número do cartão de saúde Canadense - Prince Edward Island PHIN</block>
+  <block id="37e0047daec5d1a41f67f8fdee298faf" category="cell">Número do cartão de saúde Canadense - Quebec PHIN</block>
+  <block id="f67a6db55df6462b163f29093bfc2b30" category="cell">Número do cartão de saúde Canadense - Saskatchewan PHIN</block>
+  <block id="7047dd363f6801a2bc8a7dbee707e22f" category="cell">Número do cartão de saúde Canadense - Yukon PHIN</block>
+  <block id="55ec0a8f16e4e7e1a5b3857d2be725dc" category="cell">Número de passaporte Canadense</block>
+  <block id="bc95bc80ebf2858c233b2627b019d9e4" category="cell">Número do seguro Social Canadense (SIN)</block>
+  <block id="00acd555cd21235c4d1b966ed1be4a74" category="cell">ID DO REINO UNIDO (NINO)</block>
+  <block id="03624a0e3cf06ce697a55ae458b36245" category="cell">EUA Texas Driver's License</block>
 </blocks>
