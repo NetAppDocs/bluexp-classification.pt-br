@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-using-policies.html 
 keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
-summary: Filtros de correção de políticas que fornecem resultados de pesquisa na página de investigação para consultas de conformidade comumente solicitadas. A classificação BlueXP  fornece um conjunto de políticas predefinidas com base em solicitações comuns ou você pode criar as suas. 
+summary: As pesquisas salvas são filtros personalizados que fornecem resultados de pesquisa na página de investigação para consultas de conformidade comumente solicitadas. A classificação BlueXP  fornece um conjunto de pesquisas salvas padrão com base em solicitações comuns ou você pode criar suas próprias pesquisas. 
 ---
-= Atribua políticas aos seus dados com a classificação BlueXP 
+= Gerencie pesquisas salvas com a classificação BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,75 +14,66 @@ summary: Filtros de correção de políticas que fornecem resultados de pesquisa
 
 
 [role="lead"]
-As políticas são como uma lista de favoritos de filtros personalizados que fornecem resultados de pesquisa na página de investigação para consultas de conformidade comumente solicitadas. A classificação BlueXP  fornece um conjunto de políticas predefinidas com base em solicitações comuns do cliente. Você pode criar políticas personalizadas que fornecem resultados para pesquisas específicas para sua organização.
-
-As políticas oferecem a seguinte funcionalidade:
-
-* <<Lista de políticas predefinidas,Políticas predefinidas>> Do NetApp com base nas solicitações do usuário
-* Capacidade de criar suas próprias políticas personalizadas
-* Inicie a página de investigação com os resultados das suas políticas com um clique
+A classificação BlueXP  suporta salvar suas consultas de pesquisa. Com uma pesquisa salva, você pode criar filtros personalizados para classificar consultas frequentes da página de investigação de dados. A classificação BlueXP  também inclui pesquisas salvas predefinidas com base em solicitações comuns.
 
 
-A guia *políticas* no Painel de conformidade lista todas as políticas predefinidas e personalizadas disponíveis nesta instância da classificação do BlueXP .
+NOTE: Em versões da classificação BlueXP  anteriores a 1,43, as pesquisas salvas foram chamadas xref:task-using-policies-deprecated.adoc[políticas].
 
-As políticas também aparecem na lista de filtros na página de investigação.
+A guia *Pesquisas salvas* no Painel de conformidade lista todas as pesquisas salvas predefinidas e personalizadas disponíveis nesta instância da classificação do BlueXP .
 
-image:screenshot_compliance_highlights_tab.png["Uma captura de tela da guia políticas no painel de classificação do BlueXP ."]
+As pesquisas salvas também aparecem na lista de filtros na página de investigação.
+
+image:screenshot_compliance_highlights_tab.png["Uma captura de tela da guia de pesquisas salvas no painel de classificação do BlueXP ."]
 
 
 
-== Exibir os resultados da política na página de investigação
+== Exibir resultados de pesquisas salvas na página de investigação
 
-Para exibir os resultados de uma política na página de investigação, selecione o image:screenshot_gallery_options.gif["Botão mais"]botão para uma política específica e selecione *investigar resultados*.
+Para exibir os resultados de uma pesquisa salva na página de investigação, selecione o image:screenshot_gallery_options.gif["Botão mais"]botão para uma pesquisa específica e selecione *investigar resultados*.
 
-image:screenshot_compliance_highlights_investigate.png["Uma captura de tela da seleção de investigar resultados para uma política específica na guia políticas."]
+image:screenshot_compliance_highlights_investigate.png["Uma captura de tela de seleção de resultados de investigação para uma pesquisa específica na guia Pesquisa oculta."]
 
 
 
-== Crie políticas personalizadas
+== Criar pesquisas personalizadas salvas
 
-Você pode criar suas próprias políticas personalizadas que fornecem resultados para pesquisas específicas para sua organização. Os resultados são retornados para todos os arquivos e diretórios (compartilhamentos e pastas) que correspondem aos critérios de pesquisa.
+Você pode criar suas próprias pesquisas salvas personalizadas que fornecem resultados para consultas específicas para sua organização. Os resultados são retornados para todos os arquivos e diretórios (compartilhamentos e pastas) que correspondem aos critérios de pesquisa.
 
 .Passos
 . Na guia Investigação, defina uma pesquisa selecionando os filtros que deseja usar. link:task-investigate-data.html["Filtrando dados na página de investigação"]Consulte para obter detalhes.
-. Depois de ter todas as caraterísticas do filtro definidas ao seu gosto, selecione *criar política a partir desta pesquisa*.
+. Depois de ter todas as caraterísticas do filtro definidas ao seu gosto, selecione *criar pesquisa salva*.
 +
-image:screenshot_compliance_save_as_highlight.png["Captura de tela mostrando como salvar uma consulta filtrada como uma Política."]
+image:screenshot_compliance_save_as_highlight.png["Captura de tela mostrando como salvar uma consulta filtrada como uma pesquisa salva."]
 
-. Nomeie a política e selecione outras ações que podem ser executadas pela política:
+. Nomeie a pesquisa salva e adicione uma descrição. O nome deve ser único.
+. Selecione *criar Pesquisa salva*.
 +
-.. Introduza um nome e uma descrição únicos.
-.. Opcionalmente, marque a caixa para excluir automaticamente arquivos que correspondam aos parâmetros da política.
-.. Selecione *criar política*.
-+
-image:screenshot_compliance_save_highlight2.png["Uma captura de tela que mostra como configurar a Política e salvá-la."]
-
-
+image:screenshot_compliance_save_highlight2.png["Uma captura de tela que mostra como configurar a pesquisa salva e salvá-la."]
 
 
 
 .Resultado
-A nova política é exibida na guia políticas.
+A nova pesquisa salva é exibida na guia Pesquisas salvas.
 
 
 
-== Editar políticas
+== Editar pesquisas salvas
 
-Você pode modificar os critérios de uma política existente para alterar a consulta (os itens definidos usando filtros) para adicionar ou remover determinados parâmetros.
+Você pode modificar os critérios de uma pesquisa salva criada sob medida para alterar a consulta (os itens que você definiu usando filtros) para adicionar ou remover determinados parâmetros.
 
-Não é possível modificar políticas predefinidas.
+Não é possível modificar pesquisas salvas padrão.
 
 .Passos
-. Na página Lista de políticas, selecione *Editar política* para a política que você deseja alterar.
+. Na página de pesquisas salvas, selecione *Editar pesquisa salva* para a pesquisa que você deseja alterar.
 +
-image:screenshot_compliance_edit_policy_button.png["Uma captura de tela mostrando como iniciar uma edição em uma Política existente."]
+image:screenshot_compliance_edit_policy_button.png["Uma captura de tela mostrando Editar Pesquisa salva."]
 
-. Faça as alterações nos campos de nome e descrição. Para alterar somente esses campos, selecione *Salvar política*.
+. Faça as alterações nos campos de nome e descrição. Para alterar somente esses campos, selecione *Salvar*.
 +
 Para alterar os filtros da consulta salva, selecione *Editar consulta*.
 
 +
-image:screenshot_compliance_edit_policy_dialog.png["Uma captura de tela da seleção do botão Editar consulta na página Editar política."]
+image:screenshot_compliance_edit_policy_dialog.png["Uma captura de tela da seleção do botão Editar consulta na página Editar Pesquisa salva."]
 
 . Na página de investigação que define essa consulta, edite a consulta adicionando, removendo ou personalizando os filtros e selecione *Salvar alterações* .
 +
@@ -92,34 +83,48 @@ image:screenshot_compliance_edit_policy_query.png["Uma captura de tela mostrando
 
 
 
-== Eliminar políticas
+== Eliminar pesquisas guardadas
 
-Você pode excluir qualquer política personalizada que você criou se não precisar mais dela. Não é possível excluir nenhuma das políticas predefinidas.
+Você pode excluir qualquer pesquisa personalizada salva se não precisar mais dela. Não é possível excluir pesquisas salvas padrão
 
-Para excluir uma política, selecione o image:screenshot_gallery_options.gif["Botão mais"]botão de uma política específica, selecione *Excluir política* e, em seguida, selecione *Excluir política* novamente na caixa de diálogo de confirmação.
-
-
-
-== Lista de políticas predefinidas
-
-A classificação BlueXP  fornece as seguintes políticas definidas pelo sistema:
-
-[cols="25,40,40"]
-|===
-| Nome | Descrição | Lógica 
+Para excluir uma pesquisa salva, selecione o image:screenshot_gallery_options.gif["Botão mais"]botão para uma pesquisa específica, selecione *Excluir pesquisa salva* e selecione *Excluir pesquisa* novamente na caixa de diálogo de confirmação.
 
 
-| Dados privados - obsoletos ao longo de 7 anos | Arquivos contendo informações pessoais ou confidenciais, modificados pela última vez há mais de 7 anos. | Arquivos contendo informações pessoais ou confidenciais, modificados pela última vez há mais de 7 anos 
+
+== Pesquisas padrão
+
+A classificação BlueXP  fornece as seguintes consultas de pesquisa definidas pelo sistema:
+
+* **Nomes de titulares de dados - Alto risco**
++
+Ficheiros com mais de 50 nomes de titulares de dados
+
+* **Endereços de e-mail - Alto risco**
++
+Arquivos com mais de 50 endereços de e-mail ou colunas de banco de dados com mais de 50% de suas linhas contendo endereços de e-mail
+
+* **Dados pessoais - Alto risco**
++
+Arquivos com mais de 20 identificadores de dados pessoais ou colunas de banco de dados com mais de 50% de suas linhas contendo identificadores de dados pessoais
+
+* **Dados privados - obsoletos ao longo de 7 anos**
++
+Arquivos contendo informações pessoais ou confidenciais, modificados há mais de 7 anos
+
+* ** Proteger - alta**
++
+Arquivos ou colunas de banco de dados que contêm uma senha, informações de cartão de crédito, número IBAN ou número de segurança social
+
+* ** Proteger - baixo**
++
+Arquivos que não foram acessados por mais de 3 anos
+
+* **Proteger - Médio**
++
+Arquivos que contêm arquivos ou colunas de banco de dados com identificadores de dados pessoais, incluindo números de identificação, números de identificação fiscal, números de carteira de motorista, IDs medicinais ou números de passaporte
+
+* **Dados pessoais sensíveis - Alto risco**
++
+Arquivos com mais de 20 identificadores de dados pessoais confidenciais ou colunas de banco de dados com mais de 50% de suas linhas contendo dados pessoais confidenciais
 
 
-| Nomes dos titulares dos dados - Alto risco | Arquivos com mais de 50 nomes de titulares de dados. | Arquivos com mais de 50 nomes de titulares de dados 
-
-
-| Endereços de e-mail - Alto risco | Arquivos com mais de 50 endereços de e-mail ou colunas de banco de dados com mais de 50% de suas linhas contendo endereços de e-mail | Arquivos com mais de 50 endereços de e-mail ou colunas de banco de dados com mais de 50% de suas linhas contendo endereços de e-mail 
-
-
-| Dados pessoais - Alto risco | Arquivos com mais de 20 identificadores de dados pessoais, ou colunas de banco de dados com mais de 50% de suas linhas contendo identificadores de dados pessoais. | Arquivos com mais de 20 colunas pessoais ou DB com mais de 50% de suas linhas contendo pessoal 
-
-
-| Dados pessoais sensíveis - Alto risco | Arquivos com mais de 20 identificadores de dados pessoais confidenciais, ou colunas de banco de dados com mais de 50% de suas linhas contendo dados pessoais confidenciais. | Arquivos com mais de 20 colunas pessoais sensíveis ou DB com mais de 50% de suas linhas contendo pessoal sensível 
-|===

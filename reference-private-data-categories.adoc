@@ -19,7 +19,7 @@ Há muitos tipos de dados privados que a classificação do BlueXP  pode identi
 A classificação BlueXP  identifica dois tipos de dados pessoais:
 
 * * Informações de identificação pessoal (PII) *
-* *Informações pessoais sensíveis (SPii)*
+* *Informações pessoais sensíveis (SPII)*
 
 
 
@@ -323,7 +323,7 @@ Os idiomas em que esses itens podem ser reconhecidos são identificados na tabel
 
 == Tipos de dados pessoais sensíveis
 
-A classificação BlueXP  pode encontrar as seguintes informações pessoais confidenciais (SPii) em arquivos.
+A classificação BlueXP  pode encontrar as seguintes informações pessoais confidenciais (SPII) em arquivos.
 
 Os itens nesta categoria só podem ser reconhecidos em inglês neste momento.
 

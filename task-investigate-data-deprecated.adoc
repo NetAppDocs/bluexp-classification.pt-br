@@ -27,9 +27,9 @@ Você pode filtrar o conteúdo da página de investigação para exibir apenas o
 
 
 
-=== Filtre dados por tags, rótulos, usuários atribuídos e políticas
+=== Filtre dados por tags, rótulos, usuários atribuídos e pesquisas salvas
 
-Use os filtros a seguir para exibir dados por tags, rótulos AIP, usuários atribuídos ou políticas.
+Use os filtros a seguir para exibir dados por tags, rótulos AIP, usuários atribuídos ou pesquisas salvas.
 
 []
 ====
@@ -41,7 +41,7 @@ Use os filtros a seguir para exibir dados por tags, rótulos AIP, usuários atri
 | Filtro | Detalhes 
 
 
-| Políticas | Selecione uma política ou políticas. Vá link:task-using-policies.html["aqui"^] para ver a lista de políticas existentes e para criar suas próprias políticas personalizadas. 
+| Pesquisas salvas | Selecione uma ou várias pesquisas salvas. Vá link:task-using-policies.html["aqui"^] para ver a lista de pesquisas existentes ou criar uma nova. 
 
 
 | Etiqueta | link:task-org-private-data.html#categorize-your-data-using-aip-labels["Etiquetas AIP"]Selecione que estão atribuídos aos seus ficheiros. 

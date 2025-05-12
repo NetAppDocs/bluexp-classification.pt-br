@@ -64,7 +64,7 @@ A tabela abaixo mostra algumas das diferenças:
 | Procure nomes dentro de arquivos | Sim | Não 
 
 
-| Crie link:task-using-policies.html["políticas"] que forneça resultados de pesquisa personalizados | Sim | Não 
+| Crie link:task-using-policies.html["pesquisas salvas"] que forneça resultados de pesquisa personalizados | Sim | Não 
 
 
 | Capacidade de executar outros relatórios | Sim | Não 
@@ -105,10 +105,10 @@ A tabela abaixo mostra algumas das diferenças:
 | Ficheiros duplicados | Sim | Sim 
 
 
-| Políticas predefinidas | Sim | Não 
+| Pesquisas guardadas predefinidas | Sim | Não 
 
 
-| Políticas personalizadas | Sim | Sim 
+| Pesquisas salvas padrão | Sim | Sim 
 
 
 | Relatório DDA | Sim | Sim 
@@ -169,7 +169,7 @@ A tabela abaixo mostra algumas das diferenças:
 | Recurso | Mapear e classificar | Mapa 
 
 
-| Políticas | Sim | Sim 
+| Pesquisas salvas | Sim | Sim 
 
 
 | Tipo de ambiente de trabalho | Sim | Sim 

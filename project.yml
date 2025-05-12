@@ -66,9 +66,11 @@ sidebar:
       url: "/task-controlling-private-data.html"
     - title: Categorias de dados privados
       url: "/reference-private-data-categories.html"
+    - title: Crie uma digitalização personalizada
+      url: "/task-custom-classification.html"
     - title: Investigue seus dados
       url: "/task-investigate-data.html"
-    - title: Atribua políticas aos seus dados
+    - title: Crie uma pesquisa salva
       url: "/task-using-policies.html"
     - title: Alterar as definições de digitalização
       url: "/task-managing-repo-scanning.html"

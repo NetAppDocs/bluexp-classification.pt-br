@@ -18,11 +18,9 @@ Quando você executa uma ação assíncrona do painel de resultados da investiga
 
 Isso permite que você veja as ações que foram concluídas com sucesso, as que estão em andamento e as que falharam para que você possa diagnosticar e corrigir quaisquer problemas. Observe que operações curtas que são concluídas rapidamente, como mover um único arquivo, não aparecem no painel Status das ações.
 
-[]
-====
-*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
 
-====
+NOTE: Esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
 O estado pode ser:
 
 * Sucesso - Uma ação de classificação BlueXP  está concluída e todos os itens foram bem-sucedidos.

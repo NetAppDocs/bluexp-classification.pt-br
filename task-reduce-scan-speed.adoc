@@ -21,11 +21,9 @@ Quando ativado, a digitalização lenta é usada em todas as fontes de dados - v
 
 TIP: A velocidade de digitalização não pode ser reduzida ao digitalizar bases de dados.
 
-[]
-====
-*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
 
-====
+NOTE: Esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
 .Passos
 . Na parte inferior da página _Configuration_, mova o controle deslizante para a direita para ativar a varredura lenta.
 +

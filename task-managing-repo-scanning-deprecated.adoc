@@ -16,11 +16,9 @@ summary: Você pode gerenciar como seus dados estão sendo digitalizados em cada
 [role="lead"]
 A classificação do BlueXP  verifica continuamente seus dados para detetar alterações incrementais nos repositórios que você adicionou. No entanto, leva tempo para o sistema digitalizar todos os ambientes, e não há método para controlar a ordem dos repositórios que são digitalizados. Se você precisar redigitalizar um repositório específico imediatamente para que as alterações sejam refletidas no sistema, você pode selecionar o repositório e redigitá-lo. Isso permite que você priorize a digitalização de determinados dados antes de outros dados. Após a ação de redigitalização, o repositório selecionado volta a ser verificado sob a programação de classificação normal do BlueXP .
 
-[]
-====
-*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
 
-====
+NOTE: Esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
 A classificação BlueXP  suporta a verificação de diretórios em todos os tipos de fonte de dados, exceto para o Amazon S3 e bancos de dados. Atualmente, suportamos a redigitalização de um único diretório (pasta ou compartilhamento) ou vários diretórios. O suporte futuro incluirá a redigitalização de tipos de repositório adicionais (arquivos, bancos de dados, etc.).
 
 * Ao digitalizar novamente um diretório, todos os arquivos dentro do diretório são reconfigurados, mas as subpastas dentro do diretório não são reconfiguradas.

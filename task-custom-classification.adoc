@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: task-custom-classification.html 
+keywords: custom classification, customize, regular expression, keyword, regex 
+summary: A classificação BlueXP  permite personalizar uma pesquisa de informações confidenciais, adaptando o serviço a padrões individuais e palavras-chave relevantes para a sua organização. 
+---
+= Crie uma classificação personalizada na classificação BlueXP 
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Com a classificação BlueXP , você pode criar uma pesquisa personalizada para informações confidenciais. A pesquisa pode ser definida para uma expressão regular ou um conjunto de palavras-chave de proximidade.
+
+
+
+== Crie uma classificação personalizada
+
+A classificação personalizada só está disponível para exames de mapa e classificação, não apenas para exames de mapeamento. Esta funcionalidade está atualmente em pré-visualização.
+
+.Passos
+. Selecione a guia **classificação personalizada**.
+. Selecione **Adicionar novo classificador**.
+. Adicione Nome e Descrição para o novo classificador.
+. Para adicionar a personalização como uma expressão regular, selecione **expressão regular personalizada** e depois **seguinte**.
++
+.. Para uma expressão regular, adicione o padrão para detetar as informações específicas dos seus dados. Por exemplo, o ID de 12 dígitos que começa com 201 seria B201 mm (9) B. Selecione **Validar** para confirmar a sintaxe da sua entrada.
+
+
+
+
+A nova personalização é capturada na próxima digitalização agendada. Para ver os resultados, xref:task-generating-compliance-reports.html[Gerar relatórios de conformidade]consulte .

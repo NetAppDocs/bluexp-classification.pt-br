@@ -18,11 +18,9 @@ As atividades de gerenciamento de Registros de classificação do BlueXP  que f
 
 Você pode visualizar o conteúdo dos arquivos de log de auditoria de classificação do BlueXP  ou baixá-los para ver quais alterações de arquivo ocorreram e quando. Por exemplo, você pode ver qual solicitação foi emitida, a hora da solicitação e detalhes como localização de origem no caso de um arquivo ser excluído ou localização de origem e destino no caso de um arquivo ser movido.
 
-[]
-====
-*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
 
-====
+NOTE: Esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
 
 
 == Conteúdo do ficheiro de registo
@@ -33,11 +31,11 @@ Cada linha no log de auditoria contém informações neste formato:
 
 * Data e hora - carimbo de data/hora completo para o evento
 * Estado - INFORMAÇÃO, AVISO
-* Tipo de ação (excluir, copiar, mover, criar política, atualizar política, redigitalizar arquivos, baixar relatório JSON, etc.)
+* Tipo de ação (excluir, copiar, mover, criar pesquisa salva, atualizar pesquisa salva, redigitalizar arquivos, baixar relatório JSON, etc.)
 * Nome do ficheiro (se a ação for relevante para um ficheiro)
 * Detalhes para a ação - o que foi feito: Depende da ação
 +
-** Nome da política
+** Nome de pesquisa guardado
 ** Para mover - origem e destino
 ** Para copiar - origem e destino
 ** Para tag - nome da tag

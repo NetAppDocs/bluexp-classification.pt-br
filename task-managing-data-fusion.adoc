@@ -16,11 +16,12 @@ summary: 'A classificação BlueXP  fornece muitas maneiras de adicionar uma li
 [role="lead"]
 A classificação BlueXP  fornece muitas maneiras de adicionar uma lista personalizada de "dados pessoais" que a classificação BlueXP  identificará em futuras verificações, dando a você uma visão completa sobre onde os dados potencialmente confidenciais residem em _all_ arquivos de suas organizações.
 
-[]
-====
-*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
 
-====
+IMPORTANT: Para criar uma classificação personalizada na versão 1,43 e posterior, xref:task-custom-classification.adoc[Crie uma classificação personalizada]consulte .
+
+
+NOTE: Esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
 * Você pode adicionar identificadores exclusivos com base em colunas específicas em bancos de dados que você está digitalizando.
 * Você pode adicionar palavras-chave personalizadas a partir de um arquivo de texto - essas palavras são identificadas dentro de seus dados.
 * Você pode adicionar um padrão pessoal usando uma expressão regular (regex) -- o regex é adicionado aos padrões predefinidos existentes.
@@ -36,7 +37,7 @@ NOTE: As capacidades descritas nesta secção só estão disponíveis se tiver o
 
 == Adicione identificadores de dados pessoais personalizados a partir de seus bancos de dados
 
-Um recurso que chamamos _Data Fusion_ permite que você analise os dados de suas organizações para identificar se identificadores exclusivos de seus bancos de dados são encontrados em qualquer uma de suas outras fontes de dados. Você pode escolher os identificadores adicionais que a classificação do BlueXP  procurará em suas verificações selecionando uma coluna específica, ou colunas, em uma tabela de banco de dados. Por exemplo, o diagrama abaixo mostra como o Data Fusion é usado para verificar seus volumes, buckets e bancos de dados para ocorrências de todas as suas IDs de cliente do seu banco de dados Oracle.
+_Data Fusion_ permite que você analise os dados da sua organização para identificar se identificadores exclusivos de seus bancos de dados são encontrados em qualquer uma de suas outras fontes de dados. Você pode escolher os identificadores adicionais que a classificação do BlueXP  procurará em suas verificações selecionando uma coluna ou colunas específicas em uma tabela de banco de dados. Por exemplo, o diagrama abaixo mostra como o Data Fusion é usado para verificar seus volumes, buckets e bancos de dados para ocorrências de todas as suas IDs de cliente do seu banco de dados Oracle.
 
 image:diagram_compliance_data_fusion.png["Um diagrama mostrando como o conteúdo de seus bancos de dados pode ser usado como uma fonte para identificar arquivos que contêm os mesmos dados."]
 

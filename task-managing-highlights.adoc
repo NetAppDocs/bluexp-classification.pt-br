@@ -16,11 +16,9 @@ summary: A classificação do BlueXP  fornece várias maneiras de gerenciar seu
 [role="lead"]
 A classificação do BlueXP  fornece várias maneiras de gerenciar seus dados privados. Algumas funcionalidades facilitam a preparação para a migração dos seus dados, enquanto outras funcionalidades permitem-lhe fazer alterações nos dados.
 
-[]
-====
-*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
 
-====
+NOTE: Esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
 * Você pode copiar arquivos para um compartilhamento NFS de destino se quiser fazer uma cópia de certos dados e movê-los para um local NFS diferente.
 * Você pode clonar um volume ONTAP para um novo volume, incluindo apenas arquivos selecionados do volume de origem no novo volume clonado. Isso é útil para situações em que você está migrando dados e deseja excluir certos arquivos do volume original.
 * Você pode copiar e sincronizar arquivos de um repositório de origem para um diretório em um local de destino específico. Isso é útil para situações em que você está migrando dados de um sistema de origem para outro, enquanto ainda há alguma atividade final nos arquivos de origem.
@@ -256,8 +254,6 @@ image:screenshot_compliance_move_file.png["Uma captura de tela mostrando a sele�
 == Eliminar ficheiros de origem
 
 Você pode remover permanentemente arquivos de origem que parecem inseguros ou muito arriscados para sair em seu sistema de armazenamento, ou que você identificou como uma duplicata. Esta ação é permanente e não há desfazer ou restaurar.
-
-Você pode excluir arquivos manualmente do painel de investigação ou link:task-using-policies.html["Usando políticas automaticamente"^].
 
 
 TIP: Não é possível excluir arquivos que residem em bancos de dados. Todas as outras fontes de dados são suportadas.

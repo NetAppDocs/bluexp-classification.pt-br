@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-org-private-data.html 
-keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
+keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, saved searches 
 summary: A classificação BlueXP  fornece muitas maneiras de gerenciar e organizar seus dados privados. Isso facilita a visualização dos dados mais importantes para você. 
 ---
 = Organize os seus dados privados com a classificação BlueXP 
@@ -16,15 +16,13 @@ summary: A classificação BlueXP  fornece muitas maneiras de gerenciar e organ
 [role="lead"]
 A classificação BlueXP  fornece muitas maneiras de gerenciar e organizar seus dados privados. Isso facilita a visualização dos dados mais importantes para você.
 
-[]
-====
-*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores. A versão de dezembro de 2023 (v1.26.6) removeu a opção de integrar dados usando rótulos AIP (proteção de informações do Azure).
 
-====
-* Se você está inscrito https://azure.microsoft.com/en-us/services/information-protection/["Proteção de informações do Azure (AIP)"^] para classificar e proteger seus arquivos, você pode usar a classificação BlueXP  para gerenciar esses rótulos AIP.
+NOTE: Esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+* Se você está inscrito link:https://azure.microsoft.com/en-us/services/information-protection/["Proteção de informações do Azure (AIP)"^]para classificar e proteger seus arquivos, você pode usar a classificação BlueXP  para gerenciar rótulos AIP.
 * Você pode adicionar Tags a arquivos que deseja marcar para a organização ou para algum tipo de acompanhamento.
 * Você pode atribuir um usuário do BlueXP  a um arquivo específico ou a vários arquivos, para que a pessoa possa ser responsável pelo gerenciamento do arquivo.
-* Usando a funcionalidade "Política", você pode criar suas próprias consultas de pesquisa personalizadas para que você possa ver facilmente os resultados clicando em um botão.
+* Com a funcionalidade de pesquisa salva, você pode criar suas próprias consultas de pesquisa personalizadas para que você possa ver facilmente os resultados clicando em um botão.
 * Você pode enviar alertas de e-mail para usuários do BlueXP  ou qualquer outro endereço de e-mail quando certas políticas críticas retornam resultados.
 
 

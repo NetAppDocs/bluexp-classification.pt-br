@@ -23,7 +23,7 @@ Você pode adicionar seus esquemas de bancos de dados à classificação do Blue
 | Tipo | Descrição | MongoDB | SQL Server | MySQL | Oracle | PostgreSQL | SAP HANA | Amazon RDS 
 
 
-.9+| Ações | Criar política | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+.9+| Ações | Criar pesquisa guardada | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
 
 
 | Etiqueta | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
@@ -50,7 +50,7 @@ Você pode adicionar seus esquemas de bancos de dados à classificação do Blue
 | Etiqueta | x | x | x | x | x | x | x 
 
 
-.25+| Filtros | Políticas | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+.25+| Filtros | Pesquisas salvas | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
 
 
 | Estado da análise do exame | ✓ | ✓ | ✓ | ✓ | ✓ |  |  

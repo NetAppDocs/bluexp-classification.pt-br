@@ -83,9 +83,9 @@ image:screenshot_compliance_repo_scan_all.png["Uma captura de tela mostrando com
 
 == Priorizar exames
 
-Você pode priorizar as digitalizações somente de mapeamento mais importantes para garantir que as digitalizações de alta prioridade sejam concluídas primeiro.
+Pode priorizar as digitalizações apenas de mapeamento mais importantes ou mapear e classificar digitalizações para garantir que as digitalizações de alta prioridade sejam concluídas primeiro.
 
-Por padrão, as digitalizações são enfileiradas com base na ordem em que são iniciadas. Com a capacidade de priorizar digitalizações, agora você pode mover digitalizações para a frente da fila. Várias digitalizações podem ser priorizadas. A prioridade é designada em uma ordem de primeira entrada e primeira saída, o que significa que a primeira digitalização que você prioriza se move para a frente da fila; a segunda digitalização que você prioriza se torna segunda na fila, e assim por diante. Esta funcionalidade está limitada a digitalizações apenas de mapeamento. Não está disponível para exames de mapa e classificação.
+Por padrão, as digitalizações são enfileiradas com base na ordem em que são iniciadas. Com a capacidade de priorizar digitalizações, agora você pode mover digitalizações para a frente da fila. Várias digitalizações podem ser priorizadas. A prioridade é designada em uma ordem de primeira entrada e primeira saída, o que significa que a primeira digitalização que você prioriza se move para a frente da fila; a segunda digitalização que você prioriza se torna segunda na fila, e assim por diante.
 
 A prioridade é concedida de uma só vez. As redigitalizações automáticas de dados de mapeamento ocorrem na ordem padrão.
 
