@@ -21,7 +21,7 @@ Você pode configurar essa configuração ao criar a política ou ao editar qual
 Siga estas etapas para adicionar atualizações de e-mail a uma política existente.
 
 .Passos
-. Na página Lista de políticas, clique em *Editar* para a política em que você deseja adicionar (ou alterar) a configuração de e-mail.
+. Na página Lista de políticas, selecione *Editar* para a política em que você deseja adicionar (ou alterar) a configuração de e-mail.
 +
 image:screenshot_compliance_add_email_alert_1.png["Uma captura de tela mostrando como editar uma política existente."]
 
@@ -34,11 +34,11 @@ image:screenshot_compliance_add_email_alert_2.png["Uma captura de tela mostrando
 
 
 
-. Clique em *Salvar política* e o intervalo no qual o e-mail é enviado aparece na descrição da política.
+. Selecione *Salvar política* e o intervalo no qual o e-mail é enviado será exibido na descrição da política.
 
 
 .Resultado
-O primeiro e-mail é enviado agora se houver resultados da política - mas somente se algum arquivo atender aos critérios da política. Nenhuma informação pessoal é enviada nos e-mails de notificação. O e-mail indica que há arquivos que correspondem aos critérios da política e fornece um link para os resultados da política.
+Um e-mail é enviado se algum arquivo atender aos critérios da política. Nenhuma informação pessoal é enviada nos e-mails de notificação. O e-mail indica que há arquivos que correspondem aos critérios da política e fornece um link para os resultados da política.
 
 
 

@@ -320,7 +320,7 @@ Observe que todas as atividades de instalação são registradas ao instalar a c
 +
 ** Você precisará das informações do servidor proxy (endereço IP ou nome do host, porta de conexão, esquema de conexão: HTTPS ou http, nome de usuário e senha).
 ** Se o proxy estiver executando intercetação TLS, você precisará saber o caminho no sistema Linux de classificação BlueXP  onde os certificados de CA TLS são armazenados.
-** O proxy deve ser não transparente - atualmente não oferecemos suporte a proxies transparentes.
+** O proxy deve ser não transparente. O BlueXP  Classificaiton não suporta proxies transparentes no momento.
 ** O utilizador tem de ser um utilizador local. Os usuários de domínio não são suportados.
 
 

@@ -218,8 +218,8 @@ Certifique-se de fazer o seguinte:
 
 . Vá para a conta AWS de origem onde reside a instância de classificação do BlueXP  e selecione a função do IAM anexada à instância.
 +
-.. Altere a duração máxima da sessão CLI/API* de 1 hora para 12 horas e salve essa alteração.
-.. Clique em *Anexar políticas* e, em seguida, clique em *criar política*.
+.. Altere a duração máxima da sessão CLI/API* de 1 hora para 12 horas. Salve a alteração.
+.. Selecione *Anexar políticas* e, em seguida, *criar política*.
 .. Crie uma política que inclua a ação "sts:AssumeRole" e especifique o ARN da função que você criou na conta de destino.
 +
 [source, json]
@@ -248,11 +248,11 @@ Certifique-se de fazer o seguinte:
 }
 ----
 +
-A conta de perfil de instância de classificação do BlueXP  agora tem acesso à conta AWS adicional.
+A conta de perfil da instância de classificação do BlueXP  recebe acesso à conta AWS adicional.
 
 
 
-. Vá para a página *Configuração do Amazon S3* e a nova conta da AWS será exibida. Observe que pode levar alguns minutos para a classificação do BlueXP  sincronizar o ambiente de trabalho da nova conta e mostrar essas informações.
+. Navegue até a página *Configuração do Amazon S3* e a nova conta da AWS será exibida. Observe que pode levar alguns minutos para a classificação do BlueXP  sincronizar o ambiente de trabalho da nova conta e mostrar essas informações.
 +
 image:screenshot_activate_and_select_buckets.png["Uma captura de tela mostrando como ativar a classificação BlueXP ."]
 

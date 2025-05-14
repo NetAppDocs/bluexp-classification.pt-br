@@ -16,7 +16,7 @@ Os sistemas operacionais a seguir requerem o uso do motor de contentor Podman, e
 .Priorizar digitalizações somente de mapeamento
 Ao realizar exames somente de mapeamento, você pode priorizar os exames mais importantes. Este recurso ajuda quando você tem muitos ambientes de trabalho e quer garantir que as verificações de alta prioridade sejam concluídas primeiro.
 
-Por padrão, as digitalizações são enfileiradas com base na ordem em que são iniciadas. Com a capacidade de priorizar digitalizações, agora você pode mover digitalizações para a frente da fila. Várias digitalizações podem ser priorizadas. A prioridade é designada em uma ordem de primeira entrada e primeira saída, o que significa que a primeira digitalização que você prioriza se move para a frente da fila; a segunda digitalização que você prioriza se torna segunda na fila, e assim por diante.
+Por padrão, as digitalizações são enfileiradas com base na ordem em que são iniciadas. Com a capacidade de priorizar digitalizações, você pode mover digitalizações para a frente da fila. Várias digitalizações podem ser priorizadas. A prioridade é designada em uma ordem de primeira entrada e primeira saída, o que significa que a primeira digitalização que você prioriza se move para a frente da fila; a segunda digitalização que você prioriza se torna segunda na fila, e assim por diante.
 
 A prioridade é concedida de uma só vez. As redigitalizações automáticas de dados de mapeamento ocorrem na ordem padrão.
 
@@ -25,9 +25,9 @@ A priorização é limitada a link:concept-cloud-compliance.html["digitalizaçõ
 Para obter mais informações, link:task-managing-repo-scanning.html#prioritize-scans["Priorizar exames"]consulte .
 
 .Tente novamente todas as digitalizações
-A classificação BlueXP  agora suporta a capacidade de tentar em lote novamente todas as digitalizações com falha.
+A classificação BlueXP  suporta a capacidade de tentar em lote todas as digitalizações com falha.
 
-Agora você pode tentar novamente digitalizações em uma operação em lote com a função **Repetir tudo**. Se as verificações de classificação estiverem falhando devido a um problema temporário, como uma interrupção da rede, você pode tentar novamente todas as verificações ao mesmo tempo com um botão em vez de tentar novamente individualmente. As digitalizações podem ser tentadas quantas vezes forem necessárias.
+Você pode tentar novamente digitalizações em uma operação em lote com a função **Repetir tudo**. Se as verificações de classificação estiverem falhando devido a um problema temporário, como uma interrupção da rede, você pode tentar novamente todas as verificações ao mesmo tempo com um botão em vez de tentar novamente individualmente. As digitalizações podem ser tentadas quantas vezes forem necessárias.
 
 Para tentar novamente todas as digitalizações:
 

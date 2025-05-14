@@ -144,7 +144,7 @@ Depois de adicionar o regex, a classificação BlueXP  reiniciará a digitaliza
 Se você precisar de ajuda para construir a expressão regular, https://regex101.com/["Expressões regulares 101"^] consulte . Escolha *Python* para o sabor para ver os tipos de resultados a classificação BlueXP  irá corresponder a partir da expressão regular. O https://pythonium.net/regex["Página do Python Regex Tester"^] também é útil ao exibir uma representação gráfica de seus padrões.
 
 
-NOTE: Atualmente não permitimos o uso de sinalizadores de padrão ao criar um regex - isso significa que você não deve usar "/".
+NOTE: A classificação BlueXP  não suporta sinalizadores de padrão ao criar um regex. Isso significa que você não deve usar "/".
 
 .Passos
 . Na guia _Configurações de classificação_, clique em *Adicionar novo classificador* para iniciar o assistente _Adicionar classificador personalizado_.

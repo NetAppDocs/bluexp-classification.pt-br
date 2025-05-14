@@ -16,17 +16,11 @@ summary: A classificação do BlueXP  é um serviço de governança de dados do
 [role="lead"]
 A classificação do BlueXP  (Cloud Data Sense) é um serviço de governança de dados do BlueXP  que analisa suas fontes de dados corporativas no local e na nuvem para mapear e classificar dados e identificar informações privadas. Isso pode ajudar a reduzir os riscos de segurança e conformidade, diminuir os custos de storage e auxiliar nos projetos de migração de dados.
 
-[]
-====
-IMPORTANTE
 
-A partir de maio de 2024 com a versão 1,31, a classificação BlueXP  está agora disponível como uma capacidade principal dentro do BlueXP  sem nenhum custo adicional. Nenhuma licença de classificação ou assinatura é necessária. Concentramos a funcionalidade de classificação do BlueXP  em sistemas de armazenamento NetApp, de modo que alguns recursos não utilizados ou subutilizados foram obsoletos.
+IMPORTANT: A partir da versão 1,31, a classificação BlueXP  está disponível como uma capacidade principal com o BlueXP . Não há nenhum custo adicional. Nenhuma licença de classificação ou assinatura é necessária.
 
-link:reference-free-paid.html["Veja uma lista de recursos obsoletos"].
+Se você estiver usando a versão 1,30 ou anterior herdada, essa versão estará disponível até que sua assinatura expire. link:reference-free-paid.html["Veja uma lista de recursos obsoletos"].
 
-Os usuários que usam versões antigas 1,30 ou anteriores continuarão a poder usar essa versão até que sua assinatura expire.
-
-====
 
 
 == Caraterísticas
@@ -96,7 +90,7 @@ A classificação do BlueXP  é compatível com as versões NFS 3.x, 4,0 e 4,1,
 
 == Custo
 
-A classificação BlueXP  é agora livre de usar. Nenhuma licença de classificação ou assinatura paga é necessária.
+A classificação BlueXP  é gratuita. Nenhuma licença de classificação ou assinatura paga é necessária.
 
 
 
