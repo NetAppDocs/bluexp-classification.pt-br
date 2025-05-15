@@ -130,11 +130,11 @@ image:screenshot_s3_enable_compliance.png["Uma captura de tela da ativação do 
 +
 image:screenshot_s3_compliance_iam_role.png["Uma captura de tela de entrada da função do AWS IAM para a classificação do BlueXP "]
 
-. Clique em *Ativar*.
+. Selecione *Ativar*.
 
 
 
-TIP: Você também pode ativar verificações de conformidade para um ambiente de trabalho na página Configuração clicando no image:screenshot_gallery_options.gif["três pontos"] botão e selecionando *Ativar classificação BlueXP *.
+TIP: Você também pode ativar verificações de conformidade para um ambiente de trabalho na página Configuração selecionando o image:button-gallery-options.gif["três pontos"] botão e depois *Ativar classificação BlueXP *.
 
 .Resultado
 O BlueXP  atribui a função do IAM à instância.

@@ -32,12 +32,12 @@ A classificação BlueXP  suporta a capacidade de priorizar exames de mapa e cl
 Para obter mais informações, link:task-managing-repo-scanning.html#prioritize-scans["Priorizar exames"]consulte .
 
 .Suporte para categorias de dados de informações pessoais (PII) canadenses
-As varreduras de classificação BlueXP  identificam categorias de dados de PII canadenses para informações bancárias, número de passaporte, número de seguro social e número de carteira de motorista e número de cartão de saúde para todas as províncias e territórios.
+Os exames de classificação BlueXP  identificam categorias de dados de PII canadenses. Essas categorias incluem informações bancárias, números de passaporte, números de seguro social, números de carteira de motorista e números de cartão de saúde para todas as províncias e territórios canadenses.
 
-Para obter mais informações detalhadas, xref:reference-private-data-categories.adoc#types-of-personal-data[Categorias de dados pessoais]consulte .
+Para obter mais informações, xref:reference-private-data-categories.adoc#types-of-personal-data[Categorias de dados pessoais]consulte .
 
 .Classificação personalizada (pré-visualização)
-A classificação BlueXP  suporta classificações personalizadas para exames de mapa e classificação. Com classificações personalizadas, você pode personalizar as digitalizações BlueXP  para capturar dados específicos da sua organização para garantir a conformidade com expressões regulares. Esta funcionalidade está atualmente em pré-visualização.
+A classificação BlueXP  suporta classificações personalizadas para exames de mapa e classificação. Com classificações personalizadas, você pode personalizar as digitalizações BlueXP  para capturar dados específicos da sua organização usando expressões regulares. Esta funcionalidade está atualmente em pré-visualização.
 
 Para obter mais informações, xref:task-custom-classification.adoc[Adicione classificações personalizadas]consulte .
 

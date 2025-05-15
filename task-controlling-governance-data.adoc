@@ -149,7 +149,7 @@ O relatório inclui as seguintes informações:
 +
 image:screenshot-compliance-report-buttons.png["Uma captura de tela do Painel de Governança que mostra como iniciar o Relatório de Mapeamento de dados."]
 
-. Para personalizar o nome da empresa que aparece na primeira página do relatório, no canto superior direito da página de classificação do BlueXP , image:screenshot_gallery_options.gif["O botão mais"]selecione . Em seguida, selecione *alterar nome da empresa*. Na próxima vez que você gerar o relatório, ele incluirá o novo nome.
+. Para personalizar o nome da empresa que aparece na primeira página do relatório, no canto superior direito da página de classificação do BlueXP , image:button-gallery-options.gif["O botão mais"]selecione . Em seguida, selecione *alterar nome da empresa*. Na próxima vez que você gerar o relatório, ele incluirá o novo nome.
 
 
 .Resultado

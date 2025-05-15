@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-using-policies.html 
-keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
+keywords: compliance, privacy, filter data, highlights, policies, notifications, saved search, tags, data sense, edit query 
 summary: As pesquisas salvas são filtros personalizados que fornecem resultados de pesquisa na página de investigação para consultas de conformidade comumente solicitadas. A classificação BlueXP  fornece um conjunto de pesquisas salvas padrão com base em solicitações comuns ou você pode criar suas próprias pesquisas. 
 ---
 = Gerencie pesquisas salvas com a classificação BlueXP 
@@ -29,9 +29,9 @@ image:screenshot_compliance_highlights_tab.png["Uma captura de tela da guia de p
 
 == Exibir resultados de pesquisas salvas na página de investigação
 
-Para exibir os resultados de uma pesquisa salva na página de investigação, selecione o image:screenshot_gallery_options.gif["Botão mais"]botão para uma pesquisa específica e selecione *investigar resultados*.
+Para exibir os resultados de uma pesquisa salva na página de investigação, selecione o image:button-gallery-options.gif["Botão mais"]botão para uma pesquisa específica e selecione *investigar resultados*.
 
-image:screenshot_compliance_highlights_investigate.png["Uma captura de tela de seleção de resultados de investigação para uma pesquisa específica na guia Pesquisa oculta."]
+image:screenshot_compliance_highlights_investigate.png["Uma captura de tela de seleção de resultados de investigação para uma pesquisa específica a partir da guia de pesquisa salva."]
 
 
 
@@ -52,32 +52,31 @@ image:screenshot_compliance_save_highlight2.png["Uma captura de tela que mostra 
 
 
 
-.Resultado
-A nova pesquisa salva é exibida na guia Pesquisas salvas.
+Depois de criar a pesquisa, você pode visualizá-la na guia **Pesquisas salvas**.
 
 
 
 == Editar pesquisas salvas
 
-Você pode modificar os critérios de uma pesquisa salva criada sob medida para alterar a consulta (os itens que você definiu usando filtros) para adicionar ou remover determinados parâmetros.
+Você pode modificar os critérios de consulta para uma pesquisa salva (ou seja, os filtros definidos) para adicionar ou remover determinados parâmetros.
 
 Não é possível modificar pesquisas salvas padrão.
 
 .Passos
-. Na página de pesquisas salvas, selecione *Editar pesquisa salva* para a pesquisa que você deseja alterar.
+. Na página de pesquisas salvas, selecione *Editar pesquisa* para a pesquisa que você deseja alterar.
 +
-image:screenshot_compliance_edit_policy_button.png["Uma captura de tela mostrando Editar Pesquisa salva."]
+image:screenshot-edit-search.png["Uma captura de tela mostrando Editar Pesquisa salva."]
 
-. Faça as alterações nos campos de nome e descrição. Para alterar somente esses campos, selecione *Salvar*.
+. Faça as alterações nos campos de nome e descrição. Para alterar apenas os campos de nome e descrição, selecione *Guardar pesquisa*.
 +
-Para alterar os filtros da consulta salva, selecione *Editar consulta*.
+Para alterar os filtros da pesquisa salva, selecione *Editar consulta*.
 
 +
-image:screenshot_compliance_edit_policy_dialog.png["Uma captura de tela da seleção do botão Editar consulta na página Editar Pesquisa salva."]
+image:screenshot-edit-search-dialog.png["Uma captura de tela do botão Editar consulta na página Editar Pesquisa salva."]
 
-. Na página de investigação que define essa consulta, edite a consulta adicionando, removendo ou personalizando os filtros e selecione *Salvar alterações* .
+. Na página de investigação, edite a consulta. Você pode adicionar, remover ou modificar filtros. Para concluir as alterações, selecione *Salvar consulta para esta pesquisa*.
 +
-image:screenshot_compliance_edit_policy_query.png["Uma captura de tela mostrando como editar a consulta alterando as configurações de filtro."]
+image:screenshot-edit-query.png["Uma captura de tela mostrando como editar a consulta alterando as configurações de filtro."]
 
 
 
@@ -85,9 +84,9 @@ image:screenshot_compliance_edit_policy_query.png["Uma captura de tela mostrando
 
 == Eliminar pesquisas guardadas
 
-Você pode excluir qualquer pesquisa personalizada salva se não precisar mais dela. Não é possível excluir pesquisas salvas padrão
+Você pode excluir qualquer pesquisa personalizada salva se não precisar mais dela. Não é possível excluir pesquisas salvas padrão.
 
-Para excluir uma pesquisa salva, selecione o image:screenshot_gallery_options.gif["Botão mais"]botão para uma pesquisa específica, selecione *Excluir pesquisa salva* e selecione *Excluir pesquisa* novamente na caixa de diálogo de confirmação.
+Para excluir uma pesquisa salva, selecione o image:button-gallery-options.gif["Botão mais"]botão para uma pesquisa específica, selecione *Excluir pesquisa* e, em seguida, selecione *Excluir pesquisa* novamente na caixa de diálogo de confirmação.
 
 
 

@@ -13,7 +13,7 @@ summary: A classificação BlueXP  permite personalizar uma pesquisa de informa
 
 
 [role="lead"]
-Com a classificação BlueXP , você pode criar uma pesquisa personalizada para informações confidenciais. A pesquisa pode ser definida para uma expressão regular ou um conjunto de palavras-chave de proximidade.
+Com a classificação BlueXP , você pode criar uma pesquisa personalizada para informações confidenciais. A pesquisa pode ser definida para uma expressão regular (regex).
 
 
 
@@ -22,14 +22,12 @@ Com a classificação BlueXP , você pode criar uma pesquisa personalizada para
 A classificação personalizada só está disponível para exames de mapa e classificação, não apenas para exames de mapeamento. Esta funcionalidade está atualmente em pré-visualização.
 
 .Passos
-. Selecione a guia **classificação personalizada**.
-. Selecione **Adicionar novo classificador**.
-. Adicione Nome e Descrição para o novo classificador.
+. Selecione a guia **classificação personalizada**. image:screenshot-custom-classification-tab.png["Uma captura de tela da página classificação personalizada."]
+. Selecione o botão **Adicionar novo classificador**.
+. Adicione um Nome e uma Descrição para o novo classificador.
 . Para adicionar a personalização como uma expressão regular, selecione **expressão regular personalizada** e depois **seguinte**.
-+
-.. Para uma expressão regular, adicione o padrão para detetar as informações específicas dos seus dados. Por exemplo, o ID de 12 dígitos que começa com 201 seria B201 mm (9) B. Selecione **Validar** para confirmar a sintaxe da sua entrada.
-
-
+. Adicione um padrão para detetar as informações específicas de seus dados. Selecione **Validar** para confirmar a sintaxe da sua entrada. image:screenshot-create-logic-regex.png["Uma captura de tela da caixa de diálogo para criar uma expressão regular."]
+. Selecione **Concluído** para criar a classificação personalizada.
 
 
 A nova personalização é capturada na próxima digitalização agendada. Para ver os resultados, xref:task-generating-compliance-reports.html[Gerar relatórios de conformidade]consulte .

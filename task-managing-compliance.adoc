@@ -22,7 +22,7 @@ Se necessário, você pode impedir que a classificação do BlueXP  digitalize 
 
 Quando você desativa as varreduras, a classificação BlueXP  não verifica mais os dados no ambiente de trabalho e remove os insights de conformidade indexados da instância de classificação BlueXP  (os dados do próprio ambiente de trabalho não são excluídos).
 
-. Na página _Configuration_, clique no image:screenshot_gallery_options.gif["Botão mais"] botão na linha do ambiente de trabalho e, em seguida, clique em *Deactivate Data Sense*.
+. Na página _Configuration_, selecione o image:button-gallery-options.gif["Botão mais"] botão na linha para o ambiente de trabalho e, em seguida, *Deactivate Data Sense*.
 
 
 image:screenshot_deactivate_compliance_scan.png["Uma captura de tela do ícone de ação onde você pode selecionar Desativar classificação BlueXP . Esta opção está disponível depois de selecionar um ambiente de trabalho na página Canvas."]
@@ -36,7 +36,7 @@ TIP: Você também pode desativar as verificações de conformidade para um ambi
 
 Se você não quiser mais digitalizar um determinado banco de dados, você pode excluí-lo da interface de classificação do BlueXP  e parar todas as verificações.
 
-. Na página _Configuration_, clique no image:screenshot_gallery_options.gif["Botão mais"] botão na linha do banco de dados e clique em *Remove DB Server*.
+. Na página _Configuration_, selecione o image:button-gallery-options.gif["Botão mais"] botão na linha do banco de dados e depois *Remove DB Server*.
 
 
 image:screenshot_compliance_remove_db.png["Uma captura de tela do botão Remover servidor de banco de dados da página Configuração de digitalização."]
@@ -48,7 +48,7 @@ image:screenshot_compliance_remove_db.png["Uma captura de tela do botão Remover
 Se você não quiser mais analisar arquivos de usuário de um grupo de compartilhamentos de arquivos, você pode excluir o Grupo de compartilhamentos de arquivos da interface de classificação do BlueXP  e parar todas as verificações.
 
 .Passos
-. Na página _Configuration_, clique no image:screenshot_gallery_options.gif["Botão mais"] botão na linha do Grupo de compartilhamentos de arquivos e clique em *Remover grupo de compartilhamentos de arquivos*.
+. Na página _Configuration_, selecione o image:button-gallery-options.gif["Botão mais"] botão na linha para o Grupo compartilhamentos de arquivos e depois *Remover grupo compartilhamentos de arquivos*.
 +
 image:screenshot_compliance_remove_fileshare_group.png["Uma captura de tela do botão Remover grupo de compartilhamento de arquivos da página Configuração de digitalização."]
 

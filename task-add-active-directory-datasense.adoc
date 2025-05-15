@@ -116,4 +116,4 @@ image:screenshot_compliance_active_directory_added.png["Uma captura de tela most
 
 Se você precisar modificar quaisquer valores na integração do ative Directory, clique no botão *Editar* e faça as alterações.
 
-Você também pode excluir a integração se não precisar mais clicando no image:screenshot_gallery_options.gif["Botão mais"] botão e depois em *Remover ative Directory*.
+Você também pode excluir a integração selecionando o image:button-gallery-options.gif["Botão mais"] botão e depois *Remover ative Directory*.
