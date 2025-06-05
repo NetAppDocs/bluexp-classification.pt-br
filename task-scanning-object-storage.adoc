@@ -17,9 +17,7 @@ summary: 'Conclua algumas etapas para iniciar a digitalização de dados dentro 
 Conclua algumas etapas para iniciar a digitalização de dados dentro do armazenamento de objetos diretamente com a classificação BlueXP . A classificação do BlueXP  pode analisar dados de qualquer serviço de armazenamento de objetos que use o protocolo Simple Storage Service (S3). Isso inclui NetApp StorageGRID, IBM Cloud Object Store, Linode, B2 Cloud Storage, Amazon S3 e muito mais.
 
 
-IMPORTANT: As seguintes informações são relevantes apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
-
-Começando com a versão 1,31, a classificação BlueXP  faz parte da oferta principal do BlueXP . Para obter mais informações, link:task-scanning-storagegrid.html["Digitalizar dados StorageGRID"]consulte .
+IMPORTANT: As seguintes informações são relevantes apenas para a classificação BlueXP  versões antigas 1,30 e anteriores. Começando com a versão 1,31, a classificação BlueXP  faz parte da oferta principal do BlueXP . Para obter mais informações, link:task-scanning-storagegrid.html["Digitalizar dados StorageGRID"]consulte .
 
 
 

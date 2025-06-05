@@ -192,7 +192,7 @@ Por exemplo, você pode querer ver onde os arquivos de instalação compatados n
 
 Depois de atualizar as categorias personalizadas, a classificação BlueXP  reiniciará a digitalização de todas as fontes de dados. Após a conclusão do exame, os novos resultados serão apresentados no Painel de controlo de conformidade da classificação BlueXP , na secção "categorias", e na página de investigação no filtro "Categoria". link:task-controlling-private-data.html#view-files-by-categories["Veja como exibir arquivos por categorias"].
 
-.O que você vai precisar
+.Antes de começar
 Você precisará criar um mínimo de 25 arquivos de treinamento que contenham amostras das categorias de dados que você deseja que a classificação BlueXP  reconheça. Os seguintes tipos de arquivo são suportados:
 
 `+.CSV, .DOC, .DOCX, .GZ, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`

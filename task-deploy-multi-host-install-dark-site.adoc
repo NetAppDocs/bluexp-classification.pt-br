@@ -20,12 +20,10 @@ Para configurações muito grandes em que você estará verificando petabytes de
 
 Siga estas etapas ao instalar o software de classificação BlueXP  em vários hosts locais em um ambiente off-line.
 
-[]
-====
-*NOTA* esta informação é relevante apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
 
-====
-.O que você vai precisar
+NOTE: As seguintes informações são relevantes apenas para a classificação BlueXP  versões antigas 1,30 e anteriores.
+
+.Antes de começar
 * Verifique se todos os seus sistemas Linux para os nós de Gerenciador e scanner atendem aos requisitos do host.
 * Verifique se você instalou os dois pacotes de software pré-requisito (Docker Engine ou Podman, e Python 3).
 * Certifique-se de que você tem Privileges root nos sistemas Linux.

@@ -220,7 +220,7 @@ Siga estas etapas para executar o script de pré-requisitos de classificação d
 
 https://youtu.be/5ONowfPWkFs?si=QLGUw8mqPrz9qs4B["Assista a este vídeo"^] Para ver como executar o script pré-requisitos e interpretar os resultados.
 
-.O que você vai precisar
+.Antes de começar
 * Verifique se o sistema Linux atende ao <<Verifique os requisitos do host,requisitos de host>>.
 * Verifique se o sistema tem os dois pacotes de software pré-requisito instalados (Docker Engine ou Podman, e Python 3).
 * Certifique-se de ter o root Privileges no sistema Linux.

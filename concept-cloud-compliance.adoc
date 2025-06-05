@@ -5,8 +5,8 @@ keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, perso
 summary: A classificação do BlueXP  é um serviço de governança de dados do BlueXP  que analisa suas fontes de dados corporativas no local e na nuvem para mapear e classificar dados e identificar informações privadas. Isso pode ajudar a reduzir os riscos de segurança e conformidade, diminuir os custos de storage e auxiliar nos projetos de migração de dados. 
 ---
 = Saiba mais sobre a classificação BlueXP 
-:hardbreaks:
 :allow-uri-read: 
+:no-hardbreaks: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -17,9 +17,7 @@ summary: A classificação do BlueXP  é um serviço de governança de dados do
 A classificação do BlueXP  (Cloud Data Sense) é um serviço de governança de dados do BlueXP  que analisa suas fontes de dados corporativas no local e na nuvem para mapear e classificar dados e identificar informações privadas. Isso pode ajudar a reduzir os riscos de segurança e conformidade, diminuir os custos de storage e auxiliar nos projetos de migração de dados.
 
 
-IMPORTANT: A partir da versão 1,31, a classificação BlueXP  está disponível como uma capacidade principal com o BlueXP . Não há nenhum custo adicional. Nenhuma licença de classificação ou assinatura é necessária.
-
-Se você estiver usando a versão 1,30 ou anterior herdada, essa versão estará disponível até que sua assinatura expire. link:reference-free-paid.html["Veja uma lista de recursos obsoletos"].
+IMPORTANT: A partir da versão 1,31, a classificação BlueXP  está disponível como uma capacidade principal com o BlueXP . Não há nenhum custo adicional. Nenhuma licença de classificação ou assinatura é necessária. Se você estiver usando a versão 1,30 ou anterior herdada, essa versão estará disponível até que sua assinatura expire. link:reference-free-paid.html["Veja uma lista de recursos obsoletos"].
 
 
 
