@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-controlling-governance-data.html 
-keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, categories, file types, costs of data 
+keywords: savings, stale data, non-business data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, categories, file types, costs of data 
 summary: Controle os custos relacionados aos dados sobre os recursos de storage da sua organização. A classificação do BlueXP  identifica a quantidade de dados obsoletos, dados não comerciais, arquivos duplicados e arquivos muito grandes em seus sistemas. Assim, você pode decidir se deseja remover ou categorizar alguns arquivos para um storage de objetos mais econômico. 
 ---
 = Veja detalhes de governança sobre os dados armazenados em sua organização com a classificação BlueXP 
@@ -14,7 +14,7 @@ summary: Controle os custos relacionados aos dados sobre os recursos de storage 
 
 
 [role="lead"]
-Controle os custos relacionados aos dados sobre os recursos de storage da sua organização. A classificação do BlueXP  identifica a quantidade de dados obsoletos, dados não comerciais, arquivos duplicados e arquivos muito grandes em seus sistemas. Assim, você pode decidir se deseja remover ou categorizar alguns arquivos para um storage de objetos mais econômico.
+Obtenha controle dos custos relacionados aos dados nos recursos de armazenamento da sua organização. A classificação do BlueXP  identifica a quantidade de dados obsoletos, dados não comerciais, arquivos duplicados e arquivos muito grandes em seus sistemas. Assim, você pode decidir se deseja remover ou categorizar alguns arquivos para um storage de objetos mais econômico.
 
 É aqui que você deve começar sua pesquisa. No painel Governança, você pode selecionar uma área para mais investigações.
 
@@ -40,11 +40,11 @@ O painel Governança é exibido.
 
 === Analisar as oportunidades de economia
 
-Você pode querer investigar os itens na área _Saving Opportunities_ para ver se há dados que você deve excluir ou categorizar para armazenamento de objetos mais barato.
+O componente _Oportunidades de Economia_ mostra dados que você pode excluir ou alocar para um armazenamento de objetos mais barato. Os dados em _Oportunidades de Economia_ são atualizados a cada 2 horas e podem ser atualizados manualmente.
 
 .Passos
 . No menu classificação BlueXP , selecione *Governança*.
-. Em cada bloco de oportunidades de economia do painel Governança, selecione *Otimize Storage* para exibir os resultados filtrados na página de investigação. Você pode querer investigar os itens na área _Saving Opportunities_ para ver se há dados que você deve excluir ou categorizar para armazenamento de objetos mais barato.
+. Em cada bloco de oportunidades de economia do painel Governança, selecione *Otimize Storage* para exibir os resultados filtrados na página de investigação. Para descobrir quaisquer dados que você deve excluir ou transferir para um armazenamento mais barato, investigue as _Oportunidades de economia_.
 +
 ** *Dados obsoletos* - dados que foram modificados pela última vez há mais de 3 anos.
 ** *Dados não comerciais* - dados considerados não relacionados ao negócio, com base na sua Categoria ou tipo de ficheiro. Isso inclui:
@@ -70,13 +70,13 @@ NOTE: Se alguma das suas fontes de dados implementar a disposição em camadas d
 
 === Reveja as pesquisas salvas com o maior número de resultados
 
-Na guia _pesquisas salvas_, as pesquisas com o maior número de resultados aparecem no topo da lista.
+Na guia _pesquisas salvas_, as pesquisas com o maior número de resultados aparecem no topo da lista. Esses dados são atualizados a cada duas horas.
 
 Para obter detalhes sobre pesquisas salvas, link:task-using-policies.html["Criar pesquisas salvas"]consulte .
 
 .Passos
 . No menu classificação BlueXP , selecione *Governança*.
-. No painel Goverance, localize o bloco de pesquisas salvas. Selecione o nome de uma pesquisa salva para exibir os resultados na página de investigação.
+. No painel Governança, localize o bloco Pesquisas salvas. Selecione o nome de uma pesquisa salva para exibir os resultados na página de investigação.
 . Selecione *Exibir tudo* para exibir a lista de todas as pesquisas salvas disponíveis. Na área _pesquisas salvas_, as pesquisas com o maior número de resultados aparecem no topo da lista.
 
 
@@ -122,7 +122,7 @@ A classificação BlueXP  gera um relatório PDF que pode ser revisado e enviad
 
 == Crie o Relatório de Visão Geral do Mapeamento de dados
 
-O Data Mapping Overview Report fornece uma visão geral dos dados que estão sendo armazenados em suas fontes de dados corporativas para ajudá-lo com decisões de migração, backup, segurança e processos de conformidade. Primeiro, o relatório lista uma visão geral que resume todos os seus ambientes de trabalho e fontes de dados e, em seguida, fornece uma análise para cada ambiente de trabalho.
+O Data Mapping Overview Report fornece uma visão geral dos dados que estão sendo armazenados em suas fontes de dados corporativas para ajudá-lo com decisões de migração, backup, segurança e processos de conformidade. O relatório resume todos os ambientes de trabalho e fontes de dados. Também fornece uma análise para cada ambiente de trabalho.
 
 O relatório inclui as seguintes informações:
 
@@ -155,7 +155,7 @@ image:screenshot-compliance-report-buttons.png["Uma captura de tela do Painel de
 .Resultado
 A classificação BlueXP  gera um relatório .pdf que pode rever e enviar para outros grupos, conforme necessário.
 
-Se o relatório for maior que 1 MB, o arquivo .pdf será retido na instância de classificação do BlueXP  e você verá uma mensagem pop-up sobre a localização exata. Quando a classificação do BlueXP  é instalada em uma máquina Linux em suas instalações ou em uma máquina Linux implantada na nuvem, você pode navegar diretamente para o arquivo .pdf. Quando a classificação do BlueXP  é implantada na nuvem, você precisará fazer SSH para a instância de classificação do BlueXP  para baixar o arquivo .pdf.
+Se o relatório for maior que 1 MB, o arquivo .pdf será retido na instância de classificação do BlueXP  e você verá uma mensagem pop-up sobre a localização exata. Quando a classificação do BlueXP  é instalada em uma máquina Linux em suas instalações ou em uma máquina Linux implantada na nuvem, você pode navegar diretamente para o arquivo .pdf. Quando a classificação BlueXP for implantada na nuvem, você precisará usar SSH para acessar a instância de classificação BlueXP para baixar o arquivo .pdf.
 
 
 
@@ -168,9 +168,11 @@ A área _Top Data Repositories by Sensitivity Level_ do relatório Visão geral 
 * Dados pessoais confidenciais
 
 
+Esses dados são atualizados a cada duas horas e podem ser atualizados manualmente.
+
 .Passos
 . Para ver o número total de itens em cada categoria, posicione o cursor sobre cada seção da barra.
-. Para filtrar os resultados que aparecerão na página de investigação, selecione cada área ib a barra e investigue mais.
+. Para filtrar os resultados que aparecerão na página Investigação, selecione cada área na barra e investigue mais.
 
 
 
@@ -179,8 +181,8 @@ A área _Top Data Repositories by Sensitivity Level_ do relatório Visão geral 
 
 A área _dados sensíveis e permissões amplas_ do relatório Visão geral do mapeamento de dados mostra a porcentagem de arquivos que contêm dados confidenciais e têm permissões amplas. O gráfico mostra os seguintes tipos de permissões:
 
-* Das permissões mais restritivas às restrições mais permissivas no axix horizontal.
-* Dos dados menos sensitve aos dados mais sensíveis no eixo vertical.
+* Das permissões mais restritivas às restrições mais permissivas no eixo horizontal.
+* Dos dados menos sensíveis aos dados mais sensíveis no eixo vertical.
 
 
 .Passos
@@ -235,8 +237,8 @@ As categorias podem ajudá-lo a entender o que está acontecendo com seus dados,
 Consulte link:task-controlling-private-data.html["Visualizar ficheiros por categorias"] para obter mais informações.
 
 .Passos
-. No menu BlueXP , clique em *Governança > classificação*.
-. Clique em *Governança* e, em seguida, clique no botão *Relatório de avaliação de descoberta de dados*.
+. A partir do menu BlueXP , selecione *Governança > classificação*.
+. Selecione *Governança* e depois o botão *Relatório de Avaliação de Descoberta de Dados*.
 
 
 .Resultado

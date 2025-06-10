@@ -1,0 +1,60 @@
+= Versão 1,44
+:allow-uri-read: 
+
+
+
+
+=== Versão 1,44
+
+Esta versão de classificação BlueXP  inclui:
+
+.Tempos de atualização aprimorados para o painel de governança
+Os tempos de atualização para componentes individuais do painel de Governança foram aprimorados. A tabela a seguir exibe a frequência de atualizações para cada componente.
+
+[cols="1,1"]
+|===
+| Componente | Horários de atualização 
+
+
+| Idade dos dados | 24 horas 
+
+
+| Categorias | 24 horas 
+
+
+| Visão geral dos dados | 5 minutos 
+
+
+| Arquivos duplicados | 2 horas 
+
+
+| Tipos de ficheiros | 24 horas 
+
+
+| Dados não comerciais | 2 horas 
+
+
+| Abrir permissões | 24 horas 
+
+
+| Pesquisas salvas | 2 horas 
+
+
+| Dados sensíveis e permissões amplas | 24 horas 
+
+
+| Tamanho dos dados | 24 horas 
+
+
+| Dados obsoletos | 2 horas 
+
+
+| Principais repositórios de dados por nível de sensibilidade | 2 horas 
+|===
+Você pode visualizar o horário da última atualização e atualizar manualmente os componentes Arquivos Duplicados, Dados Não Comerciais, Pesquisas Salvas, Dados Obsoletos e Principais Repositórios de Dados por Nível de Sensibilidade. Para obter mais informações sobre o painel de Governança, consulte xref:task-controlling-governance-data.html[Veja detalhes de governança sobre os dados armazenados em sua organização] .
+
+.Melhorias de desempenho e segurança
+Foram feitas melhorias para melhorar o desempenho, o consumo de memória e a segurança da classificação BlueXP.
+
+.Correções de bugs
+O Redis foi atualizado para melhorar a confiabilidade da classificação do BlueXP. A classificação do BlueXP agora utiliza o Elasticsearch para melhorar a precisão dos relatórios de contagem de arquivos durante as verificações.
