@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-limitations.html 
 keywords: limitations, data sense, classification, bluexp, scan shares 
-summary: As limitações conhecidas identificam funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado. 
+summary: Limitações conhecidas identificam funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado. 
 ---
 = Limitações conhecidas na classificação BlueXP 
 :hardbreaks:
@@ -14,22 +14,24 @@ summary: As limitações conhecidas identificam funções que não são suportad
 
 
 [role="lead"]
-As limitações conhecidas identificam funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado.
+Limitações conhecidas identificam funções que não são suportadas ou que não interoperam corretamente nesta versão. Revise essas limitações com cuidado.
 
 
 
-== Opções de liberação de classificação BlueXP  removidas
+== Opções de classificação desabilitadas do BlueXP
 
 A versão de dezembro de 2023 (versão 1.26.6) removeu as seguintes opções:
 
 * A opção para ativar a coleção de registos de auditoria foi desativada.
-* Durante a investigação de diretórios, a opção de calcular o número de dados pessoais identificáveis (PII) por diretórios não está disponível.
+* Durante a investigação dos Diretórios, a opção para calcular o número de dados de informações de identificação pessoal (PII) pelos Diretórios não está disponível.
 * A opção de integrar dados usando rótulos AIP (proteção de informações do Azure) foi desativada.
 
 
 
 
-== Limitações de digitalização da classificação BlueXP 
+== Varredura de classificação BlueXP
+
+As seguintes limitações ocorrem com as verificações de classificações do BlueXP.
 
 
 
@@ -43,7 +45,7 @@ Se você tiver vários compartilhamentos de arquivo em um único volume, a class
 * /D/E
 
 
-Em seguida, os dados em /A serão digitalizados. Os dados em /C e /D não serão digitalizados.
+Nesta configuração, apenas os dados em /A são escaneados. Os dados em /C e /D não são escaneados.
 
 .Solução alternativa
 Existe uma solução alternativa para verificar se você está digitalizando dados de todos os compartilhamentos do seu volume. Siga estes passos:
@@ -51,12 +53,12 @@ Existe uma solução alternativa para verificar se você está digitalizando dad
 . No ambiente de trabalho, adicione o volume a ser lido.
 . Depois que a classificação do BlueXP  concluir a digitalização do volume, vá para a página _Investigação de dados_ e crie um filtro para ver qual compartilhamento está sendo digitalizado:
 +
-Você filtrará os dados por "Nome do ambiente de trabalho" e "tipo de diretório" para ver qual compartilhamento está sendo verificado.
+Filtre os dados por "Nome do ambiente de trabalho" e "Tipo de diretório = Compartilhamento" para ver qual compartilhamento está sendo verificado.
 
 . Obtenha a lista completa de compartilhamentos que existem no volume para que você possa ver quais compartilhamentos não estão sendo digitalizados.
 . link:task-scanning-file-shares.html["Adicione os compartilhamentos restantes a um grupo de ações"].
 +
-Você precisará adicionar todos os compartilhamentos individualmente, por exemplo:
+Adicione todas as ações individualmente, por exemplo:
 
 +
 ....
@@ -65,3 +67,9 @@ Você precisará adicionar todos os compartilhamentos individualmente, por exemp
 ....
 . Execute estas etapas para cada volume no ambiente de trabalho que tenha vários compartilhamentos.
 
+
+
+
+=== Último carimbo de data/hora de acesso
+
+Quando a classificação BlueXP realiza uma varredura de um diretório, a varredura afeta o campo **Último acesso** do diretório. Ao visualizar o campo **Último acesso**, esses metadados refletem a data e a hora da varredura ou a última vez que um usuário acessou o diretório.

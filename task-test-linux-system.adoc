@@ -115,7 +115,7 @@ O software de classificação BlueXP  deve ser executado em um host que atenda 
 *** Red Hat Enterprise Linux versão 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5
 
 
-** As extensões avançadas de vetor (AVX) devem estar ativadas no sistema anfitrião.
+** As extensões de vetor avançadas (AVX2) devem estar habilitadas no sistema host.
 
 
 * *Red Hat Subscription Management*: O host deve estar registrado no Red Hat Subscription Management. Se não estiver registrado, o sistema não poderá acessar repositórios para atualizar o software necessário de 3rd partes durante a instalação.
