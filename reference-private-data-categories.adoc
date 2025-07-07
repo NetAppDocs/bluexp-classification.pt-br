@@ -38,7 +38,7 @@ Os idiomas em que esses itens podem ser reconhecidos são identificados na tabel
 | Tipo | Identificador | Validação de proximidade? | Inglês | Alemão | Espanhol | Francês | Japonês 
 
 
-.6+| Geral | Número do cartão de crédito | Não | ✓ | ✓ | ✓ |  | ✓ 
+.6+| Geral | Número do cartão de crédito | Sim | ✓ | ✓ | ✓ |  | ✓ 
 
 
 | Titulares dos dados | Não | ✓ | ✓ | ✓ |  |  
@@ -413,7 +413,7 @@ A maioria dessas categorias pode ser reconhecida em inglês, alemão e espanhol.
 
 | Suporte | Reclamações e bilhetes | ✓ | ✓ | ✓ 
 |===
-Os seguintes metadados também são categorizados e são identificados nos mesmos idiomas suportados:
+Os seguintes metadados também são categorizados e identificados nos mesmos idiomas suportados:
 
 * Dados da aplicação
 * Arquivar ficheiros
@@ -445,9 +445,7 @@ Os seguintes metadados também são categorizados e são identificados nos mesmo
 
 == Tipos de arquivos
 
-A classificação BlueXP  verifica todos os arquivos para obter informações sobre categorias e metadados e exibe todos os tipos de arquivo na seção tipos de arquivo do painel.
-
-Mas quando a classificação BlueXP  deteta informações pessoais identificáveis (PII) ou quando realiza uma pesquisa DSAR, apenas os seguintes formatos de arquivo são suportados:
+A classificação BlueXP  verifica todos os arquivos para obter informações sobre categorias e metadados e exibe todos os tipos de arquivo na seção tipos de arquivo do painel. Quando a classificação BlueXP detecta Informações de Identificação Pessoal (PII) ou quando realiza uma pesquisa DSAR, somente os seguintes formatos de arquivo são suportados:
 
 `+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
 

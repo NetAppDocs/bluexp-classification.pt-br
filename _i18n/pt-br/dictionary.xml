@@ -664,7 +664,6 @@
   <block id="cf270e40d273f9e7fd7c3061729060c3" category="cell">Formação</block>
   <block id="db5eb84117d06047c97c9a0191b5fffe" category="cell">Suporte</block>
   <block id="1cdcde584710eee44415045aa08434f5" category="cell">Reclamações e bilhetes</block>
-  <block id="fd23f2a479ed0b74592359ca0f2e8fc1" category="paragraph">Os seguintes metadados também são categorizados e são identificados nos mesmos idiomas suportados:</block>
   <block id="01ff99864c73c43a845fe1b26d70c372" category="list-text">Dados da aplicação</block>
   <block id="0fa5a9c40f7f4a1f5dc486811f7a9a68" category="list-text">Arquivar ficheiros</block>
   <block id="b22f0418e8ac915eb66f829d262d14a2" category="list-text">Áudio</block>
@@ -690,8 +689,6 @@
   <block id="554cfab3938e21d9270bd6b75931f96f" category="list-text">Vídeos</block>
   <block id="6acc6b028214373f8cc2b2f2cd1be70c" category="list-text">Ficheiros Zero-Byte</block>
   <block id="ba2688508d4961c3340fa3a979e0a164" category="section-title">Tipos de arquivos</block>
-  <block id="e28941ad3ee4450d4e082c1ed4ac7223" category="paragraph">A classificação BlueXP  verifica todos os arquivos para obter informações sobre categorias e metadados e exibe todos os tipos de arquivo na seção tipos de arquivo do painel.</block>
-  <block id="e4ef3ccfa363c6ab883bef97f62feda4" category="paragraph">Mas quando a classificação BlueXP  deteta informações pessoais identificáveis (PII) ou quando realiza uma pesquisa DSAR, apenas os seguintes formatos de arquivo são suportados:</block>
   <block id="80890af19007fc709ba59342ca8b0385" category="section-title">Precisão das informações encontradas</block>
   <block id="28fda5ce8d3d029d75bd23c4faaf51cb" category="paragraph">A NetApp não pode garantir 100% de precisão dos dados pessoais e dados pessoais sensíveis que a classificação BlueXP  identifica. Deve sempre validar as informações através da revisão dos dados.</block>
   <block id="9d203da310dab1f086a98748da39c625" category="paragraph">Com base em nossos testes, a tabela abaixo mostra a precisão das informações que a classificação BlueXP  encontra. Nós quebramos isso por _precisão_ e _recall_:</block>
@@ -2796,39 +2793,26 @@
   <block id="28dc8814bfe656bc8e29052d1508b999" category="section-title">2 de setembro de 2024</block>
   <block id="2808185c0a48de3cd5dcc0d92f453531" category="section-title">Versão 1,35</block>
   <block id="60c09f1a3afdb367fc787929a52bce2c" category="paragraph">Para obter detalhes, <block ref="01dac562b0502c43b97eebbd4bf4b35d" category="inline-link-macro-rx"></block>consulte .</block>
-  <block id="dd6b8bf5a56c8beb81b173991906c83e" category="section-title">5 de agosto de 2024</block>
   <block id="3b506912c9fbc6e924c90fcd67f9e81d" category="section-title">Versão 1,34</block>
-  <block id="16ec862fdbc31bf15f7d944ad60dd33f" category="section-title">1 de julho de 2024</block>
   <block id="29ca6f4adc7aee37872328bb347b7543" category="section-title">Versão 1,33</block>
-  <block id="4497f9fd188a9629ea47d91a3f025c8c" category="section-title">5 de junho de 2024</block>
   <block id="decdab3311a7d521fe764d5d580ddd35" category="section-title">Versão 1,32</block>
   <block id="93716955add4f66b2af685a33bac4789" category="section-title">15 de maio de 2024</block>
   <block id="362a66c8caf141f86c11be1e2f936c77" category="section-title">Versão 1,31</block>
-  <block id="4434c8a49854e6484f6c158999be4e10" category="section-title">1 de abril de 2024</block>
   <block id="e6a70634d4a42783e6d5918eff0a0ab6" category="section-title">Versão 1,30</block>
-  <block id="9ee51d75827fcf6a985ed40e7418fea6" category="section-title">4 de março de 2024</block>
   <block id="512d4a337ec357edd106a616e83b1a1f" category="section-title">Versão 1,29</block>
   <block id="c630754f942c555264fff115d6b5e9b2" category="section-title">10 de janeiro de 2024</block>
   <block id="536149161458a7a77ae5b72258f34e48" category="section-title">Versão 1,27</block>
   <block id="3500d4b863ccad6f25298c3ab1519e74" category="section-title">14 de dezembro de 2023</block>
   <block id="552c9ad11d5dffc1189fa270ca015445" category="section-title">Versão 1.26.6</block>
-  <block id="c8684cf4ccd502e49d1d79ff9936bc98" category="section-title">6 de novembro de 2023</block>
   <block id="0778a32085af8830c408efb93cb7239f" category="section-title">Versão 1.26.3</block>
-  <block id="e5899cce271b544ee6441231f3c8cb3f" category="section-title">4 de outubro de 2023</block>
   <block id="a7dfa38887a337aec315ca23d79dc622" category="section-title">Versão 1,26</block>
-  <block id="133c04bb5f03e7d4a910bcf2f7193ebd" category="section-title">5 de setembro de 2023</block>
   <block id="3f1982a78707e6a0e0433cad5b5a037d" category="section-title">Versão 1,25</block>
   <block id="deac043b98b13aa9a1a0d041a820ee2c" category="section-title">17 de julho de 2023</block>
   <block id="314ecd7c1da8864532628a8aa4a6c85b" category="section-title">Versão 1,24</block>
-  <block id="6a7140fd5370f297d9a834d30e26ffde" category="section-title">6 de junho de 2023</block>
   <block id="5a78709b3e68f78b25a72a31cfcaa8f0" category="section-title">Versão 1,23</block>
-  <block id="102787ed6297b34a7504b527e91d01d3" category="section-title">3 de abril de 2023</block>
   <block id="288d139ea0d21561e65bec74c2f7c646" category="section-title">Versão 1,22</block>
-  <block id="4b10c384bd11c38afbbe24f979f5519d" category="section-title">7 de março de 2023</block>
   <block id="321553493f3e3f76105c5f5c5633b4c1" category="section-title">Versão 1,21</block>
-  <block id="e1bc7b26155063f1ce71b76f655669ef" category="section-title">5 de fevereiro de 2023</block>
   <block id="4d892f9a0cb70711d12ffb41d4d77d8b" category="section-title">Versão 1,20</block>
-  <block id="88a11892e7418e1eee8c952df9545b46" category="section-title">9 de janeiro de 2023</block>
   <block id="58080b77f4121259ffde5ce32650fff6" category="section-title">Versão 1,19</block>
   <block id="d201913c731a2c485562d2197234ff40" category="paragraph">Conclua algumas etapas para instalar a classificação BlueXP  em um host Linux em um site local que não tenha acesso à Internet - também conhecido como _modo privado_. Esse tipo de instalação, que usa um script de instalação, não tem conetividade com a camada SaaS do BlueXP .</block>
   <block id="eea715e21fdd29a12f087199006074c7" category="paragraph">Você também <block ref="76c224cc80265848284829e2886db42b" category="inline-link-macro-rx"></block>pode .</block>
@@ -3518,7 +3502,6 @@
   <block id="a68d116e41811f0ca6fb6aefa908afd9" category="list-text">Das permissões mais restritivas às restrições mais permissivas no eixo horizontal.</block>
   <block id="c0ff25971ba3c6cce0ab70a7e99e54ad" category="list-text">Dos dados menos sensíveis aos dados mais sensíveis no eixo vertical.</block>
   <block id="77a197972f7313e7a09a6a077fc9f4c2" category="list-text">Selecione *Governança* e depois o botão *Relatório de Avaliação de Descoberta de Dados*.</block>
-  <block id="791d05d0e9072626d0316ef0a7cf21bc" category="section-title">09 de junho de 2025</block>
   <block id="d4113e36e86a18cdd4a4813e9e66b30e" category="list-text">As extensões de vetor avançadas (AVX2) devem estar habilitadas no sistema host.</block>
   <block id="e07933db8e0e899d5b0b2536a835fbbe" category="summary">Limitações conhecidas identificam funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado.</block>
   <block id="74541a5ab63d560e7b65e9ce0447a3ab" category="paragraph">Limitações conhecidas identificam funções que não são suportadas ou que não interoperam corretamente nesta versão. Revise essas limitações com cuidado.</block>
@@ -3531,4 +3514,20 @@
   <block id="13bb1a0d5dd0d8923eac81793d8de810" category="paragraph">Adicione todas as ações individualmente, por exemplo:</block>
   <block id="5215d51f00cbd59bd4f5379564dd2607" category="section-title">Último carimbo de data/hora de acesso</block>
   <block id="ba9f5402880018fda0707ce102d53b4e" category="paragraph">Quando a classificação BlueXP realiza uma varredura de um diretório, a varredura afeta o campo **Último acesso** do diretório. Ao visualizar o campo **Último acesso**, esses metadados refletem a data e a hora da varredura ou a última vez que um usuário acessou o diretório.</block>
+  <block id="f8479f3d69c2063127c42c5c37486b19" category="paragraph">Os seguintes metadados também são categorizados e identificados nos mesmos idiomas suportados:</block>
+  <block id="efb48152c99d5498d08b6785efe95423" category="paragraph">A classificação BlueXP  verifica todos os arquivos para obter informações sobre categorias e metadados e exibe todos os tipos de arquivo na seção tipos de arquivo do painel. Quando a classificação BlueXP detecta Informações de Identificação Pessoal (PII) ou quando realiza uma pesquisa DSAR, somente os seguintes formatos de arquivo são suportados:</block>
+  <block id="0e42c2b565849349fc544a0196ef1b6a" category="section-title">10 de junho de 2025</block>
+  <block id="d7cf77b2e56bc33512915804de4711b6" category="section-title">05 de agosto de 2024</block>
+  <block id="65f1f74c15350fb3342360320ff8c717" category="section-title">01 de julho de 2024</block>
+  <block id="e4aecca06323b10cc72f8605553dacea" category="section-title">05 de junho de 2024</block>
+  <block id="9c0269454c5c35ffc377aed6baf6d638" category="section-title">01 de abril de 2024</block>
+  <block id="b8a98fcc40c83e855fb31eabe2a4360d" category="section-title">04 de março de 2024</block>
+  <block id="544cac1ecf4d7d5eb4b8b563c0d90c5a" category="section-title">06 de novembro de 2023</block>
+  <block id="d36a1ccbf2d01a1ff61c0e50416882e9" category="section-title">04 de outubro de 2023</block>
+  <block id="b9d5019337501d72be4adcf007f7d84c" category="section-title">05 de setembro de 2023</block>
+  <block id="40d3210136139f5fa0cdf31aed565820" category="section-title">06 de junho de 2023</block>
+  <block id="70c95406986fbb3626df1a393daf99ce" category="section-title">03 de abril de 2023</block>
+  <block id="d673bedebce5131101d3c3583efe3e40" category="section-title">07 de março de 2023</block>
+  <block id="7d04cce0092e695d038c8ac0c2c6c212" category="section-title">05 de fevereiro de 2023</block>
+  <block id="98dafe2aa2310496897ef8155a1d9413" category="section-title">09 de janeiro de 2023</block>
 </blocks>
