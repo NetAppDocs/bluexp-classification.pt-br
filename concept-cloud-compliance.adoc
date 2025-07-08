@@ -127,14 +127,14 @@ Observe o seguinte sobre a instância padrão:
 * Apenas uma instância de classificação BlueXP  é implantada por conetor.
 
 
-Você também pode implantar a classificação do BlueXP  em um host Linux no local ou em um host no seu provedor de nuvem preferido. O software funciona exatamente da mesma forma, independentemente do método de instalação que você escolher. As atualizações do software de classificação BlueXP  são automatizadas, desde que a instância tenha acesso à Internet.
+Você também pode implantar a classificação do BlueXP  em um host Linux no local ou em um host no seu provedor de nuvem preferido. O software funciona exatamente da mesma forma, independentemente do método de instalação que você escolher. As atualizações do software de classificação BlueXP são automatizadas, desde que a instância tenha acesso à Internet.
 
 
 TIP: A instância deve permanecer em execução o tempo todo porque a classificação BlueXP  verifica continuamente os dados.
 
 *Deploy em diferentes tipos de instância*
 
-Você pode implantar a classificação BlueXP  em um sistema com menos CPUs e menos RAM.
+Revise as seguintes especificações para tipos de instância:
 
 [cols="18,31,51"]
 |===
@@ -168,7 +168,7 @@ image:diagram_cloud_compliance_scan.png["Um diagrama que mostra uma instância d
 
 Após a verificação inicial, a classificação BlueXP  verifica continuamente os seus dados de forma redonda para detetar alterações incrementais. É por isso que é importante manter a instância em execução.
 
-Você pode ativar e desativar digitalizações no nível de volume ou no nível do esquema do banco de dados.
+Você pode habilitar e desabilitar verificações no nível do volume ou no nível do esquema do banco de dados.
 
 
 
@@ -176,7 +176,7 @@ Você pode ativar e desativar digitalizações no nível de volume ou no nível 
 
 Pode realizar dois tipos de exames na classificação BlueXP :
 
-* **As digitalizações somente de mapeamento** fornecem apenas uma visão geral de alto nível de seus dados e são realizadas em fontes de dados selecionadas. As digitalizações somente de mapeamento demoram menos tempo do que mapear e classificar digitalizações porque o não acessa arquivos para ver os dados dentro. Pode pretender fazer isto inicialmente para identificar áreas de investigação e, em seguida, executar uma leitura de mapa e classificação nessas áreas.
+* **As digitalizações somente de mapeamento** fornecem apenas uma visão geral de alto nível de seus dados e são realizadas em fontes de dados selecionadas. As varreduras somente de mapeamento levam menos tempo do que as varreduras de mapeamento e classificação porque não acessam arquivos para ver os dados contidos neles. Pode pretender fazer isto inicialmente para identificar áreas de investigação e, em seguida, executar uma leitura de mapa e classificação nessas áreas.
 * **As digitalizações de mapa e classificação** fornecem uma digitalização de nível profundo dos seus dados.
 
 

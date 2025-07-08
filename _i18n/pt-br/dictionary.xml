@@ -152,10 +152,8 @@
   <block id="555b1e52bb127041158dea54f3685aaf" category="list-text">Em regiões onde a instância padrão não está disponível, a classificação BlueXP  é executada em uma instância alternativa. <block ref="e3d4e40a766f2ed64294b1dd26c6e095" category="inline-link-macro-rx"></block>.</block>
   <block id="005b996ef864c5e5d692c055b435643b" category="list-text">A instância é chamada _CloudCompliance_ com um hash gerado (UUID) concatenado a ela. Por exemplo: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_</block>
   <block id="d05dbd72313077420069ae49fe175de1" category="list-text">Apenas uma instância de classificação BlueXP  é implantada por conetor.</block>
-  <block id="b9542475929b3c8ff209e88bb948446b" category="paragraph">Você também pode implantar a classificação do BlueXP  em um host Linux no local ou em um host no seu provedor de nuvem preferido. O software funciona exatamente da mesma forma, independentemente do método de instalação que você escolher. As atualizações do software de classificação BlueXP  são automatizadas, desde que a instância tenha acesso à Internet.</block>
   <block id="5509f198213f653cadd8f4de67a143bf" category="admonition">A instância deve permanecer em execução o tempo todo porque a classificação BlueXP  verifica continuamente os dados.</block>
   <block id="6b58a1f82ed5bb7a99f52822509a4519" category="paragraph">*Deploy em diferentes tipos de instância*</block>
-  <block id="df08805f9a68769e5aca6dccacac7494" category="paragraph">Você pode implantar a classificação BlueXP  em um sistema com menos CPUs e menos RAM.</block>
   <block id="360d214e899b88b8fe54a260668c2f48" category="cell">Especificações</block>
   <block id="e646e16bee8b32e6ea29e30d01970a6c" category="cell">Limitações</block>
   <block id="5d4d8771b47d6c5166952822e552f082" category="cell">Extra grande</block>
@@ -3530,4 +3528,8 @@
   <block id="d673bedebce5131101d3c3583efe3e40" category="section-title">07 de março de 2023</block>
   <block id="7d04cce0092e695d038c8ac0c2c6c212" category="section-title">05 de fevereiro de 2023</block>
   <block id="98dafe2aa2310496897ef8155a1d9413" category="section-title">09 de janeiro de 2023</block>
+  <block id="5545319db9091a71ae7b48d6f230c126" category="paragraph">Você também pode implantar a classificação do BlueXP  em um host Linux no local ou em um host no seu provedor de nuvem preferido. O software funciona exatamente da mesma forma, independentemente do método de instalação que você escolher. As atualizações do software de classificação BlueXP são automatizadas, desde que a instância tenha acesso à Internet.</block>
+  <block id="16d42e00c386e70a3a7df4333dbd3a1d" category="paragraph">Revise as seguintes especificações para tipos de instância:</block>
+  <block id="b6312fd76a50f60b989ce722e432d447" category="paragraph">Você pode habilitar e desabilitar verificações no nível do volume ou no nível do esquema do banco de dados.</block>
+  <block id="5ef007aec2cc80b49f082c5ae4dba4dc" category="list-text">**As digitalizações somente de mapeamento** fornecem apenas uma visão geral de alto nível de seus dados e são realizadas em fontes de dados selecionadas. As varreduras somente de mapeamento levam menos tempo do que as varreduras de mapeamento e classificação porque não acessam arquivos para ver os dados contidos neles. Pode pretender fazer isto inicialmente para identificar áreas de investigação e, em seguida, executar uma leitura de mapa e classificação nessas áreas.</block>
 </blocks>
