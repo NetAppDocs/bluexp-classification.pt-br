@@ -43,7 +43,7 @@ A tabela abaixo mostra algumas das diferenças:
 | Preços | Livre | Livre 
 
 
-| Capacidade | Limitado a 500 TB | Limitado a 500 TB 
+| Capacidade | Limitado a 500 TiB* | Limitado a 500 TiB* 
 
 
 | Lista de tipos de arquivo e capacidade usada | Sim | Sim 
@@ -72,6 +72,8 @@ A tabela abaixo mostra algumas das diferenças:
 
 | Capacidade de ver metadados de arquivos* | Não | Sim 
 |===
+{asterisco} include::_include/connector-limit.adoc[]
+
 *Os seguintes metadados são extraídos de arquivos durante as varreduras de mapeamento:
 
 * Ambiente de trabalho

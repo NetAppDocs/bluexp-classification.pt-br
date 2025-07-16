@@ -179,7 +179,6 @@
   <block id="e22ac25b066b201473de7aa700ef5d92" category="cell">Preços</block>
   <block id="b24ce0cd392a5b0b8dedc66c25213594" category="cell">Livre</block>
   <block id="3b8f7696879f77dfc8c74aa8df8db24b" category="cell">Capacidade</block>
-  <block id="1210ad5d6a7beaf8ab7fd7d0808a95ca" category="cell">Limitado a 500 TB</block>
   <block id="e897ea41d67b7f4324a05104cdb193d8" category="cell">Lista de tipos de arquivo e capacidade usada</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">Sim</block>
   <block id="f70dc1570da6e051d772bf79c53fd19c" category="cell">Número de arquivos e capacidade utilizada</block>
@@ -2597,7 +2596,6 @@
   <block id="6195c7a1534de8abb0c4706e15d24a3c" category="inline-link">Alterar as definições de digitalização</block>
   <block id="2f94c0116c501abdbd5c76ddef86d94a" category="paragraph">Para obter explicações sobre os Estados,<block ref="cacd3972a6d9bfb8b2d3cde3ba576e77" category="inline-link-rx"></block> consulte .</block>
   <block id="d1e72f4d21bb915d180e5f6d1e9d4264" category="section-title">A classificação está disponível como um serviço principal dentro do BlueXP </block>
-  <block id="ac229efd3fa61c5457dcab252996be0b" category="paragraph">A classificação BlueXP  está agora disponível como um recurso principal no BlueXP  sem custo adicional para até 500 TIB de dados digitalizados. Nenhuma licença de classificação ou assinatura paga é necessária. À medida que focamos a funcionalidade de classificação do BlueXP  na digitalização de sistemas de armazenamento NetApp com esta nova versão, algumas funcionalidades antigas só estarão disponíveis para clientes que já haviam pago uma licença. O uso desses recursos herdados expirará quando o contrato pago atingir sua data final.</block>
   <block id="3607a722a9a09bb6d405f4d84609e858" category="inline-link-macro">Saiba mais sobre os recursos obsoletos</block>
   <block id="1a50d9154328b370f6d9bbbab041964a" category="paragraph"><block ref="671322b9b43cc49264f86b21ef88a11d" category="inline-link-macro-rx"></block>.</block>
   <block id="1f2986b833ebc6f322deb045aeee0ad8" category="section-title">Suporte adicionado para classificação RHEL v8,8 e v9,3 BlueXP </block>
@@ -3553,4 +3551,11 @@
   <block id="c10aaeed86973ee0f442f2e7b73b80b8" category="paragraph">Para obter mais informações, <block ref="c56cfb642e9d697265520a2d16e8cbad" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="4c59149345d32f10d4c1edb221d77028" category="paragraph">Agora você pode visualizar mais informações sobre os proprietários dos arquivos capturados na aba "Investigação". Ao visualizar metadados de um arquivo na guia Investigação, localize o proprietário do arquivo e selecione **Exibir detalhes** para ver o nome de usuário, o e-mail e o nome da conta SAM. Você também pode visualizar outros itens pertencentes a este usuário. Este recurso está disponível apenas para ambientes de trabalho com o Active Directory.</block>
   <block id="476669d16044da6b8fccc04e3a65c887" category="paragraph">Para obter mais informações, <block ref="202490d1a2feeed942d0b33752539ffd" category="inline-link-macro-rx"></block>consulte .</block>
+  <block id="ba0582c1a4216adac557c97d2f92f869" category="inline-link-macro">instalar outro conector</block>
+  <block id="bb421402dbabe6eec32567511e69bc2a" category="inline-link-macro">implantar outra instância de classificação</block>
+  <block id="7473cbb9b768b471bd45e7579b544a3a" category="inline-link-macro">Trabalhe com vários conetores</block>
+  <block id="c430d0ad1a785912ff6e7f2d659d752f" category="paragraph">A BlueXP classification não impõe um limite à quantidade de dados que pode escanear. Cada Conector suporta escaneamento e exibição de 500 TiB de dados. Para escanear mais de 500 TiB de dados, <block ref="a34b864875c7f2ebc4a815c94a375e43" category="inline-link-macro-rx"></block> então <block ref="a51ca3e7fcece55a05339015489757d6" category="inline-link-macro-rx"></block> . + A interface do usuário do BlueXP exibe dados de um único conector. Para dicas sobre como visualizar dados de vários conectores, consulte <block ref="5255e271b4118330c3aac09d32603a12" category="inline-link-macro-rx"></block> .</block>
+  <block id="551fbc3b7472150a5293373b773972d7" category="cell">Limitado a 500 TiB*</block>
+  <block id="acdf9d63036f9706b8165f6f6a7117da" category="paragraph">{asterisco} include::_include/connector-limit.adoc[]</block>
+  <block id="e8c9a8c8c457fc72bf3b116575089845" category="paragraph">A BlueXP classification agora está disponível como um recurso principal do BlueXP , sem custo adicional, para até 500 TiB de dados digitalizados por conector. Nenhuma licença de classificação ou assinatura paga é necessária. À medida que focamos a funcionalidade de classificação do BlueXP  na digitalização de sistemas de armazenamento NetApp com esta nova versão, algumas funcionalidades antigas só estarão disponíveis para clientes que já haviam pago uma licença. O uso desses recursos herdados expirará quando o contrato pago atingir sua data final.</block>
 </blocks>
