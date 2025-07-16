@@ -2842,7 +2842,6 @@
   <block id="e5e1cbf6654ebd60cb667a224f96576b" category="list-text">*Map e Classify* digitalizações fornecem varredura de nível profundo de seus dados.</block>
   <block id="c124c4f02a2ca2f9d44b7fba00db37c1" category="paragraph">Você pode se beneficiar do uso de varreduras somente de mapeamento para verificar rapidamente seus dados para identificar as fontes de dados que exigem mais pesquisas e, em seguida, ativar o mapa e classificar varreduras somente nas fontes de dados ou volumes necessários.</block>
   <block id="50c745bad209edbd34224bb42d16a2f2" category="paragraph">A prioridade é atribuída apenas a digitalizações só de mapeamento, e não a mapear e classificar digitalizações.</block>
-  <block id="e6d9a832ce4714fadf7ccc119cafd52e" category="paragraph">A prioridade é definida como 1 por padrão, e você pode alterá-la para qualquer número entre 1 e 10. Quanto menor o número, maior a prioridade. Se você não definir uma prioridade, a digitalização recebe uma prioridade de 5.</block>
   <block id="6dc81f0ce39e2f29f7002163498374d6" category="paragraph">Para alterar a prioridade, faça o seguinte:</block>
   <block id="09d7e52dfc68f84cd7ef45e3c26a0389" category="list-text">No menu classificação BlueXP , selecione *Configuração*.</block>
   <block id="9ad22d134d0b57050c5d4d4a8e861bf9" category="list-text">Selecione os recursos que deseja priorizar.</block>
@@ -3084,7 +3083,6 @@
   <block id="87dda2e6b67eed182754a59416a10145" category="doc">Descrição geral das fontes de dados do exame com a classificação BlueXP </block>
   <block id="9ed967b138578dbb6c57d7b336d5c696" category="paragraph">A classificação do BlueXP  analisa os dados nos repositórios (volumes, esquemas de banco de dados ou outros dados de usuário) que você seleciona para identificar dados pessoais e confidenciais. A classificação do BlueXP  mapeia os dados organizacionais, categoriza cada arquivo e identifica padrões predefinidos nos dados. O resultado da digitalização é um índice de informações pessoais, informações pessoais confidenciais, categorias de dados e tipos de arquivos.</block>
   <block id="3779db1fb21572df76305e5ede3efad1" category="sidebar">Analise a visão geral das suas fontes de dados</block>
-  <block id="c00e1d18d877d030ee92aec3422b1aeb" category="paragraph">A priorização é limitada a <block ref="377ae34afcc76614c5602798befc8a4b" category="inline-link-macro-rx"></block>; ela não está disponível para mapear e classificar digitalizações.</block>
   <block id="fc9679220132eb8e0f499680bbe8909a" category="list-text">* Reconhecimento de entidade de nome*: A classificação BlueXP  usa IA para extrair os nomes naturais das pessoas de documentos. <block ref="8e814e02dddb19e3bb4166c15fc34470" category="inline-link-macro-rx"></block>.</block>
   <block id="e888dadabb0f55fe5c317b3b6754087e" category="paragraph">A função atribuída a cada utilizador fornece diferentes capacidades dentro da classificação BlueXP  e dentro da classificação BlueXP . Para obter mais informações,<block ref="9e5b18f30859b96d93203df427b4bd3d" category="inline-link-rx"></block> consulte (quando utilizar o BlueXP  no modo padrão).</block>
   <block id="6f0ff027a4b5c5cccc90c166290d3013" category="cell">Capacidade de executar a. <block ref="c2177dc55e01ee229f523014b3bacb31" category="inline-link-macro-rx"></block></block>
@@ -3193,12 +3191,10 @@
   <block id="b9cf7636c1458813ea2386a78b8774cd" category="list-text">Escolha o tipo de relatório: CSV ou JSON.</block>
   <block id="aac46765e6c078c569d11a06fa32886b" category="list-text">Escolha uma das seguintes opções:</block>
   <block id="bc19fc1fb9d36ac2eec32fb81f6e5cca" category="paragraph">Ao realizar exames somente de mapeamento, você pode priorizar os exames mais importantes. Este recurso ajuda quando você tem muitos ambientes de trabalho e quer garantir que as verificações de alta prioridade sejam concluídas primeiro.</block>
-  <block id="2e41eb33226717a4730fa2131336dc5a" category="paragraph">Para obter mais informações, <block ref="9493b318b51f384796e93c6ba74f5935" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="33fc2a8f6921fec02571495993aa2c6c" category="doc">Versão 1,42</block>
   <block id="83962582dc3c189ba60063fe7990755c" category="paragraph">Esta versão de classificação BlueXP  inclui:</block>
   <block id="2dcf334efa4f886393cac0e44ff5a917" category="paragraph-title">Digitalização em massa para ambientes de trabalho</block>
   <block id="7c021042892d25e3e5d4271749e03344" category="paragraph-title">Baixe o relatório de investigação localmente</block>
-  <block id="95403a677c140fea03f157c2edb41c85" category="paragraph">Para obter mais informações, <block ref="55ff936b35b23a6f6693627bfb444c62" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="84acc1c8e6e80bda04b6eac437f19154" category="admonition">Você pode baixar uma versão do arquivo CSV para visualizar neste navegador. Esta versão está limitada a 10.000 registos.</block>
   <block id="05035e3bc31af3e060bb6a5ed03e7988" category="list-text">Digite um ** Nome do relatório**.</block>
   <block id="634cb969225c406dc49fde5e0df02409" category="list-text">Na opção ações<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block>, selecione *priorizar a digitalização*.</block>
@@ -3257,10 +3253,8 @@
   <block id="841ba72ee4bfb55c34ecc91bca130388" category="inline-xref-macro">Categorias de dados pessoais</block>
   <block id="0faf34dc58fa8cc3526b8a0a51850b2b" category="paragraph-title">Classificação personalizada (pré-visualização)</block>
   <block id="68fcca37a232a8993c6b392c92803de3" category="inline-xref-macro">Adicione classificações personalizadas</block>
-  <block id="293ef51708e6a5ff00afa3b03fc38173" category="paragraph">Para obter mais informações, <block ref="5c3ba05e723fa646f41c75d6d8a263d3" category="inline-xref-macro-rx"></block>consulte .</block>
   <block id="dcc61fc6bf6aa17ea807ec107b3f9682" category="paragraph-title">Separador Pesquisas guardadas</block>
   <block id="1005b3a447fe9caf1ce373cf96b4dc01" category="inline-xref-macro">**Pesquisas salvas**</block>
-  <block id="619964fa6c4dc175f106697cd53cd93b" category="paragraph">A guia **políticas** foi renomeada <block ref="57cf69bfb5ee6dec8716152c342ad94c" category="inline-xref-macro-rx"></block>. A funcionalidade é a mesma.</block>
   <block id="decaf26b476fc5aad56ba857036660b7" category="inline-link-macro">Linha do tempo de BlueXP </block>
   <block id="ddba4621d4e9a4c39c38ef2131834760" category="list-title">Atualizações de segurança</block>
   <block id="0a39c7bc14a0f00de22f1ead79c18b0c" category="list-text">O pacote keras foi atualizado, atenuando vulnerabilidades (BDSA-2025-0107 e BDSA-2025-1984).</block>
@@ -3382,7 +3376,6 @@
   <block id="fe2063e5676e0308022c99eb2466140c" category="paragraph-title">Os resultados da página de investigação mostram o tamanho total, além do número total de itens</block>
   <block id="6cff48344cb111c0fcdb424ba18c6bcf" category="paragraph">Os resultados filtrados na página de investigação exibem o tamanho total dos itens, além do número total de arquivos. Isso pode ajudar ao mover arquivos, excluir arquivos e muito mais.</block>
   <block id="162e654adac435300128c485423d9e97" category="paragraph">Os exames de classificação BlueXP  identificam categorias de dados de PII canadenses. Essas categorias incluem informações bancárias, números de passaporte, números de seguro social, números de carteira de motorista e números de cartão de saúde para todas as províncias e territórios canadenses.</block>
-  <block id="24b795aa1c931b8beb71a1bad521912d" category="paragraph">Para obter mais informações, <block ref="918fde1c1c3c4433556923cc965488af" category="inline-xref-macro-rx"></block>consulte .</block>
   <block id="779a8744af84c09c0b82c029307690b7" category="paragraph">A classificação BlueXP  suporta classificações personalizadas para exames de mapa e classificação. Com classificações personalizadas, você pode personalizar as digitalizações BlueXP  para capturar dados específicos da sua organização usando expressões regulares. Esta funcionalidade está atualmente em pré-visualização.</block>
   <block id="59cb665cd7462a904eefb54d13262d58" category="paragraph">Você também pode excluir a integração selecionando o <block ref="aa89719a78a5f0c3ea3c4b3d03b565b2" category="inline-image-macro-rx" type="image"></block> botão e depois *Remover ative Directory*.</block>
   <block id="b26c3f06a8206b488da4691050c7d97f" category="list-text">Para personalizar o nome da empresa que aparece na primeira página do relatório, no canto superior direito da página de classificação do BlueXP , <block ref="b7ac54c4d55d285685809fbae424a873" category="inline-image-macro-rx" type="image"></block>selecione . Em seguida, selecione *alterar nome da empresa*. Na próxima vez que você gerar o relatório, ele incluirá o novo nome.</block>
@@ -3443,7 +3436,6 @@
   <block id="3c321d8be960cf9c4e3de3feeb79454d" category="cell">Dados obsoletos</block>
   <block id="66f1eb6a68ea177f7b25f4befa2afcb5" category="cell">Principais repositórios de dados por nível de sensibilidade</block>
   <block id="b97835ec7267635dbdb6a030bb594b9b" category="inline-xref-macro">Veja detalhes de governança sobre os dados armazenados em sua organização</block>
-  <block id="af67ad5f0d1d3f928958a66c7475e1df" category="paragraph">Você pode visualizar o horário da última atualização e atualizar manualmente os componentes Arquivos Duplicados, Dados Não Comerciais, Pesquisas Salvas, Dados Obsoletos e Principais Repositórios de Dados por Nível de Sensibilidade. Para obter mais informações sobre o painel de Governança, consulte <block ref="e2440d776a494477c2f83bc685289508" category="inline-xref-macro-rx"></block> .</block>
   <block id="98b92205e576b5e6498a01750fffbf6b" category="paragraph-title">Melhorias de desempenho e segurança</block>
   <block id="890d5712449921f1a6ffa08636045ac2" category="paragraph">Foram feitas melhorias para melhorar o desempenho, o consumo de memória e a segurança da classificação BlueXP.</block>
   <block id="cb000a9ed4aba8f6a1db1f518019d44e" category="paragraph">O Redis foi atualizado para melhorar a confiabilidade da classificação do BlueXP. A classificação do BlueXP agora utiliza o Elasticsearch para melhorar a precisão dos relatórios de contagem de arquivos durante as verificações.</block>
@@ -3497,10 +3489,7 @@
   <block id="8f993d1847870bf5334f9e8a709029c8" category="paragraph-title">Fluxo de trabalho aprimorado para adicionar compartilhamentos de arquivos para digitalização</block>
   <block id="7363f98210e80281886d9b88b644899c" category="paragraph">O fluxo de trabalho para adicionar compartilhamentos de arquivos a um grupo de compartilhamento de arquivos foi simplificado. O processo agora também diferencia o suporte ao protocolo CIFS com base no tipo de autenticação (Kerberos ou NTLM).</block>
   <block id="628bc6ea752b2d2bd10bc4f22b8cfcca" category="inline-xref-macro">Verificar compartilhamentos de arquivos</block>
-  <block id="1ac63d916d77b3c107f8a8cfa12fb2bb" category="paragraph">Para obter mais informações, <block ref="828b8ad7e27c62fe81ed86d552495069" category="inline-xref-macro-rx"></block>consulte .</block>
   <block id="2cc1f0459a8aa18da26c0c17c08edd37" category="paragraph-title">Informações aprimoradas sobre o proprietário do arquivo</block>
-  <block id="11960942a6824585cdbadbb9ccfaa7b2" category="paragraph">Agora você pode visualizar mais informações sobre os proprietários dos arquivos capturados na aba "Investigação". Ao visualizar os metadados de um arquivo na aba "Investigação", localize o proprietário do arquivo e selecione **Exibir detalhes** para ver o nome de usuário, o e-mail e o nome da conta SAM. Você também pode visualizar outros itens pertencentes a este usuário. Este recurso está disponível apenas para ambientes de trabalho com o Active Directory.</block>
-  <block id="761b95894e65b7e84a1b42c7277548f8" category="paragraph">Para obter mais informações, <block ref="52346db20931f188e29e56e6e913f681" category="inline-xref-macro-rx"></block>consulte .</block>
   <block id="c6d521e93c659f52fc0150619d81cd0e" category="paragraph">Você também pode visualizar mais detalhes sobre o proprietário do arquivo: nome da conta, endereço de e-mail e nome da conta SAM, ou visualizar itens de propriedade desse usuário.</block>
   <block id="8d1256ea20b6f3627b46e3916aa6a135" category="paragraph">Se você quiser garantir que os "últimos horários de acesso" dos seus arquivos não sejam alterados pelas verificações de BlueXP classification , é recomendável que o usuário tenha permissões de Gravação de Atributos no CIFS ou permissões de gravação no NFS. Se possível, configure o usuário do Active Directory como parte de um grupo pai na organização que tenha permissões para todos os arquivos.</block>
   <block id="06d20a71e8e976cfefed98d4f05b2dc1" category="list-text">Para refinar ainda mais os resultados, selecione um dos filtros no painel Filtro.</block>
@@ -3552,4 +3541,16 @@
   <block id="b42fc0af753e0ff8c5de1ac5d8dfe183" category="list-text">Selecione o menu **Configuração**.</block>
   <block id="790cba8a3b8c32c0870a5b1dd53d5a26" category="list-text">Selecione a **Configuração do ambiente de trabalho**.</block>
   <block id="f2673d4a3fe0162a501d43f5168ae950" category="section-title">14 de julho de 2025</block>
+  <block id="fb6e5e6a0aed1cea1619e3e2b53a4e5a" category="paragraph">A prioridade é definida como 1 por padrão, e você pode alterá-la para qualquer número entre 1 e 10. Quanto menor o número, maior a prioridade. Se você não definir uma prioridade, a verificação receberá a prioridade 5.</block>
+  <block id="0b17075b3e9565678240914f5e9706ac" category="paragraph">A priorização é limitada a <block ref="afc1d39fdcd662d524f1ee8687a1f655" category="inline-link-macro-rx"></block>; ela não está disponível para mapear e classificar digitalizações.</block>
+  <block id="65d0aa01e8cb73d7f5c3ed79051f78c8" category="paragraph">Para obter mais informações, <block ref="7906b79b56c525526a8be1ef38207fbe" category="inline-link-macro-rx"></block>consulte .</block>
+  <block id="4b23e8e8b3c785425bb2f43c66b07bac" category="paragraph">Para obter mais informações, <block ref="7ebae31e4d4430330abc2c251fc33af0" category="inline-link-macro-rx"></block>consulte .</block>
+  <block id="57d85b4f49f470b7d997c29f8429b5e7" category="paragraph">Para obter mais informações, <block ref="f531a90b2f521cc15b6c40a4fefd348c" category="inline-link-macro-rx"></block>consulte .</block>
+  <block id="306edd7aeedf6507cc97939f9da0078d" category="paragraph">Para obter mais informações, <block ref="4bbd4987f0bfb0027f16d1ecbeb0ac2a" category="inline-link-macro-rx"></block>consulte .</block>
+  <block id="99eed1f6672cc1f43b2df5c4804244c8" category="paragraph">Para obter mais informações, <block ref="dff0174af6dfcf02b13f904a99df6834" category="inline-link-macro-rx"></block>consulte .</block>
+  <block id="9f05f559eebd2a533aa123c3408334d1" category="paragraph">A guia **políticas** foi renomeada <block ref="914c4a7aebf4348f66dcbf2a8e8ad77e" category="inline-link-macro-rx"></block>. A funcionalidade não foi alterada.</block>
+  <block id="accdfd5d359347cb2c916567bd17bdd0" category="paragraph">Você pode visualizar o horário da última atualização e atualizar manualmente os componentes Arquivos Duplicados, Dados Não Comerciais, Pesquisas Salvas, Dados Obsoletos e Principais Repositórios de Dados por Nível de Sensibilidade. Para obter mais informações sobre o painel de Governança, consulte <block ref="1ce3f0a304b1b93276c322629a323f14" category="inline-link-macro-rx"></block> .</block>
+  <block id="c10aaeed86973ee0f442f2e7b73b80b8" category="paragraph">Para obter mais informações, <block ref="c56cfb642e9d697265520a2d16e8cbad" category="inline-link-macro-rx"></block>consulte .</block>
+  <block id="4c59149345d32f10d4c1edb221d77028" category="paragraph">Agora você pode visualizar mais informações sobre os proprietários dos arquivos capturados na aba "Investigação". Ao visualizar metadados de um arquivo na guia Investigação, localize o proprietário do arquivo e selecione **Exibir detalhes** para ver o nome de usuário, o e-mail e o nome da conta SAM. Você também pode visualizar outros itens pertencentes a este usuário. Este recurso está disponível apenas para ambientes de trabalho com o Active Directory.</block>
+  <block id="476669d16044da6b8fccc04e3a65c887" category="paragraph">Para obter mais informações, <block ref="202490d1a2feeed942d0b33752539ffd" category="inline-link-macro-rx"></block>consulte .</block>
 </blocks>

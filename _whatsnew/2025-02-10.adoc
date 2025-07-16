@@ -26,7 +26,7 @@ Você pode se beneficiar do uso de varreduras somente de mapeamento para verific
 
 A prioridade é atribuída apenas a digitalizações só de mapeamento, e não a mapear e classificar digitalizações.
 
-A prioridade é definida como 1 por padrão, e você pode alterá-la para qualquer número entre 1 e 10. Quanto menor o número, maior a prioridade. Se você não definir uma prioridade, a digitalização recebe uma prioridade de 5.
+A prioridade é definida como 1 por padrão, e você pode alterá-la para qualquer número entre 1 e 10. Quanto menor o número, maior a prioridade. Se você não definir uma prioridade, a verificação receberá a prioridade 5.
 
 Para alterar a prioridade, faça o seguinte:
 

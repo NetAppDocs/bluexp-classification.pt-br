@@ -20,9 +20,9 @@ Por padrão, as digitalizações são enfileiradas com base na ordem em que são
 
 A prioridade é concedida de uma só vez. As redigitalizações automáticas de dados de mapeamento ocorrem na ordem padrão.
 
-A priorização é limitada a link:concept-cloud-compliance.html["digitalizações apenas de mapeamento"]; ela não está disponível para mapear e classificar digitalizações.
+A priorização é limitada a link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["digitalizações apenas de mapeamento"^]; ela não está disponível para mapear e classificar digitalizações.
 
-Para obter mais informações, link:task-managing-repo-scanning.html#prioritize-scans["Priorizar exames"]consulte .
+Para obter mais informações, link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans["Priorizar exames"^]consulte .
 
 .Tente novamente todas as digitalizações
 A classificação BlueXP  suporta a capacidade de tentar em lote todas as digitalizações com falha.
