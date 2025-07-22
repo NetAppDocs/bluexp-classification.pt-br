@@ -192,29 +192,29 @@ Em regiões onde o tipo de instância padrão não está disponível, a classifi
 .Implante na AWS
 --
 .Passos
-. No menu de navegação esquerdo do BlueXP , clique em *Governança > classificação*.
+. No menu de navegação esquerdo do BlueXP , selecione *Governança > classificação*.
+. Selecione *Implantar classificação no local ou na nuvem*.
 +
-image:screenshot_cloud_compliance_deploy_start.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
+image:screenshot-deploy-classification.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
 
-. Clique em *Activate Data Sense*.
-. Na página _Installation_, clique em *Deploy > Deploy* para usar o tamanho da instância "grande" e iniciar o assistente de implantação na nuvem.
+. Na página _Instalação_, selecione *Implementar > Implementar* para usar o tamanho de instância "Grande" e iniciar o assistente de implantação na nuvem.
 . O assistente exibe o progresso à medida que passa pelas etapas de implantação. Ele irá parar e pedir a entrada se ele se deparar com quaisquer problemas.
 +
 image:screenshot_cloud_compliance_wizard_start.png["Uma captura de tela do assistente de classificação do BlueXP  para implantar uma nova instância."]
 
-. Quando a instância for implantada e a classificação BlueXP  estiver instalada, clique em *Continue to Configuration* para ir para a página _Configuration_.
+. Quando a instância estiver implantada e a BlueXP classification estiver instalada, selecione *Continuar para a configuração* para ir para a página _Configuração_.
 
 
 --
 .Implantar no Azure
 --
 .Passos
-. No menu de navegação esquerdo do BlueXP , clique em *Governança > classificação*.
-. Clique em *Activate Data Sense*.
+. No menu de navegação esquerdo do BlueXP , selecione *Governança > classificação*.
+. Selecione *Implantar classificação no local ou na nuvem*.
 +
-image:screenshot_cloud_compliance_deploy_start.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
+image:screenshot-deploy-classification.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
 
-. Clique em *Deploy* para iniciar o assistente de implantação na nuvem.
+. Selecione *Implementar* para iniciar o assistente de implantação na nuvem.
 +
 image:screenshot_cloud_compliance_deploy_cloud.png["Uma captura de tela da seleção do botão para implantar a classificação do BlueXP  na nuvem."]
 
@@ -222,19 +222,19 @@ image:screenshot_cloud_compliance_deploy_cloud.png["Uma captura de tela da sele�
 +
 image:screenshot_cloud_compliance_wizard_start.png["Uma captura de tela do assistente de classificação do BlueXP  para implantar uma nova instância."]
 
-. Quando a instância for implantada e a classificação BlueXP  estiver instalada, clique em *Continue to Configuration* para ir para a página _Configuration_.
+. Quando a instância estiver implantada e a BlueXP classification estiver instalada, selecione *Continuar para a configuração* para ir para a página _Configuração_.
 
 
 --
 .Implantar no Google Cloud
 --
 .Passos
-. No menu de navegação esquerdo do BlueXP , clique em *Governança > classificação*.
-. Clique em *Activate Data Sense*.
+. No menu de navegação esquerdo do BlueXP , selecione *Governança > classificação*.
+. Selecione *Implantar classificação no local ou na nuvem*.
 +
-image:screenshot_cloud_compliance_deploy_start.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
+image:screenshot-deploy-classification.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
 
-. Clique em *Deploy* para iniciar o assistente de implantação na nuvem.
+. Selecione *Implementar* para iniciar o assistente de implantação na nuvem.
 +
 image:screenshot_cloud_compliance_deploy_cloud.png["Uma captura de tela da seleção do botão para implantar a classificação do BlueXP  na nuvem."]
 
@@ -242,7 +242,7 @@ image:screenshot_cloud_compliance_deploy_cloud.png["Uma captura de tela da sele�
 +
 image:screenshot_cloud_compliance_wizard_start.png["Uma captura de tela do assistente de classificação do BlueXP  para implantar uma nova instância."]
 
-. Quando a instância for implantada e a classificação BlueXP  estiver instalada, clique em *Continue to Configuration* para ir para a página _Configuration_.
+. Quando a instância estiver implantada e a BlueXP classification estiver instalada, selecione *Continuar para a configuração* para ir para a página _Configuração_.
 
 
 --

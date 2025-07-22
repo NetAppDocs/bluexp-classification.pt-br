@@ -337,9 +337,9 @@ Observe que todas as atividades de instalação são registradas ao instalar a c
 tar -xzf DATASENSE-INSTALLER-V1.25.0.tar.gz
 ----
 . No BlueXP , selecione *Governança > classificação*.
-. Clique em *Activate Data Sense*.
+. Selecione *Implantar classificação no local ou na nuvem*.
 +
-image:screenshot_cloud_compliance_deploy_start.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
+image:screenshot-deploy-classification.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
 
 . Dependendo se você está instalando a classificação do BlueXP  em uma instância preparada na nuvem ou em uma instância preparada em suas instalações, clique no botão *Deploy* apropriado para iniciar a instalação da classificação do BlueXP .
 +

@@ -307,9 +307,9 @@ Isso extrai o software necessário e o arquivo de instalação real *cc_onprem_i
 tar -xzf cc_onprem_installer.tar.gz
 ----
 . Inicie o BlueXP  e selecione *Governança > classificação*.
-. Clique em *Activate Data Sense*.
+. Selecione *Implantar classificação no local ou na nuvem*.
 +
-image:screenshot_cloud_compliance_deploy_start.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
+image:screenshot-deploy-classification.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
 
 . Clique em *Deploy* para iniciar a instalação no local.
 +

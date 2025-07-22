@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: task-access.html 
+keywords: log in, sign in 
+summary: Comece a usar a BlueXP classification acessando o serviço no BlueXP. 
+---
+= BlueXP classification
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+Você pode acessar o serviço de BlueXP classification por meio do NetApp BlueXP.
+
+Para fazer login no BlueXP, você pode usar suas credenciais do site de suporte da NetApp ou pode se inscrever para um login na nuvem da NetApp usando seu e-mail e uma senha. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Saiba mais sobre como fazer login no BlueXP"^].
+
+Tarefas específicas exigem funções específicas do usuário do BlueXP . link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do BlueXP para todos os serviços"^].
+
+.Antes de começar
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Você deve adicionar um conector BlueXP ."^]
+* link:task-deploy-cloud-compliance.html["Entenda qual estilo de implantação de BlueXP classification é mais adequado à sua carga de trabalho."]
+
+
+.Passos
+. Em um navegador da web, navegue até o link:https://console.bluexp.netapp.com/["Consola BlueXP"^] .
++
+É apresentada a página de início de sessão do NetApp BlueXP .
+
+. Sign in no BlueXP.
+. No menu de navegação esquerdo do BlueXP , selecione *Governança* > *Classificação*.
+. Se esta for a primeira vez que você acessa a BlueXP classification, a página de destino será exibida.
++
+Selecione *Implantar classificação no local ou na nuvem* para começar a implantar sua instância de classificação. Para obter mais informações, consulte link:task-deploy-cloud-compliance.html["Qual implantação de classificação BlueXP  você deve usar?"]
+
++
+image:screenshot-deploy-classification.png["Uma captura de tela da seleção do botão para ativar a classificação BlueXP ."]
+
++
+Caso contrário, o Painel de BlueXP classification será exibido.
+
+
