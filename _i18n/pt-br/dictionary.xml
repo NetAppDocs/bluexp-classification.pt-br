@@ -262,8 +262,6 @@
   <block id="b7753345b24c98f72b73e9e641a456d7" category="paragraph">As regras de saída estão completamente abertas. O acesso à Internet é necessário para instalar e atualizar o software de classificação BlueXP  e enviar métricas de utilização.</block>
   <block id="def03cca1b6cd44fc1ef14e712a6c792" category="inline-link-macro">Saiba mais sobre os endpoints que a classificação BlueXP  contacta</block>
   <block id="80cef547cabd3e510ea56f58ec10a12e" category="paragraph">Se você tem exigências estritas da rede, <block ref="a5023c570d3c1110eead6b3e84b02871" category="inline-link-macro-rx"></block>.</block>
-  <block id="1e81701a0a647214aeef7f6f5b09394b" category="section-title">Funções de utilizador na classificação BlueXP </block>
-  <block id="0fceee5053bfc73b3d9e3253ad7b8f0b" category="inline-link">Funções do BlueXP  IAM</block>
   <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">Este FAQ pode ajudar se você está apenas procurando uma resposta rápida para uma pergunta.</block>
   <block id="aa2fb7dd454c7ccfa2e848f8e1ae91b3" category="doc">Perguntas frequentes sobre a classificação BlueXP </block>
   <block id="d114fb433bcf7d5f0818cbc8249575fd" category="section-title">Serviço de classificação BlueXP </block>
@@ -966,7 +964,6 @@
   <block id="c35738c7864c7cbf5383db60bc7aceb3" category="open-title">Pontos de extremidade necessários para o GCP</block>
   <block id="396224b62257ab9727288876f0e89ef6" category="list-text">Certifique-se de que o BlueXP  tem as permissões necessárias</block>
   <block id="9edd86f763fc6d21418429b5c63134af" category="inline-link">As políticas fornecidas pela NetApp</block>
-  <block id="8f1a8cf43aa444c46e29ecb0349384d2" category="list-text">Certifique-se de que o BlueXP  tenha permissões para implantar recursos e criar grupos de segurança para a instância de classificação do BlueXP . Você pode encontrar as permissões de BlueXP  mais recentes no<block ref="12017b43c12237092f4f947467fd170e" category="inline-link-rx"></block>.</block>
   <block id="a8abb2cf85d3fffe4e0996a3ef7fdff4" category="list-text">Certifique-se de que o conetor BlueXP  pode aceder à classificação BlueXP </block>
   <block id="b3da390fe73676b135519aad2bb0ac8d" category="list-text">Garanta a conetividade entre o conetor e a instância de classificação BlueXP . O grupo de segurança do conetor deve permitir tráfego de entrada e saída pela porta 443 de e para a instância de classificação BlueXP . Essa conexão permite a implantação da instância de classificação do BlueXP  e permite exibir informações nas guias conformidade e Governança. A classificação do BlueXP  é compatível com regiões governamentais na AWS e no Azure.</block>
   <block id="fd1958e5e74317f89c6c16bbca7d1446" category="inline-link">Regras para o conetor na AWS</block>
@@ -1345,7 +1342,6 @@
   <block id="a3b67f96a0c9278d4984faae4a248582" category="inline-image-macro">Uma captura de tela para selecionar os ambientes de trabalho para os relatórios que você deseja executar.</block>
   <block id="c9df4195a305212ffd7b56d24f67129d" category="summary">O NetApp fornece suporte para BlueXP  de várias maneiras. Amplas opções gratuitas de suporte autônomo estão disponíveis 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. O seu registo de suporte inclui suporte técnico remoto através de Bilheteira na Web.</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Obtenha ajuda</block>
-  <block id="7c5661ab6b39ee901cea00a6e7020a49" category="paragraph">A NetApp oferece suporte ao BlueXP  e seus serviços de nuvem de várias maneiras. Amplas opções gratuitas de suporte autônomo estão disponíveis 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. O seu registo de suporte inclui suporte técnico remoto através de Bilheteira na Web.</block>
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">Obtenha suporte para um serviço de arquivos do provedor de nuvem</block>
   <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">Para obter suporte técnico relacionado a um serviço de arquivo de provedor de nuvem, sua infraestrutura ou qualquer solução usando o serviço, consulte "obter ajuda" na documentação do BlueXP  para esse produto.</block>
   <block id="9d06990508d25d367d9158c6558eb9c8" category="list-text"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
@@ -2401,8 +2397,6 @@
   <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Selecione *Adicionar credenciais NSS* e siga o prompt de autenticação do site de suporte da NetApp (NSS).</block>
   <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">Para confirmar que o processo de Registro foi bem-sucedido, selecione o ícone Ajuda e selecione *suporte*.</block>
   <block id="2ba7f9eae7a02f9c3ac0fc07517d1c48" category="paragraph">A página *recursos* deve mostrar que sua organização do BlueXP  está registrada para suporte.</block>
-  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">Uma captura de tela que mostra um número de série de conta e uma caixa de seleção verde e o texto registrado para suporte.</block>
-  <block id="3d183819a15163ef2e2e7d9d764254a9" category="paragraph"><block ref="3d183819a15163ef2e2e7d9d764254a9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c05e530d1466e986d570cfe3f92656c3" category="paragraph">Observe que outros usuários do BlueXP  não verão esse mesmo status de Registro de suporte se não tiverem associado uma conta do site de suporte da NetApp ao login do BlueXP . No entanto, isso não significa que sua organização do BlueXP  não esteja registrada para suporte. Desde que um usuário na organização tenha seguido esses passos, sua organização foi registrada.</block>
   <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Cliente existente, mas sem conta NSS</block>
   <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">Se você já é um cliente NetApp com licenças e números de série existentes, mas _no_ conta NSS, você precisa criar uma conta NSS e associá-la ao seu login no BlueXP .</block>
@@ -3073,7 +3067,6 @@
   <block id="9ed967b138578dbb6c57d7b336d5c696" category="paragraph">A classificação do BlueXP  analisa os dados nos repositórios (volumes, esquemas de banco de dados ou outros dados de usuário) que você seleciona para identificar dados pessoais e confidenciais. A classificação do BlueXP  mapeia os dados organizacionais, categoriza cada arquivo e identifica padrões predefinidos nos dados. O resultado da digitalização é um índice de informações pessoais, informações pessoais confidenciais, categorias de dados e tipos de arquivos.</block>
   <block id="3779db1fb21572df76305e5ede3efad1" category="sidebar">Analise a visão geral das suas fontes de dados</block>
   <block id="fc9679220132eb8e0f499680bbe8909a" category="list-text">* Reconhecimento de entidade de nome*: A classificação BlueXP  usa IA para extrair os nomes naturais das pessoas de documentos. <block ref="8e814e02dddb19e3bb4166c15fc34470" category="inline-link-macro-rx"></block>.</block>
-  <block id="e888dadabb0f55fe5c317b3b6754087e" category="paragraph">A função atribuída a cada utilizador fornece diferentes capacidades dentro da classificação BlueXP  e dentro da classificação BlueXP . Para obter mais informações,<block ref="9e5b18f30859b96d93203df427b4bd3d" category="inline-link-rx"></block> consulte (quando utilizar o BlueXP  no modo padrão).</block>
   <block id="6f0ff027a4b5c5cccc90c166290d3013" category="cell">Capacidade de executar a. <block ref="c2177dc55e01ee229f523014b3bacb31" category="inline-link-macro-rx"></block></block>
   <block id="a7e6da043e68990d1e9627e5da9319c2" category="paragraph">Para obter detalhes, <block ref="8df90f52b87f57dd64f76114b6c4e6a8" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="3d0a52f701c42fc59411425fdc2a4746" category="paragraph">Os nomes japoneses agora podem ser inseridos ao procurar o nome de um sujeito em resposta a uma solicitação de acesso ao titular de dados (DSAR). Você pode gerar um<block ref="413db830e9f14a03bda795e0ca85886f" category="inline-link-rx"></block> com as informações resultantes. Também pode introduzir nomes japoneses no<block ref="dc85c6bd448621c7d3e7987af7ac2483" category="inline-link-rx"></block> para identificar ficheiros que contenham o nome do assunto.</block>
@@ -3577,4 +3570,14 @@
   <block id="3047d0f529bebd6bfe17922e0ca45403" category="paragraph">Investigue os dados da sua organização visualizando os detalhes na página Investigação de Dados. Aqui é onde você pode continuar sua pesquisa depois de olhar para o painel Governança. Na página de investigação, você pode filtrar os dados usando um dos muitos filtros para mostrar apenas os resultados que deseja ver. Você também pode exibir metadados de arquivos, permissões para arquivos e diretórios e verificar arquivos duplicados em seus sistemas de armazenamento.</block>
   <block id="f93f654f18be890b72a6dc3853af2702" category="list-text">JSON - 100.000 registros por relatório que leva cerca de 5 minutos para ser gerado</block>
   <block id="1685dbc95abdf5db3fea70bcbed67efa" category="list-text">CSV - 200.000 registros por relatório que leva cerca de 4 minutos para ser gerado</block>
+  <block id="b1be31d5cf6b0567551065ae3533caf1" category="list-text">Certifique-se de que o BlueXP tenha permissões para implantar recursos e criar grupos de segurança para a instância de BlueXP classification .</block>
+  <block id="d3846482b7a5f3467b05518965422219" category="inline-link-macro">Permissões do Google Cloud</block>
+  <block id="c46f60718e1e68e31a7a27b785a25a23" category="list-text"><block ref="c46f60718e1e68e31a7a27b785a25a23" category="inline-link-macro-rx"></block></block>
+  <block id="d2c0c7feb18d0e89bab9d23b6ec4c042" category="inline-link-macro">Permissões da AWS</block>
+  <block id="b08bb744ad1ab6a2ee30e20e034859bc" category="list-text"><block ref="b08bb744ad1ab6a2ee30e20e034859bc" category="inline-link-macro-rx"></block></block>
+  <block id="bf689424a4d3a62d9c0d40a07107c3d2" category="inline-link-macro">Permissões do Azure</block>
+  <block id="ff27171010c4f698d0174fb8b8ce6b5d" category="list-text"><block ref="ff27171010c4f698d0174fb8b8ce6b5d" category="inline-link-macro-rx"></block></block>
+  <block id="bbbc9b55f08bfe80f146b5207bdb7728" category="paragraph">A NetApp oferece suporte para o BlueXP e seus serviços de nuvem de diversas maneiras. Oferecemos amplas opções gratuitas de autossuporte 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. Seu cadastro no suporte inclui suporte técnico remoto por meio de tickets online.</block>
+  <block id="759d32287efdf88cd8ac71dccc0ecf8d" category="inline-image-macro">Uma captura de tela que mostra um número de série da conta, uma caixa de seleção verde e o texto Registrado para suporte.</block>
+  <block id="4c441b388bebcddf8c08fb782095b864" category="paragraph"><block ref="4c441b388bebcddf8c08fb782095b864" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
