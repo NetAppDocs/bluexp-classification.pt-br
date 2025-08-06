@@ -63,7 +63,7 @@ Você pode copiar arquivos de origem que a classificação do BlueXP  está dig
 TIP: Você não pode copiar arquivos que residem em bancos de dados.
 
 .Requisitos
-* Você deve ter permissões para copiar arquivos. link:concept-cloud-compliance.html#user-roles["Saiba mais sobre o acesso do usuário às informações de conformidade"].
+* Você deve ter permissões para copiar arquivos. link:concept-cloud-compliance.html["Saiba mais sobre o acesso do usuário às informações de conformidade"] .
 * A cópia de arquivos requer que o compartilhamento NFS de destino permita o acesso a partir da instância de classificação BlueXP .
 * Você pode copiar entre 1 e 100.000 arquivos de cada vez.
 
@@ -106,7 +106,7 @@ O novo volume é criado no mesmo agregado que o volume de origem. Certifique-se 
 *Nota:* os volumes FlexGroup não podem ser clonados porque não são suportados pelo FlexClone.
 
 .Requisitos
-* Você deve ter permissões para copiar arquivos. link:concept-cloud-compliance.html#user-roles["Saiba mais sobre o acesso do usuário às informações de conformidade"].
+* Você deve ter permissões para copiar arquivos. link:concept-cloud-compliance.html["Saiba mais sobre o acesso do usuário às informações de conformidade"] .
 * Você deve selecionar um mínimo de 20 arquivos.
 * Todos os arquivos selecionados devem ter o mesmo volume e o volume deve estar on-line.
 * O volume deve ser de um sistema Cloud Volumes ONTAP ou ONTAP no local. Nenhuma outra fonte de dados é suportada atualmente.
@@ -160,7 +160,7 @@ Isso é útil para situações em que você está migrando dados de um sistema d
 TIP: Não é possível copiar e sincronizar arquivos que residem em bancos de dados, contas do OneDrive ou contas do SharePoint.
 
 .Requisitos
-* Você deve ter permissões para copiar e sincronizar arquivos. link:concept-cloud-compliance.html#user-roles["Saiba mais sobre o acesso do usuário às informações de conformidade"].
+* Você deve ter permissões para copiar e sincronizar arquivos. link:concept-cloud-compliance.html["Saiba mais sobre o acesso do usuário às informações de conformidade"] .
 * Você deve selecionar um mínimo de 20 arquivos.
 * Todos os arquivos selecionados devem ser do mesmo repositório de origem (volume ONTAP, bucket do S3, compartilhamento NFS ou CIFS, etc.).
 * Você precisará ativar o serviço de cópia e sincronização do BlueXP  e configurar um mínimo de um agente de dados que pode ser usado para transferir arquivos entre os sistemas de origem e destino. Reveja os requisitos de cópia e sincronização do BlueXP  a partir do https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html["Descrição de início rápido"^].
@@ -218,7 +218,7 @@ Observe que a estrutura de subdiretório do arquivo de origem é recriada no com
 TIP: Você não pode mover arquivos que residem em bancos de dados.
 
 .Requisitos
-* Você deve ter permissões para mover arquivos. link:concept-cloud-compliance.html#user-roles["Saiba mais sobre o acesso do usuário às informações de conformidade"].
+* Você deve ter permissões para mover arquivos. link:concept-cloud-compliance.html["Saiba mais sobre o acesso do usuário às informações de conformidade"] .
 * Os arquivos de origem podem estar localizados nas seguintes fontes de dados: ONTAP on-premises, Cloud Volumes ONTAP, Azure NetApp Files, compartilhamentos de arquivos e SharePoint Online.
 * Você pode mover um máximo de 15 milhões de arquivos de cada vez.
 * Apenas os ficheiros com 50 MB ou menos são movidos.
@@ -270,7 +270,7 @@ A exclusão de arquivos requer as seguintes permissões:
 === Excluir arquivos de origem manualmente
 
 .Requisitos
-* Você deve ter permissões para excluir arquivos. link:concept-cloud-compliance.html#user-roles["Saiba mais sobre o acesso do usuário às informações de conformidade"].
+* Você deve ter permissões para excluir arquivos. link:concept-cloud-compliance.html["Saiba mais sobre o acesso do usuário às informações de conformidade"] .
 * Pode eliminar um máximo de 100.000 ficheiros de cada vez.
 
 
