@@ -2878,7 +2878,6 @@
   <block id="de112667eda744a4b358697bb7edc818" category="list-text">Para ativar as digitalizações completas num intervalo, selecione *Map &amp; Classify*.</block>
   <block id="da912e25717291a31093b36e55bb8641" category="list-text">Para desativar a digitalização em um balde, selecione *Off*.</block>
   <block id="79043fd5ff3b61216207b60882cd72cd" category="section-title">19 de fevereiro de 2025</block>
-  <block id="84ea0db5b42f134872fbf35016e39cf9" category="list-text">Red Hat Enterprise Linux versão 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5</block>
   <block id="70c351474b2828e2c0dff97793686bc4" category="paragraph-title">Precisão melhorada do modelo de categorização</block>
   <block id="f436ec850a6acc51f2281d01c1b289da" category="paragraph">A precisão do modelo de aprendizado de máquina para <block ref="fff0603fda0aac9c86fd12605ac8a06f" category="inline-link-macro-rx"></block>melhorou em 11%.</block>
   <block id="4fce1192bdd8d2ff506dd6d380e85fdd" category="doc">Versão 1,41</block>
@@ -3580,4 +3579,14 @@
   <block id="cabac526d4cf33ef9b02b0693cd1699c" category="list-text">Você deve ter permissões para copiar e sincronizar arquivos. <block ref="8ccbab5e2c8c15f4593085b049c7211e" category="inline-link-macro-rx"></block> .</block>
   <block id="3e3cb2a1aa38db84e1a7fbd4e46dd21b" category="list-text">Você deve ter permissões para mover arquivos. <block ref="8ccbab5e2c8c15f4593085b049c7211e" category="inline-link-macro-rx"></block> .</block>
   <block id="25dc0f9bf48b7d09b459240afbf36637" category="list-text">Você deve ter permissões para excluir arquivos. <block ref="8ccbab5e2c8c15f4593085b049c7211e" category="inline-link-macro-rx"></block> .</block>
+  <block id="d9e521087da6e40e92c4e4b4c7c7bfde" category="list-text">Red Hat Enterprise Linux versão 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5 e 9.6.</block>
+  <block id="7a4e65e1bd3f1685ea059c893a13cb58" category="doc">Versão 1.46</block>
+  <block id="d221ee9585220af20b8b4e1420b1a705" category="paragraph">Esta versão da BlueXP classification inclui correções de bugs e as seguintes atualizações:</block>
+  <block id="688ea6ebefec0ae0aaddb70ff5413e00" category="paragraph-title">Insights aprimorados sobre eventos de varredura na linha do tempo do BlueXP</block>
+  <block id="e3f2c8a75408251f04a1059c3edcc328" category="paragraph">A linha do tempo do BlueXP agora oferece suporte a insights aprimorados sobre eventos de verificação para BlueXP classification.  A linha do tempo agora exibe quando a verificação de um ambiente de trabalho começa, os status dos ambientes de trabalho e quaisquer problemas.  Os status de compartilhamentos e ambientes de trabalho estão disponíveis somente para verificações de mapeamento.</block>
+  <block id="57bee919903f0c92a41c5582519db779" category="inline-link-macro">Monitorar as operações do BlueXP</block>
+  <block id="6ae0edc3b3f0ae8b008d6d6252956898" category="paragraph">Para obter mais informações sobre o cronograma do BlueXP , consulte<block ref="985f72ec91ace369e4feac0016fa4020" category="inline-link-macro-rx"></block> .</block>
+  <block id="e5d2f68147d287044a7fffa2d0926eae" category="paragraph-title">Suporte para RHEL 9.6</block>
+  <block id="f1513d7b9b8ef1acb75bb450ddd12a6c" category="paragraph">Esta versão adiciona suporte ao Red Hat Enterprise Linux v9.6 para instalação manual local da BlueXP classification, incluindo implantações de site escuro.</block>
+  <block id="b9d888f58b09c4007db0247286e392b5" category="section-title">11 de agosto de 2025</block>
 </blocks>
