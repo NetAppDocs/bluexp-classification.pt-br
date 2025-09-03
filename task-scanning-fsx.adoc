@@ -113,7 +113,7 @@ NOTE: Para o FSX for ONTAP, a classificação BlueXP  pode digitalizar volumes 
 As credenciais podem ser somente leitura, mas fornecer credenciais de administrador garante que a classificação do BlueXP  possa ler qualquer dado que exija permissões elevadas. As credenciais são armazenadas na instância de classificação do BlueXP .
 
 +
-Se você quiser garantir que os "últimos horários de acesso" dos seus arquivos não sejam alterados pelas verificações de BlueXP classification , é recomendável que o usuário tenha permissões de Gravação de Atributos no CIFS ou permissões de gravação no NFS. Se possível, configure o usuário do Active Directory como parte de um grupo pai na organização que tenha permissões para todos os arquivos.
+Se você quiser ter certeza de que os "últimos horários de acesso" dos seus arquivos não serão alterados pelas verificações de BlueXP classification , é recomendável que o usuário tenha permissões de Gravação de Atributos no CIFS ou permissões de gravação no NFS.  Se possível, configure o usuário do Active Directory como parte de um grupo pai na organização que tenha permissões para todos os arquivos.
 
 +
 Depois de inserir as credenciais, você verá uma mensagem informando que todos os volumes CIFS foram autenticados com êxito.

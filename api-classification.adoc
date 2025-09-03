@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: api-classification.html 
 keywords: api, apis, rest, restful, authorization, classification, data sense, swagger, body, header, list apis 
-summary: Os recursos de classificação do BlueXP  que estão disponíveis através da IU da Web também estão disponíveis através da API Swagger. 
+summary: Os recursos de BlueXP classification disponíveis por meio da interface do usuário da Web também estão disponíveis por meio da API REST. 
 ---
 = APIs de classificação BlueXP 
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Os recursos de classificação do BlueXP  que estão disponíveis atra
 
 
 [role="lead"]
-Os recursos de classificação do BlueXP  que estão disponíveis através da IU da Web também estão disponíveis através da API Swagger.
+Os recursos de BlueXP classification disponíveis por meio da interface do usuário da Web também estão disponíveis por meio da API REST.
 
 Existem quatro categorias definidas na classificação BlueXP  que correspondem às guias na IU:
 
@@ -52,13 +52,13 @@ Por exemplo, você pode localizar arquivos _sem_ informações pessoais identifi
 
 
 
-A API é segura e usa o mesmo método de autenticação que a interface do usuário. Você pode encontrar informações sobre a autenticação em: https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html[]
+A API é segura e usa o mesmo método de autenticação da interface do usuário.  Você pode encontrar informações sobre a autenticação nolink:https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html["Documentação do REST API"^] .
 
 
 
 == Acessando a referência da API Swagger
 
-Para entrar no Swagger, você precisará do endereço IP da instância de classificação do seu BlueXP . No caso de uma implantação na nuvem, você usará o endereço IP público. Então você precisará entrar nesse endpoint:
+Para acessar a referência da API, você precisa do endereço IP da sua instância de BlueXP classification .  Se você tiver uma implantação na nuvem, use o endereço de ID público. Por exemplo:
 
 https://<classification_ip>/documentação
 

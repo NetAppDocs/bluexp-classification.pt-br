@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="doc"></block>
-  <block id="264b044bf416a5337d28443921b46791" category="list-text">A classificação BlueXP  não é suportada em um host que é compartilhado com outros aplicativos - o host deve ser um host dedicado.</block>
   <block id="914179b3d4545ce8b8e8ba122c53f4d9" category="list-text">Ao criar o sistema host em suas instalações, você pode escolher entre esses tamanhos de sistema, dependendo do tamanho do conjunto de dados que você planeja fazer a verificação de classificação do BlueXP .</block>
   <block id="8c270421a057347baf727ea386f58d8f" category="cell">Tamanho do sistema</block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="cell">CPU</block>
@@ -13,13 +12,9 @@
   <block id="c1b7308083354b8b60760460bcce3ccc" category="cell">* Grande *</block>
   <block id="dc8179e6e72156a5578bf35cf9574540" category="cell">16 CPUs</block>
   <block id="5a1fdf37d5cd85436f7504641d78b95f" category="cell">64 GB DE RAM</block>
-  <block id="d5c832490c0ab9dcb105acd9ee7b4709" category="list-text">Ao implantar uma instância de computação na nuvem para sua instalação de classificação do BlueXP , recomendamos um sistema que atenda aos requisitos "grandes" do sistema acima:</block>
   <block id="e6414c92b8fa46238f4135e4d3e45674" category="inline-link-macro">Consulte tipos de instâncias adicionais da AWS</block>
-  <block id="b5f08a168a732355a95d9acdc430dcaf" category="list-text">*Tipo de instância do Amazon Elastic Compute Cloud (Amazon EC2)*: Recomendamos "m6i.4xlarge". <block ref="2fad631c28a07a1344ecdbaabb5084bf" category="inline-link-macro-rx"></block>.</block>
   <block id="130a6b20e1175876fb22c9520aa18c8c" category="inline-link-macro">Consulte tipos de instância adicionais do Azure</block>
-  <block id="d713d26696157989a3e54d75e186ddb9" category="list-text">*Tamanho da VM do Azure*: Recomendamos "Standard_D16s_v3". <block ref="600a0a16acacbb97202eae2cd680ce79" category="inline-link-macro-rx"></block>.</block>
   <block id="02a3b057fd8df2afe74574d8ba4929b5" category="inline-link-macro">Consulte tipos de instância adicionais do GCP</block>
-  <block id="0b0199602ca16ca93e8ce086565ea99e" category="list-text">*Tipo de máquina GCP*: Recomendamos "n2-standard-16". <block ref="0560993eb8cc456f0c5f18a57a7d0f71" category="inline-link-macro-rx"></block>.</block>
   <block id="114b40cee02180a916d6e0a652f1300d" category="list-text">*Permissões de pasta UNIX*: As seguintes permissões mínimas UNIX são necessárias:</block>
   <block id="b0f2b97dc5d2b76b26e040408bb1d8af" category="cell">Pasta</block>
   <block id="9dc48a158dad20b2148d68f6a5863b5e" category="cell">Permissões mínimas</block>
@@ -43,8 +38,6 @@
   <block id="42b04f3730744d602d0c4b812384dce9" category="list-text">Docker Engine versão 19.3.1 ou superior.<block ref="bbcf0e5e8b0c8687d84c2c22a5ad2ecf" category="inline-link-rx"></block>.</block>
   <block id="1e61042bc6437e79f5a1cc09c86acd1a" category="list-text">Podman versão 4 ou superior. Para instalar o Podman, digite <block ref="9305f04686d4e3dadce4d1e9e77d9d71" prefix="(" category="inline-code"></block>).</block>
   <block id="1d7787fe4a7264402153a51d8513414f" category="list-text">Python versão 3,6 ou superior.<block ref="f67fc9f0c7d8aa701884bad21356a242" category="inline-link-rx"></block>.</block>
-  <block id="dfd993077bb353282906702dc3143ec7" category="list-text">*Considerações de NTP*: A NetApp recomenda configurar o sistema de classificação BlueXP  para usar um serviço de protocolo de tempo de rede (NTP). O tempo deve ser sincronizado entre o sistema de classificação BlueXP  e o sistema de conetores BlueXP .</block>
-  <block id="af8d3a18d6425ec49a99c09691466f39" category="summary">Os recursos de classificação do BlueXP  que estão disponíveis através da IU da Web também estão disponíveis através da API Swagger.</block>
   <block id="3e70aaa0489a8fa1d39b16943a3f0844" category="doc">APIs de classificação BlueXP </block>
   <block id="8b2aa55ee7b70ec31ec11bb4537186f7" category="paragraph">Existem quatro categorias definidas na classificação BlueXP  que correspondem às guias na IU:</block>
   <block id="5cbac16d406ddfc92080f39efa7437d8" category="list-text">Investigação</block>
@@ -64,9 +57,7 @@
   <block id="8d4462bd75d514bcb1e0545bfb9272d9" category="list-text">Ver e cancelar ações</block>
   <block id="a3c128ab8674fa4b5e836c2d45315f6c" category="list-text">Volte a verificar diretórios</block>
   <block id="5e20646580da584d76435da00d6face4" category="list-text">Exportar dados</block>
-  <block id="a39ca37fb6314be500ea6c4e6028aad1" category="paragraph">A API é segura e usa o mesmo método de autenticação que a interface do usuário. Você pode encontrar informações sobre a autenticação em:<block ref="86100a8a51cdb9259081132b7d91c690" category="inline-link-rx"></block></block>
   <block id="6bb2320a7f7d5e941653039f26a38ad9" category="section-title">Acessando a referência da API Swagger</block>
-  <block id="af16b996606b35cb0f77fe07ba2e556a" category="paragraph">Para entrar no Swagger, você precisará do endereço IP da instância de classificação do seu BlueXP . No caso de uma implantação na nuvem, você usará o endereço IP público. Então você precisará entrar nesse endpoint:</block>
   <block id="49ef162b6621f970581074315940ec6c" category="paragraph">https://&lt;classification_ip&gt;/documentação</block>
   <block id="b62dbbecd6533f9627427d34160e7d75" category="section-title">Exemplo usando as APIs</block>
   <block id="b7fd2e4068e2c6cc68317c7892c5290c" category="paragraph">O exemplo a seguir mostra uma chamada de API para copiar arquivos.</block>
@@ -2805,10 +2796,8 @@
   <block id="74110511ebf4f8eea597c953392110f9" category="list-text">SSD TIB de 1 GB ligado / ou 100 GiB disponível em /opt</block>
   <block id="4056804c808441484593a6cd5998f06e" category="list-text">895 GiB disponível em /var/lib/docker</block>
   <block id="f9ddd233a713e3719c7d8046ab62cc1e" category="list-text">5 GiB em /tmp</block>
-  <block id="79d1a6d2ec5f279b488952c279f36449" category="list-text">*Para Podman, 5 GB em /tmp*</block>
   <block id="0e1cb4b06a070e11230e1c8de75a1db8" category="list-text">*Para Podman, 30 GB em /var/tmp*</block>
   <block id="16b9e4a3843d82aedd78ddf5568f32cc" category="list-text">SSD de 500 GiB em / ou 100 GiB disponível em /opt</block>
-  <block id="7d5ad3bf21c571c611eed766c4a188c1" category="list-text">395 GiB disponível em /var/lib/docker ou Podman /var/lib/containers ou Podman /var/lib/containers</block>
   <block id="155acacab86f1c55608330de83b4e05f" category="paragraph">Você também <block ref="1a9c56cdde8c9a93a744fbe95f12b64a" category="inline-link-macro-rx"></block>pode .</block>
   <block id="f9cb03d21a26b2f64053d2e527396790" category="paragraph">A instalação no local pode ser uma boa opção se você preferir digitalizar sistemas ONTAP locais usando uma instância de classificação do BlueXP  que também está localizada no local, mas isso não é um requisito. O software funciona exatamente da mesma forma, independentemente do método de instalação que você escolher.</block>
   <block id="ee8870d1e0595ddae329cf8ef1ee89fa" category="paragraph">Você pode filtrar o conteúdo da página de investigação para exibir apenas os resultados que deseja ver.</block>
@@ -3459,7 +3448,6 @@
   <block id="16d42e00c386e70a3a7df4333dbd3a1d" category="paragraph">Revise as seguintes especificações para tipos de instância:</block>
   <block id="b6312fd76a50f60b989ce722e432d447" category="paragraph">Você pode habilitar e desabilitar verificações no nível do volume ou no nível do esquema do banco de dados.</block>
   <block id="5ef007aec2cc80b49f082c5ae4dba4dc" category="list-text">**As digitalizações somente de mapeamento** fornecem apenas uma visão geral de alto nível de seus dados e são realizadas em fontes de dados selecionadas. As varreduras somente de mapeamento levam menos tempo do que as varreduras de mapeamento e classificação porque não acessam arquivos para ver os dados contidos neles. Pode pretender fazer isto inicialmente para identificar áreas de investigação e, em seguida, executar uma leitura de mapa e classificação nessas áreas.</block>
-  <block id="71653fb5163aa99d8613874ef0398606" category="paragraph">+ Se você quiser garantir que os "últimos horários de acesso" dos seus arquivos não sejam alterados pelas verificações de BlueXP classification , é recomendável que o usuário tenha permissões de Gravação de Atributos no CIFS ou permissões de gravação no NFS. Se possível, configure o usuário do Active Directory como parte de um grupo pai na organização que tenha permissões para todos os arquivos.</block>
   <block id="d0169e5c24cd4c5e05dcb7edb4ca10d7" category="doc">Versão 1,45</block>
   <block id="8321b9867214f5caa9d5a37197549cfb" category="paragraph">Esta versão de BlueXP classification inclui alterações de código que otimizam a utilização de recursos e:</block>
   <block id="8f993d1847870bf5334f9e8a709029c8" category="paragraph-title">Fluxo de trabalho aprimorado para adicionar compartilhamentos de arquivos para digitalização</block>
@@ -3467,7 +3455,6 @@
   <block id="628bc6ea752b2d2bd10bc4f22b8cfcca" category="inline-xref-macro">Verificar compartilhamentos de arquivos</block>
   <block id="2cc1f0459a8aa18da26c0c17c08edd37" category="paragraph-title">Informações aprimoradas sobre o proprietário do arquivo</block>
   <block id="c6d521e93c659f52fc0150619d81cd0e" category="paragraph">Você também pode visualizar mais detalhes sobre o proprietário do arquivo: nome da conta, endereço de e-mail e nome da conta SAM, ou visualizar itens de propriedade desse usuário.</block>
-  <block id="8d1256ea20b6f3627b46e3916aa6a135" category="paragraph">Se você quiser garantir que os "últimos horários de acesso" dos seus arquivos não sejam alterados pelas verificações de BlueXP classification , é recomendável que o usuário tenha permissões de Gravação de Atributos no CIFS ou permissões de gravação no NFS. Se possível, configure o usuário do Active Directory como parte de um grupo pai na organização que tenha permissões para todos os arquivos.</block>
   <block id="06d20a71e8e976cfefed98d4f05b2dc1" category="list-text">Para refinar ainda mais os resultados, selecione um dos filtros no painel Filtro.</block>
   <block id="07b57c9c0ed87759bcd88b15d5738118" category="paragraph">A disponibilidade das informações depende da fonte de dados. Por exemplo, o nome do volume e as permissões não são compartilhados para arquivos de banco de dados.</block>
   <block id="d353221e429d4e01e167115856394ba7" category="paragraph">Você pode verificar se há arquivos duplicados armazenados em seus sistemas de armazenamento. Isso é útil se você quiser identificar áreas onde você pode economizar espaço de armazenamento. Também é bom garantir que determinados arquivos com permissões específicas ou informações confidenciais não sejam duplicados desnecessariamente em seus sistemas de armazenamento.</block>
@@ -3530,9 +3517,7 @@
   <block id="4c59149345d32f10d4c1edb221d77028" category="paragraph">Agora você pode visualizar mais informações sobre os proprietários dos arquivos capturados na aba "Investigação". Ao visualizar metadados de um arquivo na guia Investigação, localize o proprietário do arquivo e selecione **Exibir detalhes** para ver o nome de usuário, o e-mail e o nome da conta SAM. Você também pode visualizar outros itens pertencentes a este usuário. Este recurso está disponível apenas para ambientes de trabalho com o Active Directory.</block>
   <block id="476669d16044da6b8fccc04e3a65c887" category="paragraph">Para obter mais informações, <block ref="202490d1a2feeed942d0b33752539ffd" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="ba0582c1a4216adac557c97d2f92f869" category="inline-link-macro">instalar outro conector</block>
-  <block id="bb421402dbabe6eec32567511e69bc2a" category="inline-link-macro">implantar outra instância de classificação</block>
   <block id="7473cbb9b768b471bd45e7579b544a3a" category="inline-link-macro">Trabalhe com vários conetores</block>
-  <block id="c430d0ad1a785912ff6e7f2d659d752f" category="paragraph">A BlueXP classification não impõe um limite à quantidade de dados que pode escanear. Cada Conector suporta escaneamento e exibição de 500 TiB de dados. Para escanear mais de 500 TiB de dados, <block ref="a34b864875c7f2ebc4a815c94a375e43" category="inline-link-macro-rx"></block> então <block ref="a51ca3e7fcece55a05339015489757d6" category="inline-link-macro-rx"></block> . + A interface do usuário do BlueXP exibe dados de um único conector. Para dicas sobre como visualizar dados de vários conectores, consulte <block ref="5255e271b4118330c3aac09d32603a12" category="inline-link-macro-rx"></block> .</block>
   <block id="551fbc3b7472150a5293373b773972d7" category="cell">Limitado a 500 TiB*</block>
   <block id="acdf9d63036f9706b8165f6f6a7117da" category="paragraph">{asterisco} include::_include/connector-limit.adoc[]</block>
   <block id="e8c9a8c8c457fc72bf3b116575089845" category="paragraph">A BlueXP classification agora está disponível como um recurso principal do BlueXP , sem custo adicional, para até 500 TiB de dados digitalizados por conector. Nenhuma licença de classificação ou assinatura paga é necessária. À medida que focamos a funcionalidade de classificação do BlueXP  na digitalização de sistemas de armazenamento NetApp com esta nova versão, algumas funcionalidades antigas só estarão disponíveis para clientes que já haviam pago uma licença. O uso desses recursos herdados expirará quando o contrato pago atingir sua data final.</block>
@@ -3589,4 +3574,20 @@
   <block id="e5d2f68147d287044a7fffa2d0926eae" category="paragraph-title">Suporte para RHEL 9.6</block>
   <block id="f1513d7b9b8ef1acb75bb450ddd12a6c" category="paragraph">Esta versão adiciona suporte ao Red Hat Enterprise Linux v9.6 para instalação manual local da BlueXP classification, incluindo implantações de site escuro.</block>
   <block id="b9d888f58b09c4007db0247286e392b5" category="section-title">11 de agosto de 2025</block>
+  <block id="88490f51308acd9c9a526511feb1b6fb" category="paragraph">+ Se você quiser ter certeza de que os "últimos horários de acesso" dos seus arquivos não serão alterados pelas verificações de BlueXP classification , é recomendável que o usuário tenha permissões de Gravação de Atributos no CIFS ou permissões de gravação no NFS.  Se possível, configure o usuário do Active Directory como parte de um grupo pai na organização que tenha permissões para todos os arquivos.</block>
+  <block id="06c3d407c31ff0f40292519ad2fbf086" category="inline-link-macro">implantar outra instância da BlueXP classification</block>
+  <block id="5872875d7a05b489de9eca6b794aeb0d" category="paragraph">A BlueXP classification não impõe um limite à quantidade de dados que ele pode escanear.  Cada conector suporta digitalização e exibição de 500 TiB de dados.  Para escanear mais de 500 TiB de dados,<block ref="a34b864875c7f2ebc4a815c94a375e43" category="inline-link-macro-rx"></block> então<block ref="d93d7bddd35b0564aa636ce280ef8dbf" category="inline-link-macro-rx"></block> .  A interface do usuário do BlueXP exibe dados de um único conector.  Para obter dicas sobre como visualizar dados de vários conectores, consulte<block ref="5255e271b4118330c3aac09d32603a12" category="inline-link-macro-rx"></block> .</block>
+  <block id="d55dde897c01cfd972009c9f03ae26e7" category="list-text">A BlueXP classification não é suportada em um host compartilhado com outros aplicativos.  O host deve ser um host dedicado.</block>
+  <block id="fbb27e2a29f9e80c540c4bb1e45f91c9" category="list-text">400 GiB disponíveis em /var/lib/docker ou para Podman /var/lib/containers</block>
+  <block id="925c9039268a157dc5413b766386d330" category="list-text">Ao implantar uma instância de computação na nuvem para sua instalação de BlueXP classification , use um sistema que atenda aos requisitos de sistema "Grande" acima:</block>
+  <block id="10657c54dd5c19e73ee0f8e2223b7a46" category="list-text">*Tipo de instância do Amazon Elastic Compute Cloud (Amazon EC2)*: "m6i.4xlarge". <block ref="2fad631c28a07a1344ecdbaabb5084bf" category="inline-link-macro-rx"></block> .</block>
+  <block id="dcd6c94de63a44c707e6410206f93f30" category="list-text">*Tamanho da VM do Azure*: "Standard_D16s_v3". <block ref="600a0a16acacbb97202eae2cd680ce79" category="inline-link-macro-rx"></block> .</block>
+  <block id="e7d3c98d4730560139776bd99350f7c9" category="list-text">*Tipo de máquina GCP*: "n2-standard-16". <block ref="0560993eb8cc456f0c5f18a57a7d0f71" category="inline-link-macro-rx"></block> .</block>
+  <block id="4729c99a5b7462bb98c9ab0f4f598a51" category="list-text">*Considerações sobre NTP*: A NetApp recomenda configurar a BlueXP classification para usar um serviço NTP (Network Time Protocol).  O tempo deve ser sincronizado entre o sistema de BlueXP classification e o Conector.</block>
+  <block id="6446da06477af010feea65d51c284e8c" category="summary">Os recursos de BlueXP classification disponíveis por meio da interface do usuário da Web também estão disponíveis por meio da API REST.</block>
+  <block id="dc2db3ddd305206c3c8fd34179c0e3e0" category="paragraph">Os recursos de BlueXP classification disponíveis por meio da interface do usuário da Web também estão disponíveis por meio da API REST.</block>
+  <block id="567ead09d16d940fef8acf1a3c2c193f" category="inline-link-macro">Documentação do REST API</block>
+  <block id="d0e3c0b1617fba7e035a47001abbc7c1" category="paragraph">A API é segura e usa o mesmo método de autenticação da interface do usuário.  Você pode encontrar informações sobre a autenticação no<block ref="bbdacd4f187c413013ce0d7ecba5c48f" category="inline-link-macro-rx"></block> .</block>
+  <block id="078dc57072fdb65adb61b246152fd26d" category="paragraph">Para acessar a referência da API, você precisa do endereço IP da sua instância de BlueXP classification .  Se você tiver uma implantação na nuvem, use o endereço de ID público. Por exemplo:</block>
+  <block id="66658abcedb95d760806823bcf735240" category="paragraph">Se você quiser ter certeza de que os "últimos horários de acesso" dos seus arquivos não serão alterados pelas verificações de BlueXP classification , é recomendável que o usuário tenha permissões de Gravação de Atributos no CIFS ou permissões de gravação no NFS.  Se possível, configure o usuário do Active Directory como parte de um grupo pai na organização que tenha permissões para todos os arquivos.</block>
 </blocks>
